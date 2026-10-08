@@ -112,14 +112,4 @@ This component does not emit any custom events.
 
 {% endblock %}
 
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-icon>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
-{% endblock %}
-
 {% block updates %}{% endblock %}

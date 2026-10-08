@@ -258,17 +258,6 @@ dropdownmenu.addEventListener('nys-click', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-
-{% endblock %}
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-icon>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}

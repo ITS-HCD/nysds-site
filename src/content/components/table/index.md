@@ -361,14 +361,4 @@ console.log(`Column ${columnIndex} ("${columnLabel}") sorted: ${sortDirection}`)
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block dependencies %}
-
-{% set dependencies = [
-   "<nys-icon>", "<nys-button>"
-  ] %}
-
-{% include "partials/dependencies.njk" %}
-
-{% endblock %}
-
 {% block updates %}{% endblock %}

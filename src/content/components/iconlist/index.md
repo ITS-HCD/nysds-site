@@ -112,21 +112,5 @@ The `<nys-iconlist>` component includes the following accessibility-focused feat
 
 {% endblock %}
 
-{% block events %}
-
-This component does not emit any custom events.
-
-{% endblock %}
-
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-icon>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
-{% endblock %}
 
 {% block updates %}{% endblock %}

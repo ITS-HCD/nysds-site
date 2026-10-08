@@ -125,24 +125,6 @@ The NYS Brand Logo can be toggled on via the `nysLogo` property for back-office 
 {% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
-
-{% endblock %}
-
-{% block events %}
-
-This component does not emit any custom events.
-
-{% endblock %}
-
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-icon>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}

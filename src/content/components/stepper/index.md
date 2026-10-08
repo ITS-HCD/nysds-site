@@ -328,12 +328,4 @@ stepper.addEventListener("nys-step-click", () => {
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block dependencies %}
-
-{% set dependencies = [] %}
-
-{% include "partials/dependencies.njk" %}
-
-{% endblock %}
-
 {% block updates %}{% endblock %}

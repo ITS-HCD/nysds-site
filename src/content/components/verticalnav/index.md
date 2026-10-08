@@ -401,14 +401,4 @@ verticalnav.addEventListener('nys-verticalnav-toggle', (event) => {
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block dependencies %}
-
-{% set dependencies = [
-"<nys-accordion>", "<nys-icon>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
-{% endblock %}
-
 {% block updates %}{% endblock %}

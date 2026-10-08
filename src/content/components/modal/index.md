@@ -269,14 +269,4 @@ console.log(`Modal (${id}) is closed.`);
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block dependencies %}
-
-{% set dependencies = [
-   "<nys-button>"
-  ] %}
-
-{% include "partials/dependencies.njk" %}
-
-{% endblock %}
-
 {% block updates %}{% endblock %}

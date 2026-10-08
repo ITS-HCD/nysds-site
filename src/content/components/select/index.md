@@ -388,14 +388,4 @@ select.addEventListener('nys-change', (event) => {
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-errormessage>", "<nys-icon>", "<nys-label>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
-{% endblock %}
-
 {% block updates %}{% endblock %}

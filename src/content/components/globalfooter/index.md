@@ -123,21 +123,4 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 
 {% endblock %}
 
-{% block events %}
-
-This component does not emit any custom events.
-
-{% endblock %}
-
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-divider>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
-{% endblock %}
-
 {% block updates %}{% endblock %}
