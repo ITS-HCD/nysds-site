@@ -1,9 +1,9 @@
 ---
-permalink: /foundations/utilities/position/
+permalink: /utilities/position/
+redirect_from: /foundations/utilities/position/
 title: Position
 description: Utility classes for controlling element positioning in the NYS Design System.
-section: Foundations
-parent: Utilities
+section: Utilities
 layout: layouts/3-col.njk
 ---
 
@@ -13,7 +13,7 @@ layout: layouts/3-col.njk
 
 # Position
 
-Position utilities set the CSS `position` property on an element, controlling how it's placed in the document flow. Positioned elements can then use offset properties (`top`, `right`, `bottom`, `left`) and [z-index utilities](/foundations/utilities/zindex/) for layering.
+Position utilities set the CSS `position` property on an element, controlling how it's placed in the document flow. Positioned elements can then use offset properties (`top`, `right`, `bottom`, `left`) and [z-index utilities](/utilities/zindex/) for layering.
 
 </section>
 
@@ -120,7 +120,7 @@ Use `.nys-position-sticky` with a `top` offset to make an element stick in place
 
 ## Responsive variants
 
-All position utilities support responsive prefixes. See [Responsive Utilities](/foundations/utilities/responsive/) for breakpoint details.
+All position utilities support responsive prefixes. See [Responsive Utilities](/utilities/responsive/) for breakpoint details.
 
 ```html
 <!-- Static on mobile, sticky on desktop -->

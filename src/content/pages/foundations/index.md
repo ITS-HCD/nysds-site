@@ -55,6 +55,13 @@ How the design system is built — the token layers, styling framework, theming 
       description="Web components, shadow DOM, slots, CSS custom properties, and the patterns you need to use NYSDS components effectively.">
       <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
     </nys-card>
+    <nys-card class="nys-grid-col-12 nys-tablet:nys-grid-col-6"
+      href="/foundations/breakpoints/"
+      headingLevel="h3"
+      heading="Breakpoints"
+      description="The five viewport ranges and grid gutters that keep layouts consistent from mobile to desktop large.">
+      <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
+    </nys-card>
 </div>
 
 ## Implementation Guides
@@ -84,7 +91,7 @@ Practical references for building interfaces with the design system — typograp
       <nys-icon slot="footer" name="arrow_forward" size="5xl"></nys-icon>
     </nys-card>
     <nys-card class="nys-grid-col-12 nys-tablet:nys-grid-col-6"
-      href="/foundations/utilities/"
+      href="/utilities/"
       headingLevel="h3"
       heading="Utilities"
       description="Layout grid, flexbox, spacing, display, and responsive utility classes for rapid, consistent page layout.">

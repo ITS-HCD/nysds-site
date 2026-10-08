@@ -184,7 +184,7 @@ Looking back at my initial doubts about why we decided to adopt web components, 
 <br/> 
 <figure>
     <img
-        src="/assets/i/2026/shadow-dom-article/something_just_like_this2.jpg"
+        src="/assets/i/2026/shadow-dom-article/something_just_like_this.jpg"
         alt="music poster">
     <figcaption><a href="https://en.wikipedia.org/wiki/Something_Just_Like_This">Single</a> by <a href="https://www.youtube.com/watch?v=FM7MFYoylVs&themeRefresh=1"><a href="https://en.wikipedia.org/wiki/The_Chainsmokers">The Chainsmokers</a> and <a href="https://en.wikipedia.org/wiki/Coldplay">Coldplay</a></figcaption>
 </figure>

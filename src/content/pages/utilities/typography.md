@@ -1,8 +1,9 @@
 ---
-permalink: /foundations/utilities/typography/
+permalink: /utilities/typography/
+redirect_from: /foundations/utilities/typography/
 title: Typography
 description: The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
-parent: Utilities
+section: Utilities
 layout: layouts/3-col.njk
 ---
 

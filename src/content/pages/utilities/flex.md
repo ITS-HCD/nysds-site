@@ -1,9 +1,9 @@
 ---
-permalink: /foundations/utilities/flex/
+permalink: /utilities/flex/
+redirect_from: /foundations/utilities/flex/
 title: Flexbox
 description: Utility classes for building flexible one-dimensional layouts with alignment, wrapping, and ordering in the NYS Design System.
-section: Foundations
-parent: Utilities
+section: Utilities
 layout: layouts/3-col.njk
 ---
 
@@ -15,7 +15,7 @@ layout: layouts/3-col.njk
 
 These utility classes are used to create a flexbox layout. Flexbox is a one-dimensional layout method for laying out items in rows or columns. Items flex to fill additional space and shrink to fit into smaller spaces.
 
-All flexbox utilities support [responsive prefixes](/foundations/utilities/responsive/).
+All flexbox utilities support [responsive prefixes](/utilities/responsive/).
 
 </section>
 

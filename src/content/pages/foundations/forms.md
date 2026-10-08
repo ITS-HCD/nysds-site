@@ -122,7 +122,7 @@ Single-column layouts are easier to scan, reduce cognitive load, and perform bet
 
 ### Multi-column form
 
-When placing fields side by side makes semantic sense (like first name and last name), use the [grid utilities](/foundations/utilities/grid/):
+When placing fields side by side makes semantic sense (like first name and last name), use the [grid utilities](/utilities/grid/):
 
 {% set preview %}
 <form id="dmv-contact">

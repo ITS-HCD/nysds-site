@@ -7,7 +7,25 @@ section: Get Started
 
 # Get Started as a Developer
 
-The NYSDS gives you a library of web components and a set of design tokens and styles. Install via npm, load the files in your HTML, and start building.
+Choose your framework:
+
+<div class="nys-grid-row nys-grid-gap-400" style="--nys-card-height: 100%">
+    <nys-card class="nys-tablet:nys-grid-col-6" heading="No framework" description="CSS/JS and HTML custom elements" headingLevel="h3">
+      <nys-button fullWidth slot="footer" href="#quick-start" variant="outline">Framework-less quick start</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-6" heading="Angular" description="Pre-built NYSDS Angular components" headingLevel="h3">
+      <nys-button fullWidth slot="footer" href="/get-started/developers/angular/" variant="outline">Angular quick start</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-6" heading="React" description="Pre-built NYSDS React components" headingLevel="h3">
+      <nys-button fullWidth slot="footer" href="/get-started/developers/react/" variant="outline">React quick start</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-6" heading="Vue" description="Pre-built NYSDS Vue components" headingLevel="h3">
+      <nys-button fullWidth slot="footer" href="/get-started/developers/vue/" variant="outline">Vue quick start</nys-button>
+    </nys-card>
+
+
+
+</div>
 
 ## Quick Start
 
@@ -48,123 +66,11 @@ Then use NYSDS components directly in your HTML:
 
 **Styles Framework** — The `@nysds/styles` package provides typography classes, a CSS reset, layout utilities, and agency themes. See the [styles framework guide](/foundations/styles/).
 
-**Layout & Utilities** — A grid system and utility classes for spacing, flex layouts, and responsive design. See the [layout utilities reference](/foundations/utilities/).
+**Layout & Utilities** — A grid system and utility classes for spacing, flex layouts, and responsive design. See the [layout utilities reference](/utilities/).
 
 **Typography** — Font styling and typography tokens. Fonts must be downloaded separately due to licensing. See [fonts and typography](/foundations/typography/).
 
 **Accessibility** — All components are WCAG 2.2 compliant with keyboard navigation and screen reader support. See [accessibility](/foundations/accessibility/).
-
-## Framework Guides
-
-NYSDS components are standard web components. They work in any framework. Below are sample setup steps for common frameworks used across New York State agencies. If you notice a bug in these configurations, [drop a bug report issue in GitHub](https://github.com/ITS-HCD/nysds/issues/new/choose).
-
-
-### React
-<nys-alert type="warning" heading="Undergoing Revisions" text="This section is undergoing massive documentation revisions and changes. Please reach out to the NYSDS team for the latest updates on React change or see the React Demo tutorial page" primaryLabel="React Demo Tutorial" primaryAction="https://its-hcd.github.io/nysds-react-demo/tutorial"></nys-alert>
-
-While our default web component works React. We recommend using our React wrapper components.
-Import directly from `@nysds/components/react`. This path gives you React-wrapped versions of each web component - event bindings included.
-
-{% set code %}
-import { NysButton } from "@nysds/components/react";
-<NysButton label="Submit" variant="primary" />
-{% endset %}
-{% set accordionLabel = "React Example" %}
-{% set codeExpanded = false %}
-{% include "partials/code-preview.njk" %}
-
-#### Handling React Events
-React's synthetic event system does not automatically listen to custom events from web components. Instead, NYSDS React wrappers map these to callback props like `onNysChange` and `onNysInput`, but the underlying type is still a DOM Event.
-
-{% set code %}
-// ❌ This won't work! NysTextinput doesn't fire a native change event
-<NysTextinput onChange={(e) => setValue(e.target.value)} />
-// ✅ Use the NYSDS custom event binding
-<NysTextinput
-  name="email"
-  onNysInput={(e) => {
-    const value = (e as CustomEvent).detail.value;
-    setValue(value);
-  }}
-/>}{% endset %}
-{% set accordionLabel = "React Example" %}
-{% set codeExpanded = false %}
-{% include "partials/code-preview.njk" %}
-
-
-You may also fund using `ref` callbacks or `addEventListener` helpful for NYSDS events.
-
-{% set code %}import { NysSelect } from "@nysds/components/react";
-function LicenseRenewalForm() {
-  const handleChange = (e) => {
-    console.log('Selected:', e.detail.value);
-  };
-  return (
-    <NysSelect
-      label="License type"
-      ref={(el) => el?.addEventListener('nys-change', handleChange)}
-    >
-      <option value="driver">Driver License</option>
-      <option value="commercial">Commercial Driver License</option>
-    </NysSelect>
-  );
-}{% endset %}
-{% set accordionLabel = "React Example" %}
-{% set codeExpanded = false %}
-{% include "partials/code-preview.njk" %}
-
-### Angular
-
-<nys-alert heading="Angular support is currently in ALPHA"></nys-alert>
-
-Add `CUSTOM_ELEMENTS_SCHEMA` to your module:
-
-{% set code %}// app.module.ts
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
-import '@nysds/components';
-@NgModule({
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
-})
-export class AppModule {}{% endset %}
-{% set accordionLabel = "Angular Setup" %}
-{% set codeExpanded = false %}
-{% include "partials/code-preview.njk" %}
-
-### Vue
-
-<nys-alert heading="Vue support is currently in ALPHA"></nys-alert>
-
-We package the Vue JSX files in the @nysds/components/react package. Configure Vite to recognize `nys-` tags as custom elements:
-
-{% set code %}// vite.config.js
-import vue from '@vitejs/plugin-vue';
-export default {
-  plugins: [
-    vue({
-      template: {
-        compilerOptions: {
-          isCustomElement: (tag) => tag.startsWith('nys-')
-        }
-      }
-    })
-  ]
-}{% endset %}
-{% set accordionLabel = "Vue Config" %}
-{% set codeExpanded = false %}
-{% include "partials/code-preview.njk" %}
-
-### .NET / Blazor
-
-Load NYSDS in your layout via local path:
-
-{% set code %}<!-- In _Layout.cshtml or _Host.cshtml -->
-<!-- Load the NYS Design System JavaScript library -->
-<script type="module" src="node_modules/@nysds/components/dist/nysds.js"></script>
-<!-- Load the full NYS Design System CSS -->
-<link rel="stylesheet" href="node_modules/@nysds/styles/dist/nysds-full.min.css" />{% endset %}
-{% set accordionLabel = ".NET Layout" %}
-{% set codeExpanded = false %}
-{% include "partials/code-preview.njk" %}
 
 ## VSCode Autocomplete
 

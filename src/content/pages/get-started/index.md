@@ -12,6 +12,20 @@ navOrder: 1
 
 The NYS Design System gives your team the tools to build accessible, consistent digital experiences faster. There are three ways to use it, whether you are starting from scratch or working within an existing application.
 
+## Choose Your Path
+
+<div class="nys-grid-row nys-grid-gap-200" style="--nys-card-height: 100%;">
+    <nys-card class="nys-tablet:nys-grid-col-4" heading="Designer?" description="Set up design libraries, use component variants, prototype with system components." headingLevel="h3">
+    <nys-button fullWidth slot="footer" href="/get-started/designers/" variant="outline">Start designing</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-4" heading="Developer?" description="Install via npm, integrate with your framework, start using components and tokens." headingLevel="h3">
+    <nys-button fullWidth slot="footer" href="/get-started/developers/" variant="outline">Start developing</nys-button>
+    </nys-card>
+    <nys-card class="nys-tablet:nys-grid-col-4" heading="Agency Leader?" description="Understand the value proposition, adoption strategy, and support available." headingLevel="h3">
+    <nys-button fullWidth slot="footer" href="/get-started/leadership/" variant="outline">Lead the way</nys-button>
+    </nys-card>
+</div>
+
 ## Three Ways to Use the Design System
 
 <div class="nys-grid-row nys-grid-gap-300">
@@ -42,23 +56,8 @@ Each component is production-ready, thoroughly tested, and built for government 
 
 **You can adopt all three approaches or start with what fits your situation.** Many teams begin with styles and tokens in an existing application, then add web components incrementally as their team builds confidence and finds the right moments to refactor.
 
-## Choose Your Path
-
-<div class="nys-grid-row nys-grid-gap-200" style="--nys-card-height: 100%;">
-    <nys-card class="nys-tablet:nys-grid-col-4" heading="Designer?" description="Set up design libraries, use component variants, prototype with system components." headingLevel="h3">
-    <nys-button fullWidth slot="footer" href="/get-started/designers/" variant="outline">Start Designing</nys-button>
-    </nys-card>
-    <nys-card class="nys-tablet:nys-grid-col-4" heading="Developer?" description="Install via npm, integrate with your framework, start using components and tokens." headingLevel="h3">
-    <nys-button fullWidth slot="footer" href="/get-started/developers/" variant="outline">Start Developing</nys-button>
-    </nys-card>
-    <nys-card class="nys-tablet:nys-grid-col-4" heading="Agency Leader?" description="Understand the value proposition, adoption strategy, and support available." headingLevel="h3">
-    <nys-button fullWidth slot="footer" href="/get-started/leadership/" variant="outline">Start Leading</nys-button>
-    </nys-card>
-</div>
-
-
 ## Learn the System
 
-The NYS Design System team created a [video tour](/learn/) to walk you through how the system works and how to use it in your team's workflow.
+The NYS Design System team created a [video tutorial series](/learn/) to walk you through how the system works and how to use it in your team's workflow.
 
 {% endblock %}

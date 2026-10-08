@@ -1,9 +1,9 @@
 ---
-permalink: /foundations/utilities/responsive/
+permalink: /utilities/responsive/
+redirect_from: /foundations/utilities/responsive/
 title: Responsive Utilities
 description: Responsive utilities for adjusting applied styles based on screen width.
-section: Foundations
-parent: Utilities
+section: Utilities
 layout: layouts/3-col.njk
 ---
 
