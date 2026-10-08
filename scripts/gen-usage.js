@@ -1,10 +1,24 @@
 // scripts/gen-usage.js
-// Generates src/_data/componentUsage.json from @nysds/components custom-elements.json
+// Generates src/_data/componentUsage.json and src/_data/componentSubcomponents.json
+// from @nysds/components custom-elements.json
 const fs = require("node:fs");
 const path = require("node:path");
 
 const MANIFEST = require.resolve("@nysds/components/custom-elements.json");
-const OUTPUT = path.join(__dirname, "..", "src", "_data", "componentUsage.json");
+const OUTPUT_USAGE = path.join(
+  __dirname,
+  "..",
+  "src",
+  "_data",
+  "componentUsage.json",
+);
+const OUTPUT_SUBCOMPONENTS = path.join(
+  __dirname,
+  "..",
+  "src",
+  "_data",
+  "componentSubcomponents.json",
+);
 
 function buildUsage(manifest) {
   const usage = {};
@@ -65,12 +79,56 @@ function buildUsage(manifest) {
   return usage;
 }
 
+function buildSubcomponents(manifest) {
+  const packageGroups = {};
+
+  for (const mod of manifest.modules ?? []) {
+    const match = mod.path ? mod.path.match(/^packages\/([^\/]+)/) : null;
+    const pkg = match ? match[1] : null;
+    if (!pkg) continue;
+
+    if (!packageGroups[pkg]) packageGroups[pkg] = [];
+    for (const decl of mod.declarations ?? []) {
+      if (decl.tagName && !packageGroups[pkg].includes(decl.tagName)) {
+        packageGroups[pkg].push(decl.tagName);
+      }
+    }
+  }
+
+  const subcomponents = {};
+  for (const [pkg, tags] of Object.entries(packageGroups)) {
+    if (tags.length <= 1) continue;
+
+    let primary = tags.find((t) => t === pkg);
+    if (pkg === "nys-tab") primary = "nys-tabgroup";
+    if (!primary) primary = tags[0];
+
+    subcomponents[primary] = tags.filter((t) => t !== primary);
+
+    if (pkg !== primary) {
+      subcomponents[pkg] = tags.filter((t) => t !== pkg);
+    }
+  }
+
+  return subcomponents;
+}
+
 const manifest = JSON.parse(fs.readFileSync(MANIFEST, "utf8"));
 const usage = buildUsage(manifest);
+const subcomponents = buildSubcomponents(manifest);
 
-fs.writeFileSync(OUTPUT, JSON.stringify(usage, null, 2) + "\n", "utf8");
+fs.writeFileSync(OUTPUT_USAGE, JSON.stringify(usage, null, 2) + "\n", "utf8");
 console.log(
   `[gen-usage] Generated ${Object.keys(usage).length} components in src/_data/componentUsage.json`,
 );
 
-module.exports = { buildUsage };
+fs.writeFileSync(
+  OUTPUT_SUBCOMPONENTS,
+  JSON.stringify(subcomponents, null, 2) + "\n",
+  "utf8",
+);
+console.log(
+  `[gen-usage] Generated ${Object.keys(subcomponents).length} subcomponent groups in src/_data/componentSubcomponents.json`,
+);
+
+module.exports = { buildUsage, buildSubcomponents };
