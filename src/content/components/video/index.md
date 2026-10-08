@@ -124,68 +124,6 @@ Use explicit sizes to lock a specific layout. If `size` is not set, the componen
 
 {% endblock %}
 
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>videourl</code></td>
-      <td>String</td>
-      <td>—</td>
-      <td>Required. A valid YouTube URL.</td>
-    </tr>
-    <tr>
-      <td><code>titleText</code></td>
-      <td>String</td>
-      <td>—</td>
-      <td>Caption displayed below (or overlaid on) the video. Also used as the iframe accessible label.</td>
-    </tr>
-    <tr>
-      <td><code>size</code></td>
-      <td><code>"full" | "md" | "sm"</code></td>
-      <td>auto</td>
-      <td>Locks the player to a specific size. If unset, size responds to viewport width.</td>
-    </tr>
-    <tr>
-      <td><code>thumbnail</code></td>
-      <td>String</td>
-      <td>auto</td>
-      <td>Custom thumbnail URL. Defaults to YouTube's <code>maxresdefault.jpg</code>.</td>
-    </tr>
-    <tr>
-      <td><code>autoplay</code></td>
-      <td>Boolean</td>
-      <td><code>false</code></td>
-      <td>Loads and plays the video immediately, muted.</td>
-    </tr>
-    <tr>
-      <td><code>starttime</code></td>
-      <td>Number</td>
-      <td><code>0</code></td>
-      <td>Time in seconds where playback begins.</td>
-    </tr>
-    <tr>
-      <td><code>loading</code></td>
-      <td><code>"lazy" | "eager"</code></td>
-      <td><code>"lazy"</code></td>
-      <td>Controls iframe loading behavior after play is triggered.</td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>Boolean</td>
-      <td><code>false</code></td>
-      <td>Disables playback interaction.</td>
-    </tr>
-  </table>
-</nys-table>
-{% endblock %}
-
 {% block events %}
 
 This component does not emit any custom events.

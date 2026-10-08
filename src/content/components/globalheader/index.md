@@ -128,40 +128,6 @@ The NYS Brand Logo can be toggled on via the `nysLogo` property for back-office 
 
 {% endblock %}
 
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>agencyName</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>appName</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>homepageLink</code></td>
-      <td>String (URL)</td>
-      <td><code>""</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
 {% block events %}
 
 This component does not emit any custom events.

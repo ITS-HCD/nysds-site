@@ -309,50 +309,6 @@ The `nys-table` component includes the following accessibility-focused features:
 - Support for keyboard navigation, allowing users to navigate through table rows and cells using the keyboard.
   {% endblock %}
 
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>striped</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>bordered</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>sortable</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>download</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>

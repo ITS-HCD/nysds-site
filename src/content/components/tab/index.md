@@ -142,44 +142,6 @@ The `nys-tab` component includes the following accessibility-focused features:
 
 {% endblock %}
 
-{% block properties %}
-<nys-table striped>
-
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Component</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-      <td><code>&lt;nys-tabgroup&gt;</code>, <code>&lt;nys-tab&gt;</code>, <code>&lt;nys-tabpanel&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>String</td>
-      <td><code>&lt;nys-tabgroup&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>label</code></td>
-      <td>String</td>
-      <td><code>&lt;nys-tab&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>selected</code></td>
-      <td>Boolean</td>
-      <td><code>&lt;nys-tab&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>Boolean</td>
-      <td><code>&lt;nys-tab&gt;</code></td>
-    </tr>
-  </table>
-</nys-table>
-{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>

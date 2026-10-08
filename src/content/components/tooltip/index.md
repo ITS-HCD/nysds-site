@@ -164,45 +164,6 @@ The `<nys-tooltip>` component includes the following accessibility-focused featu
 - Auto-positioning prevents the tooltip from being clipped by viewport edges, keeping content readable for users who zoom in.
   {% endblock %}
 
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>text</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>for</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>inverted</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>position</code></td>
-      <td><code>"top"</code>, <code>"bottom"</code>, <code>"left"</code>, <code>"right"</code></td>
-      <td>auto</td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
 {% block events %}
 
 This component does not emit any custom events.

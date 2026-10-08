@@ -286,63 +286,6 @@ Add an `onClick` if the content of the step is retrieved from an API or a functi
 
 {% endblock %}
 
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Component</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-      <td><code>&lt;nys-stepper&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-      <td><code>&lt;nys-stepper&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>label</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-      <td>both</td>
-    </tr>
-    <tr>
-      <td><code>selected</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-      <td><code>&lt;nys-step&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>current</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-      <td><code>&lt;nys-step&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>href</code></td>
-      <td>String (URL)</td>
-      <td><code>""</code></td>
-      <td><code>&lt;nys-step&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>onClick</code></td>
-      <td>JS function</td>
-      <td><code>undefined</code></td>
-      <td><code>&lt;nys-step&gt;</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>

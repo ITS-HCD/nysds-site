@@ -112,45 +112,6 @@ The `<nys-iconlist>` component includes the following accessibility-focused feat
 
 {% endblock %}
 
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Component</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-      <td><code>&lt;nys-iconlist&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>divider</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-      <td><code>&lt;nys-iconlist&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>inverted</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-      <td><code>&lt;nys-iconlist&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>icon</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-      <td><code>&lt;nys-iconlistitem&gt;</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
 {% block events %}
 
 This component does not emit any custom events.

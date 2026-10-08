@@ -214,50 +214,6 @@ A forced action modal requires users to make a choice before continuing. Set the
 
 {% endblock %}
 
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>heading</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>subheading</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>open</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>mandatory</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>width</code></td>
-      <td><code>"sm"</code> , <code>"md"</code> , <code>"lg"</code></td>
-      <td><code>"md"</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>

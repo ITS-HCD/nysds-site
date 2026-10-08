@@ -155,49 +155,6 @@ eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 {% endblock %}
 
-{% block properties %}
-<nys-table striped>
-<table>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Default</th>
-<th>Component</th>
-</tr>
-<tr>
-<td><code>id</code></td>
-<td>String</td>
-<td><code>""</code></td>
-<td>both</td>
-</tr>
-<tr>
-<td><code>heading</code></td>
-<td>String</td>
-<td><code>""</code></td>
-<td><code>nys-accordionitem</code></td>
-</tr>
-<tr>
-<td><code>expanded</code></td>
-<td>boolean</td>
-<td><code>false</code></td>
-<td><code>nys-accordionitem</code></td>
-</tr>
-<tr>
-<td><code>bordered</code></td>
-<td>boolean</td>
-<td><code>false</code></td>
-<td><code>nys-accordion</code></td>
-</tr>
-<tr>
-<td><code>singleSelect</code></td>
-<td>boolean</td>
-<td><code>false</code></td>
-<td><code>nys-accordion</code></td>
-</tr>
-</table>
-</nys-table>
-{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.<span></nys-alert>

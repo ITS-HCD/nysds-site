@@ -140,35 +140,6 @@ When New York State publishes an urgent message, such as a severe weather event 
 
 {% endblock %}
 
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-    </tr>
-    <tr>
-      <td><code>searchUrl</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>hideSearch</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>hideTranslate</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>

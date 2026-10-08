@@ -79,28 +79,6 @@ On dark background, add the `inverted` property to ensure the `<nys-divider>` is
 
 {% endblock %}
 
-
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-    <tr>
-      <td><code>inverted</code></td>
-      <td>Boolean</td>
-    </tr>
-    <tr>
-      <td><code>subtle</code></td>
-      <td>Boolean</td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
 {% block events %}
 
 The `<nys-divider>` is a visual component that does not emit any events.

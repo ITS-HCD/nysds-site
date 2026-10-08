@@ -106,65 +106,6 @@ You can change the background color of an Avatar. This attribute accepts any val
 
 {% endblock %}
 
-{% block properties %}
-<nys-table striped>
-
-  <table>
-      <tr>
-          <th>Property</th>
-          <th>Type</th>
-          <th>Default</th>
-      </tr>
-      <tr>
-          <td><code>id</code></td>
-          <td>String</td>
-          <td><code>""</code></td>
-      </tr>
-      <tr>
-          <td><code>color</code></td>
-          <td>String (CSS HEX, CSS color name, or CSS)</td>
-          <td><code>""</code></td>
-      </tr>
-      <tr>
-          <td><code>icon</code></td>
-          <td>String (<code>&lt;nys-icon name&gt;</code>)</td>
-          <td><code>""</code></td>
-      </tr>
-      <tr>
-          <td><code>image</code></td>
-          <td>URL</td>
-          <td><code>""</code></td>
-      </tr>
-      <tr>
-          <td><code>initials</code></td>
-          <td>String (2 letters)</td>
-          <td><code>""</code></td>
-      </tr>
-      <tr>
-          <td><code>ariaLabel</code></td>
-          <td>String</td>
-          <td><code>""</code></td>
-      </tr>
-      <tr>
-          <td><code>lazy</code></td>
-          <td>boolean</td>
-          <td><code>false</code></td>
-      </tr>
-      <tr>
-          <td><code>interactive</code></td>
-          <td>boolean</td>
-          <td><code>false</code></td>
-      </tr>
-      <tr>
-          <td><code>disabled</code></td>
-          <td>boolean</td>
-          <td><code>false</code></td>
-      </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
 {% block events %}
 
 This component does not emit any custom events.
