@@ -1,0 +1,69 @@
+{%- macro eventTable(tag, evts, showCaption) -%}
+<nys-table striped style="--nys-table-padding--cell--y: var(--nys-space-100);">
+  <table>
+{%- if showCaption %}
+    <caption><code>&lt;{{ tag }}&gt;</code></caption>
+{%- endif %}
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+    </tr>
+{%- for event in evts %}
+    <tr>
+      <td><code>{{ event.name }}</code></td>
+      <td>{{ event.description | escape | replace(r/`([^`]+)`/g, "<code>$1</code>") | safe }}</td>
+    </tr>
+{%- endfor %}
+  </table>
+</nys-table>
+{%- endmacro -%}
+{% block events %}
+{%- set currentSubcomponents = subcomponents or (componentSubcomponents[usageTag] if componentSubcomponents else []) -%}
+{%- set hasMultiple = currentSubcomponents and currentSubcomponents | length > 0 -%}
+{%- set entries = [] -%}
+{%- set compEvents = events or (componentDocsContent[usageTag].events if componentDocsContent[usageTag] else []) -%}
+{%- if compEvents and compEvents | length > 0 -%}
+{%- set _ = entries.push({ tag: usageTag, events: compEvents }) -%}
+{%- endif -%}
+{%- if hasMultiple -%}
+{%- for subTag in currentSubcomponents -%}
+{%- set subEvents = componentDocsContent[subTag].events if componentDocsContent[subTag] else [] -%}
+{%- if subEvents and subEvents | length > 0 -%}
+{%- set _ = entries.push({ tag: subTag, events: subEvents }) -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+{%- if entries | length > 0 -%}
+{%- set firstEntry = entries[0] -%}
+{%- set firstEvent = firstEntry.events[0] -%}
+{%- set totalEvents = 0 -%}
+{%- for entry in entries -%}
+{%- set totalEvents = totalEvents + (entry.events | length) -%}
+{%- endfor %}
+
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
+
+{% for entry in entries -%}
+{{ eventTable(entry.tag, entry.events, hasMultiple) }}
+
+{% endfor -%}
+<br/>
+
+You can listen to {{ "these events" if totalEvents != 1 else "this event" }} using JavaScript:
+{% set code %}
+// Select the component
+const element = document.querySelector('{{ firstEntry.tag }}');
+// Listen for the '{{ firstEvent.name }}' event
+element.addEventListener("{{ firstEvent.name }}", (event) => {
+    console.log("{{ firstEvent.name }} fired", event.detail);
+});
+{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
+{%- else %}
+
+This component does not emit any custom events.
+{%- endif %}
+{% endblock %}

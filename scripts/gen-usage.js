@@ -1,10 +1,10 @@
 // scripts/gen-usage.js
-// Generates src/_data/componentUsage.json from @nysds/components custom-elements.json
+// Generates src/_data/componentDocsContent.json from @nysds/components custom-elements.json
 const fs = require("node:fs");
 const path = require("node:path");
 
 const MANIFEST = require.resolve("@nysds/components/custom-elements.json");
-const OUTPUT = path.join(__dirname, "..", "src", "_data", "componentUsage.json");
+const OUTPUT = path.join(__dirname, "..", "src", "_data", "componentDocsContent.json");
 
 function buildUsage(manifest) {
   const usage = {};
@@ -59,7 +59,7 @@ function buildUsage(manifest) {
 
   if (missing.length) {
     console.warn(
-      `[componentUsage] no usagedos/usagedonts for: ${missing.join(", ")}`,
+      `[componentDocsContent] no content for: ${missing.join(", ")}`,
     );
   }
   return usage;
@@ -70,7 +70,7 @@ const usage = buildUsage(manifest);
 
 fs.writeFileSync(OUTPUT, JSON.stringify(usage, null, 2) + "\n", "utf8");
 console.log(
-  `[gen-usage] Generated ${Object.keys(usage).length} components in src/_data/componentUsage.json`,
+  `[gen-usage] Generated ${Object.keys(usage).length} components in src/_data/componentDocsContent.json`,
 );
 
 module.exports = { buildUsage };
