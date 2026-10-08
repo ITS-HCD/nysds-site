@@ -1,8 +1,53 @@
+{%- macro varTable(tag, vars, showCaption, showTip) -%}
+<nys-table striped style="--nys-table-padding--cell--y: var(--nys-space-100);">
+<table>
+{%- if showCaption %}
+<caption><code>&lt;{{ tag }}&gt;</code></caption>
+{%- endif %}
+<thead>
+<tr>
+<th>CSS Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+{%- for variable in vars %}
+<tr>
+<td><code>{{ variable.name }}</code></td>
+<td>{{ variable.description }}</td>
+</tr>
+{%- endfor %}
+{%- if showTip %}
+<tr>
+<td colspan="2" class="css-var-table__tip">
+Can't find a property you need? Explore existing <a href="#options">options</a>, or propose a new one with a <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component Proposal</a>.
+</td>
+</tr>
+{%- endif %}
+</tbody>
+</table>
+</nys-table>
+{%- endmacro -%}
 <div class="css-var-table">
-  {% if variables and variables | length > 0 %}
-    <p>These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.</p>
+{%- set currentSubcomponents = subcomponents or (componentSubcomponents[usageTag] if componentSubcomponents else []) -%}
+{%- set hasMultiple = currentSubcomponents and currentSubcomponents | length > 0 -%}
+{%- set entries = [] -%}
+{%- set compVars = variables or (componentUsage[usageTag].variables if componentUsage[usageTag] else []) -%}
+{%- if compVars and compVars | length > 0 -%}
+{%- set _ = entries.push({ tag: usageTag, vars: compVars }) -%}
+{%- endif -%}
+{%- if hasMultiple -%}
+{%- for subTag in currentSubcomponents -%}
+{%- set subVars = componentUsage[subTag].variables if componentUsage[subTag] else [] -%}
+{%- if subVars and subVars | length > 0 -%}
+{%- set _ = entries.push({ tag: subTag, vars: subVars }) -%}
+{%- endif -%}
+{%- endfor -%}
+{%- endif -%}
+{% if entries | length > 0 %}
+<p>These CSS custom properties are exposed for developers to customize the visual appearance of the component <strong>when necessary</strong>, beyond the defaults provided by the NYS Design System. Set them on the component selector to override the default styles.</p>
 
-    {% set code %}
+{% set code %}
 nys-component {
   --nys-component-background-color: var(--nys-color-accent);
   --nys-component-color: var(--nys-color-ink);
@@ -13,46 +58,11 @@ nys-component {
 {% set codeLanguage = "css" %}
 {% include "partials/code-preview.njk" %}
 
-    {#-- Collect rows safely --#}
-    {% set tableRows %}
-      {% for variable in variables %}
-      <tr>
-        <td><code>{{ variable.name }}</code></td>
-        <td>{{ variable.description }}</td>
-      </tr>
-      {% endfor %}
-      <tr>
-        <td colspan="2" class="css-var-table__tip">
-            Can't find a property you need? Explore existing <a href="#options">options</a>, or propose a
-            new one with a
-            <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component
-              Proposal</a>.
-        </td>
-      </tr>
-    {% endset %}
+{% for entry in entries -%}
+{{ varTable(entry.tag, entry.vars, hasMultiple, loop.last) }}
 
-    {#-- Render the Web Component table --#}
-    <nys-table striped style="--nys-table-padding--cell--y: var(--nys-space-100);">
-      <table>
-        <thead>
-          <tr>
-            <th>CSS Variable</th>
-            <th>Description</th>
-          </tr>
-        </thead>
-        <tbody>
-          {{ tableRows | safe }}
-        </tbody>
-      </table>
-    </nys-table>
-
-  {% else %}
-    <p>
-      There are no existing CSS variables for this component. Explore existing <a href="#options">options</a>, or
-      propose a
-      new one with a
-      <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component
-        Proposal</a>.
-    </p>
-  {% endif %}
+{% endfor -%}
+{% else %}
+<p>There are no existing CSS variables for this component. Explore existing <a href="#options">options</a>, or propose a new one with a <a href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals">Component Proposal</a>.</p>
+{% endif %}
 </div>
