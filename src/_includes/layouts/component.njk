@@ -94,13 +94,13 @@
 
 <section>
     <h2>Properties</h2>
-    {%- include "partials/properties.njk" %}
+    {%- include "partials/component-page/properties.njk" %}
 </section><br>
 
 <section>
     <h2>Style Overrides</h2>
     {%- set variables = componentUsage[usageTag].cssProperties %}
-    {%- include "partials/css-vars.njk" %}
+    {%- include "partials/component-page/css-vars.njk" %}
 </section><br>
 
 <section>
@@ -108,10 +108,10 @@
     {%- block events %}{% endblock -%}
 </section>
 
-{#- The Dependencies section renders only when a page fills this block; the
-    heading lives in partials/dependencies.njk so pages that declare no
-    dependencies do not emit a bare, empty <h2>. -#}
-{%- block dependencies %}{% endblock -%}
+<section>
+    <h2>Dependencies</h2>
+    {%- include "partials/component-page/dependencies.njk" %}
+ </section>
 
 <section class="nys-section">
     <h2>Suggest a New Component</h2>
