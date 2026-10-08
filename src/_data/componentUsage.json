@@ -948,6 +948,10 @@
       {
         "description": "Line height of the description text.",
         "name": "--nys-card-line-height--description"
+      },
+      {
+        "description": "blah blah blah.",
+        "name": "--emily-testing"
       }
     ],
     "slots": [

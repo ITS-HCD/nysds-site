@@ -99,7 +99,8 @@
 
 <section>
     <h2>Style Overrides</h2>
-    {%- block cssvariables %}{% endblock -%}
+    {%- set variables = componentUsage[usageTag].cssProperties %}
+    {%- include "partials/css-vars.njk" %}
 </section><br>
 
 <section>
