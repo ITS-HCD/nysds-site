@@ -26,9 +26,34 @@ function buildUsage(manifest) {
 
       if (!usagedos && !usagedonts) {
         missing.push(decl.tagName);
-        continue;
       }
-      usage[decl.tagName] = { dos: usagedos ?? [], donts: usagedonts ?? [] };
+
+      const properties = (decl.attributes ?? []).map((attr) => ({
+        ...attr,
+        type:
+          attr.type?.text ??
+          (typeof attr.type === "string" ? attr.type : ""),
+      }));
+
+      const events = (decl.events ?? []).map((evt) => ({
+        ...evt,
+        ...(evt.type
+          ? {
+              type:
+                evt.type?.text ??
+                (typeof evt.type === "string" ? evt.type : ""),
+            }
+          : {}),
+      }));
+
+      usage[decl.tagName] = {
+        usagedos: usagedos ?? [],
+        usagedonts: usagedonts ?? [],
+        properties,
+        cssProperties: decl.cssProperties ?? [],
+        slots: decl.slots ?? [],
+        events,
+      };
     }
   }
 
