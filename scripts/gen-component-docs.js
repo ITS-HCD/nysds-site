@@ -49,10 +49,10 @@ function buildUsage(manifest) {
       usage[decl.tagName] = {
         usagedos: usagedos ?? [],
         usagedonts: usagedonts ?? [],
-        properties,
-        cssProperties: decl.cssProperties ?? [],
-        slots: decl.slots ?? [],
-        events,
+        // properties,
+        // cssProperties: decl.cssProperties ?? [],
+        // slots: decl.slots ?? [],
+        // events,
       };
     }
   }
