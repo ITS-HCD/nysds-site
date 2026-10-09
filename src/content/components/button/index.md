@@ -94,7 +94,6 @@ Set the `size` prop of the `<nys-button>` to adjust the height of the button. Th
 Add the `fullWidth` prop to make the button take the width of its container. Default behavior will size the button to fit its label.
 
 {% set preview %}
-
 <div class="nys-grid-row">
     <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="sm" id="button1" name="button1" label="Small"></nys-button></div>
     <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="md" id="button2" name="button2" label="Medium"></nys-button></div>
@@ -124,7 +123,6 @@ Set the variant prop of the `<nys-button>` to adjust the appearance of the butto
 - `text`: Use for inline actions.
 
 {% set preview %}
-
 <div class="nys-grid-row">
     <div class="nys-grid-col"><nys-button id="button1" name="button1" label="Filled"></nys-button></div>
     <div class="nys-grid-col"><nys-button id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
@@ -208,7 +206,6 @@ Note: the `prefixIcon` and `suffixIcon` props are not supported when using the `
 ### Disabled
 
 {% set preview %}
-
 <div class="nys-grid-row">
     <div class="nys-grid-col"><nys-button disabled id="button1" name="button1" label="Filled"></nys-button></div>
     <div class="nys-grid-col"><nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
@@ -425,7 +422,7 @@ You can listen to these events using JavaScript:
 const button = document.querySelector('nys-button');
 // Listen for the 'nys-click' event
 button.addEventListener("nys-click", () => {
-console.log("Button clicked");
+  console.log("Button clicked");
 });
 {% endset %}
 {% set accordionLabel = "Sample Code" %}
