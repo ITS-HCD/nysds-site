@@ -204,6 +204,7 @@ Note: the `prefixIcon` and `suffixIcon` props are not supported when using the `
 {% include "partials/code-preview.njk" %}
 
 ### Disabled
+
 {% set preview %}
 <div class="nys-grid-row">
     <div class="nys-grid-col"><nys-button disabled id="button1" name="button1" label="Filled"></nys-button></div>
@@ -246,7 +247,6 @@ The available targets are:
 Set the `inverted` when the button is on a dark background.
 
 {% set preview %}
-
 <div class="nys-grid-row">
     <div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button></div>
     <div class="nys-grid-col"><nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
