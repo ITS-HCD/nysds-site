@@ -9,7 +9,7 @@ image_alt: Bugs around nature
 updatethumbnail: /assets/i/2026/shadow-dom-article/thumbnail.png
 ogimage: /assets/i/2026/shadow-dom-article/thumbnail.jpg
 thumbnailimage: /assets/i/2026/shadow-dom-article/thumbnail-alt.png
-date: 2026-10-11
+date: 2026-10-08
 tags: article, web components, shadow DOM, slots, CSS, design system
 ---
 
