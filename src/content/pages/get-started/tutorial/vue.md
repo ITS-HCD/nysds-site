@@ -11,6 +11,10 @@ parent: Developers
 
 A step-by-step guide to using NYS Design System components in a Vue 3 application.
 
+## Quick Start
+
+<nys-video size="sm" videourl="https://youtu.be/e8YoLUjQm0c" titleText="Quick Start: Vue + NYS Design System"></nys-video>
+
 ## Installation
 To start from scratch, create a new Vue Vite app:
 

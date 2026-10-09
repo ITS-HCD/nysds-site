@@ -11,8 +11,12 @@ parent: Developers
 
 A step-by-step guide to using NYS Design System components in an Angular application.
 
-
 **Requirements:** Angular `>=20.0.0` (core, common, forms)
+
+## Quick Start
+
+<nys-video size="sm" videourl="https://youtu.be/ZRJlmKk3D7A" titleText="Quick Start: Angular + NYS Design System"></nys-video>
+
 
 ## Installation
 
