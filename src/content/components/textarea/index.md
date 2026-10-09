@@ -31,19 +31,6 @@ The `<nys-textarea>` is a reusable web component for use in New York State digit
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use to collect multiple lines of open-ended text input (e.g., comments, descriptions, feedback).
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use for short or single-line input. Use `<nys-textinput>` instead.
-- Use when input should be selected from predefined options. Use `<nys-select>`, `<nys-radiobutton>`, or `<nys-checkbox>` instead.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-textarea>` component includes the following accessibility-focused features:

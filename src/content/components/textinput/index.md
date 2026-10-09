@@ -27,24 +27,6 @@ The `<nys-textinput>` is a reusable web component for use in New York State digi
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use to collect short, single-line, open-ended text input (e.g., names, email addresses, or short descriptions).
-- Use clear, concise labels that describe the expected input.
-- Add helper text with the `description` property for context.
-- Validate input live to catch errors early (e.g., invalid email formats).
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use for long or multi-line responses. Use `<nys-textarea>` instead.
-- Use when input can be chosen from predefined options. Use `<nys-select>`, `<nys-radiobutton>`, or `<nys-checkbox>` instead.
-- Overwhelm users with too many fields. Group related inputs.
-- Use placeholders as labels.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-textinput>` component includes the following accessibility-focused features:

@@ -26,27 +26,6 @@ The `<nys-button>` component is used for actions that have an immediate result i
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use for the most important actions you want users to take, such as Download, Sign up, or Log out.
-- Use Fill for the primary action on the page. There should be only one primary action per page.
-- Use Outline for secondary actions, placed next to the primary Fill button.
-- Use Ghost buttons for additional actions beyond primary and secondary.
-- Use Text buttons when an action needs to appear within a text block. If clicking takes the user somewhere else, use a Link instead.
-- Always set the `type` attribute (`submit`, `button`, or `reset`). The default is `button`.
-- Use sentence case for button labels, only capitalizing the first word.
-- Place a `chevron_down` icon on the right for buttons that open a dropdown.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use buttons for navigation. Use an `<a>` element or Text button for links that take users somewhere else.
-- Use icons in buttons without a text label. Very few icons are universally understood.
-- Create custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-button>` component includes the following accessibility-focused features:

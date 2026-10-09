@@ -44,20 +44,6 @@ The `<nys-stepper>` is a reusable web component for use in New York State digita
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use for linear, ordered forms with more than 2 sections to show progress through a multi-step process.
-- Ensure users can navigate back to previous steps to review or change information.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use when a form has only 1 or 2 sections.
-- Use for forms that are nonlinear and can be completed in any order.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `nys-stepper` component includes the following accessibility-focused features:
