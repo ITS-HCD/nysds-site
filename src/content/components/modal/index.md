@@ -66,24 +66,6 @@ The `<nys-modal>` component appears centered on the page and requires the user t
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use to confirm important actions, present focused forms (e.g., login, feedback), or require acknowledgment of alerts without navigating away from the page.
-- Keep content short and focused. Use a dedicated page for long or complex content.
-- Keep the `subheading` short and use `<p>` tags within the modal for longer information.
-- Use the `mandatory` prop to disable the dismiss button only when the user must make a critical decision or acknowledge essential information.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Stack multiple modals.
-- Use for trivial information or inline status messages. Use `<nys-alert>` instead.
-- Use for quick hints on form fields. Use `<nys-tooltip>` instead.
-- Force the `mandatory` prop unnecessarily.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-modal>` component includes the following accessibility-focused features:
@@ -232,52 +214,6 @@ A forced action modal requires users to make a choice before continuing. Set the
 
 {% endblock %}
 
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>heading</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>subheading</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>open</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>mandatory</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>width</code></td>
-      <td><code>"sm"</code> , <code>"md"</code> , <code>"lg"</code></td>
-      <td><code>"md"</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
@@ -331,16 +267,6 @@ console.log(`Modal (${id}) is closed.`);
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block dependencies %}
-
-{% set dependencies = [
-   "<nys-button>"
-  ] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}

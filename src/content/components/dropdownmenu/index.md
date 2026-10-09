@@ -32,26 +32,6 @@ The `<nys-dropdownmenu>` and `<nys-dropdownmenuitem>` components are a list of a
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use to display a list of 5–15 actions or links under a single trigger, such as navigation, commands, or user profile access.
-- Keep to 3–7 actions when possible.
-- Order actions by frequency or importance.
-- Separate destructive actions with a divider.
-- Use clear, specific labels (e.g., "Profile", "Account Settings", "Sign out").
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use for form inputs or selectable values. Use `<nys-select>` for standard selection or `<nys-combobox>` when users need to filter or search through many options.
-- Use when the action is always visible and frequently used. Use `<nys-button>` instead.
-- Use without a label or accessible description on the trigger.
-- Nest dropdown menus inside other dropdown menus.
-- Use vague labels like "Manage" or "Options".
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-dropdownmenu>` component includes the following accessibility-focused features:
@@ -228,81 +208,6 @@ Use the `nys-click` dispatch event to call for specific functions to execute act
 
 {% endblock %}
 
-{% block properties %}
-
-`<nys-dropdownmenu>`
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-    </tr>
-    <tr>
-      <td><code>for</code></td>
-      <td>String</td>
-    </tr>
-    <tr>
-      <td><code>showDropdown</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>position</code></td>
-      <td><code>"bottom-start"</code> , <code>"bottom-end"</code> , <code>"top-start"</code> , <code>"top-end"</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-</br>
-
-`<nys-dropdownmenuitem>`
-
-<nys-table striped>
-
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-    </tr>
-    <tr>
-      <td><code>label</code></td>
-      <td>String</td>
-    </tr>
-    <tr>
-      <td><code>href</code></td>
-      <td>String</td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>boolean</td>
-    </tr>
-    <tr>
-      <td><code>target</code></td>
-      <td>String (default <code>"_self"</code>)</td>
-    </tr>
-    <tr>
-      <td><code>prefixIcon</code></td>
-      <td>String</td>
-    </tr>
-    <tr>
-      <td><code>divider</code></td>
-      <td>String</td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
@@ -353,17 +258,6 @@ dropdownmenu.addEventListener('nys-click', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-
-{% endblock %}
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-icon>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}

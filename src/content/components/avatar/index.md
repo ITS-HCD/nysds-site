@@ -28,26 +28,6 @@ By default, a generic icon is displayed. Personalize avatars with custom props l
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use for clear, simple user or entity representation in UIs such as profiles, account settings, or comment threads.
-- Prefer showing the full name next to the avatar on tablets and larger breakpoints.
-- Place the full name of the user or entity to the right of the avatar.
-- Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.
-- Use the `<nys-icon>` slot only when the icon prop isn't sufficient.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Skip the `ariaLabel` attribute for screen reader users.
-- Use the `nys-icon` as a slot when the icon prop can satisfy your use.
-- Overload the avatar with unnecessary customizations or override default avatar icons unless additional context is essential. Doing so creates inconsistency across NYS interfaces.
-- Use an avatar when a large visual representation is needed; use a photo instead.
-- Replace an avatar with a simple label or text when that would communicate the information more clearly.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-avatar>` component includes the following accessibility-focused features:
@@ -126,87 +106,9 @@ You can change the background color of an Avatar. This attribute accepts any val
 
 {% endblock %}
 
-{% block properties %}
-<nys-table striped>
-
-  <table>
-      <tr>
-          <th>Property</th>
-          <th>Type</th>
-          <th>Default</th>
-      </tr>
-      <tr>
-          <td><code>id</code></td>
-          <td>String</td>
-          <td><code>""</code></td>
-      </tr>
-      <tr>
-          <td><code>color</code></td>
-          <td>String (CSS HEX, CSS color name, or CSS)</td>
-          <td><code>""</code></td>
-      </tr>
-      <tr>
-          <td><code>icon</code></td>
-          <td>String (<code>&lt;nys-icon name&gt;</code>)</td>
-          <td><code>""</code></td>
-      </tr>
-      <tr>
-          <td><code>image</code></td>
-          <td>URL</td>
-          <td><code>""</code></td>
-      </tr>
-      <tr>
-          <td><code>initials</code></td>
-          <td>String (2 letters)</td>
-          <td><code>""</code></td>
-      </tr>
-      <tr>
-          <td><code>ariaLabel</code></td>
-          <td>String</td>
-          <td><code>""</code></td>
-      </tr>
-      <tr>
-          <td><code>lazy</code></td>
-          <td>boolean</td>
-          <td><code>false</code></td>
-      </tr>
-      <tr>
-          <td><code>interactive</code></td>
-          <td>boolean</td>
-          <td><code>false</code></td>
-      </tr>
-      <tr>
-          <td><code>disabled</code></td>
-          <td>boolean</td>
-          <td><code>false</code></td>
-      </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
-{% block cssvariables %}
-
-{% set variables = [
-  { name: "--nys-avatar-size", description: "Width and height of the component"}
-]%}
-{% include "partials/css-vars.njk" %}
-
-{% endblock %}
-
 {% block events %}
 
 This component does not emit any custom events.
-
-{% endblock %}
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-icon>"
-] %}
-
-{% include "partials/dependencies.njk" %}
 
 {% endblock %}
 

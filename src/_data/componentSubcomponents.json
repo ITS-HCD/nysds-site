@@ -1,0 +1,40 @@
+{
+  "nys-accordion": [
+    "nys-accordionitem"
+  ],
+  "nys-checkbox": [
+    "nys-checkboxgroup"
+  ],
+  "nys-dropdownmenu": [
+    "nys-dropdownmenuitem"
+  ],
+  "nys-fileinput": [
+    "nys-fileitem"
+  ],
+  "nys-iconlist": [
+    "nys-iconlistitem"
+  ],
+  "nys-processlist": [
+    "nys-processlistitem"
+  ],
+  "nys-radiobutton": [
+    "nys-radiogroup"
+  ],
+  "nys-select": [
+    "nys-option"
+  ],
+  "nys-stepper": [
+    "nys-step"
+  ],
+  "nys-tabgroup": [
+    "nys-tab",
+    "nys-tabpanel"
+  ],
+  "nys-tab": [
+    "nys-tabgroup",
+    "nys-tabpanel"
+  ],
+  "nys-verticalnav": [
+    "nys-verticalnavgroup"
+  ]
+}

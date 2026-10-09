@@ -26,27 +26,6 @@ The `<nys-button>` component is used for actions that have an immediate result i
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use for the most important actions you want users to take, such as Download, Sign up, or Log out.
-- Use Fill for the primary action on the page. There should be only one primary action per page.
-- Use Outline for secondary actions, placed next to the primary Fill button.
-- Use Ghost buttons for additional actions beyond primary and secondary.
-- Use Text buttons when an action needs to appear within a text block. If clicking takes the user somewhere else, use a Link instead.
-- Always set the `type` attribute (`submit`, `button`, or `reset`). The default is `button`.
-- Use sentence case for button labels, only capitalizing the first word.
-- Place a `chevron_down` icon on the right for buttons that open a dropdown.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use buttons for navigation. Use an `<a>` element or Text button for links that take users somewhere else.
-- Use icons in buttons without a text label. Very few icons are universally understood.
-- Create custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-button>` component includes the following accessibility-focused features:
@@ -347,23 +326,6 @@ The `form` property associates this component with a `<form>` element by ID, eve
 
 {% endblock %}
 
-{% block cssvariables %}
-
-{% set variables = [
-  { name: "--nys-button-color", description: "Text color of label"},
-  { name: "--nys-button-color--hover", description: "Text color of label when hovered"},
-  { name: "--nys-button-color--active", description: "Text color of label when active"},
-  { name: "--nys-button-background-color", description: "Background color of component" },
-  { name: "--nys-button-background-color--hover", description: "Background color of component when hovered"},
-  { name: "--nys-button-background-color--active", description: "Background color of component when active"},
-  { name: "--nys-button-border-color", description: "Border color of component" },
-  { name: "--nys-button-border-color--hover", description: "Border color of component when hovered"},
-  { name: "--nys-button-border-color--active", description: "Border color of component when active"}
-]%}
-{% include "partials/css-vars.njk" %}
-
-{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
@@ -412,16 +374,6 @@ button.addEventListener("nys-click", () => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-icon>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}

@@ -26,30 +26,6 @@ The `<nys-badge>` component provides a visual indicator of text values like cate
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Indicate the status of an item, such as "new", "updated", or "beta".
-- Provide additional context or information about an item without cluttering the interface.
-- Keep badge labels short -- one or two words like "New", "Beta", or "Updated".
-- Use the `intent` property to match the badge's visual style to its meaning (e.g., `success` for positive statuses, `warning` for caution).
-- Place badges near the element they describe so the relationship is clear.
-- Use the `prefixIcon` or `suffixIcon` attributes to reinforce meaning when the label alone may be ambiguous.
-- Apply the `strong` variant when the badge appears on a raised surface or needs extra emphasis.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use badges when the information is too complex to be conveyed in a small badge.
-- Use badges when they would not add significant value to the user experience.
-- Don't use badges as interactive elements -- they are not buttons or links.
-- Don't pack long sentences or multiple values into a single badge label.
-- Don't mix badge sizes within the same group; pick either `md` or `sm` and stay consistent.
-- Don't rely on color alone to convey meaning; always include a text label.
-- Don't stack multiple badges on a single element unless each communicates a distinct, necessary status.
-
-{% endblock %}
-
 {% block accessibility %}
 
 - The `<nys-badge>` text should be concise and immediately understandable (e.g., "New", "Beta", "Admin").
@@ -195,85 +171,9 @@ Badge conveys intent through color and icon alone, which isn't accessible to scr
 
 {% endblock %}
 
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-        <th>Property</th>
-        <th>Type</th>
-        <th>Default</th>
-    </tr>
-    <tr>
-        <td><code>id</code></td>
-        <td>String</td>
-        <td><code>""</code></td>
-    </tr>
-    <tr>
-        <td><code>label</code></td>
-        <td>String</td>
-        <td><code>""</code></td>
-    </tr>
-    <tr>
-        <td><code>name</code></td>
-        <td>String</td>
-        <td><code>""</code></td>
-    </tr>
-    <tr>
-        <td><code>size</code></td>
-        <td><code>"md"</code>, <code>"sm"</code></td>
-        <td><code>"md"</code></td>
-    </tr>
-    <tr>
-        <td><code>intent</code></td>
-        <td><code>"base"</code>, <code>"info"</code>, <code>"warning"</code>, <code>"success"</code>, <code>"danger"</code>, <code>"emergency"</code></td>
-        <td><code>"base"</code></td>
-    </tr>
-    <tr>
-        <td><code>string</code></td>
-        <td>boolean</td>
-        <td><code>false</code></td>
-    </tr>
-    <tr>
-        <td><code>prefixLabel</code></td>
-        <td>String</td>
-        <td><code>""</code></td>
-    </tr>
-    <tr>
-        <td><code>prefixIcon</code></td>
-        <td>String | boolean</td>
-        <td>—</td>
-    </tr>
-    <tr>
-        <td><code>suffixIcon</code></td>
-        <td>String | boolean</td>
-        <td>—</td>
-    </tr>
-    <tr>
-        <td><code>srText</code></td>
-        <td>String</td>
-        <td><code>""</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 This component does not emit any custom events.
-
-{% endblock %}
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-icon>"
-] %}
-
-{% include "partials/dependencies.njk" %}
 
 {% endblock %}
 

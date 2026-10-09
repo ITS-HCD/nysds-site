@@ -744,21 +744,6 @@ Use the `inverted` prop when placing the combobox on a dark background.
 
 {% endblock %}
 
-{% block usagedo %}
-
-- Use when there are more than 15 options to choose from.
-- Use when screen real estate is limited.
-- Use when users can predict or recognize the value they're looking for.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use when the number of options is small. Use `<nys-select>` or `<nys-radiobutton>` instead.
-- Use when options are unfamiliar to users and browsing the full list is necessary.
-
-{% endblock %}
-
 {% block accessibility %}
 
 - Don’t auto-select options while typing.
@@ -841,10 +826,6 @@ The form attribute associates the `nys-combobox` component with a specific `<for
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}
-
-{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
@@ -914,14 +895,4 @@ combobox.addEventListener('nys-input', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-button>", "<nys-errormessage>", "<nys-icon>", "<nys-label>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}

@@ -35,25 +35,6 @@ The `<nys-breadcrumbs>` component shows users their location within a site's str
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use on pages at level 2 and deeper in a site hierarchy. If a level 2 page has child pages, all pages starting at that level should include a breadcrumb.
-- Place breadcrumb below the header and above the main content.
-- Show the site hierarchy, not the path a user took.
-- For the home page of a site, use a specific label rather than a generic "Home." This differentiates the main site home from other landing pages (e.g., "myBenefits Home" instead of just "Home").
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Don't use on top-level pages, or on sites with only one or two levels of hierarchy.
-- Don't make the current page clickable.
-- Don't use breadcrumbs as the only navigation method.
-- Don't use breadcrumbs for sequential processes like multi-step forms or wizards. Use a stepper instead.
-- Don't add breadcrumbs when they don't provide meaningful context or navigation value.
-
-{% endblock %}
-
 {% block options %}
 
 ### Basic Usage
@@ -191,65 +172,6 @@ Add the `disabled` prop to disable all links in the breadcrumbs.
 
 {% endblock %}
 
-{% block properties %}
-
-<nys-table striped>
-  <table>
-      <tr>
-          <th>Property</th>
-          <th>Type</th>
-          <th>Default</th>
-      </tr>
-      <tr>
-          <td><code>id</code></td>
-          <td>String</td>
-          <td>Auto-generated</td>
-      </tr>
-      <tr>
-          <td><code>size</code></td>
-          <td><code>"sm"</code>, <code>"md"</code></td>
-          <td><code>"md"</code></td>
-      </tr>
-      <tr>
-          <td><code>ariaLabel</code></td>
-          <td>String</td>
-          <td><code>"Breadcrumbs"</code></td>
-      </tr>
-      <tr>
-          <td><code>collapsed</code></td>
-          <td>Boolean</td>
-          <td><code>false</code></td>
-      </tr>
-      <tr>
-          <td><code>backToParent</code></td>
-          <td>Boolean</td>
-          <td><code>false</code></td>
-      </tr>
-      <tr>
-          <td><code>backgroundBar</code></td>
-          <td>Boolean</td>
-          <td><code>false</code></td>
-      </tr>
-      <tr>
-          <td><code>disabled</code></td>
-          <td>Boolean</td>
-          <td><code>false</code></td>
-      </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
-{% block cssvariables %}
-  {%
-    set variables = [
-      { name: "--nys-max-width--content", description: "Overrides the max width of the inner content area on .nys-grid-container and all header/footer/breadcrumb components at once. Set this at a higher level (e.g. `:root`) so it cascades down to every instance — setting it directly on one component only affects that instance. Takes priority over the size-specific variable below." }
-    ]
-  %}
-{% include "partials/css-vars.njk" %}
-
-{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
@@ -288,17 +210,6 @@ breadcrumbs.addEventListener("nys-expand", () => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-icon>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}

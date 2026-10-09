@@ -150,26 +150,6 @@ Set the `inverted` when the tooltip is on a dark background.
 {% endset %}
 {% set inverted = true %}
 {% include "partials/code-preview.njk" %}
-
-{% endblock %}
-
-{% block usagedo %}
-
-- Use to provide supplemental hints on form fields (e.g., explaining what "FEIN" means) or on icon buttons that need additional context.
-- Use on NYSDS form components (`<nys-textinput>`, `<nys-select>`, `<nys-checkbox>`, etc.) where the tooltip automatically renders as a hint icon next to the label.
-- Keep tooltip content brief and helpful.
-- Position tooltips so they don't block related content.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use for information critical to task completion. Use inline description text instead, as tooltips are easy to miss.
-- Use when content is long or includes links, actions, or structured content.
-- Use interactive elements such as links or buttons inside a tooltip.
-- Rely on tooltips when you have room to provide inline explanation.
-- Use when mobile users are a primary audience. Tooltips rely on hover, which is unavailable on touch devices.
-
 {% endblock %}
 
 {% block accessibility %}
@@ -183,47 +163,6 @@ The `<nys-tooltip>` component includes the following accessibility-focused featu
 - Pressing `Escape` dismisses the tooltip without moving focus, following the WAI-ARIA tooltip pattern.
 - Auto-positioning prevents the tooltip from being clipped by viewport edges, keeping content readable for users who zoom in.
   {% endblock %}
-
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>text</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>for</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>inverted</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>position</code></td>
-      <td><code>"top"</code>, <code>"bottom"</code>, <code>"left"</code>, <code>"right"</code></td>
-      <td>auto</td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 

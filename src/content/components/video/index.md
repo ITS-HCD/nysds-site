@@ -31,25 +31,6 @@ The `<nys-video>` component embeds a YouTube video with a clickable thumbnail, r
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use when motion or audio communicates something better than text or images alone.
-- Keep `titleText` to 50–60 characters.
-- Use a clear, high-quality thumbnail so users recognize it as a video.
-- Maintain the default `lazy` loading for better page performance.
-- Reserve space for the 16:9 ratio box to prevent layout shift.
-- Let users choose to start the video; avoid `autoplay` unless necessary.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use video if the same message can be delivered clearly with text or a static image.
-- Rely on video alone to convey critical information. Always provide a text alternative.
-- Set `autoplay` without understanding that the video will be muted. `nys-video` enforces this automatically to protect users from unexpected noise.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-video>` component includes the following accessibility-focused features:
@@ -140,74 +121,6 @@ Use explicit sizes to lock a specific layout. If `size` is not set, the componen
 <nys-video size="sm" videourl="https://www.youtube.com/watch?v=TBfFzt0150Q" titleText="Small (width: 320-439px)"></nys-video>
 {% endset %}
 {% include "partials/code-preview.njk" %}
-
-{% endblock %}
-
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>videourl</code></td>
-      <td>String</td>
-      <td>—</td>
-      <td>Required. A valid YouTube URL.</td>
-    </tr>
-    <tr>
-      <td><code>titleText</code></td>
-      <td>String</td>
-      <td>—</td>
-      <td>Caption displayed below (or overlaid on) the video. Also used as the iframe accessible label.</td>
-    </tr>
-    <tr>
-      <td><code>size</code></td>
-      <td><code>"full" | "md" | "sm"</code></td>
-      <td>auto</td>
-      <td>Locks the player to a specific size. If unset, size responds to viewport width.</td>
-    </tr>
-    <tr>
-      <td><code>thumbnail</code></td>
-      <td>String</td>
-      <td>auto</td>
-      <td>Custom thumbnail URL. Defaults to YouTube's <code>maxresdefault.jpg</code>.</td>
-    </tr>
-    <tr>
-      <td><code>autoplay</code></td>
-      <td>Boolean</td>
-      <td><code>false</code></td>
-      <td>Loads and plays the video immediately, muted.</td>
-    </tr>
-    <tr>
-      <td><code>starttime</code></td>
-      <td>Number</td>
-      <td><code>0</code></td>
-      <td>Time in seconds where playback begins.</td>
-    </tr>
-    <tr>
-      <td><code>loading</code></td>
-      <td><code>"lazy" | "eager"</code></td>
-      <td><code>"lazy"</code></td>
-      <td>Controls iframe loading behavior after play is triggered.</td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>Boolean</td>
-      <td><code>false</code></td>
-      <td>Disables playback interaction.</td>
-    </tr>
-  </table>
-</nys-table>
-{% endblock %}
-
-{% block cssvariables %}
-
-The `nys-video` does not have any css variables because this component must remain consistent across applications and sites.
 
 {% endblock %}
 

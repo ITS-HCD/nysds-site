@@ -1,5 +1,6 @@
 ---
 permalink: /components/tab/
+tag: nys-tabgroup
 title: Tab
 description: A clickable interface to toggle between different sets of information without leaving the page.
 image: /assets/img/components/tab.svg
@@ -130,24 +131,6 @@ To disable a tab, add the `disabled` attribute to the `<nys-tab>` element. Disab
 {% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
-
-{% endblock %}
-{% block usagedo %}
-
-- Use to organize related content into distinct sections within the same context (e.g., Overview, Specs, Reviews), especially when a page would otherwise be overwhelmingly long.
-- Keep tab labels short and clear, limited to 2–9 tabs and one row. Avoid wrapping.
-- Only one tab should ever be in the active state.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use when users need to compare information across sections simultaneously. Tabs require clicking back and forth.
-- Use for linear, step-by-step processes. Use a stepper instead.
-- Use when you only have two small pieces of content. Display them consecutively instead.
-- Nest tabs inside other tabs.
-- Use tabs for page navigation.
-
 {% endblock %}
 
 {% block accessibility %}
@@ -157,52 +140,6 @@ The `nys-tab` component includes the following accessibility-focused features:
 - **Keyboard Navigation**: Users can navigate between tabs using the arrow keys, and activate a tab with the Enter or Space key.
 - **ARIA Roles and Attributes**: The component uses appropriate ARIA roles (e.g., `tablist`, `tab`, `tabpanel`) and attributes (e.g., `aria-selected`, `aria-controls`) to ensure that assistive technologies can correctly interpret the structure and state of the tabs.
 
-{% endblock %}
-
-{% block cssvariables %}
-{% set variables = [
-    { name: "--nys-tabpanel-max-height", description: "Maximum height of the tab panel content area." }
-  ]%}
-{% include "partials/css-vars.njk" %}
-
-{% endblock %}
-
-{% block properties %}
-<nys-table striped>
-
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Component</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-      <td><code>&lt;nys-tabgroup&gt;</code>, <code>&lt;nys-tab&gt;</code>, <code>&lt;nys-tabpanel&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>String</td>
-      <td><code>&lt;nys-tabgroup&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>label</code></td>
-      <td>String</td>
-      <td><code>&lt;nys-tab&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>selected</code></td>
-      <td>Boolean</td>
-      <td><code>&lt;nys-tab&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>Boolean</td>
-      <td><code>&lt;nys-tab&gt;</code></td>
-    </tr>
-  </table>
-</nys-table>
 {% endblock %}
 
 {% block events %}

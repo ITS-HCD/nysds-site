@@ -1,5 +1,7 @@
 ---
-permalink: /components/unav-header/
+permalink: /components/unavheader/
+redirect_from: /components/unav-header/
+tag: nys-unavheader
 title: UNav Header
 description: A small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.
 image: /assets/img/components/unav-header.svg
@@ -32,23 +34,6 @@ The `<nys-unavheader>` is a reusable web component for use in New York State dig
 {% set code = preview %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}
-
-{% endblock %}
-
-{% block usagedo %}
-
-- Place at the top of every public-facing page.
-- Toggle search (`hideSearch`) and translate (`hideTranslate`) on/off depending on your needs.
-- Design your page so content below the header can shift down, since a statewide alert can appear at any time and adds height to the header.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use on back office applications or internal sites that are not public-facing, instead use the `<nys-globalheader>` with the `nysLogo` property applied.
-- Place anywhere other than the top of the page.
-- Modify the universal header.
-
 {% endblock %}
 
 {% block accessibility %}
@@ -155,44 +140,6 @@ When New York State publishes an urgent message, such as a severe weather event 
 
 {% endblock %}
 
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-    </tr>
-    <tr>
-      <td><code>searchUrl</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>hideSearch</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>hideTranslate</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
-{% block cssvariables %}
-
-{% set variables = [
-  { name: "--nys-max-width--content", description: "--nys-max-width--content", description: "Overrides the max width of the inner content area on .nys-grid-container and all header/footer/breadcrumb components at once. Set this at a higher level (e.g. `:root`) so it cascades down to every instance — setting it directly on one component only affects that instance. Takes priority over the size-specific variable below." }
-]%}
-{% include "partials/css-vars.njk" %}
-
-{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
@@ -243,17 +190,6 @@ unavheader.addEventListener("nys-search-submit", (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-alert>", "<nys-button>", "<nys-icon>", "<nys-textinput>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}

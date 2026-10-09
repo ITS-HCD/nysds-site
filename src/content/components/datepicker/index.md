@@ -33,25 +33,6 @@ The `<nys-datepicker>` component lets users select a single date by typing into 
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}
 {% endblock %}
-  
-{% block usagedo %}
-
-- Use when users need to select a single calendar date, such as scheduling an appointment or choosing a filing deadline, especially when the day of the week matters.
-- Set the `label` property to clearly describe what date is being collected. Every datepicker needs one for accessibility.
-- Add `description` text to specify the expected format or provide context.
-- Set `required` when the date is mandatory for form submission; don't set both `required` and `optional` on the same component.
-- Use `startDate` to open the calendar to a relevant month when the expected date is far from today.
-- Pass date values as ISO strings (`"YYYY-MM-DD"`) rather than `Date` objects to avoid timezone issues.
-
-{% endblock %}
-{% block usagedont %}
-
-- Don't use for dates users know from memory, such as date of birth or document issue dates. A text input with separate month/day/year fields is more efficient.
-- Don't use when users need to select multiple dates or a date range, or when time selection is required alongside the date.
-- Don't rely on the calendar popup alone. Safari and mobile browsers use the native date picker instead.
-- Don't use `hideTodayButton` and `hideClearButton` together unless users must select a specific date and cannot be allowed to clear it.
-
-{% endblock %}
 
 {% block accessibility %}
 
@@ -344,8 +325,6 @@ The `form` property associates this component with a `<form>` element by ID, eve
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
@@ -399,17 +378,6 @@ datepicker.addEventListener("nys-blur", () => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-
-{% endblock %}
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-button>", "<nys-errormessage>", "<nys-icon>", "<nys-label>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}

@@ -37,5 +37,6 @@ npm-debug.log*
 Thumbs.db
 .obsidian
 
-# Ignore Claude Code config
+# Ignore LLM configs
 .claude/
+.gemini/

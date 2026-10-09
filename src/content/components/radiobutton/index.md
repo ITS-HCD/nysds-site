@@ -46,24 +46,6 @@ The `<nys-radiobutton>` provides users with the ability to choose from a group o
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use when a user needs to select only one option from a list of 7 or fewer choices.
-- Always wrap a group of `<nys-radiobutton>` with a `<nys-radiogroup>`.
-- Group radio buttons vertically for easier scanning, especially when labels are lengthy.
-- Set a clear default when one choice is recommended or most common. Don't leave all options unselected if a helpful default can guide users.
-- Use concise, descriptive labels for each option.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use when users need to select multiple options. Use checkboxes instead.
-- Use when there are more than 7 options. Use a dropdown for better space utilization.
-- Use for yes/no questions. Consider `<nys-toggle>` or `<nys-checkbox>` instead.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-radiobutton>` component includes the following accessibility-focused features:
@@ -377,8 +359,6 @@ The `form` property associates this component with a `<form>` element by ID, eve
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
@@ -435,17 +415,6 @@ radiogroup.addEventListener('nys-change', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-errormessage>", "<nys-label>", "<nys-textinput>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}

@@ -152,26 +152,6 @@ Use `aria-labelledby` when a visible heading already names the list, so the acce
 {% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
-
-{% endblock %}
-
-{% block usagedo %}
-
-- Use a process list to explain a sequence of steps a user will take, such as how to apply for a benefit or renew a license.
-- Keep step labels short and action-oriented, and put supporting detail in the `description`.
-- Give the list an accessible name with `aria-labelledby` or `aria-label` so its purpose is clear.
-- Use `initialstep` to continue the numbering when one process is split across multiple lists.
-- Keep styling consistent across all process lists on the same page.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use a process list to show a user's progress through a multi-step form. Use the [Stepper](/components/stepper/) instead.
-- Use a process list for items with no inherent order. Use the [Icon List](/components/iconlist/) or a standard list instead.
-- Number the steps yourself in the `label`. The list owns the numbering.
-- Place interactive controls such as buttons inside a step.
-
 {% endblock %}
 
 {% block accessibility %}
@@ -261,8 +241,6 @@ The `<nys-processlist>` component includes the following accessibility-focused f
 **Slots:** use the `description` slot on `<nys-processlistitem>` for rich text below the label. It overrides the `description` property.
 
 {% endblock %}
-
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 

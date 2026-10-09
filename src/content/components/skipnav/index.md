@@ -44,20 +44,6 @@ The `<nys-skipnav>` is an accessibility feature that allows keyboard and screen 
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use on pages with a large header, navigation, or other repeated content before the main section.
-- Ensure the `href` on `<nys-skipnav>` matches the `id` of the main content container.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use if your layout already starts with the main content and there is nothing to skip over.
-- Mismatch the `href` and target `id`.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-skipnav>` component includes the following accessibility-focused features:
@@ -108,32 +94,6 @@ The `<nys-skipnav>` component adds a hidden "Skip to main content" link that app
 {% include "partials/code-preview.njk" %}
 
 {% endblock %}
-
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-    </tr>
-    <tr>
-      <td><code>href</code></td>
-      <td>String (URL)</td>
-      <td><code>"#main-content"</code></td>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 

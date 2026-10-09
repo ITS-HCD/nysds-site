@@ -44,20 +44,6 @@ The `<nys-stepper>` is a reusable web component for use in New York State digita
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use for linear, ordered forms with more than 2 sections to show progress through a multi-step process.
-- Ensure users can navigate back to previous steps to review or change information.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use when a form has only 1 or 2 sections.
-- Use for forms that are nonlinear and can be completed in any order.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `nys-stepper` component includes the following accessibility-focused features:
@@ -300,65 +286,6 @@ Add an `onClick` if the content of the step is retrieved from an API or a functi
 
 {% endblock %}
 
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Component</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-      <td><code>&lt;nys-stepper&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-      <td><code>&lt;nys-stepper&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>label</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-      <td>both</td>
-    </tr>
-    <tr>
-      <td><code>selected</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-      <td><code>&lt;nys-step&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>current</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-      <td><code>&lt;nys-step&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>href</code></td>
-      <td>String (URL)</td>
-      <td><code>""</code></td>
-      <td><code>&lt;nys-step&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>onClick</code></td>
-      <td>JS function</td>
-      <td><code>undefined</code></td>
-      <td><code>&lt;nys-step&gt;</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
@@ -399,14 +326,6 @@ stepper.addEventListener("nys-step-click", () => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block dependencies %}
-
-{% set dependencies = [] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}

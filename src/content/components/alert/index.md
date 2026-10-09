@@ -31,35 +31,6 @@ The `<nys-alert>` component is a banner-like component that appears at the top o
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Communicate important, time-sensitive information to users in a visually prominent way.
-- Use for messages such as success notifications, danger alerts, warnings, or informational updates.
-- Use for dismissible or temporary alerts when the message is not critical to user workflow.
-- Use the appropriate `theme` (e.g., `info`, `success`, `warning`, or `danger`) to match the intent of the alert.
-- Use the `dismissible` property for non-critical alerts.
-- Keep the alert content concise and focused on the message.
-- Limit alerts to one per page.
-- Use `success` type to confirm a positive system status to users such as saving a form.
-- Use `danger` type to display system status error messages.
-- Only use `emergency` for real emergencies (e.g., missing person, severe weather). Remember to swap icon if a more relevant one exists.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use alerts for information that is not time-sensitive or critical; consider using an inline message instead.
-- Use alerts for repetitive or non-actionable content that could frustrate users.
-- Remove the left icon, it is required for accessibility.
-- Use alerts to highlight actions that should be clear in the UI itself.
-- Use error messages to communicate form field validation issues; use field error states instead.
-- Include more than two link actions in an alert.
-- Overuse alerts for low-priority info. This can desensitize users.
-- Use alerts as toasts. Place them at the top of the page content.
-- Add any shadows to alerts.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-alert>` component includes the following accessibility-focused features:
@@ -219,89 +190,6 @@ Display `primaryAction` and `secondaryAction` as links using the `primaryLabel` 
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>dismissible</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>duration</code></td>
-      <td>integer</td>
-      <td><code>0</code></td>
-    </tr>
-    <tr>
-      <td><code>heading</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>icon</code></td>
-      <td>String (<code>&lt;nys-icon&gt; name</code>)</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>primaryAction</code></td>
-      <td>URL</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>primaryLabel</code></td>
-      <td>String</td>
-      <td><code>"Learn more"</code></td>
-    </tr>
-    <tr>
-      <td><code>secondaryAction</code></td>
-      <td>URL</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>secondaryLabel</code></td>
-      <td>String</td>
-      <td><code>"Dismiss"</code></td>
-    </tr>
-    <tr>
-      <td><code>text</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>type</code></td>
-      <td><code>"base"</code> , <code>"info"</code> , <code>"success"</code> , <code>"warning"</code> , <code>"danger"</code> , <code>"emergency"</code></td>
-      <td><code>"base"</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
-{% block cssvariables %}
-
-{% set variables = [
-  { name: "--nys-alert-color", description: "Text color of heading and description"},
-  { name: "--nys-alert-color--link", description: "Text color of action links" },
-  { name: "--nys-alert-color--link--hover", description: "Text color of action links when hovered" },
-  { name: "--nys-alert-color--link--active", description: "Text color of action links when active" },
-  { name: "--nys-alert-border-color", description: "Color of border accent color" },
-  { name: "--nys-alert-background-color", description: "Background color of component" }
-]%}
-{% include "partials/css-vars.njk" %}
-
-{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
@@ -353,16 +241,6 @@ alert.addEventListener("nys-close", (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-icon>", "<nys-button>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}

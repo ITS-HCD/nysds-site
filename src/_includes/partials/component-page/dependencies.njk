@@ -1,0 +1,32 @@
+<section>
+{%- set currentSubcomponents = subcomponents or (componentSubcomponents[usageTag] if componentSubcomponents else []) -%}
+{%- set hasMultiple = currentSubcomponents and currentSubcomponents | length > 0 -%}
+
+{%- set compDeps = componentUsage[usageTag].dependencies if componentUsage[usageTag] else [] -%}
+{%- if compDeps and compDeps | length > 0 -%}
+<p>{% if hasMultiple %}<code>&lt;{{ usageTag }}&gt;</code>{% else %}This component{% endif %} automatically imports the following dependencies:</p>
+<ul>
+{%- for dependency in compDeps %}
+<li><code>{{ dependency }}</code></li>
+{%- endfor %}
+</ul>
+{%- else -%}
+<p>{% if hasMultiple %}<code>&lt;{{ usageTag }}&gt;</code>{% else %}This component{% endif %} does not import any other NYSDS components.</p>
+{%- endif -%}
+
+{%- if hasMultiple -%}
+  {%- for subTag in currentSubcomponents -%}
+    {%- set subDeps = componentUsage[subTag].dependencies if componentUsage[subTag] else [] -%}
+    {%- if subDeps and subDeps | length > 0 -%}
+<p><code>&lt;{{ subTag }}&gt;</code> automatically imports the following dependencies:</p>
+<ul>
+      {%- for dependency in subDeps %}
+<li><code>{{ dependency }}</code></li>
+      {%- endfor %}
+</ul>
+    {%- else -%}
+<p><code>&lt;{{ subTag }}&gt;</code> does not import any other NYSDS components.</p>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+</section>

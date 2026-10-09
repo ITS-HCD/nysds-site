@@ -299,21 +299,6 @@ By default, column widths are determined by the content within each cell. Howeve
 {% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
-
-{% endblock %}
-{% block usagedo %}
-
-- Use to display tabular data such as statistical information or directories of locations and resources with consistent structure.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use in place of a layout grid. Table content should follow a consistent structure using headers and logical columns and rows.
-- Use for non-tabular content. Consider definition lists or hierarchical lists instead.
-- Use when cell content is long-form; table cells should be brief and scannable. If you need multiple bullet points or paragraphs in a cell, consider page headers or an accordion instead.
-- Add `rowspan` or `colspan` with the `sortable` property.
-
 {% endblock %}
 
 {% block accessibility %}
@@ -323,56 +308,6 @@ The `nys-table` component includes the following accessibility-focused features:
 - Proper use of `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, and `<td>` elements to ensure semantic structure.
 - Support for keyboard navigation, allowing users to navigate through table rows and cells using the keyboard.
   {% endblock %}
-
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>striped</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>bordered</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>sortable</code></td>
-      <td>boolean</td>
-      <td><code>false</code></td>
-    </tr>
-    <tr>
-      <td><code>download</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
-{% block cssvariables %}
-{% set variables = [
-  { name: "--nys-table-padding--cell--y", description: "Vertical padding for table cells"}
-]%}
-{% include "partials/css-vars.njk" %}{% endblock %}
 
 {% block events %}
 
@@ -424,16 +359,6 @@ console.log(`Column ${columnIndex} ("${columnLabel}") sorted: ${sortDirection}`)
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block dependencies %}
-
-{% set dependencies = [
-   "<nys-icon>", "<nys-button>"
-  ] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}

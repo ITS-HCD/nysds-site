@@ -42,24 +42,6 @@ The `<nys-backtotop>` component provides a floating button that allows users to 
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Place exactly one `<nys-backtotop>` per page, above the `<nys-globalfooter>` in your markup.
-- Use on long-form content pages such as state policy documents, agency service directories, program eligibility guides, extensive search results, or data tables.
-- Set `position="left"` when the bottom-right corner is occupied by another floating element, such as a chatbot button.
-- Let the component manage its own visibility. The auto-show behavior activates after 1.5 viewport heights on pages that are at least 4 screens tall.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Don't add multiple `<nys-backtotop>` components to a single page.
-- Don't use on pages where content fits within a single viewport without scrolling.
-- Don't use if your page already has anchor-based in-page navigation such as a table of contents. A back-to-top button is likely redundant.
-- Don't set `visible` in production unless you have a specific reason to override the auto-show behavior. Forcing visibility on short pages creates unnecessary clutter.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-backtotop>` component includes the following accessibility-focused features:
@@ -125,37 +107,6 @@ By default, `<nys-backtotop>` will be set on the bottom-right corner. If the bot
 
 {% endblock %}
 
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-        <th>Property</th>
-        <th>Type</th>
-        <th>Default</th>
-    </tr>
-    <tr>
-        <td><code>id</code></td>
-        <td>String</td>
-        <td><code>""</code></td>
-    </tr>
-    <tr>
-        <td><code>position</code></td>
-        <td><code>"left"</code> , <code>"right"</code></td>
-        <td><code>"right"</code></td>
-    </tr>
-    <tr>
-        <td><code>visible</code></td>
-        <td>boolean</td>
-        <td><code>false</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
@@ -211,16 +162,6 @@ backtotop.addEventListener("blur", () => {
 {% set codeLanguage = "js" %}
 {% set showTip = false %}
 {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-button>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}

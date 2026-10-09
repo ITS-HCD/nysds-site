@@ -40,27 +40,6 @@ The `<nys-verticalnav>` component renders a side navigation menu on desktop and 
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use for navigation where every item links to a different page.
-- Use for section-level navigation within a site.
-- Support up to two levels of navigation: top-level links and one level of nested links.
-- Set `aria-current="page"` on the active link so the component can apply active styles and expand the current group.
-- Avoid excessive use of icons, colors, or badges in navigation items.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Don't use for in-page navigation, such as scrolling to sections on the same page.
-- Don't use for linear task flows, such as multi-step forms or wizards.
-- Don't use for filtering, tab switching, or other in-page interactions.
-- Don't nest more than one level of sub-items.
-- Don't overload with excessive use of icons, colors, or badges in navigation items.
-
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-verticalnav>` component includes the following accessibility-focused features:
@@ -376,79 +355,6 @@ Call `open()`, `close()`, or `toggle()` on the mobile version of `nys-verticalna
 
 {% endblock %}
 
-{% block properties %}
-
-### nys-verticalnav
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>heading</code></td>
-      <td>String</td>
-      <td><code>"Page navigation"</code></td>
-      <td>Heading text, and the accessible label when <code>hideHeading</code> is set.</td>
-    </tr>
-    <tr>
-      <td><code>headingLevel</code></td>
-      <td><code>"h1" | "h2" | "h3" | "h4" | "h5" | "h6"</code></td>
-      <td><code>"h2"</code></td>
-      <td>Heading tag used for the auto-generated heading.</td>
-    </tr>
-    <tr>
-      <td><code>hideHeading</code></td>
-      <td>Boolean</td>
-      <td><code>false</code></td>
-      <td>Hides the visible heading. <code>heading</code> is still used as the nav's accessible label.</td>
-    </tr>
-  </table>
-</nys-table>
-
-### nys-verticalnavgroup
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td><code>label</code></td>
-      <td>String</td>
-      <td>—</td>
-      <td>Text shown on the toggle button.</td>
-    </tr>
-    <tr>
-      <td><code>expanded</code></td>
-      <td>Boolean</td>
-      <td><code>false</code></td>
-      <td>Opens the group by default.</td>
-    </tr>
-    <tr>
-      <td><code>disabled</code></td>
-      <td>Boolean</td>
-      <td><code>false</code></td>
-      <td>Prevents the group from being toggled.</td>
-    </tr>
-    <tr>
-      <td><code>active</code></td>
-      <td>Boolean</td>
-      <td><code>false</code></td>
-      <td>Set automatically when the group contains the active link. Not meant to be set manually.</td>
-    </tr>
-  </table>
-</nys-table>
-{% endblock %}
-
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
@@ -493,16 +399,6 @@ verticalnav.addEventListener('nys-verticalnav-toggle', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block dependencies %}
-
-{% set dependencies = [
-"<nys-accordion>", "<nys-icon>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}

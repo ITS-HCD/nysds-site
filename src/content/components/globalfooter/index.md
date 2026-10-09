@@ -27,27 +27,6 @@ The `<nys-globalfooter>` component renders an agency-branded footer section that
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use on every agency site and application. The Global Footer is a required page element.
-- Use to surface essential site-wide links such as contact information, privacy policies, accessibility statements, and related program pages.
-- Set `agencyName` to your agency's full official name (e.g., "Office of Information Technology Services").
-- Set `homepageLink` to make the agency name a clickable link back to your site's homepage.
-- Keep footer link lists concise. Group related links under `<span>` headings when you have more than 5–6 links.
-- Use slotted `<ul>` content for single-list links, or nested `<ul>` with `<span>` headings for multi-column layouts.
-- Place `<nys-globalfooter>` above `<nys-unavfooter>` and below your page content and `<nys-backtotop>`.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Don't use for primary navigation. That belongs in `<nys-globalheader>`.
-- Don't include page-specific content or calls to action. Footer content should be relevant site-wide.
-- Don't use for statewide universal links (Agencies, Services, Counties). Those belong in `<nys-unavfooter>`, which renders below this component.
-- Don't embed `<script>`, `<iframe>`, `<object>`, or `<img>` elements in slotted content. These are sanitized and removed by the component for security.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-globalfooter>` component includes the following accessibility-focused features:
@@ -141,62 +120,6 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
 </nys-globalfooter>{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
-
-{% endblock %}
-
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>agencyName</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>homepageLink</code></td>
-      <td>String (URL)</td>
-      <td><code>""</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
-{% block cssvariables %}
-  {%
-    set variables = [
-        { name: "--nys-max-width--content", description: "Overrides the max width of the inner content area on .nys-grid-container and all header/footer/breadcrumb components at once. Set this at a higher level (e.g. `:root`) so it cascades down to every instance — setting it directly on one component only affects that instance. Takes priority over the size-specific variable below." }
-    ]
-  %}
-{% include "partials/css-vars.njk" %}
-
-{% endblock %}
-
-{% block events %}
-
-This component does not emit any custom events.
-
-{% endblock %}
-
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-divider>"
-] %}
-
-{% include "partials/dependencies.njk" %}
 
 {% endblock %}
 

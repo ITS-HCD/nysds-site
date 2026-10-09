@@ -1,0 +1,62 @@
+<div class="properties-tables">
+{%- set currentSubcomponents = subcomponents or (componentSubcomponents[usageTag] if componentSubcomponents else []) -%}
+{%- set hasMultiple = currentSubcomponents and currentSubcomponents | length > 0 -%}
+
+{%- set compProps = componentUsage[usageTag].properties if componentUsage[usageTag] else [] -%}
+{%- if compProps and compProps | length > 0 -%}
+  <nys-table striped style="--nys-table-padding--cell--y: var(--nys-space-100);">
+    <table>
+      <caption><code>&lt;{{ usageTag }}&gt;</code></caption>
+      <thead>
+        <tr>
+          <th>Property</th>
+          <th>Type</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+        {%- for prop in compProps -%}
+        <tr>
+          <td><code>{{ prop.name }}</code></td>
+          <td>{% if prop.type %}<code>{{ prop.type }}</code>{% else %}-{% endif %}</td>
+          <td>{% if prop.default %}<code>{{ prop.default }}</code>{% else %}-{% endif %}</td>
+        </tr>
+        {%- endfor -%}
+      </tbody>
+    </table>
+  </nys-table>
+{%- else -%}
+  <p>There are no configurable properties for <code>&lt;{{ usageTag }}&gt;</code>.</p>
+{%- endif -%}
+
+{%- if hasMultiple -%}
+  {%- for subTag in currentSubcomponents -%}
+    {%- set subProps = componentUsage[subTag].properties if componentUsage[subTag] else [] -%}
+    {%- if subProps and subProps | length > 0 -%}
+      <nys-table striped style="--nys-table-padding--cell--y: var(--nys-space-100);">
+        <table>
+          <caption><code>&lt;{{ subTag }}&gt;</code></caption>
+          <thead>
+            <tr>
+              <th>Property</th>
+              <th>Type</th>
+              <th>Default</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%- for prop in subProps -%}
+            <tr>
+              <td><code>{{ prop.name }}</code></td>
+              <td>{% if prop.type %}<code>{{ prop.type }}</code>{% else %}-{% endif %}</td>
+              <td>{% if prop.default %}<code>{{ prop.default }}</code>{% else %}-{% endif %}</td>
+            </tr>
+            {%- endfor -%}
+          </tbody>
+        </table>
+      </nys-table>
+    {%- else -%}
+      <p>There are no configurable properties for <code>&lt;{{ subTag }}&gt;</code>.</p>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endif -%}
+</div>

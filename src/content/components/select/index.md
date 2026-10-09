@@ -33,21 +33,6 @@ The `<nys-select>` is a reusable web component for use in New York State digital
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use when a user needs to select a single item from a dropdown list.
-- Use the `<option>` element to define options and the native `<optgroup>` to group them.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use when users need to select multiple items. Use a checkbox group instead.
-- Use the custom `<nys-option>` element. It will be deprecated in the 2.0 release.
-- Use `<nys-select multiple>`. Use a checkbox group instead.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-select>` component includes the following accessibility-focused features:
@@ -347,8 +332,6 @@ The `form` property associates this component with a `<form>` element by ID, eve
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
@@ -403,16 +386,6 @@ select.addEventListener('nys-change', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-errormessage>", "<nys-icon>", "<nys-label>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}

@@ -96,31 +96,8 @@ Once you've registered one or more additional libraries, use the `library` prop 
 {% set showTip = false %}
 {% set accordionLabel = 'Using the "library" prop' %}
 {% include "partials/code-preview.njk" %}
-
-
 {% endblock %}
 
-{% block usagedo %}
-
-- Use icons to draw attention to actions, help users scan for key information, or enhance recognizable common actions (e.g., search, download, share).
-- Pair icons with a text label—few icons are universally understood alone.
-- Use icons consistently: same icon and label for the same meaning throughout your app.
-- Use `ariaLabel` when the icon conveys meaning, so screen readers can announce its purpose.
-- Use icons from the NYS Design System library; if unavailable, use Google Material Symbols (rounded, unfilled).
-- Match icon size and color to the design system.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use an icon if its meaning isn't immediately clear—if you suspect users won't recognize it, remove it.
-- Use icons to compensate for unclear page hierarchy or confusing content organization.
-- Use standalone icons for actions—use `<nys-button>` with an icon inside instead.
-- Replace meaningful text with icons unless the icon is universally recognized or paired with a label.
-- Overuse icons—too many create visual noise and reduce focus.
-- Use excessive icon customization that breaks design consistency.
-
-{% endblock %}
 
 {% block accessibility %}
 
@@ -454,63 +431,6 @@ Here are the icons available in the "default" icon set.
     });
   });
 </script>
-{% endblock %}
-
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-    </tr>
-    <tr>
-      <td><code>ariaLabel</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>color</code></td>
-      <td>String (CSS HEX, CSS color name, or CSS variable)</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>flip</code></td>
-      <td><code>"horizontal"</code>, <code>"vertical"</code>, <code>"both"</code></td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>library</code></td>
-      <td>String</td>
-      <td><code>"default"</code></td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>rotate</code></td>
-      <td>integer</td>
-      <td><code>0</code></td>
-    </tr>
-    <tr>
-      <td><code>size</code></td>
-      <td><code>"xs"</code>, <code>"sm"</code>, <code>"md"</code>, <code>"lg"</code>, <code>"xl"</code>, <code>"2xl"</code>, <code>"3xl"</code>, <code>"4xl"</code>, <code>"5xl"</code>, <code>"12"</code>, <code>"14"</code>, <code>"16"</code>, <code>"18"</code>, <code>"20"</code>, <code>"24"</code>, <code>"32"</code>, <code>"40"</code>, <code>"50"</code></td>
-      <td><code>"md"</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
-{% block cssvariables %}
-
-{% set variables = [
-  { name: "--nys-icon-size", description: "Width and height of the component"}
-]%}
-{% include "partials/css-vars.njk" %}
 {% endblock %}
 
 {% block events %}

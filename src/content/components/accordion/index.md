@@ -66,23 +66,6 @@ The `nys-accordionitem` component includes the following accessibility-focused f
 
 {% endblock %}
 
-{% block usagedo %}
-
-- Use accordions for FAQs on state services like DMV procedures or benefits
-  information.
-- Break up long program descriptions or supplemental details (such as optional steps, extra instructions, or secondary eligibility notes) into manageable sections without overwhelming the reader.
-- Label headings clearly so users understand the content before expanding.
-- Consider accordions in mobile layouts to keep pages compact while still allowing access to full details.
-  {% endblock %}
-
-{% block usagedont %}
-
-- Hide time-sensitive deadlines, required steps, or critical eligibility criteria in a collapsed section. Keep essential information visible by default.
-- Use vague or unclear headings that make it hard to know what is inside.
-- Overuse accordions for content that is short enough to display fully on the page.
-- Use an accordion when users need to compare details from multiple sections at once. Consider a table or side-by-side layout instead.
-  {% endblock %}
-
 {% block options %}
 
 ### Individual accordion
@@ -172,61 +155,6 @@ eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 {% endblock %}
 
-{% block properties %}
-<nys-table striped>
-<table>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Default</th>
-<th>Component</th>
-</tr>
-<tr>
-<td><code>id</code></td>
-<td>String</td>
-<td><code>""</code></td>
-<td>both</td>
-</tr>
-<tr>
-<td><code>heading</code></td>
-<td>String</td>
-<td><code>""</code></td>
-<td><code>nys-accordionitem</code></td>
-</tr>
-<tr>
-<td><code>expanded</code></td>
-<td>boolean</td>
-<td><code>false</code></td>
-<td><code>nys-accordionitem</code></td>
-</tr>
-<tr>
-<td><code>bordered</code></td>
-<td>boolean</td>
-<td><code>false</code></td>
-<td><code>nys-accordion</code></td>
-</tr>
-<tr>
-<td><code>singleSelect</code></td>
-<td>boolean</td>
-<td><code>false</code></td>
-<td><code>nys-accordion</code></td>
-</tr>
-</table>
-</nys-table>
-{% endblock %}
-
-{% block cssvariables %}
-{%
-    set variables = [
-      { name: "--nys-accordion-color--header", description: "The text color of the accordion header"},
-      { name: "--nys-accordion-background-color--header", description: "Background color of the accordion header"},
-      { name: "--nys-accordion-background-color--header--hover", description: "Background hover color of the accordion header"},
-      { name: "--nys-accordion-content-max-width", description: "Maximum readable width of accordion content. Defaults to a character-based width (80ch) for readability."}
-    ]
-  %}
-{% include "partials/css-vars.njk" %}
-{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.<span></nys-alert>
@@ -274,16 +202,6 @@ accordion.addEventListener("nys-accordionitem-toggle", (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block dependencies %}
-
-{%
-    set dependencies = [
-      "<nys-icon>"
-    ]
-  %}
-{% include "partials/dependencies.njk" %}
 {% endblock %}
 
 {% block updates %}

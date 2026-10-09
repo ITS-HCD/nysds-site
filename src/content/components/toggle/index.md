@@ -31,24 +31,6 @@ The `<nys-toggle>` allows users to toggle a toggle switch "on" or "off".
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Provide a clear label and optional description to explain what the toggle controls.
-- Ensure the page clearly reflects the toggle's on/off state through visible changes.
-- Use when the state change will be implemented immediately.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use for forms where immediate action isn't expected. Use `<nys-checkbox>` instead.
-- Use for selecting one or more options from a list. Use `<nys-checkbox>` or `<nys-radiobutton>` instead.
-- Use for complex or multi-state choices.
-- Overuse for minor settings that don't affect the user experience.
-- Hide labels unless an accessible alternative is in place.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-toggle`> component includes the following accessibility-focused features:
@@ -219,8 +201,6 @@ The `form` property associates this component with a `<form>` element by ID, eve
 
 {% endblock %}
 
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
@@ -275,16 +255,6 @@ toggle.addEventListener('nys-change', (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block dependencies %}
-
-{% set dependencies = [
-  "<nys-icon>", "<nys-label>"
-] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}

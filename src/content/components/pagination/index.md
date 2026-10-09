@@ -26,25 +26,6 @@ The `<nys-pagination>` component provides Previous/Next buttons and numbered pag
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use for large result sets such as search results, data tables, or directory listings where loading everything at once would hurt performance or usability.
-- Use when users need to navigate to a specific part of a result set.
-- Set `totalPages` based on your data set and page size; update `currentPage` in response to `nys-change` events.
-- Don't set `currentPage` to a value greater than `totalPages`. The component clamps the value automatically, but your application logic should prevent this.
-- Position the pagination component below the content it controls.
-- Scroll users to the top of the results area when they change pages.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use when content fits on a single page (fewer than 3–4 screen heights). Show all items instead.
-- Use for step-based workflows where users complete tasks in order. Use `<nys-stepper>` instead.
-- Use for infinite-scroll patterns such as a news feed.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-pagination>` component includes the following accessibility-focused features:
@@ -116,42 +97,6 @@ On screens below 768px, the component automatically switches to a condensed layo
 
 {% endblock %}
 
-{% block properties %}
-
-<nys-table striped>
-  <table>
-    <tr>
-      <th>Property</th>
-      <th>Type</th>
-      <th>Default</th>
-    </tr>
-    <tr>
-      <td><code>id</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>name</code></td>
-      <td>String</td>
-      <td><code>""</code></td>
-    </tr>
-    <tr>
-      <td><code>currentPage</code></td>
-      <td>Number</td>
-      <td><code>1</code></td>
-    </tr>
-    <tr>
-      <td><code>totalPages</code></td>
-      <td>Number</td>
-      <td><code>1</code></td>
-    </tr>
-  </table>
-</nys-table>
-
-{% endblock %}
-
-{% block cssvariables %}{% include "partials/css-vars.njk" %}{% endblock %}
-
 {% block events %}
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
@@ -195,16 +140,6 @@ pagination.addEventListener("nys-change", (event) => {
 {% set codeExpanded = true %}
 {% set codeLanguage = "js" %}
 {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block dependencies %}
-
-{% set dependencies = [
-   "<nys-button>"
-  ] %}
-
-{% include "partials/dependencies.njk" %}
-
 {% endblock %}
 
 {% block updates %}{% endblock %}
