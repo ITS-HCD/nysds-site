@@ -163,7 +163,7 @@ The `<nys-button>` component provides named slots for custom icon content when t
 - **`circle-icon`** -- Custom icon for circle mode. Overrides the `icon` prop.
 
 {% set preview %}
-<nys-button label="Slotted icons">
+<nys-button label="Slotted icons" variant="outline">
 <nys-icon 
         color="#db117d" 
         size="24" 
@@ -177,7 +177,7 @@ The `<nys-button>` component provides named slots for custom icon content when t
         name="chevron_right">
 </nys-icon>
 </nys-button>
-<nys-button circle>
+<nys-button circle variant="outline">
 <nys-icon color="#db117d" size="24" slot="circle-icon" name="close"></nys-icon>
 </nys-button>
 {% endset %}
