@@ -4,7 +4,6 @@ title: "How Components Work"
 navTitle: "Web Components"
 description: "Understand how NYSDS web components work — custom elements, shadow DOM, slots, CSS custom properties, and the patterns you need to use them effectively."
 layout: layouts/3-col.njk
-navOrder: 5
 ---
 
 {% block content %}

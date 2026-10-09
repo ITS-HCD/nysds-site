@@ -13,6 +13,10 @@ A step-by-step guide to using NYS Design System components in a React + TypeScri
 
 **Requirements:** React and React DOM `18` or `19`
 
+## Quick Start
+
+<nys-video size="sm" videourl="https://youtu.be/5XawJALkDxQ" titleText="Quick Start: React + NYS Design System"></nys-video>
+
 ## Installation
 
 To start from scratch, install the Vite React app:

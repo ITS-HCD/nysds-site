@@ -3,7 +3,6 @@ permalink: /foundations/design/
 title: Design
 description: "Good design starts before pixels. How the NYS Design System fits into the broader UX process."
 section: Foundations
-navOrder: 2
 ---
 
 {% block content %}
