@@ -39,3 +39,6 @@ Thumbs.db
 
 # Ignore Claude Code config
 .claude/
+
+# Ignore Gemini CLI config
+.gemini/
