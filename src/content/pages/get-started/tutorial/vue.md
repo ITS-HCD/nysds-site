@@ -1,21 +1,22 @@
 ---
 permalink: /get-started/developers/vue/
-title: "Vue Tutorial"
+title: "Vue Quick Start"
 navTitle: "Vue"
 description: "A step-by-step guide to using NYS Design System components in a Vue 3 application."
 section: "Get Started"
 parent: Developers
 ---
 
-# Vue Tutorial
+# Vue Quick Start
+
+<nys-video videourl="https://youtu.be/e8YoLUjQm0c" titleText="Quick Start: Vue + NYS Design System"></nys-video>
+
+## Installation
 
 A step-by-step guide to using NYS Design System components in a Vue 3 application.
 
-## Quick Start
+**Requirements:** Vue `>=3.0.0`
 
-<nys-video size="sm" videourl="https://youtu.be/e8YoLUjQm0c" titleText="Quick Start: Vue + NYS Design System"></nys-video>
-
-## Installation
 To start from scratch, create a new Vue Vite app:
 
 {% set code %}npm create vue@latest{% endset %}

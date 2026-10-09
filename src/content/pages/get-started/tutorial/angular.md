@@ -1,24 +1,21 @@
 ---
 permalink: /get-started/developers/angular/
-title: "Angular Tutorial"
+title: "Angular Quick Start"
 navTitle: "Angular"
 description: "A step-by-step guide to using NYS Design System components in an Angular application."
 section: "Get Started"
 parent: Developers
 ---
 
-# Angular Tutorial
+# Angular Quick Start
+
+<nys-video videourl="https://youtu.be/ZRJlmKk3D7A" titleText="Quick Start: Angular + NYS Design System"></nys-video>
+
+## Installation
 
 A step-by-step guide to using NYS Design System components in an Angular application.
 
 **Requirements:** Angular `>=20.0.0` (core, common, forms)
-
-## Quick Start
-
-<nys-video size="sm" videourl="https://youtu.be/ZRJlmKk3D7A" titleText="Quick Start: Angular + NYS Design System"></nys-video>
-
-
-## Installation
 
 To start from scratch, install the Angular cli, and set up a new starter package:
 

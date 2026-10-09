@@ -1,23 +1,21 @@
 ---
 permalink: /get-started/developers/react/
-title: "React Tutorial"
+title: "React Quick Start"
 navTitle: "React"
 description: "A step-by-step guide to using NYS Design System components in a React + TypeScript application."
 section: "Get Started"
 parent: Developers
 ---
 
-# React Tutorial
+# React Quick Start
+
+<nys-video videourl="https://youtu.be/5XawJALkDxQ" titleText="Quick Start: React + NYS Design System"></nys-video>
+
+## Installation
 
 A step-by-step guide to using NYS Design System components in a React + TypeScript application.
 
 **Requirements:** React and React DOM `18` or `19`
-
-## Quick Start
-
-<nys-video size="sm" videourl="https://youtu.be/5XawJALkDxQ" titleText="Quick Start: React + NYS Design System"></nys-video>
-
-## Installation
 
 To start from scratch, install the Vite React app:
 
