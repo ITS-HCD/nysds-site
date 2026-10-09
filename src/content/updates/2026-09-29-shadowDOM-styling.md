@@ -9,13 +9,10 @@ image_alt: Bugs around nature
 updatethumbnail: /assets/i/2026/shadow-dom-article/thumbnail.png
 ogimage: /assets/i/2026/shadow-dom-article/thumbnail.jpg
 thumbnailimage: /assets/i/2026/shadow-dom-article/thumbnail-alt.png
-date: 2026-10-11
+date: 2026-10-09
 tags: article, web components, shadow DOM, slots, CSS, design system
 ---
 
-<!-- <nys-alert type="info" heading="A note to readers">
-<p>Dear readers, my hope is that you can take something away from our trials and errors in adapting web components, styling slotted content, and the double-edged sword that is shadow DOM. Whether you're looking to build your own Design System or simply understand our process, I hope you find something useful here.</p>
-</nys-alert> -->
 <nys-alert type="info" heading="Quick crash course: DOM and shadow DOM" icon="edit_square">
 <span>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model">DOM (Document Object Model)</a> is the browser's representation of an HTML page as a tree-like structure of connected nodes. The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_shadow_DOM">shadow DOM</a> creates a separate, encapsulated version of the DOM inside a component, allowing its structure and styles to be isolated from the rest of the page.</span>
 </nys-alert>
