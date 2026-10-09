@@ -1,6 +1,7 @@
 # Generated files
 public*
 _site
+src/_data/componentDocsContent.json
 
 # Ignore installed npm modules
 node_modules/
