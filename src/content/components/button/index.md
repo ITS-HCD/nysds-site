@@ -204,7 +204,6 @@ Note: the `prefixIcon` and `suffixIcon` props are not supported when using the `
 {% include "partials/code-preview.njk" %}
 
 ### Disabled
-
 {% set preview %}
 <div class="nys-grid-row">
     <div class="nys-grid-col"><nys-button disabled id="button1" name="button1" label="Filled"></nys-button></div>
