@@ -1,10 +1,10 @@
 ---
-permalink: /foundations/hiding/
-title: "Hiding Content"
-description: "Not all techniques for hiding web content are created equal. The choice of which to use can have dramatic consequences for accessibility."
-layout: layouts/2-col.njk
-section: Foundations
-navOrder: 100
+permalink: /utilities/hiding/
+redirect_from: /foundations/hiding/
+title: Hiding Content
+description: Not all techniques for hiding web content are created equal. The choice of which to use can have dramatic consequences for accessibility.
+layout: layouts/3-col.njk
+section: Utilities
 ---
 
 <style>
