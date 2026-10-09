@@ -94,6 +94,7 @@ Set the `size` prop of the `<nys-button>` to adjust the height of the button. Th
 Add the `fullWidth` prop to make the button take the width of its container. Default behavior will size the button to fit its label.
 
 {% set preview %}
+
 <div class="nys-grid-row">
     <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="sm" id="button1" name="button1" label="Small"></nys-button></div>
     <div class="nys-grid-col nys-display-flex nys-flex-align-center"><nys-button size="md" id="button2" name="button2" label="Medium"></nys-button></div>
@@ -123,6 +124,7 @@ Set the variant prop of the `<nys-button>` to adjust the appearance of the butto
 - `text`: Use for inline actions.
 
 {% set preview %}
+
 <div class="nys-grid-row">
     <div class="nys-grid-col"><nys-button id="button1" name="button1" label="Filled"></nys-button></div>
     <div class="nys-grid-col"><nys-button id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
@@ -160,14 +162,26 @@ The `<nys-button>` component provides named slots for custom icon content when t
 - **`suffix-icon`** -- Custom icon after the label. Not shown for the `text` variant.
 - **`circle-icon`** -- Custom icon for circle mode. Overrides the `icon` prop.
 
-{% set code %}
-<nys-button label="Log out">
-    <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="NY"></nys-avatar>
+{% set preview %}
+<nys-button label="Slotted icons">
+<nys-icon 
+        color="#db117d" 
+        size="24" 
+        slot="prefix-icon" 
+        name="chevron_left">
+</nys-icon>
+<nys-icon 
+        color="#db117d" 
+        size="24" 
+        slot="suffix-icon" 
+        name="chevron_right">
+</nys-icon>
+</nys-button>
+<nys-button circle>
+<nys-icon color="#db117d" size="24" slot="circle-icon" name="close"></nys-icon>
 </nys-button>
 {% endset %}
-{% set accordionLabel = "Sample Code" %}
-{% set codeExpanded = true %}
-{% set codeLanguage = "html" %}
+{% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
 ### Circle
@@ -179,17 +193,17 @@ Use the `circle` prop to create a compact, circular button. Ideal for icon-only 
 - If a `label` is provided, it won’t be shown visually, but it will be used as the aria-label.
 
 Note: the `prefixIcon` and `suffixIcon` props are not supported when using the `circle` prop.
+
 {% set preview %}
 <nys-button circle icon="close"></nys-button>
 {% endset %}
-{% set code %}
-<nys-button circle icon="close"></nys-button>
-{% endset %}
+{% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
 ### Disabled
 
 {% set preview %}
+
 <div class="nys-grid-row">
     <div class="nys-grid-col"><nys-button disabled id="button1" name="button1" label="Filled"></nys-button></div>
     <div class="nys-grid-col"><nys-button disabled id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
@@ -231,6 +245,7 @@ The available targets are:
 Set the `inverted` when the button is on a dark background.
 
 {% set preview %}
+
 <div class="nys-grid-row">
     <div class="nys-grid-col"><nys-button inverted id="button1" name="button1" label="Filled"></nys-button></div>
     <div class="nys-grid-col"><nys-button inverted id="button2" name="button2" label="Outline" variant="outline"></nys-button></div>
@@ -405,7 +420,7 @@ You can listen to these events using JavaScript:
 const button = document.querySelector('nys-button');
 // Listen for the 'nys-click' event
 button.addEventListener("nys-click", () => {
-    console.log("Button clicked");
+console.log("Button clicked");
 });
 {% endset %}
 {% set accordionLabel = "Sample Code" %}
