@@ -15,7 +15,7 @@ navOrder: 2
     <div class="a11y-hero__stripe" aria-hidden="true">
       <span></span><span></span><span></span><span></span>
     </div>
-    <p class="a11y-hero__heading"><strong>Bugs</strong></p>
+    <p class="a11y-hero__heading">Be an <strong>a11y.</strong></p>
     <p class="a11y-hero__subheading">a11y is short for accessibility.</p>
     <p class="a11y-hero__caption">There are 11 letters between the a and y.</p>
   </div>
