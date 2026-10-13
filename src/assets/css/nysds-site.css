@@ -353,6 +353,7 @@ main[role="main"] {
   flex-basis: 100%;
   max-width: 780px;
   margin: 0 var(--nys-space-250);
+  text-align: center;
 }
 
 /* Page Header */
