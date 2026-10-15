@@ -42,3 +42,4 @@ Thumbs.db
 
 # Ignore Gemini CLI config
 .gemini/
+*.docx
