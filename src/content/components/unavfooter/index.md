@@ -1,5 +1,7 @@
 ---
-permalink: /components/unav-footer/
+permalink: /components/unavfooter/
+redirect_from: /components/unav-footer/
+tag: nys-unavfooter
 title: UNav Footer
 description: Required statewide footer displaying the NY.gov logo and links to Agencies, Counties, Events, Programs, and Services.
 image: /assets/img/components/unav-footer.svg
@@ -24,23 +26,6 @@ The `<nys-unavfooter>` component renders the Universal Navigation Footer -- a st
 {% set code = preview %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}
-{% endblock %}
-
-{% block usagedo %}
-
-- Place the `<nys-unavfooter>` as the last element on every public-facing page, immediately after `<nys-globalfooter>`.
-  - Use on every page of every NYS site and application. This component is required per NYS web policy, including on error pages, login screens, and landing pages.
-  - Place as the very last element on the page, immediately after `<nys-globalfooter>`.
-  - Use as-is with no configuration. The component handles its own content and styling.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Don't use on back office applications or internal sites that are not public-facing.
-- Place anywhere other than the absolute bottom of the page.
-- Customize, restyle, or override the component's content or appearance. Consistency across all state sites is the purpose of this component.
-
 {% endblock %}
 
 {% block accessibility %}

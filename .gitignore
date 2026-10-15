@@ -1,6 +1,7 @@
 # Generated files
 public*
 _site
+src/_data/componentDocsContent.json
 
 # Ignore installed npm modules
 node_modules/
@@ -37,5 +38,6 @@ npm-debug.log*
 Thumbs.db
 .obsidian
 
-# Ignore Claude Code config
+# Ignore LLM configs
 .claude/
+.gemini/
