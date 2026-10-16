@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-15T15:02:49.389Z -->
+    <!-- Latest Build: 2026-10-16T20:00:45.469Z -->
   </head>
   
   <body class="single-page page-forms section-foundations">
@@ -287,8 +287,7 @@
 <p>For a component's value to appear in form data, it must have a <code>name</code> attribute. This is the key under which the value is submitted.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-textinput name="applicant_name" label="Full Name" required=""></nys-textinput>
+<div class="code-preview__preview-root-inner"><nys-textinput name="applicant_name" label="Full Name" required=""></nys-textinput>
 </div>
   </div>
   <div class="code-preview__source">
@@ -352,8 +351,7 @@
 <p>Single-column layouts are easier to scan, reduce cognitive load, and perform better on mobile devices. Use them for most government forms.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<form id="voter-registration">
+<div class="code-preview__preview-root-inner"><form id="voter-registration">
   <nys-textinput name="first_name" label="First Name" required="" width="lg"></nys-textinput>
   <nys-textinput name="last_name" label="Last Name" required="" width="lg"></nys-textinput>
   <nys-textinput name="dob" label="Date of Birth" required="" width="md" description="MM/DD/YYYY"></nys-textinput>
@@ -400,8 +398,7 @@
 <p>When placing fields side by side makes semantic sense (like first name and last name), use the <a href="/utilities/grid/">grid utilities</a>:</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<form id="dmv-contact">
+<div class="code-preview__preview-root-inner"><form id="dmv-contact">
   <div class="nys-grid-row nys-grid-gap">
     <div class="nys-tablet:nys-grid-col-6">
       <nys-textinput name="first_name" label="First Name" required=""></nys-textinput>
@@ -519,8 +516,7 @@
 <p>Set the <code>errorMessage</code> property to override the default validation message:</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-textinput name="employee_id" label="Employee ID" required="" pattern="N[0-9]{8}" errorMessage="Enter a valid Employee ID (e.g., N00123456)"></nys-textinput>
+<div class="code-preview__preview-root-inner"><nys-textinput name="employee_id" label="Employee ID" required="" pattern="N[0-9]{8}" errorMessage="Enter a valid Employee ID (e.g., N00123456)"></nys-textinput>
 </div>
   </div>
   <div class="code-preview__source">
@@ -552,8 +548,7 @@
 <p>You can also control errors programmatically by setting both <code>errorMessage</code> and <code>showError</code>:</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-textinput name="email" label="Email Address" errorMessage="This email is already registered" showError="" required=""></nys-textinput>
+<div class="code-preview__preview-root-inner"><nys-textinput name="email" label="Email Address" errorMessage="This email is already registered" showError="" required=""></nys-textinput>
 </div>
   </div>
   <div class="code-preview__source">
@@ -708,8 +703,7 @@ form<span class="token punctuation">.</span><span class="token function">addEven
 <p>Use <code>&lt;nys-button type=&quot;submit&quot;&gt;</code> inside or associated with a <code>&lt;form&gt;</code>. When clicked, the button calls <code>form.requestSubmit()</code>, which triggers constraint validation on all form-associated elements before dispatching the <code>submit</code> event.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<form id="license-renewal">
+<div class="code-preview__preview-root-inner"><form id="license-renewal">
   <nys-textinput name="license_number" label="License Number" required="" pattern="[0-9]{9}" errorMessage="Enter your 9-digit license number"></nys-textinput>
   <nys-select name="office" label="Preferred DMV Office" required="">
     <option value="albany">Albany</option>
@@ -790,8 +784,7 @@ form<span class="token punctuation">.</span><span class="token function">addEven
 </ul>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<form id="contact-form">
+<div class="code-preview__preview-root-inner"><form id="contact-form">
   <nys-textinput name="name" label="Your Name" required=""></nys-textinput>
   <nys-textarea name="message" label="Message" required=""></nys-textarea>
   <div class="nys-grid-row nys-grid-gap">
@@ -870,8 +863,7 @@ form<span class="token punctuation">.</span><span class="token function">addEven
 <p>NYSDS does not currently provide a dedicated error summary component, but you can build one using <code>&lt;nys-alert&gt;</code> and the form's validation API. Here is an example of an error summary at the top of a form:</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-alert type="error" heading="3 field(s) need your attention">
+<div class="code-preview__preview-root-inner"><nys-alert type="error" heading="3 field(s) need your attention">
   <ul>
     <li><a href="#field-email">Email address is required</a></li>
     <li><a href="#field-phone">Phone number must be 10 digits</a></li>
@@ -1215,7 +1207,7 @@ form<span class="token punctuation">.</span><span class="token function">addEven
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/foundations/forms.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 15, 2026</p>
+    <p>Last updated: October 16, 2026</p>
   </div>
 
   </div>

@@ -52,7 +52,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-15T15:02:49.389Z -->
+    <!-- Latest Build: 2026-10-16T20:00:45.469Z -->
   </head>
   
   <body class="single-page page-a11y-build section-components">
@@ -761,8 +761,7 @@
 <div class="code-preview-container" data-pagefind-ignore="all">
 
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<details class="nysa11y accordion" data-component="accordion" data-html="native">
+<div class="code-preview__preview-root-inner"><details class="nysa11y accordion" data-component="accordion" data-html="native">
     <summary>
         Native example
     </summary>
@@ -957,8 +956,7 @@
 <div class="code-preview-container" data-pagefind-ignore="all">
 
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div class="nysa11y accordion" data-component="accordion" data-html="custom">
+<div class="code-preview__preview-root-inner"><div class="nysa11y accordion" data-component="accordion" data-html="custom">
     <button data-part="summary" aria-expanded="false">
         Custom example
     </button>
@@ -1157,39 +1155,39 @@
  * Path: /assets/nysa11y/accordion-custom.js
  * Depends on /assets/nysa11y/accordion-custom.css
  */</span>
-<span class="token keyword">const</span> nysa11y <span class="token operator">=</span> window<span class="token punctuation">.</span>nysa11y <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> nysa11y <span class="token operator">=</span> window<span class="token punctuation">.</span>nysa11y <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>&#10;
 <span class="token keyword">class</span> <span class="token class-name">Accordion</span> <span class="token punctuation">{</span>
   #selectorToggle <span class="token operator">=</span>
     <span class="token string">'[data-component="accordion"].nysa11y [data-part="summary"]'</span><span class="token punctuation">;</span>
   #selectorParent <span class="token operator">=</span> <span class="token string">'[data-component="accordion"].nysa11y'</span><span class="token punctuation">;</span>
-  #stateOpen <span class="token operator">=</span> <span class="token string">"is-open"</span><span class="token punctuation">;</span>
+  #stateOpen <span class="token operator">=</span> <span class="token string">"is-open"</span><span class="token punctuation">;</span>&#10;
   <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">options <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>container <span class="token operator">=</span> options<span class="token punctuation">.</span>container <span class="token operator">||</span> document<span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>&#10;
   <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>toggles <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>container<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorToggle<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>toggles<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token keyword">this</span><span class="token punctuation">.</span>toggles<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>&#10;
     <span class="token keyword">this</span><span class="token punctuation">.</span>toggles<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">toggle</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
       <span class="token comment">// Avoid binding the same event listener multiple times</span>
       toggle<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#handleToggle<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      toggle<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#handleToggle<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      toggle<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#handleToggle<span class="token punctuation">)</span><span class="token punctuation">;</span>&#10;
       <span class="token comment">// Set initial accessibility state</span>
       <span class="token keyword">const</span> isExpanded <span class="token operator">=</span> toggle
         <span class="token punctuation">.</span><span class="token function">closest</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorParent<span class="token punctuation">)</span>
         <span class="token operator">?.</span>classList<span class="token punctuation">.</span><span class="token function">contains</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#stateOpen<span class="token punctuation">)</span><span class="token punctuation">;</span>
       toggle<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"aria-expanded"</span><span class="token punctuation">,</span> isExpanded <span class="token operator">||</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>&#10;
   <span class="token function-variable function">#handleToggle</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> toggleElement <span class="token operator">=</span> event<span class="token punctuation">.</span>currentTarget<span class="token punctuation">;</span>
     <span class="token keyword">const</span> parent <span class="token operator">=</span> toggleElement<span class="token punctuation">.</span><span class="token function">closest</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorParent<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>parent<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>parent<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>&#10;
     <span class="token keyword">const</span> isOpen <span class="token operator">=</span> parent<span class="token punctuation">.</span>classList<span class="token punctuation">.</span><span class="token function">toggle</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#stateOpen<span class="token punctuation">)</span><span class="token punctuation">;</span>
     toggleElement<span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"aria-expanded"</span><span class="token punctuation">,</span> isOpen<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-nysa11y<span class="token punctuation">.</span>Accordion <span class="token operator">=</span> Accordion<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>&#10;
+nysa11y<span class="token punctuation">.</span>Accordion <span class="token operator">=</span> Accordion<span class="token punctuation">;</span>&#10;
 document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">new</span> <span class="token class-name">nysa11y<span class="token punctuation">.</span>Accordion</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
@@ -1299,7 +1297,7 @@ document<span class="token punctuation">.</span><span class="token function">add
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/accordion/a11y-build.njk">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 15, 2026</p>
+    <p>Last updated: October 16, 2026</p>
   </div>
 
   </div>

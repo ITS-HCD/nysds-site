@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-15T15:02:49.389Z -->
+    <!-- Latest Build: 2026-10-16T20:00:45.469Z -->
   </head>
   
   <body class="single-page page-dropdownmenu section-components">
@@ -642,8 +642,7 @@
 <section>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-button id="my-trigger-id" label="Dropdown Trigger"></nys-button>
+<div class="code-preview__preview-root-inner"><nys-button id="my-trigger-id" label="Dropdown Trigger"></nys-button>
 <nys-dropdownmenu id="my-dropdownmenu" for="my-trigger-id">
   <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
   <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
@@ -743,8 +742,7 @@ Supported positions are:</p>
 <p><strong>Note:</strong> If the preferred position does not fit within the viewport, the component will automatically find the best alternative.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div style="display: flex; gap: 16px; justify-content: center; margin: 80px;">
+<div class="code-preview__preview-root-inner"><div style="display: flex; gap: 16px; justify-content: center; margin: 80px;">
   <nys-button id="trigger-bottom-start" label="&quot;bottom-start&quot;"></nys-button>
   <nys-dropdownmenu for="trigger-bottom-start" position="bottom-start">
     <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
@@ -792,8 +790,7 @@ Supported positions are:</p>
 <p>A common use case is pairing <code>&lt;nys-dropdownmenu&gt;</code> with <code>&lt;nys-globalheader&gt;</code> for user profile navigation.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
+<div class="code-preview__preview-root-inner"><nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
   <nys-button id="my-user-actions" slot="user-actions" label="John Smith" prefixIcon="slotted">
     <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="JS"></nys-avatar>
   </nys-button>
@@ -835,17 +832,17 @@ Supported positions are:</p>
   </div>
 </div>
 <h4 id="with-icons">With Icons</h4>
-<p>Use the <code>prefixIcon</code> property on <code>&lt;nys-dropdownmenuitem&gt;</code> to add an icon before the label.</p>
+<p>Use the <code>prefixIcon</code> property on <code>&lt;nys-dropdownmenuitem&gt;</code> to add an icon before the label. <br>
+Use the <code>suffixIcon</code> to add one after it.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div style="display: flex; justify-content: center; margin: 80px;">
+<div class="code-preview__preview-root-inner"><div style="display: flex; justify-content: center; margin: 80px;">
   <nys-button id="trigger-icons" label="Open Menu"></nys-button>
   <nys-dropdownmenu for="trigger-icons">
     <nys-dropdownmenuitem label="Action 1" prefixIcon="lock_filled"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Action 2" prefixIcon="social_youtube"></nys-dropdownmenuitem>
+    <nys-dropdownmenuitem label="Action 2" prefixIcon="social_youtube" suffixIcon="open_in_new"></nys-dropdownmenuitem>
     <nys-dropdownmenuitem label="Action 3" prefixIcon="visibility" disabled=""></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Action 4" prefixIcon="sms"></nys-dropdownmenuitem>
+    <nys-dropdownmenuitem label="Action 4" suffixIcon="chevron_right"></nys-dropdownmenuitem>
   </nys-dropdownmenu>
 </div>
 </div>
@@ -865,10 +862,10 @@ Supported positions are:</p>
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>trigger-icons<span class="token punctuation">"</span></span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Open Menu<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenu</span> <span class="token attr-name">for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>trigger-icons<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenuitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Action 1<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lock_filled<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenuitem</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenuitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Action 2<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>social_youtube<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenuitem</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenuitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Action 3<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>visibility<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenuitem</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenuitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Action 4<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>sms<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenuitem</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenuitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Action 1<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>lock_filled<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenuitem</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenuitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Action 2<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>social_youtube<span class="token punctuation">"</span></span> <span class="token attr-name">suffixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>open_in_new<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenuitem</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenuitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Action 3<span class="token punctuation">"</span></span> <span class="token attr-name">prefixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>visibility<span class="token punctuation">"</span></span> <span class="token attr-name">disabled</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenuitem</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-dropdownmenuitem</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Action 4<span class="token punctuation">"</span></span> <span class="token attr-name">suffixIcon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>chevron_right<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenuitem</span><span class="token punctuation">></span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-dropdownmenu</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
@@ -878,8 +875,7 @@ Supported positions are:</p>
 <p>Use the <code>disabled</code> attribute on individual <code>&lt;nys-dropdownmenuitem&gt;</code> elements to prevent interaction.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div style="display: flex; justify-content: center; margin: 80px;">
+<div class="code-preview__preview-root-inner"><div style="display: flex; justify-content: center; margin: 80px;">
   <nys-button id="trigger-disabled" label="Open Menu"></nys-button>
   <nys-dropdownmenu for="trigger-disabled">
     <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
@@ -917,8 +913,7 @@ Supported positions are:</p>
 Use the <code>nys-click</code> dispatch event to call for specific functions to execute actions</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div style="display: flex; justify-content: center; margin: 80px;">
+<div class="code-preview__preview-root-inner"><div style="display: flex; justify-content: center; margin: 80px;">
   <nys-button id="trigger-actions" label="Open Menu"></nys-button>
   <nys-dropdownmenu for="trigger-actions">
     <nys-dropdownmenuitem label="Action 1"></nys-dropdownmenuitem>
@@ -1042,6 +1037,10 @@ Use the <code>nys-click</code> dispatch event to call for specific functions to 
       <td>String</td>
     </tr>
     <tr>
+      <td><code>suffixIcon</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
       <td><code>divider</code></td>
       <td>String</td>
     </tr>
@@ -1139,7 +1138,7 @@ dropdownmenu<span class="token punctuation">.</span><span class="token function"
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/dropdownmenu/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 15, 2026</p>
+    <p>Last updated: October 16, 2026</p>
   </div>
 
   </div>

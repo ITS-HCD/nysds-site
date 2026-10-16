@@ -118,8 +118,7 @@
 <p>We heard you. <code>&lt;nys-card&gt;</code> text was too big for some of your sites. So we've introduced a new <code>size</code> property to adjust the size of the text in your cards, while keeping things as consistent as possible. Remember that <code>md</code> is now the default for card size. Check out the updated <a href="https://designsystem.ny.gov/components/card/#sizes">Card size documentation</a> for usage instructions.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div class="nys-grid-row nys-grid-gap" style="--nys-card-height: 100%;">
+<div class="code-preview__preview-root-inner"><div class="nys-grid-row nys-grid-gap" style="--nys-card-height: 100%;">
   <nys-card class="nys-tablet:nys-grid-col-4" size="sm" preheading="Preheading content" heading="This is a small card" subheading="Subheading content" description="A short description of the card's subject."></nys-card>
   <nys-card class="nys-tablet:nys-grid-col-4" preheading="Preheading content" heading="This is the default medium card" subheading="Subheading content" description="A short description of the card's subject."></nys-card>
   <nys-card class="nys-tablet:nys-grid-col-4" size="lg" preheading="Preheading content" heading="This is a large card" subheading="Subheading content" description="A short description of the card's subject."></nys-card>
@@ -178,8 +177,7 @@
 <p>You can now fully override the card font sizes. All slots are covered: <code>preheading</code>, <code>heading</code>, <code>subheading</code>, and <code>description</code>. Modifying the <code>--nys-card-*</code> variables will adjust your font sizes and line heights for all cards on a page. <b>NOTE:</b> you cannot override the font sizes for <code>size=&quot;sm&quot;</code> or <code>size=&quot;lg&quot;</code> cards. Check out the updated <a href="https://designsystem.ny.gov/components/card/#style-overrides">Card style overides</a> for instructions.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div class="nys-grid-row nys-grid-gap" style="--nys-card-height: 100%;--nys-card-font-size--heading: 80px; --nys-card-line-height--heading: 1.25;">
+<div class="code-preview__preview-root-inner"><div class="nys-grid-row nys-grid-gap" style="--nys-card-height: 100%;--nys-card-font-size--heading: 80px; --nys-card-line-height--heading: 1.25;">
   <nys-card class="nys-tablet:nys-grid-col-4" preheading="Preheading content" heading="Hello"></nys-card>
   <nys-card class="nys-tablet:nys-grid-col-4" preheading="Preheading content" heading="Big"></nys-card>
   <nys-card class="nys-tablet:nys-grid-col-4" preheading="Preheading content" heading="World!"></nys-card>
@@ -230,8 +228,7 @@
 <p>In preparation for upcoming components, we needed to address how <code>&lt;nys-iconlist&gt;</code> displays on dark surfaces. To address this, we've added an <code>inverted</code> property which will change from black text to white text. <a href="https://designsystem.ny.gov/components/iconlist/#inverted">Check out the documentation for <code>inverted</code></a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview inverted " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-iconlist id="event-details3" divider="" inverted="">
+<div class="code-preview__preview-root-inner"><nys-iconlist id="event-details3" divider="" inverted="">
   <nys-iconlistitem icon="calendar_month">July 4, 2026</nys-iconlistitem>
   <nys-iconlistitem icon="schedule">5:00 PM</nys-iconlistitem>
   <nys-iconlistitem icon="location_on">
@@ -309,8 +306,7 @@
 <p>We heard you. <code>&lt;nys-card&gt;</code> text was too big for some of your sites. So we've introduced a new <code>size</code> property to adjust the size of the text in your cards, while keeping things as consistent as possible. Remember that <code>md</code> is now the default for card size. Check out the updated <a href="https://designsystem.ny.gov/components/card/#sizes">Card size documentation</a> for usage instructions.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div class="nys-grid-row nys-grid-gap" style="--nys-card-height: 100%;">
+<div class="code-preview__preview-root-inner"><div class="nys-grid-row nys-grid-gap" style="--nys-card-height: 100%;">
   <nys-card class="nys-tablet:nys-grid-col-4" size="sm" preheading="Preheading content" heading="This is a small card" subheading="Subheading content" description="A short description of the card's subject."></nys-card>
   <nys-card class="nys-tablet:nys-grid-col-4" preheading="Preheading content" heading="This is the default medium card" subheading="Subheading content" description="A short description of the card's subject."></nys-card>
   <nys-card class="nys-tablet:nys-grid-col-4" size="lg" preheading="Preheading content" heading="This is a large card" subheading="Subheading content" description="A short description of the card's subject."></nys-card>
@@ -369,8 +365,7 @@
 <p>You can now fully override the card font sizes. All slots are covered: <code>preheading</code>, <code>heading</code>, <code>subheading</code>, and <code>description</code>. Modifying the <code>--nys-card-*</code> variables will adjust your font sizes and line heights for all cards on a page. <b>NOTE:</b> you cannot override the font sizes for <code>size=&quot;sm&quot;</code> or <code>size=&quot;lg&quot;</code> cards. Check out the updated <a href="https://designsystem.ny.gov/components/card/#style-overrides">Card style overides</a> for instructions.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div class="nys-grid-row nys-grid-gap" style="--nys-card-height: 100%;--nys-card-font-size--heading: 80px; --nys-card-line-height--heading: 1.25;">
+<div class="code-preview__preview-root-inner"><div class="nys-grid-row nys-grid-gap" style="--nys-card-height: 100%;--nys-card-font-size--heading: 80px; --nys-card-line-height--heading: 1.25;">
   <nys-card class="nys-tablet:nys-grid-col-4" preheading="Preheading content" heading="Hello"></nys-card>
   <nys-card class="nys-tablet:nys-grid-col-4" preheading="Preheading content" heading="Big"></nys-card>
   <nys-card class="nys-tablet:nys-grid-col-4" preheading="Preheading content" heading="World!"></nys-card>
@@ -421,8 +416,7 @@
 <p>In preparation for upcoming components, we needed to address how <code>&lt;nys-iconlist&gt;</code> displays on dark surfaces. To address this, we've added an <code>inverted</code> property which will change from black text to white text. <a href="https://designsystem.ny.gov/components/iconlist/#inverted">Check out the documentation for <code>inverted</code></a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview inverted " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-iconlist id="event-details3" divider="" inverted="">
+<div class="code-preview__preview-root-inner"><nys-iconlist id="event-details3" divider="" inverted="">
   <nys-iconlistitem icon="calendar_month">July 4, 2026</nys-iconlistitem>
   <nys-iconlistitem icon="schedule">5:00 PM</nys-iconlistitem>
   <nys-iconlistitem icon="location_on">
@@ -566,8 +560,7 @@
 <p><a href="https://designsystem.ny.gov/components/badge">Read the &lt;nys-badge&gt; documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div class="nys-grid-row nys-grid-gap-100">
+<div class="code-preview__preview-root-inner"><div class="nys-grid-row nys-grid-gap-100">
   <nys-badge label="Neutral" prefixIcon=""></nys-badge>
   <nys-badge label="Info" intent="info" prefixIcon=""></nys-badge>
   <nys-badge label="Warning" intent="warning" prefixIcon=""></nys-badge>
@@ -687,8 +680,7 @@
 <p><a href="https://designsystem.ny.gov/components/badge">Read the &lt;nys-badge&gt; documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div class="nys-grid-row nys-grid-gap-100">
+<div class="code-preview__preview-root-inner"><div class="nys-grid-row nys-grid-gap-100">
   <nys-badge label="Neutral" prefixIcon=""></nys-badge>
   <nys-badge label="Info" intent="info" prefixIcon=""></nys-badge>
   <nys-badge label="Warning" intent="warning" prefixIcon=""></nys-badge>
@@ -760,8 +752,7 @@
 <p><a href="https://designsystem.ny.gov/components/card">Read the &lt;nys-card&gt; documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4">
+<div class="code-preview__preview-root-inner"><div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4">
   <nys-card heading="Giant Mountain" subheading="12th highest peak in New York">
     <img slot="media" src="https://designsystem.ny.gov/assets/i/2026/giant-mountain-card.jpg" role="presentation" />
     <p>Giant Mountain is a mountain located in the Adirondack Mountains of New York. It is the 12th highest peak in the state, with an elevation of 4,627 feet (1,410 m). The mountain is part of the Great Range and is known for its challenging hiking trails and stunning views from the summit.</p>
@@ -803,8 +794,7 @@
 <p><a href="https://designsystem.ny.gov/components/iconlist">Read the &lt;nys-iconlist&gt; documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-iconlist id="event-details">
+<div class="code-preview__preview-root-inner"><nys-iconlist id="event-details">
 <nys-iconlistitem icon="calendar_month">July 4, 2026</nys-iconlistitem>
 <nys-iconlistitem icon="schedule">5:00 PM</nys-iconlistitem>
 <nys-iconlistitem icon="location_on">Central Park West</nys-iconlistitem>
@@ -845,8 +835,7 @@
 <p><a href="https://designsystem.ny.gov/components/processlist">Read the &lt;nys-processlist&gt; documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-processlist id="application-steps">
+<div class="code-preview__preview-root-inner"><nys-processlist id="application-steps">
 <nys-processlistitem label="Gather your documents"></nys-processlistitem>
 <nys-processlistitem label="Complete the application"></nys-processlistitem>
 <nys-processlistitem label="Submit and await review"></nys-processlistitem>
@@ -889,8 +878,7 @@
 <p><a href="https://designsystem.ny.gov/components/verticalnav">Read the &lt;nys-verticalnav&gt; documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-verticalnav heading="NYS Design System" headingLevel="h2">
+<div class="code-preview__preview-root-inner"><nys-verticalnav heading="NYS Design System" headingLevel="h2">
   <ul>
     <li><a href="https://designsystem.ny.gov/">Foundations</a></li>
     <li>
@@ -917,7 +905,7 @@
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-verticalnav</span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>NYS Design System<span class="token punctuation">"</span></span> <span class="token attr-name">headingLevel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>h2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-verticalnav</span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>NYS Design System<span class="token punctuation">"</span></span> <span class="token attr-name">headingLevel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>h2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>&#10;
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Foundations<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
@@ -988,8 +976,7 @@
 <p><a href="https://designsystem.ny.gov/components/card">Read the &lt;nys-card&gt; documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4">
+<div class="code-preview__preview-root-inner"><div class="nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4">
   <nys-card heading="Giant Mountain" subheading="12th highest peak in New York">
     <img slot="media" src="https://designsystem.ny.gov/assets/i/2026/giant-mountain-card.jpg" role="presentation" />
     <p>Giant Mountain is a mountain located in the Adirondack Mountains of New York. It is the 12th highest peak in the state, with an elevation of 4,627 feet (1,410 m). The mountain is part of the Great Range and is known for its challenging hiking trails and stunning views from the summit.</p>
@@ -1031,8 +1018,7 @@
 <p><a href="https://designsystem.ny.gov/components/iconlist">Read the &lt;nys-iconlist&gt; documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-iconlist id="event-details">
+<div class="code-preview__preview-root-inner"><nys-iconlist id="event-details">
 <nys-iconlistitem icon="calendar_month">July 4, 2026</nys-iconlistitem>
 <nys-iconlistitem icon="schedule">5:00 PM</nys-iconlistitem>
 <nys-iconlistitem icon="location_on">Central Park West</nys-iconlistitem>
@@ -1073,8 +1059,7 @@
 <p><a href="https://designsystem.ny.gov/components/processlist">Read the &lt;nys-processlist&gt; documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-processlist id="application-steps">
+<div class="code-preview__preview-root-inner"><nys-processlist id="application-steps">
 <nys-processlistitem label="Gather your documents"></nys-processlistitem>
 <nys-processlistitem label="Complete the application"></nys-processlistitem>
 <nys-processlistitem label="Submit and await review"></nys-processlistitem>
@@ -1117,8 +1102,7 @@
 <p><a href="https://designsystem.ny.gov/components/verticalnav">Read the &lt;nys-verticalnav&gt; documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-verticalnav heading="NYS Design System" headingLevel="h2">
+<div class="code-preview__preview-root-inner"><nys-verticalnav heading="NYS Design System" headingLevel="h2">
   <ul>
     <li><a href="https://designsystem.ny.gov/">Foundations</a></li>
     <li>
@@ -1145,7 +1129,7 @@
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-verticalnav</span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>NYS Design System<span class="token punctuation">"</span></span> <span class="token attr-name">headingLevel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>h2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-verticalnav</span> <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>NYS Design System<span class="token punctuation">"</span></span> <span class="token attr-name">headingLevel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>h2<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>&#10;
   <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ul</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>/<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Foundations<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">></span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">></span></span>
@@ -1574,8 +1558,7 @@
 <p>Use <code>agencySubheading</code> to display a short description beneath the agency name.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-globalfooter agencyName="NYS Design System" agencySubheading="A product of the NYS Office of Information Technology Services">
+<div class="code-preview__preview-root-inner"><nys-globalfooter agencyName="NYS Design System" agencySubheading="A product of the NYS Office of Information Technology Services">
 </nys-globalfooter></div>
   </div>
   <div class="code-preview__source">
@@ -1656,8 +1639,7 @@
 <p>Use <code>agencySubheading</code> to display a short description beneath the agency name.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-globalfooter agencyName="NYS Design System" agencySubheading="A product of the NYS Office of Information Technology Services">
+<div class="code-preview__preview-root-inner"><nys-globalfooter agencyName="NYS Design System" agencySubheading="A product of the NYS Office of Information Technology Services">
 </nys-globalfooter></div>
   </div>
   <div class="code-preview__source">
@@ -1895,8 +1877,7 @@
 <p>The <code>&lt;nys-divider&gt;</code> component got a new <code>subtle</code> attribute that provides a more understated visual separation between content. The subtle divider is ideal for use in situations where a less prominent division is desired.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-Content above the divider.
+<div class="code-preview__preview-root-inner">Content above the divider.
 <nys-divider subtle=""></nys-divider>
 Content below the divider.
 </div>
@@ -2121,8 +2102,7 @@ Content below the divider.
 <p>The <code>&lt;nys-divider&gt;</code> component got a new <code>subtle</code> attribute that provides a more understated visual separation between content. The subtle divider is ideal for use in situations where a less prominent division is desired.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-Content above the divider.
+<div class="code-preview__preview-root-inner">Content above the divider.
 <nys-divider subtle=""></nys-divider>
 Content below the divider.
 </div>
@@ -2200,8 +2180,7 @@ Content below the divider.
       <description><![CDATA[<h2>New <code>&lt;nys-icon&gt;</code>: <nys-icon name="delete"></nys-icon> &quot;delete&quot;</h2>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-icon name="delete" size="5xl"></nys-icon>
+<div class="code-preview__preview-root-inner"><nys-icon name="delete" size="5xl"></nys-icon>
 </div>
   </div>
   <div class="code-preview__source">
@@ -2266,8 +2245,7 @@ Content below the divider.
       <content><![CDATA[<h2>New <code>&lt;nys-icon&gt;</code>: <nys-icon name="delete"></nys-icon> &quot;delete&quot;</h2>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-icon name="delete" size="5xl"></nys-icon>
+<div class="code-preview__preview-root-inner"><nys-icon name="delete" size="5xl"></nys-icon>
 </div>
   </div>
   <div class="code-preview__source">
@@ -2345,8 +2323,7 @@ Content below the divider.
 <p><a href="https://designsystem.ny.gov/components/tab">Read the full tabs documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-tabgroup>
+<div class="code-preview__preview-root-inner"><nys-tabgroup>
   <nys-tab label="Marcy"></nys-tab>
   <nys-tab label="Algonquin"></nys-tab>
   <nys-tab label="Haystack"></nys-tab>
@@ -2506,8 +2483,7 @@ Content below the divider.
 <p><a href="https://designsystem.ny.gov/components/tab">Read the full tabs documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-tabgroup>
+<div class="code-preview__preview-root-inner"><nys-tabgroup>
   <nys-tab label="Marcy"></nys-tab>
   <nys-tab label="Algonquin"></nys-tab>
   <nys-tab label="Haystack"></nys-tab>
@@ -2673,8 +2649,7 @@ Content below the divider.
 <p><a href="https://designsystem.ny.gov/components/breadcrumbs">Read the full breadcrumbs documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-breadcrumbs>
+<div class="code-preview__preview-root-inner"><nys-breadcrumbs>
   <ol>
     <li><a href="https://designsystem.ny.gov/">Home</a></li>
     <li><a href="https://designsystem.ny.gov/services">Services</a></li>
@@ -2715,8 +2690,7 @@ Content below the divider.
 <p><a href="https://designsystem.ny.gov/components/button/#icons">Read the full icon button documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-button variant="text" label="Review Component Proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals" suffixIcon="open_in_new">
+<div class="code-preview__preview-root-inner"><nys-button variant="text" label="Review Component Proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals" suffixIcon="open_in_new">
 </nys-button>
 </div>
   </div>
@@ -2784,8 +2758,7 @@ Content below the divider.
 <p><a href="https://designsystem.ny.gov/components/breadcrumbs">Read the full breadcrumbs documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-breadcrumbs>
+<div class="code-preview__preview-root-inner"><nys-breadcrumbs>
   <ol>
     <li><a href="https://designsystem.ny.gov/">Home</a></li>
     <li><a href="https://designsystem.ny.gov/services">Services</a></li>
@@ -2826,8 +2799,7 @@ Content below the divider.
 <p><a href="https://designsystem.ny.gov/components/button/#icons">Read the full icon button documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-button variant="text" label="Review Component Proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals" suffixIcon="open_in_new">
+<div class="code-preview__preview-root-inner"><nys-button variant="text" label="Review Component Proposals" href="https://github.com/ITS-HCD/nysds/discussions/categories/component-proposals" suffixIcon="open_in_new">
 </nys-button>
 </div>
   </div>
@@ -3090,8 +3062,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <a href="https://designsystem.ny.gov/components/datepicker/#restrict-selectable-dates">Read the minDate maxDate documentation</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-datepicker label="Select a date" description="Only dates within April 4/5/2026 - 4/15/2026 are selectable" minDate="2026-04-05" maxDate="2026-04-15"></nys-datepicker>
+<div class="code-preview__preview-root-inner"><nys-datepicker label="Select a date" description="Only dates within April 4/5/2026 - 4/15/2026 are selectable" minDate="2026-04-05" maxDate="2026-04-15"></nys-datepicker>
 </div>
   </div>
   <div class="code-preview__source">
@@ -3153,8 +3124,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <a href="https://designsystem.ny.gov/components/datepicker/#restrict-selectable-dates">Read the minDate maxDate documentation</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-datepicker label="Select a date" description="Only dates within April 4/5/2026 - 4/15/2026 are selectable" minDate="2026-04-05" maxDate="2026-04-15"></nys-datepicker>
+<div class="code-preview__preview-root-inner"><nys-datepicker label="Select a date" description="Only dates within April 4/5/2026 - 4/15/2026 are selectable" minDate="2026-04-05" maxDate="2026-04-15"></nys-datepicker>
 </div>
   </div>
   <div class="code-preview__source">
@@ -3226,8 +3196,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <p><a href="https://designsystem.ny.gov/components/video">Read the full video documentation</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-video videourl="https://www.youtube.com/watch?v=TBfFzt0150Q" titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"></nys-video>
+<div class="code-preview__preview-root-inner"><nys-video videourl="https://www.youtube.com/watch?v=TBfFzt0150Q" titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"></nys-video>
 </div>
   </div>
   <div class="code-preview__source">
@@ -3299,8 +3268,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <p><a href="https://designsystem.ny.gov/components/video">Read the full video documentation</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-video videourl="https://www.youtube.com/watch?v=TBfFzt0150Q" titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"></nys-video>
+<div class="code-preview__preview-root-inner"><nys-video videourl="https://www.youtube.com/watch?v=TBfFzt0150Q" titleText="IT'S a Tech Podcast, Episode 3: Human-Centered Design"></nys-video>
 </div>
   </div>
   <div class="code-preview__source">
@@ -3379,8 +3347,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <p><a href="https://designsystem.ny.gov/components/combobox">Read the full combobox documentation</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-combobox label="Choose a county" id="my-combobox" width="lg">
+<div class="code-preview__preview-root-inner"><nys-combobox label="Choose a county" id="my-combobox" width="lg">
   <option value="albany">Albany</option>
   <option value="allegany">Allegany</option>
   <option value="bronx">Bronx</option>
@@ -3476,8 +3443,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <p><a href="https://designsystem.ny.gov/components/dropdownmenu">Read the full dropdownmenu documentation</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-button id="my-trigger-id" label="Dropdown Menu"></nys-button>
+<div class="code-preview__preview-root-inner"><nys-button id="my-trigger-id" label="Dropdown Menu"></nys-button>
 <nys-dropdownmenu id="my-dropdownmenu" for="my-trigger-id">
   <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
   <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
@@ -3516,8 +3482,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <p><a href="https://designsystem.ny.gov/components/unav-header/#custom-language-endpoints">Read the full custom language endpoint documentation</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-unavheader id="my-header" hideSearch=""></nys-unavheader>
+<div class="code-preview__preview-root-inner"><nys-unavheader id="my-header" hideSearch=""></nys-unavheader>
 <script>
   const header = document.querySelector('#my-header');
   header.languages = [
@@ -3605,8 +3570,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <p><a href="https://designsystem.ny.gov/components/combobox">Read the full combobox documentation</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-combobox label="Choose a county" id="my-combobox" width="lg">
+<div class="code-preview__preview-root-inner"><nys-combobox label="Choose a county" id="my-combobox" width="lg">
   <option value="albany">Albany</option>
   <option value="allegany">Allegany</option>
   <option value="bronx">Bronx</option>
@@ -3702,8 +3666,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <p><a href="https://designsystem.ny.gov/components/dropdownmenu">Read the full dropdownmenu documentation</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-button id="my-trigger-id" label="Dropdown Menu"></nys-button>
+<div class="code-preview__preview-root-inner"><nys-button id="my-trigger-id" label="Dropdown Menu"></nys-button>
 <nys-dropdownmenu id="my-dropdownmenu" for="my-trigger-id">
   <nys-dropdownmenuitem label="Profile" href="/profile"></nys-dropdownmenuitem>
   <nys-dropdownmenuitem label="Repositories & Github Pages" href="/repos"></nys-dropdownmenuitem>
@@ -3742,8 +3705,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <p><a href="https://designsystem.ny.gov/components/unav-header/#custom-language-endpoints">Read the full custom language endpoint documentation</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-unavheader id="my-header" hideSearch=""></nys-unavheader>
+<div class="code-preview__preview-root-inner"><nys-unavheader id="my-header" hideSearch=""></nys-unavheader>
 <script>
   const header = document.querySelector('#my-header');
   header.languages = [
@@ -3869,8 +3831,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 </style>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<style>
+<div class="code-preview__preview-root-inner"><style>
   :root {
     --nys-accordion-background-color--header: var(--nys-color-theme-weak);
     --nys-accordion-background-color--header--hover: var(--nys-color-theme-weaker);
@@ -3939,8 +3900,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <a href="https://designsystem.ny.gov/components/radiobutton/#other">Read the radiobutton <code>other</code> documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-checkboxgroup label="Select your favorite New York landmarks">
+<div class="code-preview__preview-root-inner"><nys-checkboxgroup label="Select your favorite New York landmarks">
   <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks"></nys-checkbox>
   <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes"></nys-checkbox>
   <nys-checkbox name="landmarks" value="catskills" label="Catskills"></nys-checkbox>
@@ -4049,8 +4009,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 </style>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<style>
+<div class="code-preview__preview-root-inner"><style>
   :root {
     --nys-accordion-background-color--header: var(--nys-color-theme-weak);
     --nys-accordion-background-color--header--hover: var(--nys-color-theme-weaker);
@@ -4119,8 +4078,7 @@ Because the CSS variables used the shared vocabulary of the design tokens across
 <a href="https://designsystem.ny.gov/components/radiobutton/#other">Read the radiobutton <code>other</code> documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-checkboxgroup label="Select your favorite New York landmarks">
+<div class="code-preview__preview-root-inner"><nys-checkboxgroup label="Select your favorite New York landmarks">
   <nys-checkbox label="Adirondacks" name="landmarks" value="adirondacks"></nys-checkbox>
   <nys-checkbox name="landmarks" value="finger-lakes" label="Finger Lakes"></nys-checkbox>
   <nys-checkbox name="landmarks" value="catskills" label="Catskills"></nys-checkbox>
@@ -4991,8 +4949,7 @@ var interval = setInterval(function() {
 <p>When creating the <code>&lt;nys-table&gt;</code> component we realized that the muted color badges we created were not standing out enough in a crowd of other table cells. So we created an additional variant: &quot;strong.&quot; Use the strong badge variant to help your badges stand out in a crowd. Continue to use the default variant in most cases. <a href="https://designsystem.ny.gov/components/badge/#variant">Read the badge documentation</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div class="nys-grid-row">
+<div class="code-preview__preview-root-inner"><div class="nys-grid-row">
   <div class="nys-grid-col-3">
     <nys-badge label="Neutral" variant="strong" prefixIcon=""></nys-badge>
   </div>
@@ -5060,8 +5017,7 @@ var interval = setInterval(function() {
 <p>When creating the <code>&lt;nys-table&gt;</code> component we realized that the muted color badges we created were not standing out enough in a crowd of other table cells. So we created an additional variant: &quot;strong.&quot; Use the strong badge variant to help your badges stand out in a crowd. Continue to use the default variant in most cases. <a href="https://designsystem.ny.gov/components/badge/#variant">Read the badge documentation</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div class="nys-grid-row">
+<div class="code-preview__preview-root-inner"><div class="nys-grid-row">
   <div class="nys-grid-col-3">
     <nys-badge label="Neutral" variant="strong" prefixIcon=""></nys-badge>
   </div>
@@ -5136,8 +5092,7 @@ var interval = setInterval(function() {
 <p>The user experience for scheduling appointments, and selecting future dates, can be confusing without a calendar view. The new <code>&lt;nys-datepicker&gt;</code> component provides you a way to give users a quick calendar view of dates. <strong>Importantly</strong>, do not use this for “memorable dates” such as “date of birth” or “anniversary date,” instead use a textinput for entering the date manually. <a href="https://designsystem.ny.gov/components/datepicker/">Read the datepicker documentation</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-datepicker></nys-datepicker>
+<div class="code-preview__preview-root-inner"><nys-datepicker></nys-datepicker>
 </div>
   </div>
   <div class="code-preview__source">
@@ -5163,8 +5118,7 @@ var interval = setInterval(function() {
 <p>Tables are very useful for displaying structured data on the web. The new <code>&lt;nys-table&gt;</code> component aims to standardize the look, feel, and functionality of a table element. You'll find features such as zebra striping, column sorting, and more. <a href="https://designsystem.ny.gov/components/table/">Read the table documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-table id="table3" name="table3" bordered="" sortable="" striped="">
+<div class="code-preview__preview-root-inner"><nys-table id="table3" name="table3" bordered="" sortable="" striped="">
   <table>
     <caption>
     New York State High Peaks and Popular Hikes
@@ -5270,8 +5224,7 @@ var interval = setInterval(function() {
 <p>Based on community feedback, we identified a need to allow engineers to add a “user” menu to the global header. The <code>&lt;nys-globalheader&gt;</code> component includes a named slot called <code>user-actions</code>. This slot allows you to insert custom HTML content, such as user profile links, settings, or logout buttons, into the header. <a href="https://designsystem.ny.gov/components/globalheader/#user-actions">Read the user actions documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
+<div class="code-preview__preview-root-inner"><nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
   <nys-button slot="user-actions" label="Sign out" prefixIcon="slotted">
     <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="NY"></nys-avatar>
   </nys-button>
@@ -5346,8 +5299,7 @@ var interval = setInterval(function() {
 <p>The user experience for scheduling appointments, and selecting future dates, can be confusing without a calendar view. The new <code>&lt;nys-datepicker&gt;</code> component provides you a way to give users a quick calendar view of dates. <strong>Importantly</strong>, do not use this for “memorable dates” such as “date of birth” or “anniversary date,” instead use a textinput for entering the date manually. <a href="https://designsystem.ny.gov/components/datepicker/">Read the datepicker documentation</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-datepicker></nys-datepicker>
+<div class="code-preview__preview-root-inner"><nys-datepicker></nys-datepicker>
 </div>
   </div>
   <div class="code-preview__source">
@@ -5373,8 +5325,7 @@ var interval = setInterval(function() {
 <p>Tables are very useful for displaying structured data on the web. The new <code>&lt;nys-table&gt;</code> component aims to standardize the look, feel, and functionality of a table element. You'll find features such as zebra striping, column sorting, and more. <a href="https://designsystem.ny.gov/components/table/">Read the table documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-table id="table3" name="table3" bordered="" sortable="" striped="">
+<div class="code-preview__preview-root-inner"><nys-table id="table3" name="table3" bordered="" sortable="" striped="">
   <table>
     <caption>
     New York State High Peaks and Popular Hikes
@@ -5480,8 +5431,7 @@ var interval = setInterval(function() {
 <p>Based on community feedback, we identified a need to allow engineers to add a “user” menu to the global header. The <code>&lt;nys-globalheader&gt;</code> component includes a named slot called <code>user-actions</code>. This slot allows you to insert custom HTML content, such as user profile links, settings, or logout buttons, into the header. <a href="https://designsystem.ny.gov/components/globalheader/#user-actions">Read the user actions documentation</a></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
+<div class="code-preview__preview-root-inner"><nys-globalheader appName="User Registration Form" agencyName="Office of Information Technology Services">
   <nys-button slot="user-actions" label="Sign out" prefixIcon="slotted">
     <nys-avatar slot="prefix-icon" ariaLabel="User avatar" initials="NY"></nys-avatar>
   </nys-button>
@@ -5647,8 +5597,7 @@ var interval = setInterval(function() {
 <h3>Tooltip demo</h3>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-tooltip for="my-textinput" text="I am a tooltip."></nys-tooltip>
+<div class="code-preview__preview-root-inner"><nys-tooltip for="my-textinput" text="I am a tooltip."></nys-tooltip>
 <nys-textinput id="my-textinput" name="fullName" label="Full name" description="Enter your full legal name" width="md"></nys-textinput>
 </div>
   </div>
@@ -5676,8 +5625,7 @@ var interval = setInterval(function() {
 <p>We have added new responsive variants for our popular utility classes. You can now apply certain utility classes at specific breakpoints as written below:</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div class="nys-grid-row border-left bg-white">
+<div class="code-preview__preview-root-inner"><div class="nys-grid-row border-left bg-white">
   <div class="nys-grid-col-1 border-right">
     <div class="text-center">1</div>
   </div>
@@ -5794,8 +5742,7 @@ var interval = setInterval(function() {
 <h3>Tooltip demo</h3>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-tooltip for="my-textinput" text="I am a tooltip."></nys-tooltip>
+<div class="code-preview__preview-root-inner"><nys-tooltip for="my-textinput" text="I am a tooltip."></nys-tooltip>
 <nys-textinput id="my-textinput" name="fullName" label="Full name" description="Enter your full legal name" width="md"></nys-textinput>
 </div>
   </div>
@@ -5823,8 +5770,7 @@ var interval = setInterval(function() {
 <p>We have added new responsive variants for our popular utility classes. You can now apply certain utility classes at specific breakpoints as written below:</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div class="nys-grid-row border-left bg-white">
+<div class="code-preview__preview-root-inner"><div class="nys-grid-row border-left bg-white">
   <div class="nys-grid-col-1 border-right">
     <div class="text-center">1</div>
   </div>
@@ -6088,8 +6034,7 @@ var interval = setInterval(function() {
 </nys-alert></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-  <nys-select label="Which New York State service are you contacting us about?" description="This is for demo purposes and the list might not be exhaustive.">
+<div class="code-preview__preview-root-inner">  <nys-select label="Which New York State service are you contacting us about?" description="This is for demo purposes and the list might not be exhaustive.">
   <optgroup label="Transportation Services">
     <option value="mta">MTA / Public Transit</option>
     <option value="dmv">Department of Motor Vehicles (DMV)</option>
@@ -6219,8 +6164,7 @@ This release includes <strong>major changes</strong> to the icon size system to 
 </nys-alert></p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  solid" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-  <nys-select label="Which New York State service are you contacting us about?" description="This is for demo purposes and the list might not be exhaustive.">
+<div class="code-preview__preview-root-inner">  <nys-select label="Which New York State service are you contacting us about?" description="This is for demo purposes and the list might not be exhaustive.">
   <optgroup label="Transportation Services">
     <option value="mta">MTA / Public Transit</option>
     <option value="dmv">Department of Motor Vehicles (DMV)</option>
@@ -6414,8 +6358,7 @@ This release includes <strong>major changes</strong> to the icon size system to 
 <p><code>&lt;nys-globalfooter&gt;</code> now accepts a set of <code>&lt;ul&gt;</code>s and displays them in columns. This allows for more standard footer layouts. <a href="https://designsystem.ny.gov/components/globalfooter">Read the full documentation for link columns on the <code>&lt;nys-globalfooter&gt;</code> component</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-  <nys-globalfooter agencyName="Office of Information Technology Services">
+<div class="code-preview__preview-root-inner">  <nys-globalfooter agencyName="Office of Information Technology Services">
   <ul>
     <li>
       <span>About</span>
@@ -6483,8 +6426,7 @@ All form field components have been updated with a new property which will inver
 <p>The <code>&lt;nys-pagination&gt;</code> component has been updated to no longer hide the &quot;previous&quot; and &quot;next&quot; buttons when you are on the first or last page. This update will now disable these buttons instead of removing them. This results in a more consistent user experience.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-  <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
+<div class="code-preview__preview-root-inner">  <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
   </div>
   </div>
   <div class="code-preview__source">
@@ -6535,8 +6477,7 @@ All form field components have been updated with a new property which will inver
 <p><code>&lt;nys-globalfooter&gt;</code> now accepts a set of <code>&lt;ul&gt;</code>s and displays them in columns. This allows for more standard footer layouts. <a href="https://designsystem.ny.gov/components/globalfooter">Read the full documentation for link columns on the <code>&lt;nys-globalfooter&gt;</code> component</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-  <nys-globalfooter agencyName="Office of Information Technology Services">
+<div class="code-preview__preview-root-inner">  <nys-globalfooter agencyName="Office of Information Technology Services">
   <ul>
     <li>
       <span>About</span>
@@ -6604,8 +6545,7 @@ All form field components have been updated with a new property which will inver
 <p>The <code>&lt;nys-pagination&gt;</code> component has been updated to no longer hide the &quot;previous&quot; and &quot;next&quot; buttons when you are on the first or last page. This update will now disable these buttons instead of removing them. This results in a more consistent user experience.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-  <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
+<div class="code-preview__preview-root-inner">  <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
   </div>
   </div>
   <div class="code-preview__source">
@@ -6664,8 +6604,7 @@ All form field components have been updated with a new property which will inver
 <p>The <code>&lt;nys-pagination&gt;</code> component allows you to hook into functionality to present pagination functionality to your apps and sites. For more information, <a href="https://designsystem.ny.gov/components/pagination">read the full documentation for <code>&lt;nys-pagination&gt;</code> component</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-  <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
+<div class="code-preview__preview-root-inner">  <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
   </div>
   </div>
   <div class="code-preview__source">
@@ -6696,8 +6635,7 @@ All form field components have been updated with a new property which will inver
 <p>The <code>&lt;nys-modal&gt;</code> component brings pop up content within a page. Use it for providing context to your existing process flows. For more information, <a href="https://designsystem.ny.gov/components/modal">read the full documentation for <code>&lt;nys-modal&gt;</code> component</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-  <nys-button label="Open Modal" onclick="showModal();" type="button" id="open-modal-button"></nys-button>
+<div class="code-preview__preview-root-inner">  <nys-button label="Open Modal" onclick="showModal();" type="button" id="open-modal-button"></nys-button>
   <nys-modal id="modal1" heading="Update Available" subheading="A new version of this application is ready to install.">
     <p>
       Would you like to install the latest version? Albany ipsum dolor sit
@@ -6748,49 +6686,49 @@ All form field components have been updated with a new property which will inver
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>
-    <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Open Modal<span class="token punctuation">"</span></span>
-    <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span>
-    <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
-    <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>open-modal-button<span class="token punctuation">"</span></span>
-  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-modal</span>
-    <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal1<span class="token punctuation">"</span></span>
-    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Update Available<span class="token punctuation">"</span></span>
-    <span class="token attr-name">subheading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A new version of this application is ready to install.<span class="token punctuation">"</span></span>
-  <span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
-      Would you like to install the latest version? Albany ipsum dolor sit
-      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
-      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
-      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
-      Cuomo consequat.
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
-      Would you like to install the latest version? Albany ipsum dolor sit
-      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
-      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
-      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
-      Cuomo consequat.
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>actions<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Not now<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Update<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-modal</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
-    <span class="token keyword">function</span> <span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">const</span> modal <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'modal1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>modal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        modal<span class="token punctuation">.</span>open <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-    <span class="token keyword">function</span> <span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">const</span> modal <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'modal1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>modal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        modal<span class="token punctuation">.</span>open <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Open Modal<span class="token punctuation">"</span></span>
+  <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span>
+  <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>open-modal-button<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-modal</span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal1<span class="token punctuation">"</span></span>
+  <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Update Available<span class="token punctuation">"</span></span>
+  <span class="token attr-name">subheading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A new version of this application is ready to install.<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+    Would you like to install the latest version? Albany ipsum dolor sit
+    Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+    incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+    veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+    Cuomo consequat.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+    Would you like to install the latest version? Albany ipsum dolor sit
+    Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+    incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+    veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+    Cuomo consequat.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>actions<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Not now<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Update<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-modal</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">function</span> <span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> modal <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'modal1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>modal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      modal<span class="token punctuation">.</span>open <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> modal <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'modal1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>modal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      modal<span class="token punctuation">.</span>open <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
@@ -6823,8 +6761,7 @@ All form field components have been updated with a new property which will inver
 <p>The <code>&lt;nys-pagination&gt;</code> component allows you to hook into functionality to present pagination functionality to your apps and sites. For more information, <a href="https://designsystem.ny.gov/components/pagination">read the full documentation for <code>&lt;nys-pagination&gt;</code> component</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-  <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
+<div class="code-preview__preview-root-inner">  <nys-pagination id="pagination" name="pagination" currentPage="4" totalPages="10"></nys-pagination>
   </div>
   </div>
   <div class="code-preview__source">
@@ -6855,8 +6792,7 @@ All form field components have been updated with a new property which will inver
 <p>The <code>&lt;nys-modal&gt;</code> component brings pop up content within a page. Use it for providing context to your existing process flows. For more information, <a href="https://designsystem.ny.gov/components/modal">read the full documentation for <code>&lt;nys-modal&gt;</code> component</a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-  <nys-button label="Open Modal" onclick="showModal();" type="button" id="open-modal-button"></nys-button>
+<div class="code-preview__preview-root-inner">  <nys-button label="Open Modal" onclick="showModal();" type="button" id="open-modal-button"></nys-button>
   <nys-modal id="modal1" heading="Update Available" subheading="A new version of this application is ready to install.">
     <p>
       Would you like to install the latest version? Albany ipsum dolor sit
@@ -6907,49 +6843,49 @@ All form field components have been updated with a new property which will inver
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span>
-    <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Open Modal<span class="token punctuation">"</span></span>
-    <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span>
-    <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
-    <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>open-modal-button<span class="token punctuation">"</span></span>
-  <span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-modal</span>
-    <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal1<span class="token punctuation">"</span></span>
-    <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Update Available<span class="token punctuation">"</span></span>
-    <span class="token attr-name">subheading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A new version of this application is ready to install.<span class="token punctuation">"</span></span>
-  <span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
-      Would you like to install the latest version? Albany ipsum dolor sit
-      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
-      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
-      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
-      Cuomo consequat.
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
-      Would you like to install the latest version? Albany ipsum dolor sit
-      Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
-      incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
-      veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
-      Cuomo consequat.
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>actions<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Not now<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
-      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Update<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-modal</span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
-    <span class="token keyword">function</span> <span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">const</span> modal <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'modal1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>modal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        modal<span class="token punctuation">.</span>open <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-    <span class="token keyword">function</span> <span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-      <span class="token keyword">const</span> modal <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'modal1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token keyword">if</span> <span class="token punctuation">(</span>modal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        modal<span class="token punctuation">.</span>open <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-  </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
+  <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Open Modal<span class="token punctuation">"</span></span>
+  <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span>
+  <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>open-modal-button<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-modal</span>
+  <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>modal1<span class="token punctuation">"</span></span>
+  <span class="token attr-name">heading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Update Available<span class="token punctuation">"</span></span>
+  <span class="token attr-name">subheading</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>A new version of this application is ready to install.<span class="token punctuation">"</span></span>
+<span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+    Would you like to install the latest version? Albany ipsum dolor sit
+    Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+    incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+    veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+    Cuomo consequat.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
+    Would you like to install the latest version? Albany ipsum dolor sit
+    Empire, Hudson consectetur Adirondack elit, sed do MetroCard tempor
+    incididunt ut Capitol et Broadway magna Niagara. Ut enim ad Erie
+    veniam, quis nostrud Catskill ullamco Bronx nisi ut LongIsland ex ea
+    Cuomo consequat.
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">slot</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>actions<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Not now<span class="token punctuation">"</span></span> <span class="token attr-name">variant</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-button</span> <span class="token attr-name">label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Update<span class="token punctuation">"</span></span> <span class="token special-attr"><span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token value javascript language-javascript"><span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-button</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-modal</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">function</span> <span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> modal <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'modal1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>modal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      modal<span class="token punctuation">.</span>open <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">closeModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> modal <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'modal1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>modal<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      modal<span class="token punctuation">.</span>open <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
@@ -6988,8 +6924,7 @@ All form field components have been updated with a new property which will inver
 <p>The <code>&lt;nys-divider&gt;</code> component visually separates content or sections within an interface. For more information, <a href="https://designsystem.ny.gov/components/divider">read the full documentation for the <code>&lt;nys-divider&gt;</code></a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<h4>Hello World</h4>
+<div class="code-preview__preview-root-inner"><h4>Hello World</h4>
 <nys-divider></nys-divider>
 <h4>Goodbye World</h4>
 </div>
@@ -7038,8 +6973,7 @@ All form field components have been updated with a new property which will inver
 <p>The <code>&lt;nys-divider&gt;</code> component visually separates content or sections within an interface. For more information, <a href="https://designsystem.ny.gov/components/divider">read the full documentation for the <code>&lt;nys-divider&gt;</code></a>.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<h4>Hello World</h4>
+<div class="code-preview__preview-root-inner"><h4>Hello World</h4>
 <nys-divider></nys-divider>
 <h4>Goodbye World</h4>
 </div>

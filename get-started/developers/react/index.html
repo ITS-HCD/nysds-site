@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-15T15:02:49.389Z -->
+    <!-- Latest Build: 2026-10-16T20:00:45.469Z -->
   </head>
   
   <body class="single-page page-react section-get-started">
@@ -285,7 +285,7 @@
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> NysButton <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@nysds/react/button"</span><span class="token punctuation">;</span>
+        <pre class="language-js"><code class="language-js"><span class="token keyword">import</span> <span class="token punctuation">{</span> NysButton <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@nysds/react/button"</span><span class="token punctuation">;</span>&#10;
 <span class="token operator">&lt;</span>NysButton label<span class="token operator">=</span><span class="token string">"Submit"</span> variant<span class="token operator">=</span><span class="token string">"primary"</span> <span class="token operator">/</span><span class="token operator">></span></code></pre>
       </div>
     </div>
@@ -311,7 +311,7 @@
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-js"><code class="language-js"><span class="token comment">// ❌ This won't work! NysTextinput doesn't fire a native change event</span>
-<span class="token operator">&lt;</span>NysTextinput onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setValue</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+<span class="token operator">&lt;</span>NysTextinput onChange<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token function">setValue</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>target<span class="token punctuation">.</span>value<span class="token punctuation">)</span><span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>&#10;
 <span class="token comment">// ✅ Use the NYSDS custom event binding</span>
 <span class="token operator">&lt;</span>NysTextinput
   name<span class="token operator">=</span><span class="token string">"email"</span>
@@ -355,7 +355,6 @@ onNysInput<span class="token operator">=</span><span class="token punctuation">{
 <script>
   const input = document.querySelector('nys-textinput');
   const currentValue = document.querySelector('#current-value');
-
   input.addEventListener('nys-input', (e) => {
     currentValue.textContent = e.detail.value || '...';
   });
@@ -374,7 +373,7 @@ onNysInput<span class="token operator">=</span><span class="token punctuation">{
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">[</span>value<span class="token punctuation">,</span> setValue<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">[</span>value<span class="token punctuation">,</span> setValue<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>&#10;
 <span class="token operator">&lt;</span>NysTextinput
   label<span class="token operator">=</span><span class="token string">"Type something"</span>
   name<span class="token operator">=</span><span class="token string">"demo"</span>
@@ -403,7 +402,7 @@ onNysInput<span class="token operator">=</span><span class="token punctuation">{
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">[</span>name<span class="token punctuation">,</span> setName<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <pre class="language-js"><code class="language-js"><span class="token keyword">const</span> <span class="token punctuation">[</span>name<span class="token punctuation">,</span> setName<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">useState</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>&#10;
 <span class="token operator">&lt;</span>NysTextinput
   label<span class="token operator">=</span><span class="token string">"Name"</span>
   value<span class="token operator">=</span><span class="token punctuation">{</span>name<span class="token punctuation">}</span>
@@ -430,15 +429,15 @@ onNysInput<span class="token operator">=</span><span class="token punctuation">{
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
         <pre class="language-ts"><code class="language-ts"><span class="token keyword">import</span> <span class="token punctuation">{</span> SyntheticEvent <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
-<span class="token keyword">import</span> <span class="token punctuation">{</span> NysButton<span class="token punctuation">,</span> NysSelect<span class="token punctuation">,</span> NysTextinput <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@nysds/react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> NysButton<span class="token punctuation">,</span> NysSelect<span class="token punctuation">,</span> NysTextinput <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@nysds/react"</span><span class="token punctuation">;</span>&#10;
 <span class="token keyword">const</span> <span class="token function-variable function">MyForm</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> <span class="token function-variable function">handleSubmit</span> <span class="token operator">=</span> <span class="token punctuation">(</span>e<span class="token operator">:</span> SyntheticEvent<span class="token operator">&lt;</span>HTMLFormElement<span class="token operator">></span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-    e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    e<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>&#10;
     <span class="token keyword">const</span> formData <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">FormData</span><span class="token punctuation">(</span>e<span class="token punctuation">.</span>currentTarget<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">const</span> data <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">fromEntries</span><span class="token punctuation">(</span>formData<span class="token punctuation">.</span><span class="token function">entries</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token comment">// data = { name: "Jane Smith", topic: "general" }</span>
+    <span class="token comment">// data = { name: "Jane Smith", topic: "general" }</span>&#10;
     <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>&#10;
   <span class="token keyword">return</span> <span class="token punctuation">(</span>
     <span class="token operator">&lt;</span>form onSubmit<span class="token operator">=</span><span class="token punctuation">{</span>handleSubmit<span class="token punctuation">}</span><span class="token operator">></span>
       <span class="token operator">&lt;</span>NysTextinput name<span class="token operator">=</span><span class="token string">"name"</span> label<span class="token operator">=</span><span class="token string">"Name"</span> required <span class="token operator">/</span><span class="token operator">></span>
@@ -469,9 +468,9 @@ onNysInput<span class="token operator">=</span><span class="token punctuation">{
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-ts"><code class="language-ts"><span class="token keyword">const</span> formRef <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useRef</span><span class="token generic class-name"><span class="token operator">&lt;</span>HTMLFormElement<span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <pre class="language-ts"><code class="language-ts"><span class="token keyword">const</span> formRef <span class="token operator">=</span> <span class="token generic-function"><span class="token function">useRef</span><span class="token generic class-name"><span class="token operator">&lt;</span>HTMLFormElement<span class="token operator">></span></span></span><span class="token punctuation">(</span><span class="token keyword">null</span><span class="token punctuation">)</span><span class="token punctuation">;</span>&#10;
 <span class="token keyword">const</span> <span class="token function-variable function">handleReset</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
-  formRef<span class="token punctuation">.</span>current<span class="token operator">?.</span><span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// clears native inputs</span>
+  formRef<span class="token punctuation">.</span>current<span class="token operator">?.</span><span class="token function">reset</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// clears native inputs</span>&#10;
   <span class="token comment">// Explicitly clear NYSDS components</span>
   formRef<span class="token punctuation">.</span>current
     <span class="token operator">?.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token string">"nys-textinput, nys-select, nys-textarea"</span><span class="token punctuation">)</span>
@@ -499,7 +498,7 @@ onNysInput<span class="token operator">=</span><span class="token punctuation">{
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/pages/get-started/tutorial/react.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 15, 2026</p>
+    <p>Last updated: October 16, 2026</p>
   </div>
 
   </div>

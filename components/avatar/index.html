@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-15T15:02:49.389Z -->
+    <!-- Latest Build: 2026-10-16T20:00:45.469Z -->
   </head>
   
   <body class="single-page page-avatar section-components">
@@ -643,8 +643,7 @@
 <section>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-avatar ariaLabel="User avatar"></nys-avatar>
+<div class="code-preview__preview-root-inner"><nys-avatar ariaLabel="User avatar"></nys-avatar>
 </div>
   </div>
   <div class="code-preview__source">
@@ -702,9 +701,9 @@
 <p>To display an image in the avatar, set the <code>image</code> and <code>ariaLabel</code> attributes. Images will take <strong>priority</strong> and <strong>override</strong> initials and icons. You can also enable lazy loading for avatar images by setting the <code>lazy</code> boolean attribute.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-avatar ariaLabel="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy="">
-</nys-avatar></div>
+<div class="code-preview__preview-root-inner"><nys-avatar ariaLabel="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy="">
+</nys-avatar>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -719,7 +718,11 @@
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span> <span class="token attr-name">image</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&amp;w=100<span class="token punctuation">"</span></span> <span class="token attr-name">lazy</span><span class="token punctuation">></span></span></code></pre>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span>
+    <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span>
+    <span class="token attr-name">image</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&amp;w=100<span class="token punctuation">"</span></span>
+    <span class="token attr-name">lazy</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
   </div>
@@ -728,8 +731,7 @@
 <p>If an image is unavailable, you can set the <code>initials</code> attribute to display a personalized placeholder instead of an icon. Initials will take <strong>priority</strong> and <strong>override</strong> icons.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-avatar ariaLabel="User avatar" initials="NY"></nys-avatar>
+<div class="code-preview__preview-root-inner"><nys-avatar ariaLabel="User avatar" initials="NY"></nys-avatar>
 </div>
   </div>
   <div class="code-preview__source">
@@ -754,12 +756,13 @@
 <p>When no image or initials are set, an icon will be shown. The default avatar shows an icon called &quot;account_circle&quot;, but you can customize this with any other name found in <code>&lt;nys-icon&gt;</code> using the <code>icon</code> prop or customize directly within <code>&lt;nys-avatar&gt;</code> with the icon slot.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-avatar ariaLabel="User avatar"></nys-avatar>
+<div class="code-preview__preview-root-inner"><nys-avatar ariaLabel="User avatar"></nys-avatar>
 <nys-avatar ariaLabel="Youtube avatar" color="#f2efee">
-  <nys-icon ariaLabel="youtube icon" name="social_youtube" color="#b2071d"></nys-icon>
+    <nys-icon ariaLabel="youtube icon" name="social_youtube" color="#b2071d">
+    </nys-icon>
 </nys-avatar>
-<nys-avatar ariaLabel="Snow avatar" icon="ac_unit"></nys-avatar></div>
+<nys-avatar ariaLabel="Snow avatar" icon="ac_unit"></nys-avatar>
+</div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -774,10 +777,14 @@
     </div>
     <div class="code-preview__code-container ">
       <div class="code-preview__code-block">
-        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
+        <pre class="language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>User avatar<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>&#10;
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Youtube avatar<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#f2efee<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>youtube icon<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>social_youtube<span class="token punctuation">"</span></span> <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#b2071d<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-icon</span>
+        <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>youtube icon<span class="token punctuation">"</span></span>
+        <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>social_youtube<span class="token punctuation">"</span></span>
+        <span class="token attr-name">color</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#b2071d<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-icon</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span>&#10;
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>nys-avatar</span> <span class="token attr-name">ariaLabel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>Snow avatar<span class="token punctuation">"</span></span> <span class="token attr-name">icon</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>ac_unit<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>nys-avatar</span><span class="token punctuation">></span></span></code></pre>
       </div>
     </div>
@@ -787,8 +794,7 @@
 <p>Enable the <code>interactive</code> prop to apply interactive styling states and keyboard focus.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<div style="display:flex; gap:5px;">
+<div class="code-preview__preview-root-inner"><div style="display:flex; gap:5px;">
   <nys-avatar ariaLabel="User avatar" icon="account_circle" interactive=""></nys-avatar>
   <nys-avatar ariaLabel="New York Initial" initials="NY" interactive=""></nys-avatar>
 </div>
@@ -819,8 +825,7 @@
 <p>Use the <code>disabled</code> prop to prevent interaction and remove focusability.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-avatar ariaLabel="User avatar" disabled=""></nys-avatar>
+<div class="code-preview__preview-root-inner"><nys-avatar ariaLabel="User avatar" disabled=""></nys-avatar>
 </div>
   </div>
   <div class="code-preview__source">
@@ -846,8 +851,7 @@
 <p><strong>Note:</strong> images will naturally cover over the background color. The inner foreground for icon or initials will automatically switch between #000 or #fff for contrast.</p>
 <div class="code-preview-container" data-pagefind-ignore="all">
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<nys-avatar ariaLabel="User avatar" color="#154973"></nys-avatar></div>
+<div class="code-preview__preview-root-inner"><nys-avatar ariaLabel="User avatar" color="#154973"></nys-avatar></div>
   </div>
   <div class="code-preview__source">
     <div class="code-preview__buttons">
@@ -1032,7 +1036,7 @@ Proposal</a>.
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/avatar/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 15, 2026</p>
+    <p>Last updated: October 16, 2026</p>
   </div>
 
   </div>

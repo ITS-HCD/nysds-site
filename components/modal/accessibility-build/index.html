@@ -52,7 +52,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-15T15:02:49.389Z -->
+    <!-- Latest Build: 2026-10-16T20:00:45.469Z -->
   </head>
   
   <body class="single-page page-a11y-build section-components">
@@ -760,11 +760,9 @@
 <div class="code-preview-container" data-pagefind-ignore="all">
 
   <div class="code-preview__preview  " data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">
-<!-- This trigger button is configured (in the JavaScript file)
+<div class="code-preview__preview-root-inner"><!-- This trigger button is configured (in the JavaScript file)
      to activate a dialog that has the ID passed to `data-nysa11y-dialog` -->
 <button type="button" class="nysa11y button" data-component="button" data-html="native" data-nysa11y-dialog="#myModal">Show me places to go</button>
-
 <!-- This is the native HTML5 `dialog`.
      It opens with modal behavior due to being invoked
      with the native method `.showModal()` -->
@@ -858,7 +856,7 @@
         <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nysa11y button<span class="token punctuation">"</span></span>
         <span class="token attr-name">data-component</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span>
         <span class="token attr-name">data-html</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>native<span class="token punctuation">"</span></span>
-        <span class="token attr-name">data-nysa11y-dialog</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#myModal<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Show me places to go<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
+        <span class="token attr-name">data-nysa11y-dialog</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#myModal<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Show me places to go<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>&#10;
 <span class="token comment">&lt;!-- This is the native HTML5 `dialog`.
      It opens with modal behavior due to being invoked
      with the native method `.showModal()` --></span>
@@ -1021,20 +1019,20 @@
             <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span> <span class="token comment">/* prevent `body` scrolling */</span>
             <span class="token property">overscroll-behavior</span><span class="token punctuation">:</span> contain<span class="token punctuation">;</span> <span class="token comment">/* prevent `body` scrolling */</span>
             <span class="token property">padding</span><span class="token punctuation">:</span> 1.5rem<span class="token punctuation">;</span>
-            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nysa11y-dialog-width<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token property">width</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nysa11y-dialog-width<span class="token punctuation">)</span><span class="token punctuation">;</span>&#10;
             <span class="token selector">&amp;[open]</span> <span class="token punctuation">{</span>
                 <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
                 <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
                 <span class="token property">gap</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-space-300<span class="token punctuation">,</span> 1.5rem<span class="token punctuation">)</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>&#10;
             <span class="token selector">&amp;::backdrop</span> <span class="token punctuation">{</span>
                 <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-color-black-transparent-700<span class="token punctuation">,</span> <span class="token function">rgba</span><span class="token punctuation">(</span>27<span class="token punctuation">,</span> 27<span class="token punctuation">,</span> 27<span class="token punctuation">,</span> 0.7<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
                 <span class="token property">overflow</span><span class="token punctuation">:</span> hidden<span class="token punctuation">;</span> <span class="token comment">/* prevent `body` scrolling */</span>
                 <span class="token property">overscroll-behavior</span><span class="token punctuation">:</span> contain<span class="token punctuation">;</span> <span class="token comment">/* prevent `body` scrolling */</span>
-            <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>&#10;
             <span class="token selector">&amp;:has(main:not(:empty))</span> <span class="token punctuation">{</span>
                 <span class="token property">min-height</span><span class="token punctuation">:</span> 18rem<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>&#10;
             <span class="token selector">&amp; header</span> <span class="token punctuation">{</span>
                 <span class="token property">align-items</span><span class="token punctuation">:</span> start<span class="token punctuation">;</span>
                 <span class="token property">display</span><span class="token punctuation">:</span> grid<span class="token punctuation">;</span>
@@ -1093,7 +1091,7 @@
                     <span class="token property">grid-area</span><span class="token punctuation">:</span> subtitle<span class="token punctuation">;</span>
                     <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token function">var</span><span class="token punctuation">(</span>--nys-font-lineheight-body-lg<span class="token punctuation">,</span> 1.75rem<span class="token punctuation">)</span><span class="token punctuation">;</span>
                 <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>&#10;
             <span class="token selector">&amp; main</span> <span class="token punctuation">{</span>
                 <span class="token property">flex-grow</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
                 <span class="token property">overflow</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
@@ -1102,7 +1100,7 @@
                 <span class="token punctuation">}</span>
                 <span class="token comment">/* better accommodate focus ring of side-aligned focusable elements */</span>
                 <span class="token property">padding</span><span class="token punctuation">:</span> 1px<span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
+            <span class="token punctuation">}</span>&#10;
             <span class="token selector">&amp; footer</span> <span class="token punctuation">{</span>
                 <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
                 <span class="token property">flex-direction</span><span class="token punctuation">:</span> row<span class="token punctuation">;</span>
@@ -1183,23 +1181,23 @@
  * Path: /assets/nysa11y/dialog-native.js
  * Depends on /assets/nysa11y/dialog-native.css
  */</span>
-<span class="token keyword">const</span> nysa11y <span class="token operator">=</span> window<span class="token punctuation">.</span>nysa11y <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> nysa11y <span class="token operator">=</span> window<span class="token punctuation">.</span>nysa11y <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>&#10;
 <span class="token keyword">class</span> <span class="token class-name">Dialog</span> <span class="token punctuation">{</span>
   #selectorRoot <span class="token operator">=</span> <span class="token string">'[data-component="dialog"].nysa11y'</span><span class="token punctuation">;</span>
   #selectorTrigger <span class="token operator">=</span> <span class="token string">"[data-nysa11y-dialog]"</span><span class="token punctuation">;</span>
-  #selectorExit <span class="token operator">=</span> <span class="token string">'[data-part="exit"]'</span><span class="token punctuation">;</span>
+  #selectorExit <span class="token operator">=</span> <span class="token string">'[data-part="exit"]'</span><span class="token punctuation">;</span>&#10;
   <span class="token function">constructor</span><span class="token punctuation">(</span><span class="token parameter">options <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span>container <span class="token operator">=</span> options<span class="token punctuation">.</span>container <span class="token operator">||</span> document<span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>&#10;
   <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> triggers <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>container<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorTrigger<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">const</span> dialogs <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>container<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorRoot<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>triggers<span class="token punctuation">.</span>length <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>dialogs<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+    <span class="token keyword">const</span> dialogs <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>container<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorRoot<span class="token punctuation">)</span><span class="token punctuation">;</span>&#10;
+    <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>triggers<span class="token punctuation">.</span>length <span class="token operator">&amp;&amp;</span> <span class="token operator">!</span>dialogs<span class="token punctuation">.</span>length<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>&#10;
     triggers<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">trigger</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
       trigger<span class="token punctuation">.</span><span class="token function">removeEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#handleTriggerClick<span class="token punctuation">)</span><span class="token punctuation">;</span>
       trigger<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#handleTriggerClick<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>&#10;
     dialogs<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">dialogEl</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
       <span class="token keyword">const</span> exits <span class="token operator">=</span> dialogEl<span class="token punctuation">.</span><span class="token function">querySelectorAll</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorExit<span class="token punctuation">)</span><span class="token punctuation">;</span>
       exits<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">exitBtn</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
@@ -1207,19 +1205,19 @@
         exitBtn<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span>#handleExitClick<span class="token punctuation">)</span><span class="token punctuation">;</span>
       <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>&#10;
   <span class="token function">enter</span><span class="token punctuation">(</span><span class="token parameter">dialogEl</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>dialogEl <span class="token operator">||</span> <span class="token keyword">typeof</span> dialogEl<span class="token punctuation">.</span>showModal <span class="token operator">!==</span> <span class="token string">"function"</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>dialogEl<span class="token punctuation">.</span>open<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
     <span class="token comment">/* invoke the native method to open `dialog` with modality */</span>
     dialogEl<span class="token punctuation">.</span><span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>&#10;
   <span class="token function">exit</span><span class="token punctuation">(</span><span class="token parameter">dialogEl</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>dialogEl <span class="token operator">||</span> <span class="token keyword">typeof</span> dialogEl<span class="token punctuation">.</span>close <span class="token operator">!==</span> <span class="token string">"function"</span><span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>dialogEl<span class="token punctuation">.</span>open<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
     <span class="token comment">/* invoke the native method to close `dialog` */</span>
     dialogEl<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>&#10;
   <span class="token function-variable function">#handleTriggerClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> trigger <span class="token operator">=</span> event<span class="token punctuation">.</span>currentTarget<span class="token punctuation">;</span>
     <span class="token keyword">const</span> selector <span class="token operator">=</span> trigger<span class="token punctuation">.</span><span class="token function">getAttribute</span><span class="token punctuation">(</span><span class="token string">"data-nysa11y-dialog"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1230,21 +1228,21 @@
       <span class="token keyword">return</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">enter</span><span class="token punctuation">(</span>dialogEl<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>&#10;
   <span class="token function-variable function">#handleExitClick</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">event</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
     <span class="token keyword">const</span> exitBtn <span class="token operator">=</span> event<span class="token punctuation">.</span>currentTarget<span class="token punctuation">;</span>
     <span class="token keyword">const</span> dialogEl <span class="token operator">=</span> exitBtn<span class="token punctuation">.</span><span class="token function">closest</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>#selectorRoot<span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>dialogEl<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span>dialogEl<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-nysa11y<span class="token punctuation">.</span>Dialog <span class="token operator">=</span> Dialog<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>&#10;
+nysa11y<span class="token punctuation">.</span>Dialog <span class="token operator">=</span> Dialog<span class="token punctuation">;</span>&#10;
 window<span class="token punctuation">.</span><span class="token function-variable function">exitDialog</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   <span class="token keyword">const</span> openDialog <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">"dialog[open]"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token keyword">if</span> <span class="token punctuation">(</span>openDialog <span class="token operator">&amp;&amp;</span> nysa11y<span class="token punctuation">.</span>dialogInstance<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     nysa11y<span class="token punctuation">.</span>dialogInstance<span class="token punctuation">.</span><span class="token function">exit</span><span class="token punctuation">(</span>openDialog<span class="token punctuation">)</span><span class="token punctuation">;</span>
   <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>&#10;
 document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">{</span>
   nysa11y<span class="token punctuation">.</span>dialogInstance <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">nysa11y<span class="token punctuation">.</span>Dialog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
@@ -1488,7 +1486,7 @@ Design, test, and build for scenarios in which a dialog may fill an entire scree
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/modal/a11y-build.njk">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 15, 2026</p>
+    <p>Last updated: October 16, 2026</p>
   </div>
 
   </div>
