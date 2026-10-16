@@ -22,32 +22,20 @@ The `<nys-accordion>` and `<nys-accordionitem>` components are vertically stacke
 {% block example %}
 {% set preview %}
 <nys-accordion>
-<nys-accordionitem
-id="accordionId1"
-heading="How do I renew my passport or apply for a new one?"
-expanded
-
->
-
-    <p>
-      You can apply for or renew a U.S. passport through the U.S. Department
-      of State. Some renewals can be done by mail.
-    </p>
+  <nys-accordionitem
+    id="accordionId1"
+    heading="How do I renew my passport or apply for a new one?"
+    expanded>
+    <p>You can apply for or renew a U.S. passport through the U.S. Department of State. Some renewals can be done by mail.</p>
     <div style="display: flex; gap: 0.5rem; font-size: 1rem;">
       <a href="https://www.ny.gov" target="_blank">Check your registration</a>
       <a href="https://www.ny.gov" target="_blank">Fill out application</a>
     </div>
-
   </nys-accordionitem>
   <nys-accordionitem
     id="accordionId2"
-    heading="How can I find out if I’m registered to vote?"
-  >
-    <p>
-      You can check your registration status, update your information, or
-      find out how to register through the National Association of
-      Secretaries of State.
-    </p>
+    heading="How can I find out if I’m registered to vote?">
+    <p>You can check your registration status, or update your information.</p>
   </nys-accordionitem>
 </nys-accordion>
 {% endset %}
@@ -93,18 +81,11 @@ The `nys-accordionitem` toggles open or closed with the `expanded` prop. Add thi
 
 {% set preview %}
 <nys-accordion>
-<nys-accordionitem
-id="individualAcc1"
-heading="Liberty Ipsum: Bridges & Boroughs"
-expanded
-
->
-
-    <p>
-      Empire ipsum dolor sit amet, across the Brooklyn Bridge to Central
-      Park, consectetur adipiscing elit.
-    </p>
-
+  <nys-accordionitem
+    id="individualAcc1"
+    heading="Liberty Freedom: Bridges & Boroughs"
+    expanded>
+    <p>Empire State, across the Brooklyn Bridge to Central Park.</p>
   </nys-accordionitem>
 </nys-accordion>
 {% endset %}
@@ -118,24 +99,15 @@ set, only one `nys-accordionitem` in the wrapper can be open at a time.
 
 {% set preview %}
 <nys-accordion singleSelect>
-<nys-accordionitem id="accordion1" heading="Welcome to New York" expanded>
-<p>
-Learn about state programs, services, and resources available at
-<a href="https://www.ny.gov" target="_blank">ny.gov</a>
-</p>
-</nys-accordionitem>
-<nys-accordionitem id="accordion2" heading="Liberty Ipsum: Bridges & Boroughs">
-<p>
-Empire ipsum dolor sit amet, across the Brooklyn Bridge to Central
-Park, consectetur adipiscing elit.
-</p>
-</nys-accordionitem>
-<nys-accordionitem id="accordion3" heading="Hudson Ipsum: Riverfront Stories">
-<p>
-From the banks of the Hudson to the peaks of the Adirondacks, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
-</nys-accordionitem>
+  <nys-accordionitem id="accordion1" heading="Welcome to New York" expanded>
+    <p>Learn about state programs available at <a href="https://ny.gov" target="_blank">ny.gov</a></p>
+  </nys-accordionitem>
+  <nys-accordionitem id="accordion2" heading="Liberty Ipsum: Bridges & Boroughs">
+    <p>Empire State, across the Brooklyn Bridge to Central Park.</p>
+  </nys-accordionitem>
+  <nys-accordionitem id="accordion3" heading="Hudson Ipsum: Riverfront Stories">
+    <p>From the banks of the Hudson to the peaks of the Adirondacks.</p>
+  </nys-accordionitem>
 </nys-accordion>
 {% endset %}
 {% set code = preview %}
@@ -147,24 +119,15 @@ all `nys-accordionitem` inside the wrapper will display borders.
 
 {% set preview %}
 <nys-accordion singleSelect bordered>
-<nys-accordionitem heading="We are a group of accordions">
-<p>
-Stronger together! Learn more at
-<a href="https://www.ny.gov" target="_blank">ny.gov</a>
-</p>
-</nys-accordionitem>
-<nys-accordionitem heading="Liberty Ipsum: Bridges & Boroughs">
-<p>
-Empire ipsum dolor sit amet, across the Brooklyn Bridge to Central
-Park, consectetur adipiscing elit.
-</p>
-</nys-accordionitem>
-<nys-accordionitem heading="Hudson Ipsum: Riverfront Stories">
-<p>
-From the banks of the Hudson to the peaks of the Adirondacks, sed do
-eiusmod tempor incididunt ut labore et dolore magna aliqua.
-</p>
-</nys-accordionitem>
+  <nys-accordionitem heading="We are a group of accordions">
+    <p>Stronger together! Learn more at <a href="https://ny.gov">ny.gov</a></p>
+  </nys-accordionitem>
+  <nys-accordionitem heading="Liberty Ipsum: Bridges & Boroughs">
+    <p>Empire ipsum dolor sit amet, across the Brooklyn Bridge to Central Park, consectetur adipiscing elit. </p>
+  </nys-accordionitem>
+  <nys-accordionitem heading="Hudson Ipsum: Riverfront Stories">
+    <p>From the banks of the Hudson to the peaks of the Adirondacks.</p>
+  </nys-accordionitem>
 </nys-accordion>
 {% endset %}
 {% set code = preview %}
@@ -261,6 +224,7 @@ You can listen to these events using JavaScript:
 {% set code %}
 // Select the accordion component
 const accordion = document.querySelector("nys-accordionitem");
+
 // Listen for the 'nys-accordionitem-toggle' event
 accordion.addEventListener("nys-accordionitem-toggle", (event) => {
   console.log("Accordion toggled:", {

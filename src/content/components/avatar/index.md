@@ -65,7 +65,11 @@ The `<nys-avatar>` component includes the following accessibility-focused featur
 To display an image in the avatar, set the `image` and `ariaLabel` attributes. Images will take **priority** and **override** initials and icons. You can also enable lazy loading for avatar images by setting the `lazy` boolean attribute.
 
 {% set preview %}
-<nys-avatar ariaLabel="User avatar" image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100" lazy>
+<nys-avatar
+    ariaLabel="User avatar"
+    image="https://images.unsplash.com/photo-1513360371669-4adf3dd7dff8?q=80&w=100"
+    lazy>
+</nys-avatar>
 {% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
@@ -86,10 +90,17 @@ When no image or initials are set, an icon will be shown. The default avatar sho
 
 {% set preview %}
 <nys-avatar ariaLabel="User avatar"></nys-avatar>
+
 <nys-avatar ariaLabel="Youtube avatar" color="#f2efee">
-  <nys-icon ariaLabel="youtube icon" name="social_youtube" color="#b2071d"></nys-icon>
+    <nys-icon
+        ariaLabel="youtube icon"
+        name="social_youtube"
+        color="#b2071d">
+    </nys-icon>
 </nys-avatar>
-<nys-avatar ariaLabel="Snow avatar" icon="ac_unit"></nys-avatar>{% endset %}
+
+<nys-avatar ariaLabel="Snow avatar" icon="ac_unit"></nys-avatar>
+{% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 ### Interactive
