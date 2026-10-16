@@ -149,16 +149,17 @@ A common use case is pairing `<nys-dropdownmenu>` with `<nys-globalheader>` for 
 
 #### With Icons
 
-Use the `prefixIcon` property on `<nys-dropdownmenuitem>` to add an icon before the label.
+Use the `prefixIcon` property on `<nys-dropdownmenuitem>` to add an icon before the label. </br>
+Use the `suffixIcon` to add one after it. 
 
 {% set preview %}
 <div style="display: flex; justify-content: center; margin: 80px;">
   <nys-button id="trigger-icons" label="Open Menu"></nys-button>
   <nys-dropdownmenu for="trigger-icons">
     <nys-dropdownmenuitem label="Action 1" prefixIcon="lock_filled"></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Action 2" prefixIcon="social_youtube"></nys-dropdownmenuitem>
+    <nys-dropdownmenuitem label="Action 2" prefixIcon="social_youtube" suffixIcon="open_in_new"></nys-dropdownmenuitem>
     <nys-dropdownmenuitem label="Action 3" prefixIcon="visibility" disabled></nys-dropdownmenuitem>
-    <nys-dropdownmenuitem label="Action 4" prefixIcon="sms"></nys-dropdownmenuitem>
+    <nys-dropdownmenuitem label="Action 4" suffixIcon="chevron_right"></nys-dropdownmenuitem>
   </nys-dropdownmenu>
 </div>
 {% endset %}
@@ -166,10 +167,10 @@ Use the `prefixIcon` property on `<nys-dropdownmenuitem>` to add an icon before 
 {% set code %}
 <nys-button id="trigger-icons" label="Open Menu"></nys-button>
 <nys-dropdownmenu for="trigger-icons">
-  <nys-dropdownmenuitem label="Action 1" prefixIcon="lock_filled"></nys-dropdownmenuitem>
-  <nys-dropdownmenuitem label="Action 2" prefixIcon="social_youtube"></nys-dropdownmenuitem>
-  <nys-dropdownmenuitem label="Action 3" prefixIcon="visibility" disabled></nys-dropdownmenuitem>
-  <nys-dropdownmenuitem label="Action 4" prefixIcon="sms"></nys-dropdownmenuitem>
+    <nys-dropdownmenuitem label="Action 1" prefixIcon="lock_filled"></nys-dropdownmenuitem>
+    <nys-dropdownmenuitem label="Action 2" prefixIcon="social_youtube" suffixIcon="open_in_new"></nys-dropdownmenuitem>
+    <nys-dropdownmenuitem label="Action 3" prefixIcon="visibility" disabled></nys-dropdownmenuitem>
+    <nys-dropdownmenuitem label="Action 4" suffixIcon="chevron_right"></nys-dropdownmenuitem>
 </nys-dropdownmenu>
 {% endset%}
 {% include "partials/code-preview.njk" %}
@@ -290,6 +291,10 @@ Use the `nys-click` dispatch event to call for specific functions to execute act
     </tr>
     <tr>
       <td><code>prefixIcon</code></td>
+      <td>String</td>
+    </tr>
+    <tr>
+      <td><code>suffixIcon</code></td>
       <td>String</td>
     </tr>
     <tr>

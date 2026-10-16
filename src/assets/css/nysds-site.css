@@ -1,20 +1,11 @@
-/* 🫣 NYS DESIGN SYSTEM
-   We’re early in our journey, so you might spot
-   some hand-rolled CSS here and there. The plan
-   is to keep adding to the design system until
-   these custom bits can retire in style.
-*/
+/* NYS DESIGN SYSTEM Site-specific styles */
 
 p,
 ul,
 ol,
 dl,
 blockquote {
-  font: var(--nys-font-size-md) / var(--nys-font-lineheight-md)
-    var(--nys-font-family-body);
-  margin-bottom: var(--nys-space-150);
-  font: var(--nys-font-size-md) / var(--nys-font-lineheight-md)
-    var(--nys-font-family-body);
+  font: var(--nys-font-size-md) / var(--nys-font-lineheight-md) var(--nys-font-family-body);
   margin-bottom: var(--nys-space-150);
 }
 
