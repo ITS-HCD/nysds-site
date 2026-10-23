@@ -110,14 +110,24 @@ document.addEventListener("DOMContentLoaded", function () {
         const codeEl = swatch.closest('.token-list__example')?.querySelector('code.token-list__raw');
         if (codeEl) codeEl.innerText = '#' + bg.map(n => n.toString(16).padStart(2, '0')).join('');
 
-        // The build only knows the default theme's values, so recalculate each recommended text color's contrast.
+        // The build only knows the default theme's values, so pick the recommended text color again. Each value
+        // lists the text color and its counterpart (for example, text and text-reverse); the higher contrast wins.
         swatch.querySelectorAll('.token-list__text--value').forEach(valueEl => {
-          const fg = toRgb(getComputedStyle(valueEl).color);
-          if (!fg) return;
-          const ratio = getContrastRatio(fg, bg);
-          valueEl.textContent = ratio;
+          let best = null;
+          for (const name of valueEl.dataset.candidates.split(' ')) {
+            valueEl.style.color = `var(${name})`;
+            const fg = toRgb(getComputedStyle(valueEl).color);
+            if (!fg) continue;
+            const ratio = getContrastRatio(fg, bg);
+            if (!best || ratio > best.ratio) best = { name, ratio };
+          }
+          if (!best) return;
+
+          valueEl.style.color = `var(${best.name})`;
+          valueEl.dataset.color = `var(${best.name})`;
+          valueEl.textContent = best.ratio;
           // Same 4.5:1 threshold as partials/token-item.njk uses at build time.
-          valueEl.classList.toggle('token-list__text--low-contrast', ratio < 4.5);
+          valueEl.classList.toggle('token-list__text--low-contrast', best.ratio < 4.5);
         });
       });
     }

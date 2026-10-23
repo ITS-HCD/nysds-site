@@ -10,6 +10,7 @@
                 class="token-list__text--value{% if details.contrastRatio < 4.5 %} token-list__text--low-contrast{% endif %}"
                 style="color: var({{ details.variableName }});"
                 data-color="var({{ details.variableName }})"
+                data-candidates="{{ details.candidates | join(' ') }}"
               >
                 {{ details.contrastRatio }}
               </span>
