@@ -259,5 +259,9 @@
   "src/assets/img/nys-breakpoints.png": "04465be609200a2b447b40eca8b1d361986e7e16cf45ae5e1c5f74c69f6e443c",
   "src/assets/img/page_templates.png": "a85916e909087446847dfe708635148c72de5dd4abaee0d779f771561d893df3",
   "src/assets/img/sections/section-utilities.svg": "6be238f1b47dc4903f3f992fa0849ec678a2b2f37c4846e83ff6aec26a1c8908",
-  "src/assets/img/components/tabs.svg": "82b18455cd944976256ed4722ba99464c00fcea252d47ef469bbee1fb7caf42d"
+  "src/assets/img/components/tabs.svg": "82b18455cd944976256ed4722ba99464c00fcea252d47ef469bbee1fb7caf42d",
+  "src/assets/img/132-grid-light.svg": "ed78f3addfa52667de2e59d4f196f0695a1c7259be1f6d6b4a0c5e94347231e8",
+  "src/assets/img/132-grid-mid.svg": "f2409e4276ff6cf093ea39f2b8a464c195a3e1af1d71f22b689966046db50379",
+  "src/assets/img/321-grid-light.svg": "d723693f3499f9c8b207d8fcd4977aab05d96ccb784f7568c731578cf23ecc81",
+  "src/assets/img/321-grid-mid.svg": "5d19a4a3036c5fb1c6a0246b70ec79e032caf633ff0485b33f4fcbb7f07d1974"
 }
