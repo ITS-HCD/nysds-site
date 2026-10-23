@@ -113,7 +113,11 @@ document.addEventListener("DOMContentLoaded", function () {
         // The build only knows the default theme's values, so recalculate each recommended text color's contrast.
         swatch.querySelectorAll('.token-list__text--value').forEach(valueEl => {
           const fg = toRgb(getComputedStyle(valueEl).color);
-          if (fg) valueEl.textContent = getContrastRatio(fg, bg);
+          if (!fg) return;
+          const ratio = getContrastRatio(fg, bg);
+          valueEl.textContent = ratio;
+          // Same 4.5:1 threshold as partials/token-item.njk uses at build time.
+          valueEl.classList.toggle('token-list__text--low-contrast', ratio < 4.5);
         });
       });
     }

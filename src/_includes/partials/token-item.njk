@@ -7,7 +7,7 @@
             <div class="token-list__text">
             {% for textColor, details in token.recommendedtype %}
               <span
-                class="token-list__text--value"
+                class="token-list__text--value{% if details.contrastRatio < 4.5 %} token-list__text--low-contrast{% endif %}"
                 style="color: var({{ details.variableName }});"
                 data-color="var({{ details.variableName }})"
               >
