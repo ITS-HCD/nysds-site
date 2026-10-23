@@ -66,24 +66,6 @@ The `<nys-modal>` component appears centered on the page and requires the user t
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use to confirm important actions, present focused forms (e.g., login, feedback), or require acknowledgment of alerts without navigating away from the page.
-- Keep content short and focused. Use a dedicated page for long or complex content.
-- Keep the `subheading` short and use `<p>` tags within the modal for longer information.
-- Use the `mandatory` prop to disable the dismiss button only when the user must make a critical decision or acknowledge essential information.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Stack multiple modals.
-- Use for trivial information or inline status messages. Use `<nys-alert>` instead.
-- Use for quick hints on form fields. Use `<nys-tooltip>` instead.
-- Force the `mandatory` prop unnecessarily.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-modal>` component includes the following accessibility-focused features:
