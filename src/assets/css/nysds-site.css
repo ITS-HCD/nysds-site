@@ -1,20 +1,11 @@
-/* 🫣 NYS DESIGN SYSTEM
-   We’re early in our journey, so you might spot
-   some hand-rolled CSS here and there. The plan
-   is to keep adding to the design system until
-   these custom bits can retire in style.
-*/
+/* NYS DESIGN SYSTEM Site-specific styles */
 
 p,
 ul,
 ol,
 dl,
 blockquote {
-  font: var(--nys-font-size-md) / var(--nys-font-lineheight-md)
-    var(--nys-font-family-body);
-  margin-bottom: var(--nys-space-150);
-  font: var(--nys-font-size-md) / var(--nys-font-lineheight-md)
-    var(--nys-font-family-body);
+  font: var(--nys-font-size-md) / var(--nys-font-lineheight-md) var(--nys-font-family-body);
   margin-bottom: var(--nys-space-150);
 }
 
@@ -1274,8 +1265,18 @@ li > .section-nav__list {
   display: inline-block;
   width: var(--nys-space-100);
   height: var(--nys-space-100);
+  margin-inline-end: var(--nys-space-50);
   border-radius: var(--nys-radius-round);
   background: currentColor;
+}
+
+/* Below 4.5:1 (WCAG AA for normal text), swap the dot for a warning triangle in the same color. */
+.token-list__text--low-contrast::before {
+  width: var(--nys-space-150);
+  height: var(--nys-space-150);
+  border-radius: 0;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 .75 15.75 15H.25ZM7.1 5.5h1.8v5H7.1Zm0 6.25h1.8v1.75H7.1Z'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M8 .75 15.75 15H.25ZM7.1 5.5h1.8v5H7.1Zm0 6.25h1.8v1.75H7.1Z'/%3E%3C/svg%3E") center / contain no-repeat;
 }
 
 .token-list__text--value {

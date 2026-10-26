@@ -47,6 +47,15 @@ function getContrastRatio(fg_hex, bg_hex) {
   return Math.round(ratio * 100) / 100; // Round to 2 decimal places (let's be sensible)
 }
 
+// Each text color's counterpart for the opposite kind of surface. A swatch recommends whichever of the pair
+// has more contrast, so mid-range colors can land on either side depending on the agency theme.
+const COUNTERPARTS = {
+  "--nys-color-text": "--nys-color-text-reverse",
+  "--nys-color-text-reverse": "--nys-color-text",
+  "--nys-color-link": "--nys-color-link-reverse",
+  "--nys-color-link-reverse": "--nys-color-link"
+};
+
 function getColorCategory(name) {
   if (name.includes('-transparent-')) return 'transparency';
   if (name.startsWith('--nys-color-theme')) return 'theme';
@@ -58,6 +67,7 @@ function getColorCategory(name) {
 
 module.exports = function(collectionApi) {
   const tokens = collectionApi.items[0].data.tokens; // Pull tokens from _data/
+  const rawValues = Object.fromEntries(tokens.map(token => [token.name, token.rawvalue]));
 
   tokens.forEach(token => {
       if (token.type === "color") {
@@ -67,19 +77,30 @@ module.exports = function(collectionApi) {
           Object.entries(token.recommendedtype).forEach(([textColor, fgColor]) => {
               let bgColor = token.rawvalue; // Background should be token.rawvalue
 
+              // The authored recommendation comes first, so it wins a tie with its counterpart
+              let candidates = [{ variableName: textColor, color: fgColor }];
+              let counterpart = COUNTERPARTS[textColor];
+              if (counterpart && rawValues[counterpart]) {
+                  candidates.push({ variableName: counterpart, color: rawValues[counterpart] });
+              }
+
               try {
-                  let contrast = getContrastRatio(fgColor, bgColor);
+                  let best = candidates
+                      .map(candidate => ({ ...candidate, contrastRatio: getContrastRatio(candidate.color, bgColor) }))
+                      .reduce((a, b) => (b.contrastRatio > a.contrastRatio ? b : a));
 
                   token.recommendedtype[textColor] = {
-                      variableName: textColor, // Store token reference (e.g., --nys-color-ink-reverse)
-                      color: fgColor, // Store actual HEX value so we can calculate contrast
-                      contrastRatio: contrast
+                      variableName: best.variableName, // Store token reference (e.g., --nys-color-ink-reverse)
+                      color: best.color, // Store actual HEX value so we can calculate contrast
+                      contrastRatio: best.contrastRatio,
+                      candidates: candidates.map(candidate => candidate.variableName) // Lets the theme switcher pick again
                   };
               } catch (error) {
                   token.recommendedtype[textColor] = {
                       variableName: textColor,
                       color: fgColor,
-                      contrastRatio: "N/A"
+                      contrastRatio: "N/A",
+                      candidates: [textColor]
                   };
               }
           });

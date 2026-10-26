@@ -117,10 +117,32 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addFilter("onlySeries", onlySeries);
   eleventyConfig.addFilter("shuffle", shuffle);
   eleventyConfig.addFilter("sortBySeriesOrder", sortBySeriesOrder);
-  eleventyConfig.addFilter("trimCode", (str) =>
-    String(str ?? "")
-      .replace(/^[ \t]*\n/gm, "")
-      .trim(),
+  // Trims leading/trailing blank lines and removes common indentation,
+  // while preserving interior blank lines and relative indentation.
+  eleventyConfig.addFilter("trimCode", (str) => {
+    const lines = String(str ?? "")
+      .replace(/\r\n/g, "\n")
+      .replace(/^(?:[ \t]*\n)+/, "")
+      .replace(/(?:\n[ \t]*)+$/, "")
+      .split("\n");
+    const indents = lines
+      .filter((l) => l.trim())
+      .map((l) => l.match(/^[ \t]*/)[0].length);
+    const min = indents.length ? Math.min(...indents) : 0;
+    return lines.map((l) => (l.trim() ? l.slice(min) : "")).join("\n");
+  });
+
+  // Markdown ends an HTML block at a blank line, wrapping what follows in <p>.
+  // Swap each newline that precedes another newline for an entity so the
+  // rendered <pre> keeps its blank lines without any blank lines in the source.
+  eleventyConfig.addFilter("preserveBlankLines", (str) =>
+    String(str ?? "").replace(/\n(?=[ \t]*\n)/g, "&#10;").replace(/&#10;[ \t]+\n/g, "&#10;\n"),
+  );
+
+  // Rendered previews are raw HTML; blank lines would end the markdown HTML
+  // block and wrap the rest in <p>, so drop them (insignificant in markup).
+  eleventyConfig.addFilter("stripBlankLines", (str) =>
+    String(str ?? "").replace(/^[ \t]*\n/gm, ""),
   );
 
   // Pagefind

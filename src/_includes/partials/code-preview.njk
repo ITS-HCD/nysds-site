@@ -8,7 +8,7 @@
 <div class="code-preview-container" data-pagefind-ignore="all">
 {% if preview %}
   <div class="code-preview__preview {% if inverted %}inverted{% endif %} {% if backgroundSolid %}solid{% endif %}" data-pagefind-ignore="all">
-<div class="code-preview__preview-root-inner">{{ preview | safe }}</div>
+<div class="code-preview__preview-root-inner">{{ preview | stripBlankLines | safe }}</div>
   </div>
 {% endif %}
   <div class="code-preview__source">
@@ -24,9 +24,9 @@
     </div>
     <div class="code-preview__code-container {% if codeExpanded %}expanded{% endif %}">
       <div class="code-preview__code-block">
-        {% set lang = codeLanguage or "html" %}{% highlight lang %}
+        {% set lang = codeLanguage or "html" %}{% set highlighted %}{% highlight lang %}
         {{ code | trimCode | safe }}
-        {% endhighlight %}
+        {% endhighlight %}{% endset %}{{ highlighted | preserveBlankLines | safe }}
       </div>
     </div>
 {% if showTip %}
