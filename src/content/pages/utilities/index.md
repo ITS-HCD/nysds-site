@@ -21,7 +21,21 @@ Utility classes are single-purpose CSS classes that apply one specific style —
 All utility classes use the `nys-` prefix. Most support [responsive variants](/utilities/responsive/) that let you apply styles at specific breakpoints.
 
 </section>
-
+<a class="card card--horizontal" href="#">
+    <div class="card__inner">
+    <div class="card__media">
+        <img src="/assets/img/132-grid-light.svg" alt="Thumbnail image" />
+    </div>
+    <div class="card__content">
+        <div class="card__title">
+        Layout Grid
+        </div>
+        <div class="card__desc">
+        Structure content with a responsive 12-column flexbox grid
+        </div>
+    </div>
+    </div>
+</a>
 <section id="utility-categories">
 
 - **[Display](/utilities/display/)** — Control element visibility and display behavior
