@@ -6,6 +6,9 @@ const path = require("node:path");
 const MANIFEST = require.resolve("@nysds/components/custom-elements.json");
 const OUTPUT = path.join(__dirname, "..", "src", "_data", "componentDocsContent.json");
 
+// Matches "Don't" / "Don’t" at the start of a bullet, case-insensitive
+const DONT_RE = /^don['’]t\b/i;
+
 function buildUsage(manifest) {
   const usage = {};
   const missing = [];
@@ -14,45 +17,27 @@ function buildUsage(manifest) {
     for (const decl of mod.declarations ?? []) {
       if (!decl.tagName) continue;
 
-      const { usagedos, usagedonts } = decl;
-      for (const [key, value] of Object.entries({ usagedos, usagedonts })) {
-        const ok =
-          value === undefined ||
-          (Array.isArray(value) && value.every((s) => typeof s === "string"));
-        if (!ok) {
-          throw new Error(`${decl.tagName}: ${key} must be an array of strings`);
-        }
+      const { usage: componentUsage } = decl;
+
+      const ok =
+        componentUsage === undefined ||
+        (Array.isArray(componentUsage) &&
+          componentUsage.every((s) => typeof s === "string"));
+      if (!ok) {
+        throw new Error(`${decl.tagName}: usage must be an array of strings`);
       }
 
-      if (!usagedos && !usagedonts) {
+      if (!componentUsage) {
         missing.push(decl.tagName);
       }
 
-      const properties = (decl.attributes ?? []).map((attr) => ({
-        ...attr,
-        type:
-          attr.type?.text ??
-          (typeof attr.type === "string" ? attr.type : ""),
-      }));
-
-      const events = (decl.events ?? []).map((evt) => ({
-        ...evt,
-        ...(evt.type
-          ? {
-              type:
-                evt.type?.text ??
-                (typeof evt.type === "string" ? evt.type : ""),
-            }
-          : {}),
-      }));
+      const items = componentUsage ?? [];
+      const donts = items.filter((s) => DONT_RE.test(s.trim()));
+      const dos = items.filter((s) => !DONT_RE.test(s.trim()));
 
       usage[decl.tagName] = {
-        usagedos: usagedos ?? [],
-        usagedonts: usagedonts ?? [],
-        // properties,
-        // cssProperties: decl.cssProperties ?? [],
-        // slots: decl.slots ?? [],
-        // events,
+        dos,
+        donts,
       };
     }
   }
