@@ -259,5 +259,8 @@
   "src/assets/img/nys-breakpoints.png": "04465be609200a2b447b40eca8b1d361986e7e16cf45ae5e1c5f74c69f6e443c",
   "src/assets/img/page_templates.png": "a85916e909087446847dfe708635148c72de5dd4abaee0d779f771561d893df3",
   "src/assets/img/sections/section-utilities.svg": "6be238f1b47dc4903f3f992fa0849ec678a2b2f37c4846e83ff6aec26a1c8908",
-  "src/assets/img/components/tabs.svg": "82b18455cd944976256ed4722ba99464c00fcea252d47ef469bbee1fb7caf42d"
+  "src/assets/img/components/tabs.svg": "82b18455cd944976256ed4722ba99464c00fcea252d47ef469bbee1fb7caf42d",
+  "src/assets/i/2026/bigslide-badge.png": "2ad9e8805050eb071a5782edef99e465e216f2ec9ffda19b89db3235f7dcb71d",
+  "src/assets/i/2026/release-1.23.0-thumbnail.png": "947a3658901a1014da0e746a3a50a456037ef3b2f7ff43a4170f420315a34a1b",
+  "src/assets/i/2026/release-1.23.0.png": "169859a68a49ca735c27cab04a861412fbe260973a01ba4e76458c5794c3088f"
 }
