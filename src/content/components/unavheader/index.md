@@ -92,7 +92,7 @@ The default search URL for the `<nys-unavheader>` is `https://search.its.ny.gov/
 
 ### Translate Key
 
-If your site was given a personalized translate key, you can pass it to the `translateKey` property. This will allow the component to use our state-wide translation service by default. The translate key is a unique identifier that allows the translation service to recognize your site and provide the appropriate translations. If you do not have a translate key you cannot use our default translation service, and you will need to implement your own translation solution, .or contact <nys-button variant="text" suffixIcon="content_copy" onclick="navigator.clipboard.writeText('Translation@its.ny.gov')">Translation@its.ny.gov</nys-button> to get started.
+If your site was given a personalized translate key, you can pass it to the `translateKey` property. This will allow the component to use our state-wide translation service by default. The translate key is a unique identifier that allows the translation service to recognize your site and provide the appropriate translations. If you do not have a translate key you cannot use our default translation service, and you will need to implement your own translation solution, .or contact <nys-button variant="text" href="mailto:Translation@its.ny.gov">Translation@its.ny.gov</nys-button> to get started.
 
 {% set preview %}
 <nys-unavheader translateKey="NEf4Y5qMb9PGP" hideSearch></nys-unavheader>
