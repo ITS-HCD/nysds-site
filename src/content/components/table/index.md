@@ -299,21 +299,6 @@ By default, column widths are determined by the content within each cell. Howeve
 {% endset %}
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
-
-{% endblock %}
-{% block usagedo %}
-
-- Use to display tabular data such as statistical information or directories of locations and resources with consistent structure.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use in place of a layout grid. Table content should follow a consistent structure using headers and logical columns and rows.
-- Use for non-tabular content. Consider definition lists or hierarchical lists instead.
-- Use when cell content is long-form; table cells should be brief and scannable. If you need multiple bullet points or paragraphs in a cell, consider page headers or an accordion instead.
-- Add `rowspan` or `colspan` with the `sortable` property.
-
 {% endblock %}
 
 {% block accessibility %}

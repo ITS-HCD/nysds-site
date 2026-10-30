@@ -31,24 +31,6 @@ The `<nys-toggle>` allows users to toggle a toggle switch "on" or "off".
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Provide a clear label and optional description to explain what the toggle controls.
-- Ensure the page clearly reflects the toggle's on/off state through visible changes.
-- Use when the state change will be implemented immediately.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use for forms where immediate action isn't expected. Use `<nys-checkbox>` instead.
-- Use for selecting one or more options from a list. Use `<nys-checkbox>` or `<nys-radiobutton>` instead.
-- Use for complex or multi-state choices.
-- Overuse for minor settings that don't affect the user experience.
-- Hide labels unless an accessible alternative is in place.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-toggle`> component includes the following accessibility-focused features:
