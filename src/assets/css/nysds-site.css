@@ -400,13 +400,13 @@ main[role="main"] {
   padding-bottom: var(--nys-space-100);
   padding-left: var(--nys-space-200);
   padding-right: var(--nys-space-200);
-  margin-bottom: var(--nys-space-800);
+  margin-bottom: var(--nys-space-400);
   border-radius: var(--nys-radius-md);
   border: var(--nys-border-width-md) solid var(--nys-color-theme-weak);
 }
 
 .page-meta {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   flex-wrap: wrap;
   /* Optional, if you want it to wrap nicely on smaller viewports */
