@@ -191,6 +191,11 @@ When New York State publishes an urgent message, such as a severe weather event 
       <td>boolean</td>
       <td><code>false</code></td>
     </tr>
+    <tr>
+      <td><code>translateKey</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+    </tr>
   </table>
 </nys-table>
 
