@@ -7,6 +7,113 @@
     <description>Guidelines, components, and tools for building digital services in New York State.</description>
     <language>en</language>
     <item>
+      <title>NYS Design System Release 1.23.0 “Big Slide”</title>
+      <link>https://designsystem.ny.gov/about/updates/1.23.0-release/</link>
+      <description><![CDATA[<h2>“Big Slide”</h2>
+<p>The winning vote during Office Hours was for naming this release “Big Slide” after the 27<sup>th</sup> highest peak in New York: Big Slide Mountain. The Mountain has an elevation of 4,240 ft (1,290 m). Thats equivalent to 8,480 Nathan’s hot dogs 🌭 stacked end to end. At Joey Chestnut’s record pace, that amounts to about 112 consecutive contests, or 19 hours of uninterrupted eating!</p>
+<p><a href="https://en.wikipedia.org/wiki/Big_Slide_Mountain_(New_York)">Learn more about Big Slide Mountain <nys-icon name="open_in_new"></nys-icon></a></p>
+<h2>Improved Translation Support</h2>
+<p>In order to support upcoming localization efforts, we've added additional translation functionality to the <code>&lt;nys-unavheader&gt;</code>. The header now takes an optional property: <code>translateKey</code>. Provide a valid key to enable translation from our new localization platform. Any questions about Translation as a Service (TaaS) should be sent to <a href="mailto:Translation@its.ny.gov">Translation@its.ny.gov</a> to get started.</p>
+<p><a href="https://designsystem.ny.gov/components/unav-header/#translate-key">Read the <code>&lt;nys-unavheader&gt;</code> support docs</a></p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> pushed the boundaries of translation.
+  </div>
+</div>
+<h2>Improved Unav Assistive Technology (AT) Support</h2>
+<p>Working hand-in-hand with our amazing Accessibility team at ITS, we improved the screen reader, mobile device, and voice control user experience in the <code>&lt;nys-unavheader&gt;</code>. We tested with multiple AT's to ensure an equitable experience for all users.</p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/aaron-mendez.jpg"></nys-avatar>
+    <a href="https://github.com/mendeza">Aaron Mendez</a> improved support for everyone!
+  </div>
+</div>
+<h2>New <code>&lt;nys-unavbundle&gt;</code> Bundle</h2>
+<p>Most NYS websites feature our <code>&lt;nys-unavheader&gt;</code> and <code>&lt;nys-unavfooter&gt;</code> at the top and bottom of their pages. Since they are both used together, and you would never run one without the other, we've created our first &quot;component bundle&quot; named <code>nys-unavbundle</code>. Using the bundle is different from using a regular component, as it isn't a component itself, it simply bundles multiple components. So instead of inserting <code>&lt;nys-unavbundle&gt;</code> (Which doesn't exist), you would instead place the code for the header and footer as normal, but only load in the one nys-unavbundle javascript file.</p>
+<p>More to come!</p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
+    <a href="https://github.com/esteinborn">Eric Steinborn</a> bundled these babies!
+  </div>
+</div>
+<h2>Bug fixes</h2>
+<ul>
+<li>Improve language switcher SR UX @mendeza</li>
+<li>Fix: Resolve nys-change not dispatching in Firefox by @NovaCat35</li>
+<li>Fix: Remove role in nys-checkboxgroup by @NovaCat35</li>
+<li>Fix: Resolve same name aria attributes being excluded in React by @NovaCat35</li>
+<li>Fix: removing the suffixIcon/prefixIcon prop will remove the icon in nys-badge by @NovaCat35</li>
+<li>FIX:rtl border radius logic on textinput button by @emilygorelik</li>
+<li>fix 1 vuln, 3 high remain by @esteinborn</li>
+</ul>
+<h2>Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>Known issues</h2>
+<ul>
+<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
+</ul>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.23.0">See the full developer release notes for v.1.23.0 →</a></p>
+]]></description>
+      <content><![CDATA[<h2>“Big Slide”</h2>
+<p>The winning vote during Office Hours was for naming this release “Big Slide” after the 27<sup>th</sup> highest peak in New York: Big Slide Mountain. The Mountain has an elevation of 4,240 ft (1,290 m). Thats equivalent to 8,480 Nathan’s hot dogs 🌭 stacked end to end. At Joey Chestnut’s record pace, that amounts to about 112 consecutive contests, or 19 hours of uninterrupted eating!</p>
+<p><a href="https://en.wikipedia.org/wiki/Big_Slide_Mountain_(New_York)">Learn more about Big Slide Mountain <nys-icon name="open_in_new"></nys-icon></a></p>
+<h2>Improved Translation Support</h2>
+<p>In order to support upcoming localization efforts, we've added additional translation functionality to the <code>&lt;nys-unavheader&gt;</code>. The header now takes an optional property: <code>translateKey</code>. Provide a valid key to enable translation from our new localization platform. Any questions about Translation as a Service (TaaS) should be sent to <a href="mailto:Translation@its.ny.gov">Translation@its.ny.gov</a> to get started.</p>
+<p><a href="https://designsystem.ny.gov/components/unav-header/#translate-key">Read the <code>&lt;nys-unavheader&gt;</code> support docs</a></p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/emily-gorelik.jpg"></nys-avatar>
+    <a href="https://github.com/emilygorelik">Emily Gorelik</a> pushed the boundaries of translation.
+  </div>
+</div>
+<h2>Improved Unav Assistive Technology (AT) Support</h2>
+<p>Working hand-in-hand with our amazing Accessibility team at ITS, we improved the screen reader, mobile device, and voice control user experience in the <code>&lt;nys-unavheader&gt;</code>. We tested with multiple AT's to ensure an equitable experience for all users.</p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/aaron-mendez.jpg"></nys-avatar>
+    <a href="https://github.com/mendeza">Aaron Mendez</a> improved support for everyone!
+  </div>
+</div>
+<h2>New <code>&lt;nys-unavbundle&gt;</code> Bundle</h2>
+<p>Most NYS websites feature our <code>&lt;nys-unavheader&gt;</code> and <code>&lt;nys-unavfooter&gt;</code> at the top and bottom of their pages. Since they are both used together, and you would never run one without the other, we've created our first &quot;component bundle&quot; named <code>nys-unavbundle</code>. Using the bundle is different from using a regular component, as it isn't a component itself, it simply bundles multiple components. So instead of inserting <code>&lt;nys-unavbundle&gt;</code> (Which doesn't exist), you would instead place the code for the header and footer as normal, but only load in the one nys-unavbundle javascript file.</p>
+<p>More to come!</p>
+<div class="page-meta author-card">
+  <div class="page-author">
+    <nys-avatar image="/assets/img/authors/eric-steinborn.jpg"></nys-avatar>
+    <a href="https://github.com/esteinborn">Eric Steinborn</a> bundled these babies!
+  </div>
+</div>
+<h2>Bug fixes</h2>
+<ul>
+<li>Improve language switcher SR UX @mendeza</li>
+<li>Fix: Resolve nys-change not dispatching in Firefox by @NovaCat35</li>
+<li>Fix: Remove role in nys-checkboxgroup by @NovaCat35</li>
+<li>Fix: Resolve same name aria attributes being excluded in React by @NovaCat35</li>
+<li>Fix: removing the suffixIcon/prefixIcon prop will remove the icon in nys-badge by @NovaCat35</li>
+<li>FIX:rtl border radius logic on textinput button by @emilygorelik</li>
+<li>fix 1 vuln, 3 high remain by @esteinborn</li>
+</ul>
+<h2>Breaking changes</h2>
+<ul>
+<li>none</li>
+</ul>
+<h2>Known issues</h2>
+<ul>
+<li>If you notice any issues, please add them to <a href="https://github.com/ITS-HCD/nysds/issues">our GitHub Issue Tracker</a></li>
+</ul>
+<h4>For full component updates, bug fixes, and the detailed changelog:</h4>
+<p><a href="https://github.com/ITS-HCD/nysds/releases/tag/v1.23.0">See the full developer release notes for v.1.23.0 →</a></p>
+]]></content>
+      <pubDate>Wed, 28 Oct 2026 24:00:00 GMT</pubDate>
+      <dc:creator>NYS ITS Design System Team</dc:creator>
+      <guid>https://designsystem.ny.gov/about/updates/1.23.0-release/</guid>
+    </item>
+    <item>
       <title>NYS Design System Release 1.22.0 “Sawteeth”</title>
       <link>https://designsystem.ny.gov/about/updates/1.22.0-release/</link>
       <description><![CDATA[<h2>“Sawteeth” 🏔️</h2>
