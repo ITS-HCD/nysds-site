@@ -31,25 +31,6 @@ The `<nys-video>` component embeds a YouTube video with a clickable thumbnail, r
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use when motion or audio communicates something better than text or images alone.
-- Keep `titleText` to 50–60 characters.
-- Use a clear, high-quality thumbnail so users recognize it as a video.
-- Maintain the default `lazy` loading for better page performance.
-- Reserve space for the 16:9 ratio box to prevent layout shift.
-- Let users choose to start the video; avoid `autoplay` unless necessary.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use video if the same message can be delivered clearly with text or a static image.
-- Rely on video alone to convey critical information. Always provide a text alternative.
-- Set `autoplay` without understanding that the video will be muted. `nys-video` enforces this automatically to protect users from unexpected noise.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-video>` component includes the following accessibility-focused features:

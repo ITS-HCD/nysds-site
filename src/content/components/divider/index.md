@@ -30,35 +30,6 @@ The `<nys-divider>` component visually separates content or sections within an i
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usage %}
-
-### When to use this component
-
-  - Use dividers for dense copy or when separating content helps users digest content, otherwise use white space.
-  - Make sure the divider is helping users understand structure or hierarchy — not just adding visual decoration.
-
-### When to consider something else
-
-  - When content is formatted side bys side.
-  - When content is already organized in groups.
-
-{% endblock %}
-
-{% block usagedo %}
-
-  - Ensure consistent padding/margin above and below dividers to avoid crowding.
-  - Use the `inverted` option on dark backgrounds.
-
-{% endblock %}
-
-{% block usagedont %}
-
-  - Overuse dividers and clutter the interface, reducing scannability.
-  - Use the divider to separate content appearing side bys side. 
-  - Use the `inverted` option on light backgrounds.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-divider>` component includes the following accessibility-focused features:

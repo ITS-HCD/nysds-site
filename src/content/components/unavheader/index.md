@@ -1,5 +1,7 @@
 ---
-permalink: /components/unav-header/
+permalink: /components/unavheader/
+redirect_from: /components/unav-header/
+tag: nys-unavheader
 title: UNav Header
 description: A small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.
 image: /assets/img/components/unav-header.svg
@@ -32,23 +34,6 @@ The `<nys-unavheader>` is a reusable web component for use in New York State dig
 {% set code = preview %}
 {% set showTip = true %}
 {% include "partials/code-preview.njk" %}
-
-{% endblock %}
-
-{% block usagedo %}
-
-- Place at the top of every public-facing page.
-- Toggle search (`hideSearch`) and translate (`hideTranslate`) on/off depending on your needs.
-- Design your page so content below the header can shift down, since a statewide alert can appear at any time and adds height to the header.
-
-{% endblock %}
-
-{% block usagedont %}
-
-- Use on back office applications or internal sites that are not public-facing, instead use the `<nys-globalheader>` with the `nysLogo` property applied.
-- Place anywhere other than the top of the page.
-- Modify the universal header.
-
 {% endblock %}
 
 {% block accessibility %}

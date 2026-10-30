@@ -33,21 +33,6 @@ The `<nys-fileinput>` component is a reusable web component that allows users to
 {% include "partials/code-preview.njk" %}
 {% endblock %}
 
-{% block usagedo %}
-
-- Use when a form requires file upload, including when multiple file selection or drag-and-drop is needed.
-
-{% endblock %}
-{% block usagedont %}
-
-- Use when uploading large files that require resumable upload logic.
-- Use when selecting only from camera input or other device-native features.
-- Use when uploading sensitive data without encryption.
-- Use when file preview of uploaded content is needed.
-- Use when file upload is not necessary for the task.
-
-{% endblock %}
-
 {% block accessibility %}
 
 The `<nys-fileinput>` component includes the following accessibility-focused features:
