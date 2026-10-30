@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-24T00:07:11.737Z -->
+    <!-- Latest Build: 2026-10-30T14:28:59.810Z -->
   </head>
   
   <body class="single-page page-processlist section-components">
@@ -584,7 +584,7 @@
 
         
           <li>
-            <a href="/components/unav-footer/">
+            <a href="/components/unavfooter/">
               UNav Footer
             </a>
           </li>
@@ -595,7 +595,7 @@
 
         
           <li>
-            <a href="/components/unav-header/">
+            <a href="/components/unavheader/">
               UNav Header
             </a>
           </li>
@@ -676,7 +676,7 @@
   </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-processlist&gt;</code> component includes the following accessibility-focused features:</p>
@@ -703,7 +703,7 @@
   </p>
 </li>
 </ul>
-</section><br>
+</section>
 <section>
     <h2 id="options">Options</h2>
 <h3 id="description">Description</h3>
@@ -966,34 +966,50 @@
     </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--do nys-flex-fill">
-                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use a process list to explain a sequence of steps a user will take, such as how to apply for a benefit or renew a license.</li>
-<li>Keep step labels short and action-oriented, and put supporting detail in the <code>description</code>.</li>
-<li>Give the list an accessible name with <code>aria-labelledby</code> or <code>aria-label</code> so its purpose is clear.</li>
-<li>Use <code>initialstep</code> to continue the numbering when one process is split across multiple lists.</li>
-<li>Keep styling consistent across all process lists on the same page.</li>
-</ul>
+<li>
+<p>Use a process list to explain a sequence of steps a user will take, such as how to apply for a benefit or renew a license.</p>
+</li>
+<li>
+<p>Keep step labels short and action-oriented, and put supporting detail in the <code>description</code>.</p>
+</li>
+<li>
+<p>Give the list an accessible name with <code>aria-labelledby</code> or <code>aria-label</code> so its purpose is clear.</p>
+</li>
+<li>
+<p>Use <code>initialstep</code> to continue the numbering when one process is split across multiple lists.</p>
+</li>
+<li>
+<p>Keep styling consistent across all process lists on the same page.</p>
+<p></p></li></ul></div><p></p>
+  </div>
+  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+      <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+
+<li>
+<p>Don't use a process list to show a user's progress through a multi-step form. Use the <a href="/components/stepper/">Stepper</a> instead.</p>
+</li>
+<li>
+<p>Don't use a process list for items with no inherent order. Use the <a href="/components/iconlist/">Icon List</a> or a standard list instead.</p>
+</li>
+<li>
+<p>Don't number the steps yourself in the <code>label</code>. The list owns the numbering.</p>
+</li>
+<li>
+<p>Don't place interactive controls such as buttons inside a step.</p>
+<p></p></li></div><p></p>
+  </div>
+
+
 </div>
-        </div>
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--dont nys-flex-fill">
-                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Use a process list to show a user's progress through a multi-step form. Use the <a href="/components/stepper/">Stepper</a> instead.</li>
-<li>Use a process list for items with no inherent order. Use the <a href="/components/iconlist/">Icon List</a> or a standard list instead.</li>
-<li>Number the steps yourself in the <code>label</code>. The list owns the numbering.</li>
-<li>Place interactive controls such as buttons inside a step.</li>
-</ul>
-</div>
-        </div>
-    </div>
-</section><br>
+</section>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -1067,7 +1083,7 @@
   </table>
 </nys-table>
 <p><strong>Slots:</strong> use the <code>description</code> slot on <code>&lt;nys-processlistitem&gt;</code> for rich text below the label. It overrides the <code>description</code> property.</p>
-</section><br>
+</section>
 <section>
     <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
 <p></p><p>
@@ -1078,7 +1094,7 @@ new one with a
 Proposal</a>.
 </p><p></p>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="events">Events</h2>
 <p>This component does not emit any custom events.</p>
@@ -1100,7 +1116,7 @@ Proposal</a>.
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/processlist/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 24, 2026</p>
+    <p>Last updated: October 30, 2026</p>
   </div>
 
   </div>

@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-24T00:07:11.737Z -->
+    <!-- Latest Build: 2026-10-30T14:28:59.810Z -->
   </head>
   
   <body class="single-page page-checkbox section-components">
@@ -584,7 +584,7 @@
 
         
           <li>
-            <a href="/components/unav-footer/">
+            <a href="/components/unavfooter/">
               UNav Footer
             </a>
           </li>
@@ -595,7 +595,7 @@
 
         
           <li>
-            <a href="/components/unav-header/">
+            <a href="/components/unavheader/">
               UNav Header
             </a>
           </li>
@@ -690,7 +690,7 @@
   </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-checkbox&gt;</code> component includes the following accessibility-focused features:</p>
@@ -717,7 +717,7 @@
   </p>
 </li>
 </ul>
-</section><br>
+</section>
 <section>
     <h2 id="options">Options</h2>
 <h3 id="checkbox-group">Checkbox group</h3>
@@ -1077,31 +1077,41 @@ You can set <code>inverted</code> on <code>nys-checkboxgroup</code> to apply it 
     </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--do nys-flex-fill">
-                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use for binary decisions (agree/disagree), confirmation, or multi-select lists.</li>
-<li>Use for selecting multiple options from a list of up to 10 choices.</li>
-</ul>
+<li>
+<p>Use for binary decisions (agree/disagree), confirmation, or multi-select lists.</p>
+</li>
+<li>
+<p>Use for selecting multiple options from a list of up to 10 choices.</p>
+</li>
+<li>
+<p>Use <code>nys-checkboxgroup</code> to group checkboxes with a shared label and description.</p>
+<p></p></li></ul></div><p></p>
+  </div>
+  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+      <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+
+<li>
+<p>Don't use when users need to select only one option. Use a <code>&lt;nys-radiobutton&gt;</code> for 1–6 choices or a <nys-select> for 7 or more.</nys-select></p>
+</li>
+<li>
+<p>Don't use when you have more than 10 options to choose from.</p>
+</li>
+<li>
+<p>Don't change the state of one checkbox based on another being clicked.</p>
+<p></p></li></div><p></p>
+  </div>
+
+
 </div>
-        </div>
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--dont nys-flex-fill">
-                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Use when users need to select only one option. Use a &lt;<code>nys-radiobutton&gt;</code> for 1–6 choices or a <code>&lt;nys-select&gt;</code> for 7 or more.</li>
-<li>Use a checkbox when changing its state immediately affects the system. Use a toggle instead (e.g., enabling Dark Mode).</li>
-<li>Use when you have more than 10 options to choose from.</li>
-<li>Change the state of one checkbox based on another being clicked.</li>
-</ul>
-</div>
-        </div>
-    </div>
-</section><br>
+</section>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -1206,7 +1216,7 @@ You can set <code>inverted</code> on <code>nys-checkboxgroup</code> to apply it 
 </nys-table>
 <h3 id="form-prop">Form Prop</h3>
 <p>The <code>form</code> property associates this component with a <code>&lt;form&gt;</code> element by ID, even if the component is not a descendant of that form. See <a href="/foundations/forms/">Form Patterns</a> for details on form association and ElementInternals.</p>
-</section><br>
+</section>
 <section>
     <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
 <p></p><p>
@@ -1217,7 +1227,7 @@ new one with a
 Proposal</a>.
 </p><p></p>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="events">Events</h2>
 <p><nys-alert type="info"><span>Some components emit <code>nys-</code> events with a <code>detail</code> object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and <code>nys-</code> listeners for the same thing.</span></nys-alert></p>
@@ -1308,7 +1318,7 @@ checkbox<span class="token punctuation">.</span><span class="token function">add
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/checkbox/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 24, 2026</p>
+    <p>Last updated: October 30, 2026</p>
   </div>
 
   </div>

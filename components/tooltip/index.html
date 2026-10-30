@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-24T00:07:11.737Z -->
+    <!-- Latest Build: 2026-10-30T14:28:59.810Z -->
   </head>
   
   <body class="single-page page-tooltip section-components">
@@ -584,7 +584,7 @@
 
         
           <li>
-            <a href="/components/unav-footer/">
+            <a href="/components/unavfooter/">
               UNav Footer
             </a>
           </li>
@@ -595,7 +595,7 @@
 
         
           <li>
-            <a href="/components/unav-header/">
+            <a href="/components/unavheader/">
               UNav Header
             </a>
           </li>
@@ -670,7 +670,7 @@
   </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-tooltip&gt;</code> component includes the following accessibility-focused features:</p>
@@ -703,7 +703,7 @@
   </p>
 </li>
 </ul>
-</section><br>
+</section>
 <section>
     <h2 id="options">Options</h2>
 <h3 id="supported-components">Supported Components</h3>
@@ -854,34 +854,50 @@ Tooltip positioning is automatic (<code>top</code>/auto), so you don’t need to
     </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--do nys-flex-fill">
-                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use to provide supplemental hints on form fields (e.g., explaining what &quot;FEIN&quot; means) or on icon buttons that need additional context.</li>
-<li>Use on NYSDS form components (<code>&lt;nys-textinput&gt;</code>, <code>&lt;nys-select&gt;</code>, <code>&lt;nys-checkbox&gt;</code>, etc.) where the tooltip automatically renders as a hint icon next to the label.</li>
-<li>Keep tooltip content brief and helpful.</li>
-<li>Position tooltips so they don't block related content.</li>
-</ul>
+<li>
+<p>Use to provide supplemental hints on form fields (e.g., explaining what &quot;FEIN&quot; means) or on icon buttons that need additional context.</p>
+</li>
+<li>
+<p>Use on NYSDS form components (<code>&lt;nys-textinput&gt;</code>, <code>&lt;nys-select&gt;</code>, <code>&lt;nys-checkbox&gt;</code>, etc.) where the tooltip automatically renders as a hint icon next to the label.</p>
+</li>
+<li>
+<p>Keep tooltip content brief and helpful.</p>
+</li>
+<li>
+<p>Position tooltips so they don't block related content.</p>
+<p></p></li></ul></div><p></p>
+  </div>
+  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+      <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+
+<li>
+<p>Don't use for information critical to task completion. Use inline description text instead, as tooltips are easy to miss.</p>
+</li>
+<li>
+<p>Don't use when content is long or includes links, actions, or structured content.</p>
+</li>
+<li>
+<p>Don't use interactive elements such as links or buttons inside a tooltip.</p>
+</li>
+<li>
+<p>Don't rely on tooltips when you have room to provide inline explanation.</p>
+</li>
+<li>
+<p>Don't use when mobile users are a primary audience. Tooltips rely on hover, which is unavailable on touch devices.</p>
+<p></p></li></div><p></p>
+  </div>
+
+
 </div>
-        </div>
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--dont nys-flex-fill">
-                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Use for information critical to task completion. Use inline description text instead, as tooltips are easy to miss.</li>
-<li>Use when content is long or includes links, actions, or structured content.</li>
-<li>Use interactive elements such as links or buttons inside a tooltip.</li>
-<li>Rely on tooltips when you have room to provide inline explanation.</li>
-<li>Use when mobile users are a primary audience. Tooltips rely on hover, which is unavailable on touch devices.</li>
-</ul>
-</div>
-        </div>
-    </div>
-</section><br>
+</section>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -918,7 +934,7 @@ Tooltip positioning is automatic (<code>top</code>/auto), so you don’t need to
     </tr>
   </table>
 </nys-table>
-</section><br>
+</section>
 <section>
     <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
 <p></p><p>
@@ -929,7 +945,7 @@ new one with a
 Proposal</a>.
 </p><p></p>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="events">Events</h2>
 <p>This component does not emit any custom events.</p>
@@ -951,7 +967,7 @@ Proposal</a>.
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/tooltip/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 24, 2026</p>
+    <p>Last updated: October 30, 2026</p>
   </div>
 
   </div>

@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-24T00:07:11.737Z -->
+    <!-- Latest Build: 2026-10-30T14:28:59.810Z -->
   </head>
   
   <body class="single-page page-card section-components">
@@ -584,7 +584,7 @@
 
         
           <li>
-            <a href="/components/unav-footer/">
+            <a href="/components/unavfooter/">
               UNav Footer
             </a>
           </li>
@@ -595,7 +595,7 @@
 
         
           <li>
-            <a href="/components/unav-header/">
+            <a href="/components/unavheader/">
               UNav Header
             </a>
           </li>
@@ -676,7 +676,7 @@
   </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-card&gt;</code> component includes the following accessibility-focused features:</p>
@@ -708,7 +708,7 @@
   </p>
 </li>
 </ul>
-</section><br>
+</section>
 <section>
     <h2 id="options">Options</h2>
 <h3 id="preheading">Preheading</h3>
@@ -1363,41 +1363,71 @@
     </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--do nys-flex-fill">
-                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use a card to group content and actions about a single subject, such as one program, event, or news item.</li>
-<li>Set <code>headingLevel</code> so the card heading fits the surrounding page hierarchy.</li>
-<li>Keep headings short and specific, so a card is understandable on its own.</li>
-<li>Put actions in the <code>footer</code> slot as real buttons or links.</li>
-<li>Use <code>href</code> or <code>onClick</code> when the whole card leads to one destination or performs one action, and add an icon to the <code>footer</code> slot so the interaction is visible.</li>
-<li>Keep cards in the same group consistent in structure, so they are easy to scan and compare.</li>
-<li>Repeat any information shown in the media or the <code>media-accent</code> slot in the card's text.</li>
-<li>Place each card in a grid column to control its width, and set <code>--nys-card-height: 100%</code> when a row of cards should share one height.</li>
-</ul>
+<li>
+<p>Use a card to group content and actions about a single subject, such as one program, event, or news item.</p>
+</li>
+<li>
+<p>Set <code>headingLevel</code> so the card heading fits the surrounding page hierarchy.</p>
+</li>
+<li>
+<p>Keep headings short and specific, so a card is understandable on its own.</p>
+</li>
+<li>
+<p>Put actions in the <code>footer</code> slot as real buttons or links.</p>
+</li>
+<li>
+<p>Use <code>href</code> or <code>onClick</code> when the whole card leads to one destination or performs one action, and add an icon to the footer slot so the interaction is visible.</p>
+</li>
+<li>
+<p>Keep cards in the same group consistent in structure, so they are easy to scan and compare.</p>
+</li>
+<li>
+<p>Repeat any information shown in the <code>media</code> or the <code>media-accent</code> slot in the card's text.</p>
+</li>
+<li>
+<p>Place each card in a grid column to control its width, and set <code>--nys-card-height: 100%</code> when a row of cards should share one height.</p>
+<p></p></li></ul></div><p></p>
+  </div>
+  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+      <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+
+<li>
+<p>Don't use a card as a substitute for a page section heading or for content that belongs in the page flow.</p>
+</li>
+<li>
+<p>Don't put buttons, links, or other interactive elements in the slots of a card that has <code>href</code> or a click handler. That card is already a single control.</p>
+</li>
+<li>
+<p>Don't set both <code>href</code> and a click handler on the same card.</p>
+</li>
+<li>
+<p>Don't put more than one primary action in a card.</p>
+</li>
+<li>
+<p>Don't rely on the <code>media</code> image or the <code>media-accent</code> slot to convey information that appears nowhere else.</p>
+</li>
+<li>
+<p>Don't mix <code>elevated</code> and non-elevated cards within the same group.</p>
+</li>
+<li>
+<p>Don't skip heading levels to get a particular text size. Use <code>headingLevel</code> for structure, not for styling.</p>
+</li>
+<li>
+<p>Don't use cards for long-form content that a user needs to read in order.</p>
+<p></p></li></div><p></p>
+  </div>
+
+
 </div>
-        </div>
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--dont nys-flex-fill">
-                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Use a card as a substitute for a page section heading or for content that belongs in the page flow.</li>
-<li>Put buttons, links, or other interactive elements in the slots of a card that has <code>href</code> or a click handler. That card is already a single control.</li>
-<li>Set both <code>href</code> and a click handler on the same card.</li>
-<li>Put more than one primary action in a card.</li>
-<li>Rely on the media image or the <code>media-accent</code> slot to convey information that appears nowhere else.</li>
-<li>Mix <code>elevated</code> and non-elevated cards within the same group.</li>
-<li>Skip heading levels to get a particular text size. Use <code>headingLevel</code> for structure, not for styling.</li>
-<li>Use cards for long-form content that a user needs to read in order.</li>
-</ul>
-</div>
-        </div>
-    </div>
-</section><br>
+</section>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -1511,7 +1541,7 @@
     </tr>
   </table>
 </nys-table>
-</section><br>
+</section>
 <section>
     <h2 id="style-overrides">Style Overrides</h2>
 <div class="css-var-table">
@@ -1595,7 +1625,7 @@ Proposal</a>.
 </table>
 </nys-table><p></p>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="events">Events</h2>
 <p><nys-alert type="info"><span>Some components emit <code>nys-</code> events with a <code>detail</code> object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and <code>nys-</code> listeners for the same thing.</span></nys-alert></p>
@@ -1669,7 +1699,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/card/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 24, 2026</p>
+    <p>Last updated: October 30, 2026</p>
   </div>
 
   </div>

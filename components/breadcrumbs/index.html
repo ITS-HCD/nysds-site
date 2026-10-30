@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-24T00:07:11.737Z -->
+    <!-- Latest Build: 2026-10-30T14:28:59.810Z -->
   </head>
   
   <body class="single-page page-breadcrumbs section-components">
@@ -584,7 +584,7 @@
 
         
           <li>
-            <a href="/components/unav-footer/">
+            <a href="/components/unavfooter/">
               UNav Footer
             </a>
           </li>
@@ -595,7 +595,7 @@
 
         
           <li>
-            <a href="/components/unav-header/">
+            <a href="/components/unavheader/">
               UNav Header
             </a>
           </li>
@@ -680,7 +680,7 @@
   </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="accessibility">Accessibility</h2>
     <nys-table bordered="">
@@ -707,7 +707,7 @@ For comprehensive insight and guidance, please see
 <a href="./accessibility-tests/">Accessibility Checklists</a> and
 <a href="./accessibility-build/">Build Accessibly</a>.
 </p><p></p>
-</section><br>
+</section>
 <section>
     <h2 id="options">Options</h2>
 <h3 id="basic-usage">Basic Usage</h3>
@@ -999,34 +999,50 @@ For comprehensive insight and guidance, please see
     </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--do nys-flex-fill">
-                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use on pages at level 2 and deeper in a site hierarchy. If a level 2 page has child pages, all pages starting at that level should include a breadcrumb.</li>
-<li>Place breadcrumb below the header and above the main content.</li>
-<li>Show the site hierarchy, not the path a user took.</li>
-<li>For the home page of a site, use a specific label rather than a generic &quot;Home.&quot; This differentiates the main site home from other landing pages (e.g., &quot;myBenefits Home&quot; instead of just &quot;Home&quot;).</li>
-</ul>
+<li>
+<p>Use on pages at level 2 and deeper in a site hierarchy. If a level 2 page has child pages, all pages starting at that level should include a breadcrumb.</p>
+</li>
+<li>
+<p>Place breadcrumb below the header and above the main content.</p>
+</li>
+<li>
+<p>Show the site hierarchy, not the path a user took.</p>
+</li>
+<li>
+<p>For the home page of a site, use a specific label rather than a generic &quot;Home.&quot; This differentiates the main site home from other landing pages (e.g., &quot;myBenefits Home&quot; instead of just &quot;Home&quot;).</p>
+<p></p></li></ul></div><p></p>
+  </div>
+  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+      <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+
+<li>
+<p>Don't use on top-level pages, or on sites with only one or two levels of hierarchy.</p>
+</li>
+<li>
+<p>Don't make the current page clickable.</p>
+</li>
+<li>
+<p>Don't use breadcrumbs as the only navigation method.</p>
+</li>
+<li>
+<p>Don't use breadcrumbs for sequential processes like multi-step forms or wizards. Use a stepper instead.</p>
+</li>
+<li>
+<p>Don't add breadcrumbs when they don't provide meaningful context or navigation value.</p>
+<p></p></li></div><p></p>
+  </div>
+
+
 </div>
-        </div>
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--dont nys-flex-fill">
-                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Don't use on top-level pages, or on sites with only one or two levels of hierarchy.</li>
-<li>Don't make the current page clickable.</li>
-<li>Don't use breadcrumbs as the only navigation method.</li>
-<li>Don't use breadcrumbs for sequential processes like multi-step forms or wizards. Use a stepper instead.</li>
-<li>Don't add breadcrumbs when they don't provide meaningful context or navigation value.</li>
-</ul>
-</div>
-        </div>
-    </div>
-</section><br>
+</section>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -1073,7 +1089,7 @@ For comprehensive insight and guidance, please see
       </tr>
   </table>
 </nys-table>
-</section><br>
+</section>
 <section>
     <h2 id="style-overrides">Style Overrides</h2>
 <div class="css-var-table">
@@ -1125,7 +1141,7 @@ Proposal</a>.
 </table>
 </nys-table><p></p>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="events">Events</h2>
 <p><nys-alert type="info"><span>Some components emit <code>nys-</code> events with a <code>detail</code> object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and <code>nys-</code> listeners for the same thing.</span></nys-alert></p>
@@ -1195,7 +1211,7 @@ breadcrumbs<span class="token punctuation">.</span><span class="token function">
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/breadcrumbs/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 24, 2026</p>
+    <p>Last updated: October 30, 2026</p>
   </div>
 
   </div>

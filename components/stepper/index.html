@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-24T00:07:11.737Z -->
+    <!-- Latest Build: 2026-10-30T14:28:59.810Z -->
   </head>
   
   <body class="single-page page-stepper section-components">
@@ -584,7 +584,7 @@
 
         
           <li>
-            <a href="/components/unav-footer/">
+            <a href="/components/unavfooter/">
               UNav Footer
             </a>
           </li>
@@ -595,7 +595,7 @@
 
         
           <li>
-            <a href="/components/unav-header/">
+            <a href="/components/unavheader/">
               UNav Header
             </a>
           </li>
@@ -699,7 +699,7 @@
   </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="accessibility">Accessibility</h2>
 <p>The <code>nys-stepper</code> component includes the following accessibility-focused features:</p>
@@ -723,7 +723,7 @@
   </p>
 </li>
 </ul>
-</section><br>
+</section>
 <section>
     <h2 id="options">Options</h2>
 <h3 id="multi-page-vs-single-page-stepper">Multi Page vs. Single Page Stepper</h3>
@@ -1118,29 +1118,35 @@
 <li>This prop is automatically applied to all steps before the <code>current</code> step and is used to style the steps properly.</li>
 <li>Do not add <code>previous</code> to a step on the implementation side.</li>
 </ul>
-</section><br>
+</section>
 <section>
     <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--do nys-flex-fill">
-                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use for linear, ordered forms with more than 2 sections to show progress through a multi-step process.</li>
-<li>Ensure users can navigate back to previous steps to review or change information.</li>
-</ul>
+<li>
+<p>Use for linear, ordered forms with more than 2 sections to show progress through a multi-step process.</p>
+</li>
+<li>
+<p>Ensure users can navigate back to previous steps to review or change information.</p>
+<p></p></li></ul></div><p></p>
+  </div>
+  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+      <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+
+<li>
+<p>Don't use when a form has only 1 or 2 sections.</p>
+</li>
+<li>
+<p>Don't use for forms that are nonlinear and can be completed in any order.</p>
+<p></p></li></div><p></p>
+  </div>
+
+
 </div>
-        </div>
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--dont nys-flex-fill">
-                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Use when a form has only 1 or 2 sections.</li>
-<li>Use for forms that are nonlinear and can be completed in any order.</li>
-</ul>
-</div>
-        </div>
-    </div>
-</section><br>
+</section>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -1195,7 +1201,7 @@
     </tr>
   </table>
 </nys-table>
-</section><br>
+</section>
 <section>
     <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
 <p></p><p>
@@ -1206,7 +1212,7 @@ new one with a
 Proposal</a>.
 </p><p></p>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="events">Events</h2>
 <p><nys-alert type="info"><span>Some components emit <code>nys-</code> events with a <code>detail</code> object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and <code>nys-</code> listeners for the same thing.</span></nys-alert></p>
@@ -1275,7 +1281,7 @@ stepper<span class="token punctuation">.</span><span class="token function">addE
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/stepper/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 24, 2026</p>
+    <p>Last updated: October 30, 2026</p>
   </div>
 
   </div>

@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-24T00:07:11.737Z -->
+    <!-- Latest Build: 2026-10-30T14:28:59.810Z -->
   </head>
   
   <body class="single-page page-avatar section-components">
@@ -584,7 +584,7 @@
 
         
           <li>
-            <a href="/components/unav-footer/">
+            <a href="/components/unavfooter/">
               UNav Footer
             </a>
           </li>
@@ -595,7 +595,7 @@
 
         
           <li>
-            <a href="/components/unav-header/">
+            <a href="/components/unavheader/">
               UNav Header
             </a>
           </li>
@@ -667,7 +667,7 @@
   </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-avatar&gt;</code> component includes the following accessibility-focused features:</p>
@@ -694,7 +694,7 @@
   </p>
 </li>
 </ul>
-</section><br>
+</section>
 <section>
     <h2 id="options">Options</h2>
 <h3 id="images">Images</h3>
@@ -871,35 +871,53 @@
     </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--do nys-flex-fill">
-                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use for clear, simple user or entity representation in UIs such as profiles, account settings, or comment threads.</li>
-<li>Prefer showing the full name next to the avatar on tablets and larger breakpoints.</li>
-<li>Place the full name of the user or entity to the right of the avatar.</li>
-<li>Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.</li>
-<li>Use the <code>&lt;nys-icon&gt;</code> slot only when the icon prop isn't sufficient.</li>
-</ul>
+<li>
+<p>Use for clear, simple user or entity representation in UIs such as profiles, account settings, or comment threads.</p>
+</li>
+<li>
+<p>Prefer showing the full name next to the avatar on tablets and larger breakpoints.</p>
+</li>
+<li>
+<p>Place the full name of the user or entity to the right of the avatar.</p>
+</li>
+<li>
+<p>Ensure the text of initial avatars meets WCAG 2.1 contrast ratio against the avatar's background.</p>
+</li>
+<li>
+<p>Use the <code>&lt;nys-icon&gt;</code> slot only when the icon prop isn't sufficient.</p>
+<p></p></li></ul></div><p></p>
+  </div>
+  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+      <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+
+<li>
+<p>Don't skip the <code>ariaLabel</code> attribute for screen reader users.</p>
+</li>
+<li>
+<p>Don't use the <code>&lt;nys-icon&gt;</code> as a slot when the icon prop can satisfy your use.</p>
+</li>
+<li>
+<p>Don't overload the avatar with unnecessary customizations or override default avatar icons unless additional context is essential. Doing so creates inconsistency across NYS interfaces.</p>
+</li>
+<li>
+<p>Don't use an avatar when a large visual representation is needed; use a photo instead.</p>
+</li>
+<li>
+<p>Don't replace an avatar with a simple label or text when that would communicate the information more clearly.</p>
+<p></p></li></div><p></p>
+  </div>
+
+
 </div>
-        </div>
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--dont nys-flex-fill">
-                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Skip the <code>ariaLabel</code> attribute for screen reader users.</li>
-<li>Use the <code>nys-icon</code> as a slot when the icon prop can satisfy your use.</li>
-<li>Overload the avatar with unnecessary customizations or override default avatar icons unless additional context is essential. Doing so creates inconsistency across NYS interfaces.</li>
-<li>Use an avatar when a large visual representation is needed; use a photo instead.</li>
-<li>Replace an avatar with a simple label or text when that would communicate the information more clearly.</li>
-</ul>
-</div>
-        </div>
-    </div>
-</section><br>
+</section>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -956,7 +974,7 @@
       </tr>
   </table>
 </nys-table>
-</section><br>
+</section>
 <section>
     <h2 id="style-overrides">Style Overrides</h2>
 <div class="css-var-table">
@@ -1008,7 +1026,7 @@ Proposal</a>.
 </table>
 </nys-table><p></p>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="events">Events</h2>
 <p>This component does not emit any custom events.</p>
@@ -1036,7 +1054,7 @@ Proposal</a>.
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/avatar/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 24, 2026</p>
+    <p>Last updated: October 30, 2026</p>
   </div>
 
   </div>

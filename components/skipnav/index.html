@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-24T00:07:11.737Z -->
+    <!-- Latest Build: 2026-10-30T14:28:59.810Z -->
   </head>
   
   <body class="single-page page-skipnav section-components">
@@ -584,7 +584,7 @@
 
         
           <li>
-            <a href="/components/unav-footer/">
+            <a href="/components/unavfooter/">
               UNav Footer
             </a>
           </li>
@@ -595,7 +595,7 @@
 
         
           <li>
-            <a href="/components/unav-header/">
+            <a href="/components/unavheader/">
               UNav Header
             </a>
           </li>
@@ -682,7 +682,7 @@
   </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-skipnav&gt;</code> component includes the following accessibility-focused features:</p>
@@ -709,7 +709,7 @@
   </p>
 </li>
 </ul>
-</section><br>
+</section>
 <section>
     <h2 id="options">Options</h2>
 <p>The <code>&lt;nys-skipnav&gt;</code> component adds a hidden &quot;Skip to main content&quot; link that appears on Tab, allowing keyboard and screen reader users to jump directly to the main content. By default, <code>href</code> is set to <code>href=&quot;#main-content&quot;</code>, but you can change it to match the id of your main content container.</p>
@@ -761,29 +761,35 @@
     </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--do nys-flex-fill">
-                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use on pages with a large header, navigation, or other repeated content before the main section.</li>
-<li>Ensure the <code>href</code> on <code>&lt;nys-skipnav&gt;</code> matches the <code>id</code> of the main content container.</li>
-</ul>
+<li>
+<p>Use on pages with a large header, navigation, or other repeated content before the main section.</p>
+</li>
+<li>
+<p>Ensure the <code>href</code> on <code>&lt;nys-skipnav&gt;</code> matches the <code>id</code> of the main content container.</p>
+<p></p></li></ul></div><p></p>
+  </div>
+  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+      <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+
+<li>
+<p>Don't use if your layout already starts with the main content and there is nothing to skip over.</p>
+</li>
+<li>
+<p>Don't mismatch the <code>href</code> and target <code>id</code>.</p>
+<p></p></li></div><p></p>
+  </div>
+
+
 </div>
-        </div>
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--dont nys-flex-fill">
-                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Use if your layout already starts with the main content and there is nothing to skip over.</li>
-<li>Mismatch the <code>href</code> and target <code>id</code>.</li>
-</ul>
-</div>
-        </div>
-    </div>
-</section><br>
+</section>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -805,7 +811,7 @@
     </tr>
   </table>
 </nys-table>
-</section><br>
+</section>
 <section>
     <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
 <p></p><p>
@@ -816,7 +822,7 @@ new one with a
 Proposal</a>.
 </p><p></p>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="events">Events</h2>
 <p>This component does not emit any custom events.</p>
@@ -838,7 +844,7 @@ Proposal</a>.
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/skipnav/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 24, 2026</p>
+    <p>Last updated: October 30, 2026</p>
   </div>
 
   </div>

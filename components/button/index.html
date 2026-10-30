@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-24T00:07:11.737Z -->
+    <!-- Latest Build: 2026-10-30T14:28:59.810Z -->
   </head>
   
   <body class="single-page page-button section-components">
@@ -584,7 +584,7 @@
 
         
           <li>
-            <a href="/components/unav-footer/">
+            <a href="/components/unavfooter/">
               UNav Footer
             </a>
           </li>
@@ -595,7 +595,7 @@
 
         
           <li>
-            <a href="/components/unav-header/">
+            <a href="/components/unavheader/">
               UNav Header
             </a>
           </li>
@@ -666,7 +666,7 @@
   </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-button&gt;</code> component includes the following accessibility-focused features:</p>
@@ -696,7 +696,7 @@
   </p>
 </li>
 </ul>
-</section><br>
+</section>
 <section>
     <h2 id="options">Options</h2>
 <h3 id="click-action">Click Action</h3>
@@ -1008,36 +1008,56 @@ Set the <code>target</code> prop of the <code>&lt;nys-button&gt;</code> to speci
     </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--do nys-flex-fill">
-                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use for the most important actions you want users to take, such as Download, Sign up, or Log out.</li>
-<li>Use Fill for the primary action on the page. There should be only one primary action per page.</li>
-<li>Use Outline for secondary actions, placed next to the primary Fill button.</li>
-<li>Use Ghost buttons for additional actions beyond primary and secondary.</li>
-<li>Use Text buttons when an action needs to appear within a text block. If clicking takes the user somewhere else, use a Link instead.</li>
-<li>Always set the <code>type</code> attribute (<code>submit</code>, <code>button</code>, or <code>reset</code>). The default is <code>button</code>.</li>
-<li>Use sentence case for button labels, only capitalizing the first word.</li>
-<li>Place a <code>chevron_down</code> icon on the right for buttons that open a dropdown.</li>
-</ul>
+<li>
+<p>Use for the most important actions you want users to take, such as &quot;Download&quot;, &quot;Sign up&quot;, or &quot;Log out&quot;.</p>
+</li>
+<li>
+<p>Use <code>variant=&quot;fill&quot;</code> for the primary action on the page. There should be only one primary action per page.</p>
+</li>
+<li>
+<p>Use <code>variant=&quot;outline&quot;</code> for secondary actions, placed next to the primary Fill button.</p>
+</li>
+<li>
+<p>Use <code>variant=&quot;ghost&quot;</code> buttons for additional actions beyond primary and secondary.</p>
+</li>
+<li>
+<p>Use <code>variant=&quot;text&quot;</code> buttons when an action needs to appear within a text block. If clicking takes the user somewhere else, use a Link instead.</p>
+</li>
+<li>
+<p>Always set the <code>type</code> attribute (<code>submit</code>, <code>button</code>, or <code>reset</code>). The default is <code>button</code>.</p>
+</li>
+<li>
+<p>Use sentence case for button labels, only capitalizing the first word.</p>
+</li>
+<li>
+<p>Place a <code>chevron_down icon</code> on the right for buttons that open a dropdown.</p>
+<p></p></li></ul></div><p></p>
+  </div>
+  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+      <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+
+<li>
+<p>Don't use buttons for navigation. Use an <code>&lt;a&gt;</code> element or Text button for links that take users somewhere else.</p>
+</li>
+<li>
+<p>Don't use icons in buttons without a text label. Very few icons are universally understood.</p>
+</li>
+<li>
+<p>Don't create custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior.</p>
+<p></p></li></div><p></p>
+  </div>
+
+
 </div>
-        </div>
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--dont nys-flex-fill">
-                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Use buttons for navigation. Use an <code>&lt;a&gt;</code> element or Text button for links that take users somewhere else.</li>
-<li>Use icons in buttons without a text label. Very few icons are universally understood.</li>
-<li>Create custom button styles (color, shape, size). Consistency helps users recognize buttons and predict behavior.</li>
-</ul>
-</div>
-        </div>
-    </div>
-</section><br>
+</section>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -1131,7 +1151,7 @@ Set the <code>target</code> prop of the <code>&lt;nys-button&gt;</code> to speci
 </nys-table>
 <h3 id="form-prop">Form Prop</h3>
 <p>The <code>form</code> property associates this component with a <code>&lt;form&gt;</code> element by ID, even if the component is not a descendant of that form. See <a href="/foundations/forms/">Form Patterns</a> for details on form association and ElementInternals.</p>
-</section><br>
+</section>
 <section>
     <h2 id="style-overrides">Style Overrides</h2>
 <div class="css-var-table">
@@ -1215,7 +1235,7 @@ Proposal</a>.
 </table>
 </nys-table><p></p>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="events">Events</h2>
 <p><nys-alert type="info"><span>Some components emit <code>nys-</code> events with a <code>detail</code> object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and <code>nys-</code> listeners for the same thing.</span></nys-alert></p>
@@ -1295,7 +1315,7 @@ button<span class="token punctuation">.</span><span class="token function">addEv
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/button/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 24, 2026</p>
+    <p>Last updated: October 30, 2026</p>
   </div>
 
   </div>

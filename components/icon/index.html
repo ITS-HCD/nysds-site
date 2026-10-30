@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-24T00:07:11.737Z -->
+    <!-- Latest Build: 2026-10-30T14:28:59.810Z -->
   </head>
   
   <body class="single-page page-icon section-components">
@@ -584,7 +584,7 @@
 
         
           <li>
-            <a href="/components/unav-footer/">
+            <a href="/components/unavfooter/">
               UNav Footer
             </a>
           </li>
@@ -595,7 +595,7 @@
 
         
           <li>
-            <a href="/components/unav-header/">
+            <a href="/components/unavheader/">
               UNav Header
             </a>
           </li>
@@ -762,7 +762,7 @@ registerIconLibrary('material', {
     </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-icon&gt;</code> component includes the following accessibility-focused features:</p>
@@ -777,7 +777,7 @@ Additional accessibility test and build content is coming soon,
 in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 </span>
 </p><p></p>
-</section><br>
+</section>
 <section>
     <h2 id="options">Options</h2>
 <h3 id="size">Size</h3>
@@ -1859,37 +1859,59 @@ document<span class="token punctuation">.</span><span class="token function">add
     });
   });
 </script>
-</section><br>
+</section>
 <section>
     <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--do nys-flex-fill">
-                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use icons to draw attention to actions, help users scan for key information, or enhance recognizable common actions (e.g., search, download, share).</li>
-<li>Pair icons with a text label—few icons are universally understood alone.</li>
-<li>Use icons consistently: same icon and label for the same meaning throughout your app.</li>
-<li>Use <code>ariaLabel</code> when the icon conveys meaning, so screen readers can announce its purpose.</li>
-<li>Use icons from the NYS Design System library; if unavailable, use Google Material Symbols (rounded, unfilled).</li>
-<li>Match icon size and color to the design system.</li>
-</ul>
+<li>
+<p>Use icons to draw attention to actions, help users scan for key information, or enhance recognizable common actions (e.g., search, download, share).</p>
+</li>
+<li>
+<p>Pair icons with a text label—few icons are universally understood alone.</p>
+</li>
+<li>
+<p>Use icons consistently: same icon and label for the same meaning throughout your app.</p>
+</li>
+<li>
+<p>Use <code>ariaLabel</code> when the icon conveys meaning, so screen readers can announce its purpose.</p>
+</li>
+<li>
+<p>Use icons from the NYS Design System library; if unavailable, use Google Material Symbols (rounded, unfilled).</p>
+</li>
+<li>
+<p>Match icon size and color to the design system.</p>
+<p></p></li></ul></div><p></p>
+  </div>
+  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+      <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+
+<li>
+<p>Don't use an icon if its meaning isn't immediately clear—if you suspect users won't recognize it, remove it.</p>
+</li>
+<li>
+<p>Don't use icons to compensate for unclear page hierarchy or confusing content organization.</p>
+</li>
+<li>
+<p>Don't use standalone icons for actions—use <code>&lt;nys-button&gt;</code> with an icon inside instead.</p>
+</li>
+<li>
+<p>Don't replace meaningful text with icons unless the icon is universally recognized or paired with a label.</p>
+</li>
+<li>
+<p>Don't overuse icons—too many create visual noise and reduce focus.</p>
+</li>
+<li>
+<p>Don't use excessive icon customization that breaks design consistency.</p>
+<p></p></li></div><p></p>
+  </div>
+
+
 </div>
-        </div>
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--dont nys-flex-fill">
-                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Use an icon if its meaning isn't immediately clear—if you suspect users won't recognize it, remove it.</li>
-<li>Use icons to compensate for unclear page hierarchy or confusing content organization.</li>
-<li>Use standalone icons for actions—use <code>&lt;nys-button&gt;</code> with an icon inside instead.</li>
-<li>Replace meaningful text with icons unless the icon is universally recognized or paired with a label.</li>
-<li>Overuse icons—too many create visual noise and reduce focus.</li>
-<li>Use excessive icon customization that breaks design consistency.</li>
-</ul>
-</div>
-        </div>
-    </div>
-</section><br>
+</section>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -1936,7 +1958,7 @@ document<span class="token punctuation">.</span><span class="token function">add
     </tr>
   </table>
 </nys-table>
-</section><br>
+</section>
 <section>
     <h2 id="style-overrides">Style Overrides</h2>
 <div class="css-var-table">
@@ -1988,7 +2010,7 @@ Proposal</a>.
 </table>
 </nys-table><p></p>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="events">Events</h2>
 <p>This component does not emit any custom events.</p>
@@ -2010,7 +2032,7 @@ Proposal</a>.
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/icon/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 24, 2026</p>
+    <p>Last updated: October 30, 2026</p>
   </div>
 
   </div>

@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-24T00:07:11.737Z -->
+    <!-- Latest Build: 2026-10-30T14:28:59.810Z -->
   </head>
   
   <body class="single-page page-modal section-components">
@@ -584,7 +584,7 @@
 
         
           <li>
-            <a href="/components/unav-footer/">
+            <a href="/components/unavfooter/">
               UNav Footer
             </a>
           </li>
@@ -595,7 +595,7 @@
 
         
           <li>
-            <a href="/components/unav-header/">
+            <a href="/components/unavheader/">
               UNav Header
             </a>
           </li>
@@ -698,7 +698,7 @@
   </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="accessibility">Accessibility</h2>
     <nys-table bordered="">
@@ -733,7 +733,7 @@ For comprehensive insight and guidance, please see
 <li>Announce the modal to screen readers using role=&quot;dialog&quot;.</li>
 <li>Prevent background scroll so users don’t lose context.</li>
 </ul>
-</section><br>
+</section>
 <section>
     <h2 id="options">Options</h2>
 <h3 id="slots">Slots</h3>
@@ -893,33 +893,47 @@ For comprehensive insight and guidance, please see
       closeModal(id);
     }; 
   </script>
-</section><br>
+</section>
 <section>
     <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--do nys-flex-fill">
-                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use to confirm important actions, present focused forms (e.g., login, feedback), or require acknowledgment of alerts without navigating away from the page.</li>
-<li>Keep content short and focused. Use a dedicated page for long or complex content.</li>
-<li>Keep the <code>subheading</code> short and use <code>&lt;p&gt;</code> tags within the modal for longer information.</li>
-<li>Use the <code>mandatory</code> prop to disable the dismiss button only when the user must make a critical decision or acknowledge essential information.</li>
-</ul>
+<li>
+<p>Use to confirm important actions, present focused forms (e.g., login, feedback), or require acknowledgment of alerts without navigating away from the page.</p>
+</li>
+<li>
+<p>Keep content short and focused. Use a dedicated page for long or complex content.</p>
+</li>
+<li>
+<p>Keep the <code>subheading</code> short and use <code>&lt;p&gt;</code> tags within the modal for longer information.</p>
+</li>
+<li>
+<p>Use the <code>mandatory</code> prop to disable the dismiss button only when the user must make a critical decision or acknowledge essential information.</p>
+<p></p></li></ul></div><p></p>
+  </div>
+  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+      <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+
+<li>
+<p>Don't stack multiple modals.</p>
+</li>
+<li>
+<p>Don't use for trivial information or inline status messages. Use <code>&lt;nys-alert&gt;</code> instead.</p>
+</li>
+<li>
+<p>Don't use for quick hints on form fields. Use <code>&lt;nys-tooltip&gt;</code> instead.</p>
+</li>
+<li>
+<p>Don't force the <code>mandatory</code> prop unnecessarily.</p>
+<p></p></li></div><p></p>
+  </div>
+
+
 </div>
-        </div>
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--dont nys-flex-fill">
-                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Stack multiple modals.</li>
-<li>Use for trivial information or inline status messages. Use <code>&lt;nys-alert&gt;</code> instead.</li>
-<li>Use for quick hints on form fields. Use <code>&lt;nys-tooltip&gt;</code> instead.</li>
-<li>Force the <code>mandatory</code> prop unnecessarily.</li>
-</ul>
-</div>
-        </div>
-    </div>
-</section><br>
+</section>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -961,7 +975,7 @@ For comprehensive insight and guidance, please see
     </tr>
   </table>
 </nys-table>
-</section><br>
+</section>
 <section>
     <h2 id="style-overrides">Style Overrides</h2><div class="css-var-table">
 <p></p><p>
@@ -972,7 +986,7 @@ new one with a
 Proposal</a>.
 </p><p></p>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="events">Events</h2>
 <p><nys-alert type="info"><span>Some components emit <code>nys-</code> events with a <code>detail</code> object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and <code>nys-</code> listeners for the same thing.</span></nys-alert></p>
@@ -1057,7 +1071,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/modal/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 24, 2026</p>
+    <p>Last updated: October 30, 2026</p>
   </div>
 
   </div>

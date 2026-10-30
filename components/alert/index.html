@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-24T00:07:11.737Z -->
+    <!-- Latest Build: 2026-10-30T14:28:59.810Z -->
   </head>
   
   <body class="single-page page-alert section-components">
@@ -584,7 +584,7 @@
 
         
           <li>
-            <a href="/components/unav-footer/">
+            <a href="/components/unavfooter/">
               UNav Footer
             </a>
           </li>
@@ -595,7 +595,7 @@
 
         
           <li>
-            <a href="/components/unav-header/">
+            <a href="/components/unavheader/">
               UNav Header
             </a>
           </li>
@@ -670,7 +670,7 @@
   </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-alert&gt;</code> component includes the following accessibility-focused features:</p>
@@ -713,7 +713,7 @@ Additional accessibility test and build content is coming soon,
 in a <a href="/components/accordion/accessibility-tests/">new format</a>.
 </span>
 </p><p></p>
-</section><br>
+</section>
 <section>
     <h2 id="options">Options</h2>
 <h3 id="theme">Theme</h3>
@@ -947,44 +947,80 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
     </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--do nys-flex-fill">
-                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Communicate important, time-sensitive information to users in a visually prominent way.</li>
-<li>Use for messages such as success notifications, danger alerts, warnings, or informational updates.</li>
-<li>Use for dismissible or temporary alerts when the message is not critical to user workflow.</li>
-<li>Use the appropriate <code>theme</code> (e.g., <code>info</code>, <code>success</code>, <code>warning</code>, or <code>danger</code>) to match the intent of the alert.</li>
-<li>Use the <code>dismissible</code> property for non-critical alerts.</li>
-<li>Keep the alert content concise and focused on the message.</li>
-<li>Limit alerts to one per page.</li>
-<li>Use <code>success</code> type to confirm a positive system status to users such as saving a form.</li>
-<li>Use <code>danger</code> type to display system status error messages.</li>
-<li>Only use <code>emergency</code> for real emergencies (e.g., missing person, severe weather). Remember to swap icon if a more relevant one exists.</li>
-</ul>
+<li>
+<p>Communicate important, time-sensitive information to users in a visually prominent way.</p>
+</li>
+<li>
+<p>Use for messages such as success notifications, danger alerts, warnings, or informational updates.</p>
+</li>
+<li>
+<p>Use for dismissible or temporary alerts when the message is not critical to user workflow.</p>
+</li>
+<li>
+<p>Use the appropriate theme (e.g., info, success, warning, or danger) to match the intent of the alert.</p>
+</li>
+<li>
+<p>Use the dismissible property for non-critical alerts.</p>
+</li>
+<li>
+<p>Keep the alert content concise and focused on the message.</p>
+</li>
+<li>
+<p>Limit alerts to one per page.</p>
+</li>
+<li>
+<p>Use success type to confirm a positive system status to users such as saving a form.</p>
+</li>
+<li>
+<p>Use danger type to display system status error messages.</p>
+</li>
+<li>
+<p>Only use emergency for real emergencies (e.g., missing person, severe weather). Remember to swap icon if a more relevant one exists.</p>
+<p></p></li></ul></div><p></p>
+  </div>
+  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+      <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+
+<li>
+<p>Don't use alerts for information that is not time-sensitive or critical; consider using an inline message instead.</p>
+</li>
+<li>
+<p>Don't use alerts for repetitive or non-actionable content that could frustrate users.</p>
+</li>
+<li>
+<p>Don't remove the left icon, it is required for accessibility.</p>
+</li>
+<li>
+<p>Don't use alerts to highlight actions that should be clear in the UI itself.</p>
+</li>
+<li>
+<p>Don't use error messages to communicate form field validation issues; use field error states instead.</p>
+</li>
+<li>
+<p>Don't include more than two link actions in an alert.</p>
+</li>
+<li>
+<p>Don't overuse alerts for low-priority info. This can desensitize users.</p>
+</li>
+<li>
+<p>Don't use alerts as toasts. Place them at the top of the page content.</p>
+</li>
+<li>
+<p>Don't add any shadows to alerts.</p>
+<p></p></li></div><p></p>
+  </div>
+
+
 </div>
-        </div>
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--dont nys-flex-fill">
-                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Use alerts for information that is not time-sensitive or critical; consider using an inline message instead.</li>
-<li>Use alerts for repetitive or non-actionable content that could frustrate users.</li>
-<li>Remove the left icon, it is required for accessibility.</li>
-<li>Use alerts to highlight actions that should be clear in the UI itself.</li>
-<li>Use error messages to communicate form field validation issues; use field error states instead.</li>
-<li>Include more than two link actions in an alert.</li>
-<li>Overuse alerts for low-priority info. This can desensitize users.</li>
-<li>Use alerts as toasts. Place them at the top of the page content.</li>
-<li>Add any shadows to alerts.</li>
-</ul>
-</div>
-        </div>
-    </div>
-</section><br>
+</section>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -1051,7 +1087,7 @@ in a <a href="/components/accordion/accessibility-tests/">new format</a>.
     </tr>
   </table>
 </nys-table>
-</section><br>
+</section>
 <section>
     <h2 id="style-overrides">Style Overrides</h2>
 <div class="css-var-table">
@@ -1123,7 +1159,7 @@ Proposal</a>.
 </table>
 </nys-table><p></p>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="events">Events</h2>
 <p><nys-alert type="info"><span>Some components emit <code>nys-</code> events with a <code>detail</code> object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and <code>nys-</code> listeners for the same thing.</span></nys-alert></p>
@@ -1205,7 +1241,7 @@ alert<span class="token punctuation">.</span><span class="token function">addEve
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/alert/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 24, 2026</p>
+    <p>Last updated: October 30, 2026</p>
   </div>
 
   </div>

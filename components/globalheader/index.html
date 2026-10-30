@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-24T00:07:11.737Z -->
+    <!-- Latest Build: 2026-10-30T14:28:59.810Z -->
   </head>
   
   <body class="single-page page-globalheader section-components">
@@ -584,7 +584,7 @@
 
         
           <li>
-            <a href="/components/unav-footer/">
+            <a href="/components/unavfooter/">
               UNav Footer
             </a>
           </li>
@@ -595,7 +595,7 @@
 
         
           <li>
-            <a href="/components/unav-header/">
+            <a href="/components/unavheader/">
               UNav Header
             </a>
           </li>
@@ -669,7 +669,7 @@
   </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-globalheader&gt;</code> component includes the following accessibility-focused features:</p>
@@ -702,7 +702,7 @@
   </p>
 </li>
 </ul>
-</section><br>
+</section>
 <section>
     <h2 id="options">Options</h2>
 <h3 id="with-links">With Links</h3>
@@ -881,38 +881,62 @@
     </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--do nys-flex-fill">
-                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use on every agency site and application. The Global Header is a required page element.</li>
-<li>Place below <code>&lt;nys-unavheader&gt;</code> when using the Universal Navigation Header.</li>
-<li>Use <code>agencyName</code> alone for public-facing agency websites not tied to a specific application; omit it for statewide portals that aren't agency-specific.</li>
-<li>Use <code>appName</code> for named applications (e.g., &quot;Employee Time Tracker&quot; or &quot;License Renewal Portal&quot;).</li>
-<li>Combine <code>appName</code> and <code>agencyName</code> when an application belongs to a specific agency.</li>
-<li>Set <code>homepageLink</code> to make the header title clickable. On public-facing sites, this is the primary path back to the homepage.</li>
-<li>Use the <code>user-actions</code> slot for authenticated applications that need log-out buttons or user profile controls.</li>
-<li>Keep navigation link lists to 6 items or fewer. On mobile, these collapse into a full-width menu.</li>
-<li>Add the <code>nysLogo</code> property to display the NYS brand mark for internal applications that don't require public-facing agency branding.</li>
-</ul>
+<li>
+<p>Use on every agency site and application. The Global Header is a required page element.</p>
+</li>
+<li>
+<p>Place below <code>&lt;nys-unavheader&gt;</code> when using the Universal Navigation Header.</p>
+</li>
+<li>
+<p>Use <code>agencyName</code> alone for public-facing agency websites not tied to a specific application; omit it for statewide portals that aren't agency-specific.</p>
+</li>
+<li>
+<p>Use <code>appName</code> for named applications (e.g., &quot;Employee Time Tracker&quot; or &quot;License Renewal Portal&quot;).</p>
+</li>
+<li>
+<p>Combine <code>appName</code> and <code>agencyName</code> when an application belongs to a specific agency.</p>
+</li>
+<li>
+<p>Set <code>homepageLink</code> to make the header title clickable. On public-facing sites, this is the primary path back to the homepage.</p>
+</li>
+<li>
+<p>Use the <code>user-actions</code> slot for authenticated applications that need log-out buttons or user profile controls.</p>
+</li>
+<li>
+<p>Keep navigation link lists to 6 items or fewer. On mobile, these collapse into a full-width menu.</p>
+</li>
+<li>
+<p>Add the <code>nysLogo</code> property to display the NYS brand mark for internal applications that don't require public-facing agency branding.</p>
+<p></p></li></ul></div><p></p>
+  </div>
+  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+      <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+
+<li>
+<p>Don't use <code>appName</code> for an agency name. Use the <code>agencyName</code> prop instead.</p>
+</li>
+<li>
+<p>Don't add navigation links to application headers where users should remain focused on a task (e.g., a multi-step form).</p>
+</li>
+<li>
+<p>Don't place secondary or utility navigation in the Global Header. Use <code>&lt;nys-globalfooter&gt;</code> for secondary links.</p>
+</li>
+<li>
+<p>Don't use the <code>nysLogo</code> property on public-facing sites, instead use the <code>&lt;nys-unavheader&gt;</code> for statewide branding.</p>
+<p></p></li></div><p></p>
+  </div>
+
+
 </div>
-        </div>
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--dont nys-flex-fill">
-                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Don't use <code>appName</code> for an agency name. Use the <code>agencyName</code> prop instead.</li>
-<li>Don't add navigation links to application headers where users should remain focused on a task (e.g., a multi-step form).</li>
-<li>Don't place secondary or utility navigation in the Global Header. Use <code>&lt;nys-globalfooter&gt;</code> for secondary links.</li>
-<li>Don't use the <code>nysLogo</code> property on public-facing sites, instead use the <code>&lt;nys-unavheader&gt;</code> for statewide branding.</li>
-</ul>
-</div>
-        </div>
-    </div>
-</section><br>
+</section>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -944,7 +968,7 @@
     </tr>
   </table>
 </nys-table>
-</section><br>
+</section>
 <section>
     <h2 id="style-overrides">Style Overrides</h2>
 <div class="css-var-table">
@@ -996,7 +1020,7 @@ Proposal</a>.
 </table>
 </nys-table><p></p>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="events">Events</h2>
 <p>This component does not emit any custom events.</p>
@@ -1024,7 +1048,7 @@ Proposal</a>.
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/globalheader/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 24, 2026</p>
+    <p>Last updated: October 30, 2026</p>
   </div>
 
   </div>

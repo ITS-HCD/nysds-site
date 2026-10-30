@@ -44,7 +44,7 @@
 </script>
 
     
-    <!-- Latest Build: 2026-10-24T00:07:11.737Z -->
+    <!-- Latest Build: 2026-10-30T14:28:59.810Z -->
   </head>
   
   <body class="single-page page-video section-components">
@@ -584,7 +584,7 @@
 
         
           <li>
-            <a href="/components/unav-footer/">
+            <a href="/components/unavfooter/">
               UNav Footer
             </a>
           </li>
@@ -595,7 +595,7 @@
 
         
           <li>
-            <a href="/components/unav-header/">
+            <a href="/components/unavheader/">
               UNav Header
             </a>
           </li>
@@ -670,7 +670,7 @@
   </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="accessibility">Accessibility</h2>
 <p>The <code>&lt;nys-video&gt;</code> component includes the following accessibility-focused features:</p>
@@ -694,7 +694,7 @@
   </p>
 </li>
 </ul>
-</section><br>
+</section>
 <section>
     <h2 id="options">Options</h2>
 <h3 id="custom-thumbnail">Custom Thumbnail</h3>
@@ -848,34 +848,50 @@
     </div>
   </div>
 </div>
-</section><br>
+</section>
 <section>
     <h2 id="usage">Usage</h2><div class="nys-grid-row nys-grid-gap">
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--do nys-flex-fill">
-                <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
+    <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+        <div class="card card--do nys-flex-fill">
+            <h3 class="card__title" id="do"><nys-icon name="check_circle" size="lg"></nys-icon> Do</h3>
 <ul>
-<li>Use when motion or audio communicates something better than text or images alone.</li>
-<li>Keep <code>titleText</code> to 50–60 characters.</li>
-<li>Use a clear, high-quality thumbnail so users recognize it as a video.</li>
-<li>Maintain the default <code>lazy</code> loading for better page performance.</li>
-<li>Reserve space for the 16:9 ratio box to prevent layout shift.</li>
-<li>Let users choose to start the video; avoid <code>autoplay</code> unless necessary.</li>
-</ul>
+<li>
+<p>Use when motion or audio communicates something better than text or images alone.</p>
+</li>
+<li>
+<p>Keep <code>titleText</code> to 50–60 characters.</p>
+</li>
+<li>
+<p>Use a clear, high-quality thumbnail so users recognize it as a video.</p>
+</li>
+<li>
+<p>Maintain the default <code>lazy</code> loading for better page performance.</p>
+</li>
+<li>
+<p>Reserve space for the 16:9 ratio box to prevent layout shift.</p>
+</li>
+<li>
+<p>Let users choose to start the video; avoid <code>autoplay</code> unless necessary.</p>
+<p></p></li></ul></div><p></p>
+  </div>
+  <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
+      <div class="card card--dont nys-flex-fill">
+          <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
+
+<li>
+<p>Don't use video if the same message can be delivered clearly with text or a static image.</p>
+</li>
+<li>
+<p>Don't rely on video alone to convey critical information. Always provide a text alternative.</p>
+</li>
+<li>
+<p>Don't set <code>autoplay</code> without understanding that the video will be muted. <code>nys-video</code> enforces this automatically to protect users from unexpected noise.</p>
+<p></p></li></div><p></p>
+  </div>
+
+
 </div>
-        </div>
-        <div class="nys-tablet:nys-grid-col-6 nys-display-flex">
-            <div class="card card--dont nys-flex-fill">
-                <h3 class="card__title" id="dont"><nys-icon name="warning" size="lg"></nys-icon> Don't</h3>
-<ul>
-<li>Use video if the same message can be delivered clearly with text or a static image.</li>
-<li>Rely on video alone to convey critical information. Always provide a text alternative.</li>
-<li>Set <code>autoplay</code> without understanding that the video will be muted. <code>nys-video</code> enforces this automatically to protect users from unexpected noise.</li>
-</ul>
-</div>
-        </div>
-    </div>
-</section><br>
+</section>
 <section>
     <h2 id="properties">Properties</h2>
 <nys-table striped="">
@@ -936,11 +952,11 @@
     </tr>
   </table>
 </nys-table>
-</section><br>
+</section>
 <section>
     <h2 id="style-overrides">Style Overrides</h2>
 <p>The <code>nys-video</code> does not have any css variables because this component must remain consistent across applications and sites.</p>
-</section><br>
+</section>
 <section>
     <h2 id="events">Events</h2>
 <p>This component does not emit any custom events.</p>
@@ -962,7 +978,7 @@
     
   <div class="edit-page-link" data-pagefind-ignore="all">
     <p><a href="https://github.com/its-hcd/nysds-site/edit/main/src/content/components/video/index.md">Edit this page on GitHub</a> (Permissions required)</p>
-    <p>Last updated: October 24, 2026</p>
+    <p>Last updated: October 30, 2026</p>
   </div>
 
   </div>
