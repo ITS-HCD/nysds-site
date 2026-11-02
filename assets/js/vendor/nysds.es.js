@@ -2,13 +2,13 @@ import { LitElement as O, unsafeCSS as k, html as u, nothing as Lt } from "lit";
 import { property as a, state as C, query as ao } from "lit/decorators.js";
 import { ifDefined as v } from "lit/directives/if-defined.js";
 /*!
-   * New York State Design System v1.23.0
+   * New York State Design System v1.23.1
    * Description: A design system for New York State's digital products.
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
  */
 /*!
-  * New York State Design System v1.23.0
+  * New York State Design System v1.23.1
   * Description: A design system for New York State's digital products.
   * Repository: https://github.com/its-hcd/nysds
   * License: MIT
@@ -141,13 +141,13 @@ const Yc = /* @__PURE__ */ Hl(O), Gc = (r) => {
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Icon Component v1.23.0
+   * Icon Component v1.23.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
 */
 /*!
-  * New York State Design System v1.23.0
+  * New York State Design System v1.23.1
   * Description: A design system for New York State's digital products.
   * Repository: https://github.com/its-hcd/nysds
   * License: MIT
@@ -172,7 +172,7 @@ const Qc = (r) => {
 }, Xc = /* @__PURE__ */ Qc(O), Ri = globalThis.__nysIconRegistry ??= /* @__PURE__ */ new Map(), ts = globalThis.__nysIconWatchers ??= /* @__PURE__ */ new Map();
 let La = null, Ta = null;
 async function Jc() {
-  return La || (Ta ??= import("./nys-icon.library-dR8B2cmh-D2cWTOx2.js").then(
+  return La || (Ta ??= import("./nys-icon.library-CzPN4H8R-DCkPqUYP.js").then(
     (r) => La = r.default
   ), Ta);
 }
@@ -2102,13 +2102,13 @@ customElements.get("nys-accordion") || customElements.define("nys-accordion", to
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Button Component v1.23.0
+   * Button Component v1.23.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
 */
 /*!
-  * New York State Design System v1.23.0
+  * New York State Design System v1.23.1
   * Description: A design system for New York State's digital products.
   * Repository: https://github.com/its-hcd/nysds
   * License: MIT
@@ -3708,13 +3708,13 @@ customElements.get("nys-card") || customElements.define("nys-card", ge);
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Tooltip Component v1.23.0
+   * Tooltip Component v1.23.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
 */
 /*!
-  * New York State Design System v1.23.0
+  * New York State Design System v1.23.1
   * Description: A design system for New York State's digital products.
   * Repository: https://github.com/its-hcd/nysds
   * License: MIT
@@ -4039,7 +4039,7 @@ customElements.get("nys-tooltip") || customElements.define("nys-tooltip", co);
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Label Component v1.23.0
+   * Label Component v1.23.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -4139,7 +4139,7 @@ customElements.get("nys-label") || customElements.define("nys-label", ho);
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Error message Component v1.23.0
+   * Error message Component v1.23.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
@@ -4531,13 +4531,13 @@ customElements.get("nys-checkboxgroup") || customElements.define("nys-checkboxgr
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Textinput Component v1.23.0
+   * Textinput Component v1.23.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
 */
 /*!
-  * New York State Design System v1.23.0
+  * New York State Design System v1.23.1
   * Description: A design system for New York State's digital products.
   * Repository: https://github.com/its-hcd/nysds
   * License: MIT
@@ -8705,13 +8705,13 @@ customElements.get("nys-globalheader") || customElements.define("nys-globalheade
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Divider Component v1.23.0
+   * Divider Component v1.23.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
 */
 /*!
-  * New York State Design System v1.23.0
+  * New York State Design System v1.23.1
   * Description: A design system for New York State's digital products.
   * Repository: https://github.com/its-hcd/nysds
   * License: MIT
@@ -8941,7 +8941,7 @@ customElements.get("nys-globalfooter") || customElements.define("nys-globalfoote
 const Tr = globalThis.__nysIconRegistry ??= /* @__PURE__ */ new Map(), xo = globalThis.__nysIconWatchers ??= /* @__PURE__ */ new Map();
 let Ci = null, vl = null;
 async function $y() {
-  return Ci || (vl ??= import("./nys-icon.library-B1pGtdv1.js").then(
+  return Ci || (vl ??= import("./nys-icon.library-BoTLZp1N.js").then(
     (r) => Ci = r.default
   ), vl);
 }
@@ -14390,13 +14390,13 @@ customElements.get("nys-tooltip") || customElements.define("nys-tooltip", cn);
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Alert Component v1.23.0
+   * Alert Component v1.23.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
 */
 /*!
-  * New York State Design System v1.23.0
+  * New York State Design System v1.23.1
   * Description: A design system for New York State's digital products.
   * Repository: https://github.com/its-hcd/nysds
   * License: MIT
@@ -14745,7 +14745,7 @@ const mf = "https://alerts-cta.static-assets.ny.gov/alerts.json", xf = "https://
    * component keeps defaultRole = null and does not move a role onto the host.
    */
   connectedCallback() {
-    super.connectedCallback(), this._loadAlerts(), this._initLocalize(), this._initGoogletagmanager();
+    super.connectedCallback(), this._loadAlerts(), this._initLocalize();
   }
   disconnectedCallback() {
     super.disconnectedCallback(), this._alertRequest?.abort(), this._alertRequest = null;
@@ -14886,15 +14886,6 @@ const mf = "https://alerts-cta.static-assets.ny.gov/alerts.json", xf = "https://
     if (e.url) return e.url;
     if (!this.translateKey)
       return this._smartlingUrl(e.code);
-  }
-  _initGoogletagmanager() {
-    document.getElementById(
-      "nys-gtm-script"
-    ) || (function(t, n, o, s, i) {
-      t[s] = t[s] || [], t[s].push({ "gtm.start": (/* @__PURE__ */ new Date()).getTime(), event: "gtm.js" });
-      var h = n.getElementsByTagName(o)[0], p = n.createElement(o), b = "";
-      p.async = !0, p.src = "https://www.googletagmanager.com/gtm.js?id=" + i + b, h.parentNode.insertBefore(p, h);
-    })(window, document, "script", "dataLayer", "GTM-T4FP6H");
   }
   _initLocalize() {
     if (this.hideTranslate || !this.translateKey)
@@ -15667,13 +15658,13 @@ customElements.get("nys-verticalnavgroup") || customElements.define("nys-vertica
    * █ █ █  █▄▄▄█  ▀▀▀▄▄  █   █ ▀▀▀▄▄
    * █  ▀█    █    █▄▄▄█  █▄▄▀  █▄▄▄█
    *
-   * Accordion Component v1.23.0
+   * Accordion Component v1.23.1
    * Part of the New York State Design System
    * Repository: https://github.com/its-hcd/nysds
    * License: MIT
 */
 /*!
-  * New York State Design System v1.23.0
+  * New York State Design System v1.23.1
   * Description: A design system for New York State's digital products.
   * Repository: https://github.com/its-hcd/nysds
   * License: MIT
