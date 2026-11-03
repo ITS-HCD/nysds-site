@@ -51,7 +51,7 @@ The following sections break the layout grid down and describe how it works.
 
 - **Equal-width columns:** With flexbox, grid columns without a specified width will display as equal-width columns. For example, four instances of `nys-grid-col` will display as one-quarter-width columns across all sizes. Refer to the [auto-layout columns](#auto-layout-columns) section for more examples.
 - **Gutters:** Rows and columns don’t have any gutters by default, but gutters can be added by including `nys-grid-gap-2px`, `nys-grid-gap`, or `nys-grid-gap-300` at the row level. Refer to [gutters](#gutters) for more info.
-- **Media queries:** Grid breakpoints are based on minimum-width media queries, meaning they apply to that specific width and all greater widths (e.g., `nys-tablet:col-4` applies to tablet, desktop, and widescreen devices but not at `nys-mobile-lg` or any width below the tablet breakpoint). Refer to [responsive classes](#responsive-classes) for a full list.
+- **Media queries:** Grid breakpoints are based on minimum-width media queries, meaning they apply to that specific width and all greater widths (e.g., `nys-tablet:nys-grid-col-4` applies to tablet, desktop, and widescreen devices but not at `nys-mobile-lg` or any width below the tablet breakpoint). Refer to [responsive classes](#responsive-classes) for a full list.
 </section>
 
 <section id="auto-layout-columns">
@@ -382,7 +382,7 @@ Items wrap when the sum of the grid columns is more than 12 as shown in the foll
 ## Gutters
 ### Default gutter
 
-Add `nys-grid-gap` to a grid row to add a gap (or gutter) between each column in the row. The default gap width is 2 units and 4 units at `desktop` and higher.
+Add `nys-grid-gap` to a grid row to add a gap (or gutter) between each column in the row. The default gap width sets a column gap of 0.5rem and a row gap of 1rem, then 1rem and 2rem at 64em (`desktop` and higher).
 
 {% set preview%}<div class="nys-grid-row border-left bg-white">
   <div class="nys-grid-col-1 border-right">
@@ -452,7 +452,6 @@ Add `nys-grid-gap` to a grid row to add a gap (or gutter) between each column in
 
 `nys-grid-gap-*` classes allow you to customize the gutter width. The following options are available:
 
-*   `nys-grid-gap-0` — No gap
 *   `nys-grid-gap-1px` — 1px gap
 *   `nys-grid-gap-2px` — 2px gap
 *   `nys-grid-gap-50` — 4px gap (0.25rem)
@@ -545,7 +544,7 @@ Add `nys-grid-gap` to a grid row to add a gap (or gutter) between each column in
 {% endblock %}
 
 ## Style Override
-Style overrides are CSS custom properties exposed for customizing a component's appearance beyond the defaults. Set them on the component selector or the `:root` (recommened for grid system) to override the default styles.
+Style overrides are CSS custom properties exposed for customizing a component's appearance beyond the defaults. Set them on the component selector or the `:root` (recommended for grid system) to override the default styles.
 
 `--nys-max-width--content` sets the max width of the inner content within `.nys-grid-container` (or `.nys-grid-container-[suffix]`) `> .nys-grid-row` and every header, footer, and breadcrumb component at once. Set it on `:root` so it cascades everywhere. Setting it on a single component only affects that instance.
 

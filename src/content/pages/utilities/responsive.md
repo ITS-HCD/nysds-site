@@ -17,7 +17,7 @@ Responsive classes which combine with utility classes to apply them at specific 
 Here are the responsive breakpoints you can prefix to utility classes:
 
   - `nys-mobile-lg:` min-width: 480px
-  - `nys-tablet:` min-width: 768px
+  - `nys-tablet:` min-width: 640px
   - `nys-desktop:` min-width: 1024px
   - `nys-widescreen:` min-width: 1400px
 

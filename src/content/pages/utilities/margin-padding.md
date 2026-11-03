@@ -279,8 +279,6 @@ Combine margin and padding utilities with layout utilities to space content in a
 
 ## Responsive variants
 
-Margin and padding utilities do **not** currently support responsive prefixes. Apply them uniformly or use [Grid](/utilities/grid/) and [Flexbox](/utilities/flex/) utilities for responsive spacing.
-
 </section>
 
 {% endblock %}
