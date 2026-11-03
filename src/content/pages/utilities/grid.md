@@ -265,7 +265,7 @@ Columns are always 50% wide, on mobile and desktop
 <section id="offsetting-columns">
 
 ## Offsetting columns
-`.nys-grid-offset-[1-12]` offsets an item by the specified number of grid columns as shown in the following example. Additionally, if you don't wish to offset an iten you can use `.nys-grid-offset-none`
+`.nys-grid-offset-[1-12]` offsets an item by the specified number of grid columns as shown in the following example. Additionally, if you don't wish to offset an item you can use `.nys-grid-offset-none`
 
 {% set preview%}
 <div class="nys-grid-row border-left bg-white">
@@ -449,6 +449,10 @@ Add `nys-grid-gap` to a grid row to add a gap (or gutter) between each column in
 {% include "partials/code-preview.njk" %}
 
 ### Gutter sizing
+
+The default directional gaps are:
+* `nys-grid-gap-x`
+* `nys-grid-gap-y`
 
 `nys-grid-gap-*` classes allow you to customize the gutter width. The following options are available:
 
