@@ -259,7 +259,7 @@ Set `disabled` to prevent interaction. The calendar button and input are both di
     <tr>
       <td><code>width</code></td>
       <td><code>"md"</code> | <code>"lg"</code> | <code>"full"</code></td>
-      <td><code>"md"</code></td>
+      <td><code>"full"</code></td>
     </tr>
     <tr>
       <td><code>startDate</code></td>

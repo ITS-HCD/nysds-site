@@ -202,7 +202,7 @@ Badge conveys intent through color and icon alone, which isn't accessible to scr
     </tr>
     <tr>
         <td><code>intent</code></td>
-        <td><code>"base"</code>, <code>"info"</code>, <code>"warning"</code>, <code>"success"</code>, <code>"danger"</code>, <code>"emergency"</code></td>
+        <td><code>"base"</code>, <code>"info"</code>, <code>"warning"</code>, <code>"success"</code>, <code>"danger"</code>, <code>"emergency"</code>, <code>"error"</error></td>
         <td><code>"base"</code></td>
     </tr>
     <tr>

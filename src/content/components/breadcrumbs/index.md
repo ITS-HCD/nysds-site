@@ -194,7 +194,7 @@ Add the `disabled` prop to disable all links in the breadcrumbs.
       <tr>
           <td><code>ariaLabel</code></td>
           <td>String</td>
-          <td><code>"Breadcrumbs"</code></td>
+          <td><code>"Breadcrumb"</code></td>
       </tr>
       <tr>
           <td><code>collapsed</code></td>
