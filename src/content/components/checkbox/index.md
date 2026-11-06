@@ -366,7 +366,7 @@ The `<nys-checkbox>` component emits **four** custom Javascript events:
     </tr>
     <tr>
       <td><code>nys-other-input</code></td>
-      <td>Fired when the checkbox option "Other" is checked.</td>
+      <td>Fired when the checkbox option "Other" is selected.</td>
       <td>—</td>
     </tr>
   </table>

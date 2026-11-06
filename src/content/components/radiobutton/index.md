@@ -365,7 +365,7 @@ The `form` property associates this component with a `<form>` element by ID, eve
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-The `<nys-radiogroup>` component emits **three** custom Javascript events:
+The `<nys-radiogroup>` component emits **four** custom Javascript events:
 
 ### Event details
 
@@ -396,6 +396,11 @@ The `<nys-radiogroup>` component emits **three** custom Javascript events:
     <tr>
       <td><code>nys-blur</code></td>
       <td>Fired when the radiobutton loses focus.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>nys-other-input</code></td>
+      <td>Fired when the radio button option "Other" is selected.</td>
       <td>—</td>
     </tr>
   </table>
