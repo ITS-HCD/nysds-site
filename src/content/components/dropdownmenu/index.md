@@ -277,10 +277,10 @@ Use the `nys-click` dispatch event to call for specific functions to execute act
       <td><code>suffixIcon</code></td>
       <td>String</td>
     </tr>
-    <tr>
+    <!--<tr>
       <td><code>divider</code></td>
       <td>String</td>
-    </tr>
+    </tr>-->
   </table>
 </nys-table>
 

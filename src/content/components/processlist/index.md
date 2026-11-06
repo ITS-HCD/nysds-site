@@ -206,24 +206,6 @@ The `<nys-processlist>` component includes the following accessibility-focused f
       <td><code>&lt;nys-processlist&gt;</code></td>
     </tr>
     <tr>
-      <td><code>ariaLabel</code></td>
-      <td>String, <code>null</code></td>
-      <td><code>null</code></td>
-      <td><code>&lt;nys-processlist&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>ariaLabelledBy</code></td>
-      <td>String, <code>null</code></td>
-      <td><code>null</code></td>
-      <td><code>&lt;nys-processlist&gt;</code></td>
-    </tr>
-    <tr>
-      <td><code>ariaDescribedBy</code></td>
-      <td>String, <code>null</code></td>
-      <td><code>null</code></td>
-      <td><code>&lt;nys-processlist&gt;</code></td>
-    </tr>
-    <tr>
       <td><code>label</code></td>
       <td>String</td>
       <td><code>""</code></td>

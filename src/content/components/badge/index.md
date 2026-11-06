@@ -206,7 +206,7 @@ Badge conveys intent through color and icon alone, which isn't accessible to scr
         <td><code>"base"</code></td>
     </tr>
     <tr>
-        <td><code>string</code></td>
+        <td><code>strong</code></td>
         <td>boolean</td>
         <td><code>false</code></td>
     </tr>
