@@ -1182,6 +1182,14 @@ li > .section-nav__list {
   padding: 0;
 }
 
+/* The title spans the row above the swatch. From tablet up the grid's row gap is 32px,
+   so pull the swatch row closer to read as the title's content. */
+@media (min-width: 40em) {
+  .token-list__name {
+    margin-bottom: calc(var(--nys-space-200) * -1);
+  }
+}
+
 .token-list__raw {
   color: var(--nys-color-neutral-600);
   font-size: var(--nys-font-size-xs);
@@ -1189,17 +1197,27 @@ li > .section-nav__list {
   word-break: break-all;
 }
 
-.token-list__info > div {
-  padding: var(--nys-space-50) var(--nys-space-250);
+/* Token name + copy button. Sized to the name and kept on one line. */
+.token-list__info {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--nys-space-50);
+  max-width: 100%;
+  margin-bottom: var(--nys-space-100);
+  padding-inline-start: var(--nys-space-150);
   background-color: var(--nys-color-neutral-50);
-  height: auto;
+  border-radius: var(--nys-radius-xl, 12px);
+}
+
+.token-list__info pre {
+  margin: 0;
+  overflow-x: auto;
 }
 
 .token-list__var {
   font-size: var(--nys-font-size-xs);
-  word-break: break-all;
   display: block;
-  white-space: pre-wrap;
+  white-space: nowrap;
   line-height: 1;
 }
 
