@@ -2094,3 +2094,70 @@ body[class*="page-a11y-"]:has(article[data-template*="a11y"]) {
 .verticalnav-container {
   margin-top: var(--nys-space-600);
 }
+
+/* --- Quick Search (nys-modal + nys-textinput) --- */
+
+.search-dialog {
+    gap: var(--nys-space-200);
+    width: 100%;
+}
+
+/* Results are a custom listbox; no NYSDS component covers linked results with excerpts */
+.search-dialog__results {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.search-dialog__result {
+    margin: 0;
+    border-bottom: 1px solid var(--nys-color-neutral-100);
+}
+
+.search-dialog__result a {
+    display: block;
+    padding: var(--nys-space-150) var(--nys-space-100);
+    text-decoration: none;
+    color: inherit;
+}
+
+.search-dialog__result a:hover,
+.search-dialog__result[aria-selected="true"] a {
+    background: var(--nys-color-neutral-50);
+}
+
+.search-dialog__result[aria-selected="true"] a {
+    outline: 2px solid var(--nys-color-focus);
+    outline-offset: -2px;
+}
+
+.search-dialog__result-title {
+    display: block;
+    font-weight: var(--nys-font-weight-semibold);
+    color: var(--nys-color-link);
+    margin-bottom: var(--nys-space-50);
+}
+
+.search-dialog__result-excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: var(--nys-font-size-sm);
+    color: var(--nys-color-text-weak);
+}
+
+.search-dialog__result-excerpt mark {
+    background: transparent;
+    font-weight: var(--nys-font-weight-semibold);
+    color: var(--nys-color-text);
+}
+
+.search-dialog__status {
+    font-size: var(--nys-font-size-sm);
+    margin: 0;
+}
+
+.search-dialog__status:empty {
+    display: none;
+}

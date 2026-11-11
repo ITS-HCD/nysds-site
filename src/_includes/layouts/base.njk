@@ -22,6 +22,25 @@
   {% include "partials/site-footer.njk" %}
   {% include "partials/unav-footer.njk" %}
 
+  <!-- Quick Search Dialog -->
+  <nys-modal id="search-dialog" heading="Search">
+    {#- nys-padding-2px keeps the input's focus outline inside the modal body's scroll area -#}
+    <div class="search-dialog nys-display-flex nys-flex-column nys-padding-2px">
+      <nys-textinput
+        id="search-dialog-input"
+        type="search"
+        ariaLabel="Search the design system"
+        placeholder="Search…"
+      >
+        <nys-button id="search-dialog-submit" slot="endButton" prefixIcon="search">
+          <span class="sr-only">See all results</span>
+        </nys-button>
+      </nys-textinput>
+      <ul id="search-dialog-results" role="listbox" aria-label="Search results" class="search-dialog__results" hidden></ul>
+      <p id="search-dialog-status" class="search-dialog__status" aria-live="polite" aria-atomic="true"></p>
+    </div>
+  </nys-modal>
+
   {% include "partials/site-js-global.njk" %}
   {% block scripts %}{% endblock %}
   </body>
