@@ -257,3 +257,314 @@ document.querySelectorAll('article[data-pattern="breadcrumbs"] .breadcrumb-demo'
     }
   });
 });
+
+// --- Quick Search: "/" shortcut + nys-modal with search-as-you-type ---
+(function () {
+  const modal = document.getElementById("search-dialog");
+  if (!modal) return;
+
+  const textInput = document.getElementById("search-dialog-input");
+  const submitBtn = document.getElementById("search-dialog-submit");
+  const resultsList = document.getElementById("search-dialog-results");
+  const statusEl = document.getElementById("search-dialog-status");
+
+  let pagefind = null;
+  let activeIndex = -1;
+  let debounceTimer = null;
+  let searchToken = 0;
+
+  async function loadPagefind() {
+    if (pagefind) return pagefind;
+    try {
+      pagefind = await import("/pagefind/pagefind.js");
+      await pagefind.init();
+    } catch (e) {
+      console.warn("Pagefind not available:", e);
+    }
+    return pagefind;
+  }
+
+  // The real <input> lives in nys-textinput's shadow root. Combobox ARIA has to
+  // sit on it, so it is set there once the component has rendered.
+  async function getNativeInput() {
+    await textInput.updateComplete;
+    return textInput.shadowRoot?.querySelector("input") || null;
+  }
+
+  async function setupComboboxAria() {
+    const native = await getNativeInput();
+    if (!native || native.getAttribute("role") === "combobox") return;
+    native.setAttribute("role", "combobox");
+    native.setAttribute("aria-autocomplete", "list");
+    native.setAttribute("aria-expanded", "false");
+    native.setAttribute("autocomplete", "off");
+    // Element reflection lets the shadow input reference the light-DOM listbox
+    if ("ariaControlsElements" in native) native.ariaControlsElements = [resultsList];
+  }
+
+  async function setExpanded(expanded) {
+    const native = await getNativeInput();
+    native?.setAttribute("aria-expanded", String(expanded));
+  }
+
+  async function setActiveDescendant(el) {
+    const native = await getNativeInput();
+    if (native && "ariaActiveDescendantElement" in native) {
+      native.ariaActiveDescendantElement = el;
+    }
+  }
+
+  function getQuery() {
+    return (textInput.value || "").trim();
+  }
+
+  function goToAllResults() {
+    const query = getQuery();
+    if (!query) return;
+    closeModal();
+    window.location.href = `/search/?q=${encodeURIComponent(query)}`;
+  }
+
+  function resetResults() {
+    resultsList.innerHTML = "";
+    resultsList.hidden = true;
+    statusEl.textContent = "";
+    activeIndex = -1;
+    setExpanded(false);
+    setActiveDescendant(null);
+  }
+
+  async function openModal() {
+    // Blur first so the modal has nothing to hand focus back to on close
+    if (document.activeElement && document.activeElement !== document.body) {
+      document.activeElement.blur();
+    }
+    textInput.value = "";
+    resetResults();
+    modal.open = true;
+    loadPagefind();
+    await modal.updateComplete;
+    await setupComboboxAria();
+    // nys-modal focuses its own container after opening; move focus to the input after that
+    requestAnimationFrame(() => textInput.focus());
+  }
+
+  function closeModal() {
+    modal.open = false;
+  }
+
+  // Deepest focused element, looking through shadow roots
+  function deepActiveElement() {
+    let el = document.activeElement;
+    while (el?.shadowRoot?.activeElement) el = el.shadowRoot.activeElement;
+    return el;
+  }
+
+  const isMac = /mac|iphone|ipad/i.test(navigator.userAgentData?.platform || navigator.platform || "");
+
+  // Open on ⌘K (Mac) / Ctrl+K (elsewhere) from anywhere, or on "/" when not typing in a field
+  document.addEventListener("keydown", (e) => {
+    if (modal.open) return;
+
+    const modKey = isMac ? e.metaKey : e.ctrlKey;
+    if (modKey && !e.altKey && !e.shiftKey && e.key.toLowerCase() === "k") {
+      e.preventDefault();
+      openModal();
+      return;
+    }
+
+    if (e.key !== "/" || e.metaKey || e.ctrlKey || e.altKey) return;
+    const active = deepActiveElement();
+    const tag = active?.tagName;
+    if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") return;
+    if (active?.isContentEditable) return;
+    e.preventDefault();
+    openModal();
+  });
+
+  // Close on overlay click (nys-modal has no built-in backdrop dismiss)
+  modal.addEventListener("click", (e) => {
+    if (e.composedPath()[0]?.classList?.contains("nys-modal-overlay")) closeModal();
+  });
+
+  modal.addEventListener("nys-close", () => {
+    clearTimeout(debounceTimer);
+    // The modal's content is unslotted when it closes, but some browsers leave
+    // focus on the now-hidden input (which also blocks the "/" shortcut). Drop it.
+    textInput.blur();
+    const active = deepActiveElement();
+    if (active && active !== document.body) active.blur();
+  });
+
+  submitBtn.addEventListener("nys-click", goToAllResults);
+
+  // Search as user types (debounced)
+  textInput.addEventListener("nys-input", () => {
+    clearTimeout(debounceTimer);
+    const query = getQuery();
+    if (!query) {
+      searchToken++;
+      resetResults();
+      return;
+    }
+    debounceTimer = setTimeout(() => runSearch(query), 180);
+  });
+
+  async function runSearch(query) {
+    const token = ++searchToken;
+    const pf = await loadPagefind();
+    if (!pf) {
+      statusEl.textContent = "Search index not available.";
+      return;
+    }
+
+    const { results } = await pf.search(query);
+    const data = await Promise.all(results.slice(0, 3).map((r) => r.data()));
+    if (token !== searchToken) return; // a newer search started meanwhile
+
+    activeIndex = -1;
+    setActiveDescendant(null);
+
+    if (!data.length) {
+      resultsList.innerHTML = "";
+      resultsList.hidden = true;
+      statusEl.textContent = `No results for "${query}"`;
+      setExpanded(false);
+      return;
+    }
+
+    resultsList.innerHTML = data
+      .map(
+        (d, i) => `
+      <li role="option" id="search-result-${i}" class="search-dialog__result" aria-selected="false">
+        <a href="${d.url}" tabindex="-1">
+          <span class="search-dialog__result-title">${d.meta?.title || "Result"}</span>
+          <span class="search-dialog__result-excerpt">${d.excerpt || ""}</span>
+        </a>
+      </li>`
+      )
+      .join("");
+    resultsList.hidden = false;
+    setExpanded(true);
+
+    const count = results.length;
+    const label = count === 1 ? "1 result found" : `${count} results found`;
+    statusEl.innerHTML = `${label}. <a href="/search/?q=${encodeURIComponent(query)}">See all results</a>`;
+  }
+
+  // Arrow keys move through results; Enter follows the active result,
+  // or opens the full results page when none is active
+  textInput.addEventListener("keydown", (e) => {
+    const items = Array.from(resultsList.querySelectorAll('[role="option"]'));
+
+    if (e.key === "Enter") {
+      e.preventDefault();
+      const link = items[activeIndex]?.querySelector("a");
+      if (link) {
+        closeModal();
+        window.location.href = link.href;
+      } else {
+        goToAllResults();
+      }
+      return;
+    }
+
+    if (!items.length) return;
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setActive(activeIndex < items.length - 1 ? activeIndex + 1 : 0, items);
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setActive(activeIndex > 0 ? activeIndex - 1 : items.length - 1, items);
+    }
+  });
+
+  function setActive(idx, items) {
+    items[activeIndex]?.setAttribute("aria-selected", "false");
+    activeIndex = idx;
+    items[idx].setAttribute("aria-selected", "true");
+    items[idx].scrollIntoView({ block: "nearest" });
+    setActiveDescendant(items[idx]);
+  }
+
+  // Following any link inside the modal closes it first
+  resultsList.addEventListener("click", (e) => {
+    const option = e.target.closest('[role="option"]');
+    const link = option?.querySelector("a");
+    if (!link) return;
+    e.preventDefault();
+    closeModal();
+    window.location.href = link.href;
+  });
+
+  // Open the modal from the header search button (mobile) or search input (desktop).
+  // composedPath() sees through the header's shadow DOM.
+  function hookHeaderSearch() {
+    const unavHeader = document.querySelector("nys-unavheader");
+    if (!unavHeader) return;
+
+    const isHeaderSearch = (e) =>
+      e.composedPath().some(
+        (el) => el.id === "nys-unavheader__searchbutton" || el.id === "nys-unavheader__searchbar--native"
+      );
+
+    // Focusing the header field expands it, so stop the focus that mousedown would cause
+    unavHeader.addEventListener("mousedown", (e) => {
+      if (!modal.open && isHeaderSearch(e)) e.preventDefault();
+    }, true);
+
+    unavHeader.addEventListener("click", (e) => {
+      if (modal.open || !isHeaderSearch(e)) return;
+      e.preventDefault();
+      e.stopImmediatePropagation();
+      openModal();
+    }, true);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", hookHeaderSearch);
+  } else {
+    hookHeaderSearch();
+  }
+
+  // "/" hint badge, placed inside the header search field so it moves with it
+  function createSlashHint() {
+    const unavHeader = document.querySelector("nys-unavheader");
+    const searchbar = unavHeader?.shadowRoot?.getElementById("nys-unavheader__searchbar");
+    const root = searchbar?.shadowRoot;
+    const container = root?.querySelector(".nys-textinput__container");
+    if (!container) return false;
+    if (root.getElementById("header-search-slash-hint")) return true;
+
+    const style = document.createElement("style");
+    style.textContent = `
+      #header-search-slash-hint {
+        position: absolute;
+        right: var(--nys-space-100, 8px);
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        margin: 0;
+        padding: 0 var(--nys-space-75, 6px);
+        border-radius: var(--nys-radius-sm, 2px);
+        background: var(--nys-color-neutral-50, #ededed);
+        font: var(--nys-font-size-xs, 12px) / 1.6 var(--nys-font-family-monospace, monospace);
+        color: var(--nys-color-neutral-700, #4a4d4f);
+      }`;
+
+    const hint = document.createElement("kbd");
+    hint.id = "header-search-slash-hint";
+    hint.setAttribute("aria-hidden", "true");
+    hint.textContent = "/";
+    root.append(style);
+    container.append(hint);
+    return true;
+  }
+
+  // The header renders asynchronously; retry until its search field exists
+  function tryCreateSlashHint(attempts) {
+    if (createSlashHint() || attempts <= 0) return;
+    setTimeout(() => tryCreateSlashHint(attempts - 1), 200);
+  }
+  setTimeout(() => tryCreateSlashHint(10), 100);
+})();
