@@ -96,9 +96,9 @@ set, only one `nys-accordionitem` in the wrapper can be open at a time.
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
-### Bordered The `bordered` prop is available on `nys-accordion`. When set,
+### Bordered
 
-all `nys-accordionitem` inside the wrapper will display borders.
+The `bordered` prop is available on `nys-accordion`. When set, all `nys-accordionitem` inside the wrapper will display borders.
 
 {% set preview %}
 <nys-accordion singleSelect bordered>
