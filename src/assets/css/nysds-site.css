@@ -346,6 +346,542 @@ main[role="main"] {
   margin: 0 var(--nys-space-250);
 }
 
+/* Videos keep their width attribute as a maximum and shrink to fit narrow
+   screens. The height and width attributes reserve the aspect ratio. */
+.page-content figure video {
+  max-inline-size: 100%;
+  min-inline-size: 0;
+  block-size: auto;
+}
+
+/* Long code names in tables can carry <wbr> break points so the table fits
+   a phone. On wider screens, remove the break points to keep each name on
+   one line. (Chrome still breaks at <wbr> under white-space: nowrap.) */
+@media (min-width: 48rem) {
+  .page-content nys-table wbr {
+    display: none;
+  }
+}
+
+/* ==== Article diagrams
+   Update articles draw diagrams in HTML instead of images, so the text
+   scales, reflows on small screens, and reads in order with a screen
+   reader. Arrows and pins are decorative nys-icons. Each layout switches
+   on the diagram's own width through a container query at 48rem. */
+.page-content figure.diagram {
+  display: block;
+  container-type: inline-size;
+  margin-block: var(--nys-space-400);
+  padding: var(--nys-space-300) var(--nys-space-200);
+  border-radius: var(--nys-radius-xl);
+  background: linear-gradient(160deg, var(--nys-color-theme) 0%, var(--nys-color-theme-strong) 100%);
+  color: var(--nys-color-text-reverse);
+  font-family: var(--nys-font-family-ui);
+  font-size: var(--nys-font-size-ui-md);
+  line-height: var(--nys-font-lineheight-ui-md);
+}
+
+.page-content figure.diagram > figcaption .diagram__note {
+  display: block;
+  margin-block-start: var(--nys-space-50);
+  font-family: var(--nys-font-family-ui);
+  font-weight: 400;
+}
+
+.page-content figure.diagram > figcaption {
+  max-inline-size: none;
+  margin: 0 0 var(--nys-space-300);
+  text-align: center;
+  font-family: var(--nys-font-family-heading);
+  font-size: var(--nys-font-size-h4);
+  line-height: var(--nys-font-lineheight-h4);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.page-content .diagram :is(ul, ol) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.page-content .diagram :is(li, p) {
+  margin: 0;
+}
+
+.page-content .diagram code {
+  padding: 0;
+  background: none;
+  color: inherit;
+  font-size: 0.875em;
+}
+
+.page-content .diagram nys-icon {
+  display: inline-flex;
+}
+
+.diagram__box {
+  border-radius: var(--nys-radius-lg);
+  padding: var(--nys-space-150) var(--nys-space-200);
+  background: var(--nys-color-theme-weaker);
+  color: var(--nys-color-text);
+}
+
+.diagram__box--accent {
+  background: var(--nys-color-accent);
+  color: var(--nys-color-ink);
+}
+
+.diagram__box--paper {
+  background: var(--nys-color-surface);
+}
+
+.diagram__box--deep {
+  background: var(--nys-color-theme-stronger);
+  color: var(--nys-color-text-reverse);
+  box-shadow: inset 0 0 0 2px var(--nys-color-white-transparent-300);
+}
+
+.diagram__box--center {
+  text-align: center;
+}
+
+.diagram__label {
+  display: block;
+  font-size: var(--nys-font-size-ui-lg);
+  line-height: var(--nys-font-lineheight-ui-lg);
+  font-weight: 700;
+}
+
+.diagram__detail {
+  display: block;
+  margin-block-start: var(--nys-space-50);
+  font-size: var(--nys-font-size-ui-sm);
+  line-height: var(--nys-font-lineheight-ui-sm);
+  color: var(--nys-color-text-weak);
+}
+
+.diagram__box--accent .diagram__detail {
+  color: var(--nys-color-ink);
+}
+
+.diagram__box--deep .diagram__detail {
+  color: var(--nys-color-text-reverse-weak);
+}
+
+.diagram__note {
+  font-size: var(--nys-font-size-ui-sm);
+  line-height: var(--nys-font-lineheight-ui-sm);
+  color: var(--nys-color-text-reverse-weak);
+}
+
+.page-content .diagram .diagram__note--center {
+  margin-block-start: var(--nys-space-250);
+  text-align: center;
+}
+
+.page-content .diagram .diagram__eyebrow + .diagram__calls {
+  margin-block-start: var(--nys-space-100);
+}
+
+.diagram__eyebrow {
+  font-size: var(--nys-font-size-ui-xs);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--nys-color-text-reverse-weak);
+}
+
+.diagram__panel {
+  border-radius: var(--nys-radius-lg);
+  padding: var(--nys-space-200);
+  background: var(--nys-color-black-transparent-200);
+}
+
+.page-content .diagram .diagram__panel-title {
+  margin-block-end: var(--nys-space-200);
+  font-size: var(--nys-font-size-ui-lg);
+  line-height: var(--nys-font-lineheight-ui-lg);
+  font-weight: 700;
+  text-align: center;
+}
+
+.diagram__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--nys-color-accent);
+}
+
+.diagram__arrow--both {
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Flow arrows point down while a diagram is stacked, then right. */
+.diagram__arrow--flow {
+  rotate: 90deg;
+}
+
+.diagram__pill {
+  display: block;
+  border: 2px solid var(--nys-color-accent);
+  border-radius: var(--nys-radius-round);
+  padding: var(--nys-space-100) var(--nys-space-200);
+  text-align: center;
+  font-size: var(--nys-font-size-ui-sm);
+  line-height: var(--nys-font-lineheight-ui-sm);
+}
+
+/* Two equal columns: cards over the scale, and the cost comparison. */
+.diagram__duo {
+  display: grid;
+  gap: var(--nys-space-200);
+}
+
+/* Guessing vs. assembling scale */
+.diagram__scale {
+  position: relative;
+  block-size: 1.125rem;
+  margin-block: var(--nys-space-700) var(--nys-space-150);
+  border-radius: var(--nys-radius-round);
+  background: linear-gradient(to right, var(--nys-color-white), var(--nys-color-red-400));
+}
+
+.diagram__pin {
+  position: absolute;
+  inset-block-end: 40%;
+  translate: -50% 0;
+  line-height: 0;
+}
+
+.diagram__pin--start {
+  inset-inline-start: 10%;
+  color: var(--nys-color-accent);
+}
+
+.diagram__pin--end {
+  inset-inline-start: 90%;
+  color: var(--nys-color-neutral-100);
+}
+
+.diagram__scale-ends {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--nys-space-200);
+  color: var(--nys-color-text-reverse-weak);
+}
+
+.diagram__scale-ends strong {
+  display: block;
+  color: var(--nys-color-text-reverse);
+  font-size: var(--nys-font-size-ui-lg);
+}
+
+.diagram__scale-ends > :last-child {
+  text-align: end;
+}
+
+/* How it works: the assistant sits between the model and the MCP server. */
+.diagram__how {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  grid-template-areas:
+    "prompt . ."
+    "down1  . ."
+    "asst   x1 model"
+    "asst   x2 mcp"
+    "down2  . ."
+    "output . .";
+  gap: var(--nys-space-100) var(--nys-space-150);
+  align-items: center;
+}
+
+.diagram__how-prompt { grid-area: prompt; }
+.diagram__how-down1 { grid-area: down1; }
+.diagram__how-asst { grid-area: asst; align-self: stretch; display: flex; flex-direction: column; justify-content: center; }
+.diagram__how-x1 { grid-area: x1; }
+.diagram__how-model { grid-area: model; }
+.diagram__how-x2 { grid-area: x2; }
+.diagram__how-mcp { grid-area: mcp; }
+.diagram__how-down2 { grid-area: down2; }
+.diagram__how-output { grid-area: output; }
+
+/* Bar chart */
+.diagram__bars {
+  display: grid;
+  gap: var(--nys-space-250);
+  margin-block: var(--nys-space-300);
+}
+
+.diagram__bars > div {
+  display: grid;
+  gap: var(--nys-space-100);
+  align-items: center;
+}
+
+.page-content .diagram__bars :is(dt, dd) {
+  margin: 0;
+}
+
+.diagram__bars dd {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--nys-space-50) var(--nys-space-150);
+}
+
+.diagram__bar {
+  flex: 0 0 var(--bar);
+  min-inline-size: var(--nys-space-100);
+  block-size: 2.25rem;
+  border-start-end-radius: var(--nys-radius-sm);
+  border-end-end-radius: var(--nys-radius-sm);
+  background: var(--nys-color-accent);
+}
+
+.diagram__bar--muted {
+  background: var(--nys-color-neutral-200);
+}
+
+.diagram__value {
+  white-space: nowrap;
+}
+
+.diagram__bars .diagram__note {
+  display: block;
+}
+
+.diagram__calls {
+  display: grid;
+  gap: var(--nys-space-150);
+}
+
+/* Pipeline: source, build output, and what reads it */
+.diagram__pipeline {
+  display: grid;
+  gap: var(--nys-space-100);
+  align-items: center;
+}
+
+.diagram__pipeline > .diagram__eyebrow,
+.diagram__pipeline > .diagram__spacer {
+  display: none;
+}
+
+.diagram__pipeline > .diagram__chain-start {
+  margin-block-start: var(--nys-space-300);
+}
+
+.page-content .diagram__code {
+  margin: 0;
+  border-radius: var(--nys-radius-lg);
+  padding: var(--nys-space-150) var(--nys-space-200);
+  background: var(--nys-color-theme-stronger);
+  box-shadow: inset 0 0 0 2px var(--nys-color-white-transparent-300);
+  color: var(--nys-color-green-200);
+  font-family: "Monaspace Neon", var(--nys-font-family-monospace);
+  font-size: var(--nys-font-size-ui-xs);
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.diagram__code-file {
+  display: block;
+  margin-block-end: var(--nys-space-50);
+  color: var(--nys-color-text-reverse-weak);
+}
+
+.diagram__code-tag {
+  color: var(--nys-color-accent);
+}
+
+.diagram__code-key {
+  color: var(--nys-color-text-reverse);
+}
+
+/* Verification cost */
+.diagram__apps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--nys-space-100);
+}
+
+.diagram__apps > li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--nys-space-100);
+  text-align: center;
+}
+
+.diagram__apps .diagram__box {
+  align-self: stretch;
+  padding-inline: var(--nys-space-100);
+  font-weight: 700;
+}
+
+.diagram__chips {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--nys-space-100);
+}
+
+.diagram__panel > .diagram__arrow {
+  margin-block: var(--nys-space-100);
+}
+
+/* Two ways in */
+.diagram__paths {
+  display: grid;
+  gap: var(--nys-space-150);
+}
+
+.diagram__paths .diagram__panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nys-space-100);
+}
+
+.diagram__paths-center {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nys-space-100);
+}
+
+.diagram__paths-team {
+  justify-self: center;
+  border-radius: var(--nys-radius-round);
+  padding: var(--nys-space-150) var(--nys-space-400);
+  text-align: center;
+}
+
+/* Pattern engine cycle */
+.diagram__cycle {
+  display: grid;
+  gap: var(--nys-space-600);
+}
+
+.diagram__cycle > li {
+  position: relative;
+}
+
+.diagram__cycle-arrow {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inset-block-start: 100%;
+  inset-inline: 0;
+  block-size: var(--nys-space-600);
+}
+
+.diagram__cycle > li:last-child .diagram__cycle-arrow {
+  display: none;
+}
+
+@container (min-width: 48rem) {
+  .diagram__arrow--flow {
+    rotate: 0deg;
+  }
+
+  .diagram__duo {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--nys-space-400);
+  }
+
+  .diagram__how {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.1fr);
+    column-gap: var(--nys-space-200);
+  }
+
+  .diagram__bars > div {
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: var(--nys-space-300);
+  }
+
+  .diagram__bars dd {
+    flex-wrap: nowrap;
+  }
+
+  .diagram__bar {
+    flex-basis: calc(var(--bar) * 0.7);
+  }
+
+  .diagram__calls {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .diagram__pipeline {
+    grid-template-columns: minmax(0, 1.3fr) auto minmax(0, 1fr) auto minmax(0, 1fr);
+    gap: var(--nys-space-200) var(--nys-space-100);
+  }
+
+  .diagram__pipeline > .diagram__eyebrow,
+  .diagram__pipeline > .diagram__spacer {
+    display: block;
+  }
+
+  .diagram__pipeline > .diagram__chain-start {
+    margin-block-start: 0;
+  }
+
+  .diagram__pipeline > .diagram__pipeline-end {
+    grid-column: 5;
+  }
+
+  .diagram__paths {
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 0.9fr) auto minmax(0, 1fr);
+    align-items: center;
+  }
+
+  .diagram__paths-team {
+    grid-column: 1 / -1;
+  }
+
+  .diagram__cycle {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--nys-space-800);
+  }
+
+  .diagram__cycle > li:nth-child(3) {
+    grid-area: 2 / 2;
+  }
+
+  .diagram__cycle > li:nth-child(4) {
+    grid-area: 2 / 1;
+  }
+
+  .diagram__cycle > li:last-child .diagram__cycle-arrow {
+    display: flex;
+  }
+
+  .diagram__cycle > li:nth-child(odd) .diagram__cycle-arrow {
+    inset-block: 0;
+    inline-size: var(--nys-space-800);
+    block-size: auto;
+  }
+
+  .diagram__cycle > li:nth-child(1) .diagram__cycle-arrow {
+    inset-inline: 100% auto;
+  }
+
+  .diagram__cycle > li:nth-child(3) .diagram__cycle-arrow {
+    inset-inline: auto 100%;
+    rotate: 180deg;
+  }
+
+  .diagram__cycle > li:nth-child(even) .diagram__cycle-arrow {
+    block-size: var(--nys-space-800);
+  }
+
+  .diagram__cycle > li:nth-child(4) .diagram__cycle-arrow {
+    inset-block: auto 100%;
+    rotate: 180deg;
+  }
+}
+
 /* Page Header */
 .page-header {
   padding-top: var(--nys-space-600);

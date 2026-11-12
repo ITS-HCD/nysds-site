@@ -81,6 +81,14 @@ Copy `.vscode/` from `node_modules/@nysds/components/dist/.vscode/` to your proj
 "css.customData": [".vscode/vscode.css-custom-data.json"]
 ```
 
+## AI-Assisted Coding
+
+If you use an AI coding assistant, connect it to the NYSDS MCP server. The server gives your assistant our components, design tokens, and usage guidance, so it builds with `nys-*` components instead of guessing at markup. It works with Claude Code, GitHub Copilot, Cursor, Gemini CLI, and most other tools that support MCP.
+
+Before you use AI tools for agency work, check with your supervisor about your agency's AI policy.
+
+For setup steps and the tools the server provides, read [Assembling, Not Guessing: The NYS Design System MCP Server](/about/updates/nysds-mcp-server/).
+
 ## Essential Links
 
 - **NPM Packages:** [@nysds/components](https://www.npmjs.com/package/@nysds/components), [@nysds/styles](https://www.npmjs.com/package/@nysds/styles)
