@@ -1,5 +1,6 @@
 ---
 permalink: /about/contribute/
+redirect_from: /get-started/contribute/
 title: "Contribute"
 description: "Feedback keeps the design system consistent, usable, and aligned with team needs. Contributors across New York State government help shape and improve digital products."
 section: About

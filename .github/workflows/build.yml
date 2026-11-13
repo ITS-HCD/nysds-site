@@ -15,6 +15,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          # Full history, so the sitemap can read each page's last commit date
+          # for <lastmod>. A shallow clone gives every page the same date.
+          fetch-depth: 0
 
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1

@@ -1,5 +1,7 @@
 ---
 permalink: /get-started/designers/
+# Old URL from early 2025. It still shows up in search results.
+redirect_from: /getting-started/designers/
 title: "Designers"
 description: "Learn how to use The New York State Design System Figma libraries, design tokens, and accessibility guidelines to create consistent, user-friendly digital experiences for New York State."
 section: Get Started

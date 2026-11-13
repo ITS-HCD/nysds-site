@@ -19,10 +19,13 @@
                 {{ section }}
             </div>
             <div class="section-header__media">
+                {#- width and height set the aspect ratio (most header art is
+                    about 578 × 145) so the browser reserves space before the
+                    image loads. Without them, the page content jumps down. -#}
                 {% if image_header %}
-                    <img src="{{ image_header | url }}" alt="{{ title }}">
+                    <img src="{{ image_header | url }}" alt="{{ title }}" width="578" height="145">
                 {% else %}
-                    <img src="{{ site.url | url }}/assets/img/sections/section-{{ section | slug }}.svg" alt="{{ section }} section header">
+                    <img src="{{ site.url | url }}/assets/img/sections/section-{{ section | slug }}.svg" alt="{{ section }} section header" width="578" height="145">
                 {% endif %}
             </div>
         </div>
