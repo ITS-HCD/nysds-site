@@ -7,6 +7,10 @@
 <title>{% if title %}{{ title | safe }}{% if page.url != "/" %} - {{ site.title }}{% endif %}{% else %}{{ site.title }}{% endif %}</title>
 {% if description %}
 <meta name="description" content="{{ description }}">{% endif %}
+{#- Test, utility, and search pages set `noindex: true` to stay out of search
+    results. The sitemap and llms.txt skip them too. -#}
+{% if noindex %}
+<meta name="robots" content="noindex">{% endif %}
 <link rel="canonical" href="{{ site.url }}{{page.url}}">
 <link rel="icon" type="image/svg+xml" href="{{ site.url }}/favicon.svg" />
 <link rel="apple-touch-icon" sizes="180x180" href="{{ site.url }}/apple-touch-icon.png">
@@ -27,9 +31,13 @@
 <meta property="og:image:height" content="630">
 <meta property="og:logo" content="{{ site.url }}/assets/img/nysds-logo-mark.png">
 <meta name="google-site-verification" content="3HnIZEb3eGAR0wp23L9DnHO-pVHPXkewO5BuVaXlrSk">
+{% include "partials/structured-data.njk" %}
 
 <link href="{{ site.url | url }}/assets/css/vendor/nysds-full.min.css" rel="stylesheet">
-<link rel="preload" href="{{ site.url | url }}/assets/fonts/proximanova-regular.woff" as="font" type="font/woff"
+{#- Preload the WOFF2 file, since nysds-fonts.css lists it first and every
+    current browser picks it. Preloading the WOFF file downloaded a font the
+    page never used. -#}
+<link rel="preload" href="{{ site.url | url }}/assets/fonts/proximanova-regular.woff2" as="font" type="font/woff2"
   crossorigin>
 <link href="{{ site.url | url}}/assets/fonts/nysds-fonts.css" rel="stylesheet">
 <link href="{{ site.url | url}}/pagefind/pagefind-ui.css" rel="stylesheet">

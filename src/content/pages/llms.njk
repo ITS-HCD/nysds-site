@@ -1,0 +1,74 @@
+---
+permalink: /llms.txt
+eleventyExcludeFromCollections: true
+---
+{#- llms.txt (https://llmstxt.org): a plain-text map of the site for AI
+    assistants and coding agents. Built from the same collections as the site
+    navigation, so new pages appear here automatically. Pages with
+    `crawl: false` or `noindex: true` are left out. Output is Markdown, not
+    HTML, so titles and descriptions are marked `safe` to keep text such as
+    `<nys-button>` from turning into HTML entities. -#}
+{%- macro entry(item) -%}
+- [{{ (item.data.title | string) | trim | safe }}]({{ site.url }}{{ item.url }}){% if item.data.description %}: {{ (item.data.description | string) | replace("\n", " ") | trim | safe }}{% endif %}
+{% endmacro -%}
+{%- macro sectionList(name) -%}
+{%- set s = collections.sections[name] -%}
+{%- if s -%}
+{#- Follow nav order: each top-level page, then its children and grandchildren. -#}
+{%- for item in s.topLevel | excludeNoIndex -%}
+{%- if item.url %}{{ entry(item) }}{% endif -%}
+{%- for child in item.children | excludeNoIndex -%}
+{%- if child.url %}{{ entry(child) }}{% endif -%}
+{%- for grandchild in child.children | excludeNoIndex -%}
+{%- if grandchild.url %}{{ entry(grandchild) }}{% endif -%}
+{%- endfor -%}
+{%- endfor -%}
+{%- endfor -%}
+{%- endif -%}
+{%- endmacro -%}
+# New York State Design System
+
+> The New York State Design System (NYSDS) is a shared library of web components, design tokens, styles, and guidance that helps teams across 45+ New York State agencies build accessible, consistent websites and applications. The New York State Office of Information Technology Services (ITS) maintains it.
+
+Key facts:
+
+- Website: {{ site.url }}/
+- Code components are framework-agnostic web components (custom elements with an `nys-` prefix, such as `<nys-button>`). They work in plain HTML and in Angular, React, Vue, and .NET applications.
+- npm packages: `@nysds/components` (web components) and `@nysds/styles` (CSS, design tokens, agency themes, and utility classes).
+- Every component is tested against WCAG 2.2 before release.
+- AI coding assistants can query component APIs, design tokens, and usage guidance through the NYSDS MCP server, published on npm as `@nysds/mcp-server`.
+- Source code: https://github.com/ITS-HCD/nysds
+
+## Get started
+
+{{ sectionList("Get Started") }}
+## Components
+
+{% for item in collections.components | excludeNoIndex -%}
+{%- if item.url and (item.url.split("/") | length) == 4 %}{{ entry(item) }}{% endif -%}
+{%- endfor %}
+## Foundations
+
+{{ sectionList("Foundations") }}
+## Design tokens
+
+{{ sectionList("Tokens") }}
+## Utility classes
+
+{{ sectionList("Utilities") }}
+## About
+
+{{ sectionList("About") }}
+## Optional
+
+{% for item in collections.updates | excludeNoIndex | limit(10) -%}
+{{ entry(item) }}
+{%- endfor %}
+{% for item in collections.components | excludeNoIndex -%}
+{%- if item.url and (item.url.split("/") | length) > 4 %}{{ entry(item) }}{% endif -%}
+{%- endfor %}
+{% for item in collections.videoPageCollection | excludeNoIndex -%}
+{%- if item.url %}{{ entry(item) }}{% endif -%}
+{%- endfor %}
+- [RSS feed of releases and articles]({{ site.url }}/feed.xml)
+- [Sitemap]({{ site.url }}/sitemap.xml)

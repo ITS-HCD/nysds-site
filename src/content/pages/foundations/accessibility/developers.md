@@ -1,5 +1,6 @@
 ---
 permalink: /foundations/accessibility/developers/
+redirect_from: /foundations/accessibility/digital-experiences/
 title: Accessibility for Developers
 navTitle: Developers
 description: Tools, guides, and resources for building accessible websites and applications for New York State.

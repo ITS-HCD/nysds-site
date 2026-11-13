@@ -1,5 +1,7 @@
 ---
 permalink: /get-started/developers/
+# Old URL from early 2025. It still shows up in search results.
+redirect_from: /getting-started/developers/
 title: "Developers"
 description: "Install the New York State Design System. Use web components and CSS variables in your project. Integrate with React, Angular, Vue, or .NET."
 section: Get Started
