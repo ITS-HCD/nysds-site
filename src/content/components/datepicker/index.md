@@ -54,13 +54,12 @@ The `<nys-datepicker>` component includes the following accessibility features:
 
 ### Value and form output
 The `value` prop accepts a `Date` object or an ISO date string (`YYYY-MM-DD`). The input displays the date in `MM/DD/YYYY` format. Internally, the component stores and submits the value as a string in ISO format (`YYYY-MM-DD`).
-<nys-alert heading="Date object warning" type="info">
+<br /><br />
+<nys-alert heading="Date object warning" type="warning">
   <p>
-    Passing <code>new Date("YYYY-MM-DD")</code> to <code>value</code> can result in an off-by-one-day error due to UTC versus local time conversion. The component handles this internally when you pass an ISO string attribute.
+    Passing <code>new Date("YYYY-MM-DD")</code> to <code>value</code> can shift the date by one day. JavaScript parses that format as UTC midnight, then displays it in local time, so users west of UTC see the previous day. The component avoids this when you pass an ISO string attribute.
     <br />
-    <a href="https://stackoverflow.com/questions/7556591/is-the-javascript-date-object-always-one-day-off">
-      Why this happens
-    </a>
+    <a href="https://stackoverflow.com/questions/7556591/is-the-javascript-date-object-always-one-day-off">Read more about the off-by-one date issue</a>.
   </p>
   <p>
     Prefer setting the value as an ISO string attribute: <code>&lt;nys-datepicker value="2025-06-01"&gt;</code>. If you must use a <code>Date</code> object in JavaScript, construct it with explicit year/month/day to avoid UTC shifting: <code>new Date(2025, 5, 1)</code>.
@@ -137,6 +136,24 @@ startDate="2026-04-01"
 {% set code = preview %}
 {% include "partials/code-preview.njk" %}
 
+### Date Range
+
+Set `minDate` and `maxDate` to limit which dates a user can pick. Both use `YYYY-MM-DD` format, and the dates you set are included. Anything outside the range is disabled in the calendar.
+
+The input doesn't show the range on its own, so state it in `description`.
+{% set preview %}
+<nys-datepicker
+  label="Application submission date"
+  description="Select a date between 04/05/2026 and 07/15/2026"
+  minDate="2026-04-05"
+  maxDate="2026-07-15"
+  startDate="2026-04-05"
+></nys-datepicker>
+{% endset %}
+{% set backgroundSolid = true %}
+{% set code = preview %}
+{% include "partials/code-preview.njk" %}
+
 ### Hiding Buttons
 
 The calendar popup includes "Today" and "Clear" buttons by default. Hide them with `hideTodayButton` and `hideClearButton` when you need users to intentionally select a specific date.
@@ -157,9 +174,7 @@ Set `required` to make the date field mandatory. The component displays a "Requi
 {% set preview %}
 <nys-datepicker
   label="Application submission date"
-  description="Only dates within April 4/5/2026 - 4/15/2026 are selectable"
-  minDate="2026-04-05"
-  maxDate="2026-04-15"
+  required
 ></nys-datepicker>
 {% endset %}
 {% set backgroundSolid = true %}
@@ -263,6 +278,16 @@ Set `disabled` to prevent interaction. The calendar button and input are both di
     </tr>
     <tr>
       <td><code>startDate</code></td>
+      <td>string (format <code>YYYY-MM-DD</code>)</td>
+      <td><code>""</code></td>
+    </tr>
+    <tr>
+      <td><code>minDate</code></td>
+      <td>string (format <code>YYYY-MM-DD</code>)</td>
+      <td><code>""</code></td>
+    </tr>
+    <tr>
+      <td><code>maxDate</code></td>
       <td>string (format <code>YYYY-MM-DD</code>)</td>
       <td><code>""</code></td>
     </tr>
