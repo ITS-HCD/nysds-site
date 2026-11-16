@@ -1,8 +1,5 @@
+# Search engines and AI crawlers are welcome to index this site.
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /cdn-cgi/
-
-Host: https://designsystem.ny.gov/
 
 Sitemap: https://designsystem.ny.gov/sitemap.xml

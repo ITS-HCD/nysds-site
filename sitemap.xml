@@ -1,1489 +1,964 @@
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
+    
+        <url>
             <loc>https://designsystem.ny.gov/videos/getting-help-and-giving-feedback/</loc>
-            <lastmod>2026-11-12T21:01:54.272Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <lastmod>2025-08-16T03:44:15-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/videos/four-ways-you-can-use-the-nys-design-system/</loc>
-            <lastmod>2026-11-12T21:01:54.272Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <lastmod>2025-08-16T03:44:15-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/videos/accessible-by-design/</loc>
-            <lastmod>2026-11-12T21:01:54.272Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <lastmod>2025-10-17T14:57:52-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/videos/introducing-the-nys-design-system/</loc>
-            <lastmod>2026-11-12T21:01:54.272Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <lastmod>2025-08-16T03:52:09-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/videos/quick-start-vue-nys-design-system/</loc>
-            <lastmod>2026-11-12T21:01:54.272Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <lastmod>2026-11-13T09:30:44-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/videos/quick-start-react-nys-design-system/</loc>
-            <lastmod>2026-11-12T21:01:54.272Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <lastmod>2026-11-13T09:30:44-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/videos/quick-start-angular-nys-design-system/</loc>
-            <lastmod>2026-11-12T21:01:54.272Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <lastmod>2026-11-13T09:30:44-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/videos/using-the-nys-design-system-css-framework/</loc>
-            <lastmod>2026-11-12T21:01:54.272Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <lastmod>2025-10-17T14:57:52-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/videos/first-steps-with-the-nys-design-system-component-library/</loc>
-            <lastmod>2026-11-12T21:01:54.272Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <lastmod>2025-10-17T14:57:52-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/videos/intro-to-nys-design-system-web-components/</loc>
-            <lastmod>2026-11-12T21:01:54.272Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <lastmod>2025-10-17T14:57:52-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/videos/using-the-visual-component-library/</loc>
-            <lastmod>2026-11-12T21:01:54.272Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <lastmod>2025-10-17T14:57:52-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/videos/using-the-project-template/</loc>
-            <lastmod>2026-11-12T21:01:54.270Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <lastmod>2025-11-07T12:16:39-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/videos/intro-to-designing-with-the-new-york-state-design-system/</loc>
-            <lastmod>2026-11-12T21:01:54.270Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <lastmod>2025-10-17T14:57:52-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/2025-wrapped/</loc>
-            <lastmod>2026-11-12T21:01:54.269Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2025-12-31T16:24:25-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/utilities/zindex/</loc>
-            <lastmod>2026-11-12T21:01:54.269Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:04:26-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/utilities/typography/</loc>
-            <lastmod>2026-11-12T21:01:54.269Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:04:26-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/utilities/responsive/</loc>
-            <lastmod>2026-11-12T21:01:54.269Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:04:26-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/utilities/position/</loc>
-            <lastmod>2026-11-12T21:01:54.269Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:04:26-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/utilities/overflow/</loc>
-            <lastmod>2026-11-12T21:01:54.269Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:04:26-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/utilities/opacity/</loc>
-            <lastmod>2026-11-12T21:01:54.269Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:04:26-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/utilities/margin-padding/</loc>
-            <lastmod>2026-11-12T21:01:54.269Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:04:26-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/utilities/</loc>
-            <lastmod>2026-11-12T21:01:54.269Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:09:07-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/utilities/hiding/</loc>
-            <lastmod>2026-11-12T21:01:54.269Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-09T09:21:32-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/utilities/grid/</loc>
-            <lastmod>2026-11-12T21:01:54.269Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:04:26-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/utilities/float/</loc>
-            <lastmod>2026-11-12T21:01:54.269Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:04:26-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/utilities/flex/</loc>
-            <lastmod>2026-11-12T21:01:54.268Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:04:26-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/utilities/display/</loc>
-            <lastmod>2026-11-12T21:01:54.268Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:04:26-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/tokens/typography/</loc>
-            <lastmod>2026-11-12T21:01:54.268Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-04-02T12:57:13-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/tokens/primitives/</loc>
-            <lastmod>2026-11-12T21:01:54.268Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-04-02T12:57:13-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/tokens/other/</loc>
-            <lastmod>2026-11-12T21:01:54.268Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-04-02T11:05:36-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/tokens/</loc>
-            <lastmod>2026-11-12T21:01:54.268Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://designsystem.ny.gov/search/</loc>
-            <lastmod>2026-11-12T21:01:54.268Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-23T19:14:46-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/learn/</loc>
-            <lastmod>2026-11-12T21:01:54.268Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-05-28T17:34:46-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/</loc>
-            <lastmod>2026-11-12T21:01:54.268Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://designsystem.ny.gov/i18n/</loc>
-            <lastmod>2026-11-12T21:01:54.268Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-11-12T15:33:28-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/get-started/developers/vue/</loc>
-            <lastmod>2026-11-12T21:01:54.268Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-09T13:12:59-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/get-started/developers/react/</loc>
-            <lastmod>2026-11-12T21:01:54.268Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-09T13:12:59-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/get-started/developers/angular/</loc>
-            <lastmod>2026-11-12T21:01:54.268Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-09T13:12:59-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/get-started/leadership/</loc>
-            <lastmod>2026-11-12T21:01:54.268Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-05-21T09:04:18-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/get-started/</loc>
-            <lastmod>2026-11-12T21:01:54.268Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-11-13T09:30:44-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/get-started/developers/</loc>
-            <lastmod>2026-11-12T21:01:54.268Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-11-13T09:30:44-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/get-started/designers/</loc>
-            <lastmod>2026-11-12T21:01:54.267Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-11-13T09:30:44-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/foundations/typography/</loc>
-            <lastmod>2026-11-12T21:01:54.267Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:04:26-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/foundations/tokens/</loc>
-            <lastmod>2026-11-12T21:01:54.267Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-05-28T17:38:57-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/foundations/themes/</loc>
-            <lastmod>2026-11-12T21:01:54.267Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-04-02T11:05:36-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/foundations/styles/</loc>
-            <lastmod>2026-11-12T21:01:54.267Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:04:26-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/foundations/</loc>
-            <lastmod>2026-11-12T21:01:54.267Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:04:26-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/foundations/forms/</loc>
-            <lastmod>2026-11-12T21:01:54.267Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:04:26-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/foundations/design/</loc>
-            <lastmod>2026-11-12T21:01:54.267Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-09T09:21:32-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/foundations/components/</loc>
-            <lastmod>2026-11-12T21:01:54.267Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-09T09:21:32-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/foundations/breakpoints/</loc>
-            <lastmod>2026-11-12T21:01:54.267Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-06T16:04:26-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/foundations/accessibility/learn/</loc>
-            <lastmod>2026-11-12T21:01:54.267Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-04-02T11:22:33-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/foundations/accessibility/leadership/</loc>
-            <lastmod>2026-11-12T21:01:54.267Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-11-13T09:30:44-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/foundations/accessibility/</loc>
-            <lastmod>2026-11-12T21:01:54.267Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-07-20T08:32:17-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/foundations/accessibility/developers/</loc>
-            <lastmod>2026-11-12T21:01:54.267Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-11-13T09:30:44-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/foundations/accessibility/content/</loc>
-            <lastmod>2026-11-12T21:01:54.267Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-11-13T09:30:44-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/formfest2025/</loc>
-            <lastmod>2026-11-12T21:01:54.266Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2025-11-25T17:32:00-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/</loc>
-            <lastmod>2026-11-12T21:01:54.266Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://designsystem.ny.gov/ally/</loc>
-            <lastmod>2026-11-12T21:01:54.266Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-09-18T12:27:11-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/what-it-solves/</loc>
-            <lastmod>2026-11-12T21:01:54.266Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-05-21T09:04:18-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/</loc>
-            <lastmod>2026-11-12T21:01:54.266Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-11-13T09:30:44-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/</loc>
-            <lastmod>2026-11-12T21:01:54.266Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-05-21T09:04:18-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/contribute/</loc>
-            <lastmod>2026-11-12T21:01:54.266Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://designsystem.ny.gov/a11y/</loc>
-            <lastmod>2026-11-12T21:01:54.266Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
-            <loc>https://designsystem.ny.gov/404.html</loc>
-            <lastmod>2026-11-12T21:01:54.266Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-11-13T09:30:44-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/video/</loc>
-            <lastmod>2026-11-12T21:01:54.266Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/verticalnav/</loc>
-            <lastmod>2026-11-12T21:01:54.266Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/unavheader/</loc>
-            <lastmod>2026-11-12T21:01:54.266Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-11-02T11:51:22-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/unavfooter/</loc>
-            <lastmod>2026-11-12T21:01:54.266Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-08T10:29:18-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/tooltip/</loc>
-            <lastmod>2026-11-12T21:01:54.265Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/toggle/</loc>
-            <lastmod>2026-11-12T21:01:54.265Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/textinput/</loc>
-            <lastmod>2026-11-12T21:01:54.265Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/textarea/</loc>
-            <lastmod>2026-11-12T21:01:54.265Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/table/</loc>
-            <lastmod>2026-11-12T21:01:54.265Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/table/accessibility-tests/</loc>
-            <lastmod>2026-11-12T21:01:54.265Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-30T10:20:02-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/table/accessibility-build/</loc>
-            <lastmod>2026-11-12T21:01:54.265Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-30T10:20:02-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/tab/</loc>
-            <lastmod>2026-11-12T21:01:54.265Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-08T10:29:18-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/tab/accessibility-tests/</loc>
-            <lastmod>2026-11-12T21:01:54.264Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-30T10:20:02-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/tab/accessibility-build/</loc>
-            <lastmod>2026-11-12T21:01:54.264Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-30T10:20:02-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/stepper/</loc>
-            <lastmod>2026-11-12T21:01:54.264Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/skipnav/</loc>
-            <lastmod>2026-11-12T21:01:54.264Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/select/</loc>
-            <lastmod>2026-11-12T21:01:54.264Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/radiobutton/</loc>
-            <lastmod>2026-11-12T21:01:54.264Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/processlist/</loc>
-            <lastmod>2026-11-12T21:01:54.264Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/pagination/</loc>
-            <lastmod>2026-11-12T21:01:54.264Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/modal/</loc>
-            <lastmod>2026-11-12T21:01:54.264Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/modal/accessibility-tests/</loc>
-            <lastmod>2026-11-12T21:01:54.264Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-30T10:20:02-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/modal/accessibility-build/</loc>
-            <lastmod>2026-11-12T21:01:54.264Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-30T10:20:02-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/iconlist/</loc>
-            <lastmod>2026-11-12T21:01:54.264Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/icon/</loc>
-            <lastmod>2026-11-12T21:01:54.263Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/globalheader/</loc>
-            <lastmod>2026-11-12T21:01:54.263Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/globalfooter/</loc>
-            <lastmod>2026-11-12T21:01:54.263Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/fileinput/</loc>
-            <lastmod>2026-11-12T21:01:54.263Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/dropdownmenu/</loc>
-            <lastmod>2026-11-12T21:01:54.263Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-26T16:33:20-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/divider/</loc>
-            <lastmod>2026-11-12T21:01:54.263Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-08T15:24:09-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/datepicker/</loc>
-            <lastmod>2026-11-12T21:01:54.263Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/combobox/</loc>
-            <lastmod>2026-11-12T21:01:54.262Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/checkbox/</loc>
-            <lastmod>2026-11-12T21:01:54.262Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/card/</loc>
-            <lastmod>2026-11-12T21:01:54.262Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/button/</loc>
-            <lastmod>2026-11-12T21:01:54.262Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-26T16:33:20-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/breadcrumbs/</loc>
-            <lastmod>2026-11-12T21:01:54.262Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/breadcrumbs/accessibility-tests/</loc>
-            <lastmod>2026-11-12T21:01:54.262Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-30T10:20:02-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/breadcrumbs/accessibility-build/</loc>
-            <lastmod>2026-11-12T21:01:54.262Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-30T10:20:02-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/badge/</loc>
-            <lastmod>2026-11-12T21:01:54.262Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/backtotop/</loc>
-            <lastmod>2026-11-12T21:01:54.262Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/avatar/</loc>
-            <lastmod>2026-11-12T21:01:54.261Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-26T16:33:20-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/alert/</loc>
-            <lastmod>2026-11-12T21:01:54.261Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-07T13:13:54-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/accordion/</loc>
-            <lastmod>2026-11-12T21:01:54.261Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-11-12T12:01:21-05:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/accordion/accessibility-tests/</loc>
-            <lastmod>2026-11-12T21:01:54.261Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-30T10:20:02-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/components/accordion/accessibility-build/</loc>
-            <lastmod>2026-11-12T21:01:54.261Z</lastmod>
-            
-              <changefreq>monthly</changefreq>
-            
-            
-              <priority>0.5</priority>
-            
-        </url><url>
+            <lastmod>2026-10-30T10:20:02-04:00</lastmod>
+            <changefreq>monthly</changefreq>
+            <priority>0.5</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/nysds-mcp-server/</loc>
             <lastmod>2026-11-11T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.23.0-release/</loc>
             <lastmod>2026-10-28T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.22.0-release/</loc>
             <lastmod>2026-10-02T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.21.1-release/</loc>
             <lastmod>2026-09-17T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.21.0-release/</loc>
             <lastmod>2026-09-03T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.20.0-release/</loc>
             <lastmod>2026-08-06T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/a11y/</loc>
             <lastmod>2026-08-05T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.19.3-release/</loc>
             <lastmod>2026-07-08T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.19.2-release/</loc>
             <lastmod>2026-06-24T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.19.0-release/</loc>
             <lastmod>2026-06-11T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.18.3-release/</loc>
             <lastmod>2026-05-28T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.18.0-release/</loc>
             <lastmod>2026-05-14T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.17.0-release/</loc>
             <lastmod>2026-04-30T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/css-variables/</loc>
             <lastmod>2026-04-21T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.16.1-release/</loc>
             <lastmod>2026-04-16T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.16.0-release/</loc>
             <lastmod>2026-04-02T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.15.0-release/</loc>
             <lastmod>2026-03-06T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.14.0-release/</loc>
             <lastmod>2026-02-19T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/happy-birthday-nysds/</loc>
             <lastmod>2026-02-19T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.13.1-release/</loc>
             <lastmod>2026-02-05T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.13.0-release/</loc>
             <lastmod>2026-01-22T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.12.1-release/</loc>
             <lastmod>2025-12-31T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.12.0-release/</loc>
             <lastmod>2025-12-11T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.11.3-release/</loc>
             <lastmod>2025-11-26T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.11.2-release/</loc>
             <lastmod>2025-11-13T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.11.0-release/</loc>
             <lastmod>2025-10-31T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/october-website-improvements/</loc>
             <lastmod>2025-10-24T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.10.1-release/</loc>
             <lastmod>2025-10-16T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.10.0-release/</loc>
             <lastmod>2025-10-03T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.9.1-release/</loc>
             <lastmod>2025-09-18T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.8.0-release/</loc>
             <lastmod>2025-09-05T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.7.0-release/</loc>
             <lastmod>2025-08-22T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.6.0-release/</loc>
             <lastmod>2025-08-07T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/fidelity-modes-rapid-prototyping/</loc>
             <lastmod>2025-08-05T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.5.3-release/</loc>
             <lastmod>2025-08-01T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.5.0-release/</loc>
             <lastmod>2025-07-24T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.4.0-release/</loc>
             <lastmod>2025-07-10T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.3.0-release/</loc>
             <lastmod>2025-06-26T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.2.0-release/</loc>
             <lastmod>2025-06-12T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.1.9-release/</loc>
             <lastmod>2025-05-29T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.1.8-release/</loc>
             <lastmod>2025-05-15T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.1.7-release/</loc>
             <lastmod>2025-04-30T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/scaling-human-centered-design/</loc>
             <lastmod>2025-04-17T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.1.6-release/</loc>
             <lastmod>2025-04-17T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.1.5-release/</loc>
             <lastmod>2025-04-04T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.1.1-release/</loc>
             <lastmod>2025-03-24T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.1.0-release/</loc>
             <lastmod>2025-02-26T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/1.0.0-release/</loc>
             <lastmod>2025-02-07T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/0.0.9-alpha-release/</loc>
             <lastmod>2025-01-29T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/0.0.8-alpha-release/</loc>
             <lastmod>2025-01-22T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/0.0.7-alpha-release/</loc>
             <lastmod>2025-01-15T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/0.0.4-alpha-release/</loc>
             <lastmod>2024-12-23T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/0.0.3-alpha-release/</loc>
             <lastmod>2024-11-29T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/0.0.2-alpha-release/</loc>
             <lastmod>2024-11-21T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
-        </url><url>
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
+        </url>
+        <url>
             <loc>https://designsystem.ny.gov/about/updates/0.0.1-alpha-release/</loc>
             <lastmod>2024-11-06T00:00:00.000Z</lastmod>
-            
-              <changefreq>weekly</changefreq>
-            
-            
-              <priority>0.8</priority>
-            
+            <changefreq>weekly</changefreq>
+            <priority>0.8</priority>
         </url>
 </urlset>

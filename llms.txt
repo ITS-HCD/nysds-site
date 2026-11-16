@@ -1,0 +1,148 @@
+# New York State Design System
+
+> The New York State Design System (NYSDS) is a shared library of web components, design tokens, styles, and guidance that helps teams across 45+ New York State agencies build accessible, consistent websites and applications. The New York State Office of Information Technology Services (ITS) maintains it.
+
+Key facts:
+
+- Website: https://designsystem.ny.gov/
+- Code components are framework-agnostic web components (custom elements with an `nys-` prefix, such as `<nys-button>`). They work in plain HTML and in Angular, React, Vue, and .NET applications.
+- npm packages: `@nysds/components` (web components) and `@nysds/styles` (CSS, design tokens, agency themes, and utility classes).
+- Every component is tested against WCAG 2.2 before release.
+- AI coding assistants can query component APIs, design tokens, and usage guidance through the NYSDS MCP server, published on npm as `@nysds/mcp-server`.
+- Source code: https://github.com/ITS-HCD/nysds
+
+## Get started
+
+- [Get Started](https://designsystem.ny.gov/get-started/): The New York State Design System makes it easier to build accessible, usable websites for New York State.
+- [Designers](https://designsystem.ny.gov/get-started/designers/): Learn how to use The New York State Design System Figma libraries, design tokens, and accessibility guidelines to create consistent, user-friendly digital experiences for New York State.
+- [Developers](https://designsystem.ny.gov/get-started/developers/): Install the New York State Design System. Use web components and CSS variables in your project. Integrate with React, Angular, Vue, or .NET.
+- [Angular Quick Start](https://designsystem.ny.gov/get-started/developers/angular/): A step-by-step guide to using NYS Design System components in an Angular application.
+- [React Quick Start](https://designsystem.ny.gov/get-started/developers/react/): A step-by-step guide to using NYS Design System components in a React + TypeScript application.
+- [Vue Quick Start](https://designsystem.ny.gov/get-started/developers/vue/): A step-by-step guide to using NYS Design System components in a Vue 3 application.
+- [Get Started as a Leader](https://designsystem.ny.gov/get-started/leadership/): A guide for agency leaders and product teams to understand what the NYS Design System is, why it matters, and how to get your team started.
+
+## Components
+
+- [Accordion](https://designsystem.ny.gov/components/accordion/): Vertically stacked list of headers that reveal or hide associated content.
+- [Alert](https://designsystem.ny.gov/components/alert/): An alert displays a prominent message, with optional links, at the top of the screen.
+- [Avatar](https://designsystem.ny.gov/components/avatar/): Avatars visually represent a user or entity as initials, a photo, or an icon.
+- [Back To Top](https://designsystem.ny.gov/components/backtotop/): Provides a button that lets users quickly scroll back to the top of the page.
+- [Badge](https://designsystem.ny.gov/components/badge/): Provides a visual indicator of categories.
+- [Breadcrumbs](https://designsystem.ny.gov/components/breadcrumbs/): Help users understand their location within a site’s hierarchy and navigate between different levels of content.
+- [Button](https://designsystem.ny.gov/components/button/): Used primarily for actions that have an immediate result like "Save", "Close", or "Add".
+- [Card](https://designsystem.ny.gov/components/card/): A self-contained container that groups related content and actions about a single subject.
+- [Checkbox](https://designsystem.ny.gov/components/checkbox/): A checkbox is a form input for users to select options (zero, one, or multiple) from a collection of choices.
+- [Combobox](https://designsystem.ny.gov/components/combobox/): Allows users to either select a predefined option or type to filter a list.
+- [Datepicker](https://designsystem.ny.gov/components/datepicker/): Allows users to select a date from a visual calendar or type a date into the input field.
+- [Divider](https://designsystem.ny.gov/components/divider/): Separates content and visually divides sections within layouts.
+- [Dropdown Menu](https://designsystem.ny.gov/components/dropdownmenu/): A list of actions or options that appear when a user interacts with a trigger, and disappears after a selection or clicking away.
+- [File Input](https://designsystem.ny.gov/components/fileinput/): Used for selecting and uploading one or more files from the user’s device.
+- [Global Footer](https://designsystem.ny.gov/components/globalfooter/): Provide users with essential information, secondary navigation, legal links, and contact details across all pages.
+- [Global Header](https://designsystem.ny.gov/components/globalheader/): Provide users with consistent access to key features, branding, and primary navigation across all pages.
+- [Icon](https://designsystem.ny.gov/components/icon/): Visual symbols are used to concisely convey information and increase visual appearance.
+- [Icon List](https://designsystem.ny.gov/components/iconlist/): Displays a collection of items paired with visual icons to create structured, scannable lists.
+- [Modal](https://designsystem.ny.gov/components/modal/): Displays content in a dialog that appears over the page and requires user interaction before returning to the main content.
+- [Pagination](https://designsystem.ny.gov/components/pagination/): Enables users to navigate through large sets of content or data divided into smaller, more manageable pages.
+- [Process List](https://designsystem.ny.gov/components/processlist/): Displays a sequence of numbered steps to communicate a multi-step process.
+- [Radio Button](https://designsystem.ny.gov/components/radiobutton/): Form input for selecting one option from a group.
+- [Select](https://designsystem.ny.gov/components/select/): Dropdown menu for selecting a single option.
+- [Skip Navigation](https://designsystem.ny.gov/components/skipnav/): An accessibility feature that lets keyboard and screen reader users skip navigation and jump to main content.
+- [Stepper](https://designsystem.ny.gov/components/stepper/): Displays to users how many steps are in a process and indicates their progress.
+- [Tab](https://designsystem.ny.gov/components/tab/): A clickable interface to toggle between different sets of information without leaving the page.
+- [Table](https://designsystem.ny.gov/components/table/): A structured layout that displays data in rows and columns to help users scan, compare, and understand information efficiently.
+- [Text Area](https://designsystem.ny.gov/components/textarea/): Field for entering multiple lines of text.
+- [Text Input](https://designsystem.ny.gov/components/textinput/): Field for entering short text strings, like email, number, password, and more.
+- [Toggle](https://designsystem.ny.gov/components/toggle/): Switch component for enabling or disabling a setting.
+- [Tooltip](https://designsystem.ny.gov/components/tooltip/): Displays a brief message when hover/focus, offering additional information or context.
+- [UNav Footer](https://designsystem.ny.gov/components/unavfooter/): Required statewide footer displaying the NY.gov logo and links to Agencies, Counties, Events, Programs, and Services.
+- [UNav Header](https://designsystem.ny.gov/components/unavheader/): A small NYS-branded header at the top of every page to ensure users they are on a secure NYS site.
+- [Vertical Navigation](https://designsystem.ny.gov/components/verticalnav/): Responsive side navigation that collapses into an accordion on smaller screens.
+- [Video Player](https://designsystem.ny.gov/components/video/): Video player for embedding YouTube videos with thumbnail preview and on-demand playback.
+
+## Foundations
+
+- [Foundations](https://designsystem.ny.gov/foundations/): The building blocks, conventions, and architecture behind the NYS Design System — from tokens and themes to typography, forms, and accessibility.
+- [Accessibility](https://designsystem.ny.gov/foundations/accessibility/): The New York State Design System makes it easier to build accessible, usable websites for New York State.
+- [Accessibility for Developers](https://designsystem.ny.gov/foundations/accessibility/developers/): Tools, guides, and resources for building accessible websites and applications for New York State.
+- [Accessibility for Content Creators](https://designsystem.ny.gov/foundations/accessibility/content/): Guidance and tools for creating accessible documents, web content, and multimedia for New York State.
+- [Accessibility for Leadership](https://designsystem.ny.gov/foundations/accessibility/leadership/): Compliance requirements, policy details, and procurement guidance for accessibility in New York State digital services.
+- [Learning Resources](https://designsystem.ny.gov/foundations/accessibility/learn/): Courses, references, and checklists for building accessibility knowledge across your team.
+- [Styles Framework](https://designsystem.ny.gov/foundations/styles/): The @nysds/styles package provides design tokens, a CSS reset, typography styles, and utility classes as composable CSS endpoints.
+- [Design Tokens](https://designsystem.ny.gov/foundations/tokens/): How the NYS Design System uses layered design tokens — primitive, semantic, and theme — to deliver consistent, themeable styles across every component and application.
+- [Agency Themes](https://designsystem.ny.gov/foundations/themes/): How to apply agency-specific color themes to NYSDS components using the data-theme attribute and theme tokens.
+- [How NYSDS Breakpoints Work](https://designsystem.ny.gov/foundations/breakpoints/): Understand how NYSDS web components work — custom elements, shadow DOM, slots, CSS custom properties, and the patterns you need to use them effectively.
+- [How Components Work](https://designsystem.ny.gov/foundations/components/): Understand how NYSDS web components work — custom elements, shadow DOM, slots, CSS custom properties, and the patterns you need to use them effectively.
+- [Design](https://designsystem.ny.gov/foundations/design/): Good design starts before pixels. How the NYS Design System fits into the broader UX process.
+- [Form Patterns](https://designsystem.ny.gov/foundations/forms/): Cross-cutting patterns for building forms with NYSDS web components, including form association, validation, event handling, and submission.
+- [Typography](https://designsystem.ny.gov/foundations/typography/): How the NYS Design System handles fonts, typography tokens, and type scale across New York State digital products.
+
+## Design tokens
+
+- [Color Tokens](https://designsystem.ny.gov/tokens/): Browse all NYSDS color tokens — theme, intent, neutral, and transparency. Switch themes to see how values change across agencies.
+- [Typography Tokens](https://designsystem.ny.gov/tokens/typography/): Browse semantic NYSDS typography tokens — font sizes, families, line heights, and letter spacing for headings, body, display, and UI text.
+- [Spacing & Layout Tokens](https://designsystem.ny.gov/tokens/other/): Browse NYSDS spacing, sizing, border radius, and elevation tokens used to build consistent layouts.
+- [Primitive Tokens](https://designsystem.ny.gov/tokens/primitives/): Raw color, typography, and spacing values that semantic tokens are built from. Use semantic tokens instead when possible.
+
+## Utility classes
+
+- [Utilities](https://designsystem.ny.gov/utilities/): CSS utility classes for layout, spacing, visibility, and responsive behavior in the NYS Design System.
+- [Display](https://designsystem.ny.gov/utilities/display/): Utility classes for controlling element display behavior in the NYS Design System.
+- [Flexbox](https://designsystem.ny.gov/utilities/flex/): Utility classes for building flexible one-dimensional layouts with alignment, wrapping, and ordering in the NYS Design System.
+- [Float](https://designsystem.ny.gov/utilities/float/): Utility classes for floating elements left, right, or clearing floats in the NYS Design System.
+- [Grid](https://designsystem.ny.gov/utilities/grid/): A responsive 12-column flexbox grid system for structuring page layouts in the NYS Design System.
+- [Hiding Content](https://designsystem.ny.gov/utilities/hiding/): Not all techniques for hiding web content are created equal. The choice of which to use can have dramatic consequences for accessibility.
+- [Margin and Padding](https://designsystem.ny.gov/utilities/margin-padding/): Utility classes for adding consistent spacing inside and outside elements in the NYS Design System.
+- [Opacity](https://designsystem.ny.gov/utilities/opacity/): Utility classes for controlling element transparency in the NYS Design System.
+- [Overflow](https://designsystem.ny.gov/utilities/overflow/): Utility classes for managing content overflow and scrolling behavior in the NYS Design System.
+- [Position](https://designsystem.ny.gov/utilities/position/): Utility classes for controlling element positioning in the NYS Design System.
+- [Responsive Utilities](https://designsystem.ny.gov/utilities/responsive/): Responsive utilities for adjusting applied styles based on screen width.
+- [Typography](https://designsystem.ny.gov/utilities/typography/): The New York State Design System makes it easier to build usable, accessible, mobile-friendly websites for New York State residents.
+- [Z-Index](https://designsystem.ny.gov/utilities/zindex/): Utility classes for controlling the stacking order of overlapping elements in the NYS Design System.
+
+## About
+
+- [About the New York State Design System](https://designsystem.ny.gov/about/): Learn about the vision, mission, and values behind the New York State Design System.
+- [What the Design System Solves](https://designsystem.ny.gov/about/what-it-solves/): The challenges the NYS Design System addresses — consistency, accessibility, and development efficiency across 45+ state agencies.
+- [Contribute](https://designsystem.ny.gov/about/contribute/): Feedback keeps the design system consistent, usable, and aligned with team needs. Contributors across New York State government help shape and improve digital products.
+- [Updates](https://designsystem.ny.gov/about/updates/): Stay current with the NYS Design System. Find the latest releases, component updates, and articles about building accessible digital services for New York State.
+
+## Optional
+
+- [Assembling, Not Guessing: The NYS Design System MCP Server](https://designsystem.ny.gov/about/updates/nysds-mcp-server/): The NYSDS MCP server connects AI coding assistants to our components, design tokens, and usage guidance, so they assemble from tested parts instead of guessing.
+- [NYS Design System Release 1.23.0 “Big Slide”](https://designsystem.ny.gov/about/updates/1.23.0-release/): We're migrating to a new translation platform, so we made some updates to <nys-unavheader> to accomodate that transition. We also shipped a new bundle component @nysds/nys-unavbundle. We spent quite a bit of time on accessible and assistive tech access to the Design System this release. We also updated all vulnerable Node.js modules due to the CVE that came out last week.
+- [NYS Design System Release 1.22.0 “Sawteeth”](https://designsystem.ny.gov/about/updates/1.22.0-release/): Added official support for Angular, React, and Vue. Setup instructions have been updated for each package and in our MCP server. Our new codegen package generates our framework-specific implementations from the source Typescript files. We also fixed a few bugs.
+- [NYS Design System Release 1.21.1](https://designsystem.ny.gov/about/updates/1.21.1-release/): This release features new nys-card size property, bug fixes for combobox, less-strict styling for slotted components, and an "inverted" option for iconlist.
+- [NYS Design System Release 1.21.0 “Colden”](https://designsystem.ny.gov/about/updates/1.21.0-release/): BREAKING CHANGES! Grid system is now aligned properly and able to be re-sized via a CSS property. New badge intents have been added. We updated the MCP server to actually use our CSS classes properly.
+- [NYS Design System Release 1.20.0 “Giant”](https://designsystem.ny.gov/about/updates/1.20.0-release/): This release is GIANT! Say hello to the latest members of the NYS Design System family: <nys-card>, <nys-iconlist>, <nys-processlist>, and <nys-verticalnav>! While we could have stopped there, we didnt. We shipped a new accessibility layer to our web components while fixed many bugs and accessibility violations.
+- [Our 2026 Global Accessibility Awareness Day (GAAD) Campaign](https://designsystem.ny.gov/about/updates/a11y/): A collaboration between the NYS Digital Accessibility and NYS Design System Teams
+- [NYS Design System Release 1.19.3](https://designsystem.ny.gov/about/updates/1.19.3-release/): Responsive margin and padding, <nys-accordionitem> style overrides, MCP server updates, added more native functionality to <nys-button> and <nys-icon>, fixes to <nys-fileinput>, and continuing our automation journey!
+- [NYS Design System Release 1.19.2](https://designsystem.ny.gov/about/updates/1.19.2-release/): BREAKING CHANGES! We added a subheading to nys-globalfooter, added two new icons, and performed our quarterly audit.
+- [NYS Design System Release 1.19.0 “Upper Wolf Jaw”](https://designsystem.ny.gov/about/updates/1.19.0-release/): BREAKING CHANGES! We upgraded the <nys-icon> to load external icon libraries which caused some breaking changes. Vertical space gaps available with new vertical grid-gap classes. Check your layouts as there is potential vertical padding breaking changes with grid-gap. Lastly, we added a subtle variant to the <nys-divider>
+
+- [Accordion Accessibility Checklist](https://designsystem.ny.gov/components/accordion/accessibility-tests/): How to test the accessibility of an accordion.
+- [Breadcrumb Accessibility Checklist](https://designsystem.ny.gov/components/breadcrumbs/accessibility-tests/): How to test the accessibility of a breadcrumbs.
+- [Build an Accessible Accordion](https://designsystem.ny.gov/components/accordion/accessibility-build/): How to code an accessible accordion.
+- [Build an Accessible Breadcrumb](https://designsystem.ny.gov/components/breadcrumbs/accessibility-build/): How to code an accessible breadcrumb.
+- [Build an Accessible Modal Dialog](https://designsystem.ny.gov/components/modal/accessibility-build/): How to code an accessible modal dialog.
+- [Build an Accessible Table](https://designsystem.ny.gov/components/table/accessibility-build/): How to code an accessible table.
+- [Build an Accessible Tablist](https://designsystem.ny.gov/components/tab/accessibility-build/): How to code an accessible tab.
+- [Modal Accessibility Checklist](https://designsystem.ny.gov/components/modal/accessibility-tests/): How to test the accessibility of a modal.
+- [Tab Accessibility Checklist](https://designsystem.ny.gov/components/tab/accessibility-tests/): How to test the accessibility of a tab.
+- [Table Accessibility Checklist](https://designsystem.ny.gov/components/table/accessibility-tests/): How to test the accessibility of a table.
+
+- [Introducing the NYS Design System](https://designsystem.ny.gov/videos/introducing-the-nys-design-system/): A quick look at what the NYS Design System is, why we built it, and how it helps teams make websites and apps that work better for everyone.
+- [Accessible by Design](https://designsystem.ny.gov/videos/accessible-by-design/): See how accessibility is built into everything we make so you can create digital services that everyone can use.
+- [Four Ways You Can Use the NYS Design System](https://designsystem.ny.gov/videos/four-ways-you-can-use-the-nys-design-system/): Four simple ways to bring the NYS Design System into your work, no matter what stage your project is in.
+- [Getting Help and Giving Feedback](https://designsystem.ny.gov/videos/getting-help-and-giving-feedback/): Get support, share your ideas, contribute to component proposals, and help us make the NYS Design System even better.
+- [Intro to Designing with the New York State Design System](https://designsystem.ny.gov/videos/intro-to-designing-with-the-new-york-state-design-system/): Learn how to start designing in Figma with ready-to-use NYS Design System libraries, tokens, components, and icons.
+- [Using the Project Template](https://designsystem.ny.gov/videos/using-the-project-template/): Jump start your project with our Figma starter project template, a solid foundation with standard headers, footers, layout, theming, and mobile-responsiveness.
+- [Using the Visual Component Library](https://designsystem.ny.gov/videos/using-the-visual-component-library/): Everything you need to know about NYS Design System components in Figma, from basics like inserting into projects to advanced tips like building your own.
+- [Intro to NYS Design System Web Components](https://designsystem.ny.gov/videos/intro-to-nys-design-system-web-components/): Get to know our web components: what they are, how they work, and why they're built to work in any framework.
+- [First Steps with the NYS Design System Component Library](https://designsystem.ny.gov/videos/first-steps-with-the-nys-design-system-component-library/): Step-by-step instructions for installing the NYS Design System and adding your first component.
+- [Using the NYS Design System CSS Framework](https://designsystem.ny.gov/videos/using-the-nys-design-system-css-framework/): Learn how to style your site with NYS Design System design tokens, utilities, and themes.
+- [Quick Start: Angular + NYS Design System](https://designsystem.ny.gov/videos/quick-start-angular-nys-design-system/): Learn how to set up a new Angular project, install the NYS Design System, and use it.
+- [Quick Start: React + NYS Design System](https://designsystem.ny.gov/videos/quick-start-react-nys-design-system/): Learn how to set up a new React project, install the NYS Design System, and use it.
+- [Quick Start: Vue + NYS Design System](https://designsystem.ny.gov/videos/quick-start-vue-nys-design-system/): Learn how to set up a new Vue project, install the NYS Design System, and use it.
+
+- [RSS feed of releases and articles](https://designsystem.ny.gov/feed.xml)
+- [Sitemap](https://designsystem.ny.gov/sitemap.xml)
