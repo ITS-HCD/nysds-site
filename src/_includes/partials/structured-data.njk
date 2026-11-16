@@ -1,0 +1,65 @@
+{#- Structured data (schema.org JSON-LD).
+    Each type here maps to a documented Google Search feature:
+    - WebSite (home page only): the site name Google shows above results.
+    - BreadcrumbList: a readable path in place of the raw URL in results.
+    - BlogPosting (update posts): publish date and author in results.
+    The publisher is NYS ITS, matching the agency named in the site footer.
+    Pages marked `noindex` get none. -#}
+{%- set publisher = {
+  "@type": "GovernmentOrganization",
+  "@id": "https://its.ny.gov/#organization",
+  "name": "New York State Office of Information Technology Services",
+  "alternateName": "NYS ITS",
+  "url": "https://its.ny.gov/",
+  "parentOrganization": {
+    "@type": "GovernmentOrganization",
+    "name": "State of New York",
+    "url": "https://www.ny.gov/"
+  }
+} -%}
+{%- set websiteId = site.url ~ "/#website" -%}
+
+{%- if page.url == "/" %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": websiteId,
+      "url": site.url ~ "/",
+      "name": "New York State Design System",
+      "alternateName": ["NYS Design System", "NYSDS"],
+      "description": site.description,
+      "inLanguage": "en-US",
+      "publisher": { "@id": publisher["@id"] }
+    },
+    publisher
+  ]
+} | jsonLd | safe }}</script>
+{%- elif not noindex and page.url %}
+{%- set breadcrumbs = page.url | breadcrumbList(collections.all, title, site.url) %}
+{%- if "/content/updates/" in page.inputPath %}
+{%- set published = page.date | dateISO %}
+{%- set article = {
+  "@type": "BlogPosting",
+  "headline": title,
+  "description": description,
+  "datePublished": published,
+  "dateModified": (page.inputPath | gitLastModified) or published,
+  "author": { "@type": "Person", "name": author } if author else null,
+  "image": site.url ~ (ogimage or image or "/assets/img/nysds_og_image.png"),
+  "mainEntityOfPage": site.url ~ page.url,
+  "isPartOf": { "@id": websiteId },
+  "publisher": publisher
+} %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@graph": [breadcrumbs, article]
+} | jsonLd | safe }}</script>
+{%- elif breadcrumbs %}
+<script type="application/ld+json">{{ {
+  "@context": "https://schema.org",
+  "@graph": [breadcrumbs]
+} | jsonLd | safe }}</script>
+{%- endif %}
+{%- endif %}

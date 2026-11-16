@@ -13,6 +13,7 @@ const JSON5 = require("json5");
 
 // Filters
 const authorAvatar = require("./src/_11ty/filters/authorAvatar.js");
+const breadcrumbList = require("./src/_11ty/filters/breadcrumbList.js");
 const byCategory = require("./src/_11ty/filters/byCategory.js");
 const dateFeed = require("./src/_11ty/filters/date.js").dateFeed;
 const dateFull = require("./src/_11ty/filters/date.js").dateFull;
@@ -25,8 +26,10 @@ const editOnGitHubUrl = require("./src/_11ty/filters/editOnGitHubUrl.js");
 const excludeDrafts = require("./src/_11ty/filters/excludeDrafts.js");
 const excludeFuture = require("./src/_11ty/filters/excludeFuture.js");
 const excludeNoIndex = require("./src/_11ty/filters/excludeNoIndex.js");
+const gitLastModified = require("./src/_11ty/filters/gitLastModified.js");
 const hasArticleTag = require("./src/_11ty/filters/hasArticleTag.js");
 const hasReleaseTag = require("./src/_11ty/filters/hasReleaseTag.js");
+const jsonLd = require("./src/_11ty/filters/jsonLd.js");
 const limit = require("./src/_11ty/filters/limit.js");
 const onlySeries = require("./src/_11ty/filters/onlySeries.js");
 const shuffle = require("./src/_11ty/filters/shuffle.js");
@@ -97,6 +100,7 @@ module.exports = async function (eleventyConfig) {
 
   // Filters
   eleventyConfig.addFilter("authorAvatar", authorAvatar);
+  eleventyConfig.addFilter("breadcrumbList", breadcrumbList);
   eleventyConfig.addFilter("byCategory", byCategory);
   eleventyConfig.addFilter("dateFeed", dateFeed);
   eleventyConfig.addFilter("dateFull", dateFull);
@@ -109,8 +113,10 @@ module.exports = async function (eleventyConfig) {
   eleventyConfig.addFilter("excludeDrafts", excludeDrafts);
   eleventyConfig.addFilter("excludeFuture", excludeFuture);
   eleventyConfig.addFilter("excludeNoIndex", excludeNoIndex);
+  eleventyConfig.addFilter("gitLastModified", gitLastModified);
   eleventyConfig.addFilter("hasArticleTag", hasArticleTag);
   eleventyConfig.addFilter("hasReleaseTag", hasReleaseTag);
+  eleventyConfig.addFilter("jsonLd", jsonLd);
   eleventyConfig.addFilter("limit", (arr, limit) => arr.slice(0, limit));
   eleventyConfig.addFilter("limit", limit);
   eleventyConfig.addFilter("offset", (arr, start) => arr.slice(start));

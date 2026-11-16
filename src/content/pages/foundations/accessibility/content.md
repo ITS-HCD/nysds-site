@@ -1,5 +1,6 @@
 ---
 permalink: /foundations/accessibility/content/
+redirect_from: /foundations/accessibility/documents/
 title: Accessibility for Content Creators
 navTitle: Content Creators
 description: Guidance and tools for creating accessible documents, web content, and multimedia for New York State.

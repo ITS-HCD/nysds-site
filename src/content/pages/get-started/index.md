@@ -1,5 +1,7 @@
 ---
 permalink: /get-started/
+# Old URL from early 2025. It still shows up in search results.
+redirect_from: /getting-started/
 title: "Get Started"
 description: "The New York State Design System makes it easier to build accessible, usable websites for New York State."
 section: Get Started

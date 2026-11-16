@@ -2,23 +2,26 @@
 permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
+{#- Pages with `crawl: false` or `noindex: true` stay out (see excludeNoIndex).
+    `lastmod` is the post date for updates and the last git commit for
+    everything else. Pages without git history omit it, since a wrong
+    `lastmod` teaches search engines to ignore the field. -#}
 <?xml version="1.0" encoding="utf-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    {% for page in collections.all | reverse %}
-      {%- if page.data.crawl !== "false" -%}
+    {% for page in collections.all | excludeNoIndex | reverse %}
+      {%- if page.url -%}
+        {%- if "/content/updates/" in page.inputPath -%}
+          {%- set lastmod = page.date | dateISO -%}
+        {%- else -%}
+          {%- set lastmod = page.inputPath | gitLastModified -%}
+        {%- endif %}
         <url>
             <loc>{{ site.url }}{{ page.url | url }}</loc>
-            <lastmod>{{ page.date.toISOString() }}</lastmod>
-            {% if page.data.changefreq %}
-              <changefreq>{{ page.data.changefreq }}</changefreq>
-            {% else %}
-              <changefreq>monthly</changefreq>
-            {% endif %}
-            {% if page.data.priority %}
-              <priority>{{ page.data.priority }}</priority>
-            {% else %}
-              <priority>0.5</priority>
-            {% endif %}
+            {%- if lastmod %}
+            <lastmod>{{ lastmod }}</lastmod>
+            {%- endif %}
+            <changefreq>{{ page.data.changefreq or "monthly" }}</changefreq>
+            <priority>{{ page.data.priority or "0.5" }}</priority>
         </url>
       {%- endif -%}
     {% endfor %}

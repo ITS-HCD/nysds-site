@@ -1,5 +1,6 @@
 ---
 permalink: /foundations/accessibility/leadership/
+redirect_from: /foundations/accessibility/legal/
 title: Accessibility for Leadership
 navTitle: Leadership
 description: Compliance requirements, policy details, and procurement guidance for accessibility in New York State digital services.
