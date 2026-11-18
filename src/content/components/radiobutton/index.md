@@ -76,13 +76,13 @@ The `<nys-radiobutton>` component includes the following accessibility-focused f
     label="Sequoia"
     description="Macbook Air"
     value="mac"
-  </nys-radiobutton>
+  ></nys-radiobutton>
   <nys-radiobutton
     name="op-system"
     label="Linux"
-    value="windows"
+    value="linux"
     disabled
-  </nys-radiobutton>
+  ></nys-radiobutton>
 </nys-radiogroup>
 {% endset %}
 {% set backgroundSolid = true %}

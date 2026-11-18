@@ -192,7 +192,6 @@ Set `required` to make a checkbox or group of checkboxes mandatory. It can be ap
   <nys-checkboxgroup
     label="Select your favorite New York landmarks"
     description="Choose from the options below"
-    inverted
     >
     <nys-checkbox
       label="Adirondacks"
