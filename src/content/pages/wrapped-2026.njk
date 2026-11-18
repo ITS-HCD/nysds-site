@@ -1,76 +1,1026 @@
 ---
 permalink: /2026-wrapped/
 title: "NYS Design System 2026 Wrapped"
-description: "A quick, mobile-friendly recap of 2026, built with NYS DS components and tokens."
+description: "Which NYS Design System component are you? Take the 2026 Wrapped quiz to reveal your archetype and explore
+this year's stats."
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>NYS Design System 2026 Wrapped</title>
 
-    <meta property="og:title" content="{{ site.title }}">
-    <meta property="og:site_name" content="{{ site.title }}">
-    <meta property="og:url" content="{{ site.url }}{{page.url}}">
-    <meta property="og:description" content="{{ description }}">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:image" content="{{ site.url }}/assets/i/2025/wrapped/wrapped-og-share.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:logo" content="{{ site.url }}/assets/img/nysds-logo-mark.png">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>NYS Design System 2026 Wrapped</title>
 
-    <!-- REQUIRED: do not add/remove CSS/JS references -->
-    <link rel="stylesheet" href="../assets/css/vendor/nysds-full.min.css" />
-    <link rel="stylesheet" href="../assets/fonts/nysds-fonts.css" />
+  <meta property="og:title" content="{{ site.title }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:url" content="{{ site.url }}{{page.url}}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:image" content="{{ site.url }}/assets/i/2025/wrapped/wrapped-og-share.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:logo" content="{{ site.url }}/assets/img/nysds-logo-mark.png">
 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
+  <!-- REQUIRED: do not add/remove CSS/JS references -->
+  <link rel="stylesheet" href="../assets/css/vendor/nysds-full.min.css" />
+  <link rel="stylesheet" href="../assets/fonts/nysds-fonts.css" />
 
-      gtag('config', 'G-M4JYBJ7BZY');
-    </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <style>
-      /* Minimum text size requirement */
-      html {
-        font-size: 18px;
+    gtag('config', 'G-M4JYBJ7BZY');
+  </script>
+
+  <style>
+    /* Minimum text size requirement */
+    html {
+      font-size: 18px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--nys-color-text);
+      background: var(--nys-color-surface);
+      font-family: "Proxima Nova", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .wrapped-app {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Slide deck container */
+    .quiz-deck {
+      position: relative;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .quiz-slide {
+      display: none;
+      flex: 1;
+      width: 100%;
+      padding: 2.5rem 1rem 5rem;
+      box-sizing: border-box;
+    }
+
+    .quiz-slide[data-active="true"] {
+      display: block;
+      animation: slideFadeIn 300ms ease-out forwards;
+    }
+
+    @keyframes slideFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(12px);
       }
 
-      body {
-        margin: 0;
-        color: var(--nys-color-text);
-        background: var(--nys-color-surface);
-        font-family: "Proxima Nova", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Background themes */
+    .bg-intro {
+      background:
+        radial-gradient(1200px 600px at 20% 20%, var(--nys-color-theme-mid), transparent 60%),
+        radial-gradient(900px 500px at 80% 30%, var(--nys-color-theme), transparent 55%),
+        linear-gradient(135deg, var(--nys-color-theme-stronger), var(--nys-color-theme-strong));
+      color: var(--nys-color-text-reverse);
+    }
+
+    .bg-question {
+      background: var(--nys-color-surface);
+      color: var(--nys-color-text);
+    }
+
+    .bg-results {
+      background:
+        radial-gradient(900px 500px at 20% 15%, var(--nys-color-theme-weak), transparent 60%),
+        radial-gradient(800px 450px at 80% 30%, var(--nys-color-info-weak, rgba(0, 100, 200, 0.08)), transparent 55%),
+        linear-gradient(180deg, var(--nys-color-surface), var(--nys-color-theme-faint, #f4f8fb));
+      color: var(--nys-color-text);
+    }
+
+    /* Intro slide layout */
+    .intro-content {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    .intro-kicker {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      opacity: 0.9;
+      margin-bottom: 0.75rem;
+    }
+
+    .intro-title {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      line-height: 1.1;
+      margin: 0 0 1.25rem;
+      font-weight: 800;
+    }
+
+    .intro-description {
+      font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+      line-height: 1.45;
+      opacity: 0.95;
+      margin: 0 auto 2.5rem;
+      max-width: 60ch;
+    }
+
+    .intro-stats-preview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 2.5rem auto 3rem;
+      max-width: 650px;
+    }
+
+    .intro-stat-pill {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 1rem;
+      padding: 1rem 0.75rem;
+    }
+
+    .intro-stat-pill strong {
+      display: block;
+      font-size: 1.75rem;
+    }
+
+    .intro-stat-pill span {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    /* Question slide layout */
+    .question-wrapper {
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+
+    .question-header {
+      margin-bottom: 2rem;
+    }
+
+    .question-kicker {
+      display: inline-block;
+      font-size: 0.95rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--nys-color-theme);
+      margin-bottom: 0.5rem;
+    }
+
+    .question-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      line-height: 1.2;
+      margin: 0 0 0.5rem;
+      font-weight: 700;
+    }
+
+    .question-subtitle {
+      font-size: 1.15rem;
+      color: var(--nys-color-neutral-700, #555);
+      margin: 0;
+      max-width: 70ch;
+    }
+
+    /* Clickable nys-card styling */
+    nys-card.quiz-answer-card {
+      --nys-card-height: 100%;
+      width: 100%;
+      display: block;
+      border-radius: var(--nys-radius-xl, 12px);
+      cursor: pointer;
+    }
+
+    nys-card.quiz-answer-card:hover {
+      transform: translateY(-3px);
+    }
+
+    nys-card.quiz-answer-card.selected {
+      outline: 3px solid var(--nys-color-theme, #154973);
+      outline-offset: 3px;
+      border-radius: var(--nys-radius-xl, 12px);
+    }
+
+    /* Slotted preheading badge */
+    .card-option-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--nys-color-theme, #154973);
+    }
+
+    .card-letter {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.85rem;
+      height: 1.85rem;
+      border-radius: 50%;
+      background: var(--nys-color-neutral-100, #eef0f2);
+      color: var(--nys-color-text, #1b1b1b);
+      font-weight: 800;
+      font-size: 0.9rem;
+    }
+
+    nys-card.quiz-answer-card:hover .card-letter,
+    nys-card.quiz-answer-card.selected .card-letter {
+      background: var(--nys-color-theme, #154973);
+      color: var(--nys-color-text-reverse, #ffffff);
+    }
+
+    /* Slotted footer action */
+    .card-select-footer {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100%;
+      padding-top: 0.5rem;
+    }
+
+    .card-select-status {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--nys-color-neutral-600, #666);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    nys-card.quiz-answer-card.selected .card-select-status {
+      color: var(--nys-color-theme, #154973);
+      font-weight: 700;
+    }
+
+    /* Sticky Bottom Navigation Bar */
+    .quiz-nav-bar {
+      position: sticky;
+      bottom: 0;
+      background: var(--nys-color-surface);
+      border-top: 1px solid var(--nys-color-base-weak, #d6d7d9);
+      padding: 0.85rem 1rem;
+      z-index: 50;
+    }
+
+    .quiz-nav-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .quiz-progress-section {
+      flex: 1;
+      max-width: 380px;
+    }
+
+    .quiz-progress-meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+      color: var(--nys-color-neutral-700, #444);
+    }
+
+    .quiz-progress-track {
+      height: 0.5rem;
+      width: 100%;
+      background: var(--nys-color-neutral-200, #e2e4e8);
+      border-radius: 999px;
+      overflow: hidden;
+    }
+
+    .quiz-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--nys-color-theme);
+      border-radius: 999px;
+    }
+
+    .quiz-nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    /* Results Page Styles */
+    .results-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .result-hero-card {
+      background: var(--nys-color-surface);
+      border: 2px solid var(--nys-color-base-weak, #d6d7d9);
+      border-radius: 1.5rem;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .result-kicker {
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--nys-color-theme);
+      margin-bottom: 0.75rem;
+    }
+
+    .result-badge {
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      background: var(--nys-color-theme-faint, #f0f7fc);
+      border: 1px solid var(--nys-color-theme);
+      color: var(--nys-color-theme);
+      border-radius: 999px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+
+    .result-component-name {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      line-height: 1.08;
+      font-weight: 800;
+      margin: 0 0 0.5rem;
+      color: var(--nys-color-text);
+    }
+
+    .result-tagline {
+      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+      font-weight: 600;
+      color: var(--nys-color-theme);
+      margin: 0 0 1.5rem;
+    }
+
+    .result-description {
+      font-size: 1.2rem;
+      line-height: 1.55;
+      max-width: 65ch;
+      margin: 0 auto 2rem;
+      color: var(--nys-color-neutral-800, #333);
+    }
+
+    .result-stat-callout {
+      background: var(--nys-color-theme-faint, #f4f8fb);
+      border-left: 4px solid var(--nys-color-theme);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+      margin: 0 auto 2rem;
+      max-width: 600px;
+      text-align: left;
+    }
+
+    .result-stat-callout strong {
+      display: block;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      color: var(--nys-color-theme);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.25rem;
+    }
+
+    .result-stat-callout p {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.4;
+    }
+
+    .result-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    /* Year in Review Grand Stats Section */
+    .grand-stats-section {
+      margin-top: 3rem;
+    }
+
+    .grand-stats-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .grand-stats-subtitle {
+      text-align: center;
+      color: var(--nys-color-neutral-600, #666);
+      margin-bottom: 1.75rem;
+      font-size: 1.1rem;
+    }
+
+    .grand-stats-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .grand-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .grand-stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .grand-stat-card {
+      background: var(--nys-color-surface);
+      border: 1px solid var(--nys-color-base-weak, #d6d7d9);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    .grand-stat-number {
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: var(--nys-color-theme);
+      line-height: 1.1;
+      margin: 0 0 0.35rem;
+    }
+
+    .grand-stat-label {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+      color: var(--nys-color-neutral-700, #444);
+    }
+
+    /* Accessibility helper */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapped-app">
+    <!-- Required site chrome -->
+    <nys-globalheader appName="Design System 2026 Wrapped">
+      <ul>
+        <li><a href="https://designsystem.ny.gov">Home</a></li>
+      </ul>
+    </nys-globalheader>
+
+    <main id="main">
+      <!-- QUIZ DECK CONTAINER -->
+      <div id="quizDeck" class="quiz-deck" aria-live="polite">
+
+        <!-- SLIDE 0: INTRO SCREEN -->
+        <section class="quiz-slide bg-intro" data-slide="0" data-active="true" aria-roledescription="slide"
+          role="region" aria-label="Quiz Introduction" tabindex="-1">
+          <div class="intro-content">
+            <p class="intro-kicker">NYS Design System • 2026 Wrapped</p>
+            <h1 class="intro-title">Which NYSDS Component Are You?</h1>
+            <p class="intro-description">
+              Diagnose your design system personality archetype, unlock key 2026 milestones, and see how you match with
+              the year's achievements.
+            </p>
+
+            <!-- Optional Year-in-Review Stats Preview -->
+            <div class="intro-stats-preview">
+              <div class="intro-stat-pill">
+                <strong>[Stat 1]</strong>
+                <span>[e.g. 35+ Releases]</span>
+              </div>
+              <div class="intro-stat-pill">
+                <strong>[Stat 2]</strong>
+                <span>[e.g. 50k+ Inserts]</span>
+              </div>
+              <div class="intro-stat-pill">
+                <strong>[Stat 3]</strong>
+                <span>[e.g. 47% Leaner]</span>
+              </div>
+            </div>
+
+            <div>
+              <nys-button id="startQuizBtn" label="Start Quiz" variant="outline"></nys-button>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 1: THE ONE QUESTION (WITH 6 CLICKABLE NYS-CARDS) -->
+        <section class="quiz-slide bg-question" data-slide="1" data-active="false" aria-roledescription="slide"
+          role="region" aria-label="Question 1 of 1" tabindex="-1">
+          <div class="question-wrapper">
+            <div class="question-header">
+              <span class="question-kicker">Question 1 of 1</span>
+              <h2 class="question-title">[Question 1 Prompt Title Goes Here]</h2>
+              <p class="question-subtitle">[Question 1 description, 2026 context, or stat hook goes here]</p>
+            </div>
+
+            <!-- 6-Answer Grid using clickable <nys-card> components -->
+            <div class="nys-grid-row nys-grid-gap" style="--nys-card-height: 100%;">
+              <!-- Card A -> Archetype 1 -->
+              <div
+                class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
+                <nys-card class="quiz-answer-card" data-question="1" data-archetype="1"
+                  heading="[Option 1A Answer text goes here]" headingLevel="h3"
+                  description="[Option 1A note or stat hint]" size="md" elevated onclick="void 0">
+
+                  <div slot="footer" class="card-select-footer">
+                    <span class="card-select-status">Tap to select</span>
+                  </div>
+                </nys-card>
+              </div>
+
+              <!-- Card B -> Archetype 2 -->
+              <div
+                class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
+                <nys-card class="quiz-answer-card" data-question="1" data-archetype="2"
+                  heading="[Option 1B Answer text goes here]" headingLevel="h3"
+                  description="[Option 1B note or stat hint]" size="md" elevated onclick="void 0">
+                  <div slot="footer" class="card-select-footer">
+                    <span class="card-select-status">Tap to select</span>
+                  </div>
+                </nys-card>
+              </div>
+
+              <!-- Card C -> Archetype 3 -->
+              <div
+                class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
+                <nys-card class="quiz-answer-card" data-question="1" data-archetype="3"
+                  heading="[Option 1C Answer text goes here]" headingLevel="h3"
+                  description="[Option 1C note or stat hint]" size="md" elevated onclick="void 0">
+
+                  <div slot="footer" class="card-select-footer">
+                    <span class="card-select-status">Tap to select</span>
+                  </div>
+                </nys-card>
+              </div>
+
+              <!-- Card D -> Archetype 4 -->
+              <div
+                class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
+                <nys-card class="quiz-answer-card" data-question="1" data-archetype="4"
+                  heading="[Option 1D Answer text goes here]" headingLevel="h3"
+                  description="[Option 1D note or stat hint]" size="md" elevated onclick="void 0">
+
+                  <div slot="footer" class="card-select-footer">
+                    <span class="card-select-status">Tap to select</span>
+                  </div>
+                </nys-card>
+              </div>
+
+              <!-- Card E -> Archetype 5 -->
+              <div
+                class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
+                <nys-card class="quiz-answer-card" data-question="1" data-archetype="5"
+                  heading="[Option 1E Answer text goes here]" headingLevel="h3"
+                  description="[Option 1E note or stat hint]" size="md" elevated onclick="void 0">
+
+                  <div slot="footer" class="card-select-footer">
+                    <span class="card-select-status">Tap to select</span>
+                  </div>
+                </nys-card>
+              </div>
+
+              <!-- Card F -> Archetype 6 -->
+              <div
+                class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
+                <nys-card class="quiz-answer-card" data-question="1" data-archetype="6"
+                  heading="[Option 1F Answer text goes here]" headingLevel="h3"
+                  description="[Option 1F note or stat hint]" size="md" elevated onclick="void 0">
+
+                  <div slot="footer" class="card-select-footer">
+                    <span class="card-select-status">Tap to select</span>
+                  </div>
+                </nys-card>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SLIDE 2: RESULTS SCREEN -->
+        <section class="quiz-slide bg-results" data-slide="2" data-active="false" aria-roledescription="slide"
+          role="region" aria-label="Your Quiz Result" tabindex="-1">
+          <div class="results-wrapper">
+            <!-- Result Hero Card -->
+            <div class="result-hero-card">
+              <span class="result-kicker">Your NYSDS Archetype</span>
+              <div>
+                <span id="resultBadge" class="result-badge">[Badge: High Contrast • 100% Dependable]</span>
+              </div>
+              <h2 id="resultComponent" class="result-component-name">&lt;nys-component&gt;</h2>
+              <p id="resultTagline" class="result-tagline">[The Workhorse of New York State]</p>
+              <p id="resultDescription" class="result-description">
+                [Detailed archetype personality summary goes here. Explains how you approach projects, your relationship
+                to design tokens and accessibility, and your spirit role on state teams.]
+              </p>
+
+              <!-- Dynamic Component Stat Callout -->
+              <div class="result-stat-callout">
+                <strong>2026 Highlight</strong>
+                <p id="resultStatCallout">[Component 2026 stat highlight goes here, e.g. Inserted 8,000+ times across
+                  agency workspaces this year.]</p>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="result-actions">
+                <nys-button id="shareResultBtn" label="Share Result" variant="primary"></nys-button>
+                <nys-button id="restartQuizBtn" label="Retake Quiz" variant="outline"></nys-button>
+                <nys-button id="exploreComponentsBtn" label="Explore Components" variant="outline"
+                  href="/components/"></nys-button>
+              </div>
+            </div>
+
+            <!-- 2026 Wrapped Grand Totals Section -->
+            <div class="grand-stats-section">
+              <h3 class="grand-stats-title">NYS Design System • 2026 By The Numbers</h3>
+              <p class="grand-stats-subtitle">A look at what New York State built, tested, and shipped together this
+                year.</p>
+
+              <div class="grand-stats-grid">
+                <div class="grand-stat-card">
+                  <p class="grand-stat-number">[35+]</p>
+                  <p class="grand-stat-label">Releases Published</p>
+                </div>
+                <div class="grand-stat-card">
+                  <p class="grand-stat-number">[500+]</p>
+                  <p class="grand-stat-label">Pull Requests Merged</p>
+                </div>
+                <div class="grand-stat-card">
+                  <p class="grand-stat-number">[200+]</p>
+                  <p class="grand-stat-label">Automated Component Tests</p>
+                </div>
+                <div class="grand-stat-card">
+                  <p class="grand-stat-number">[50k+]</p>
+                  <p class="grand-stat-label">Figma Component Inserts</p>
+                </div>
+                <div class="grand-stat-card">
+                  <p class="grand-stat-number">[~47%]</p>
+                  <p class="grand-stat-label">Bundle Size Reduction</p>
+                </div>
+                <div class="grand-stat-card">
+                  <p class="grand-stat-number">[250+]</p>
+                  <p class="grand-stat-label">Teams Community Members</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- STICKY BOTTOM NAVIGATION BAR -->
+      <div id="quizNavBar" class="quiz-nav-bar" style="display: none;">
+        <div class="quiz-nav-inner">
+          <div class="quiz-progress-section">
+            <div class="quiz-progress-meta">
+              <span id="quizProgressLabel">Question 1 of 1</span>
+              <span id="quizProgressPercent">100%</span>
+            </div>
+            <div class="quiz-progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+              aria-valuenow="100">
+              <div id="quizProgressFill" class="quiz-progress-fill" style="width: 100%;"></div>
+            </div>
+          </div>
+
+          <div class="quiz-nav-buttons">
+            <nys-button id="prevBtn" label="Back" variant="outline"></nys-button>
+            <nys-button id="nextBtn" label="See Results" variant="primary" disabled></nys-button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SHARE MODAL -->
+      <nys-modal id="shareModal" heading="Share Your NYSDS 2026 Archetype"
+        subheading="Copy your result to share on Teams, Slack, or social.">
+        <nys-textinput id="shareText" label="Share Text" type="text" readonly></nys-textinput>
+        <div slot="actions">
+          <nys-button id="copyShareBtn" label="Copy Text" variant="primary"></nys-button>
+          <nys-button id="closeShareBtn" label="Close" variant="outline"></nys-button>
+        </div>
+      </nys-modal>
+    </main>
+  </div>
+
+  <!-- REQUIRED: do not add/remove CSS/JS references -->
+  <script src="../assets/js/vendor/nysds.js" type="module"></script>
+
+  <script>
+    /**
+     * ARCHETYPES CONFIGURATION
+     * Define the 6 component outcome profiles here.
+     * When answer options with data-archetype="1".."6" are selected,
+     * the quiz tallies the score and presents the winning archetype.
+     */
+    const ARCHETYPES = {
+      1: {
+        component: "<nys-button>",
+        badge: "[Archetype 1 Badge: High Contrast • 100% Dependable]",
+        tagline: "[Archetype 1 Tagline: The Workhorse of New York]",
+        description: "[Archetype 1 Description: You are the reliable backbone of every state application. When citizens need clear action, they press your buttons. You don't overcomplicate things—you show up, provide crystal-clear direction, and never fail WCAG AAA contrast checks.]",
+        statCallout: "[Archetype 1 Stat: Inserted 7,700+ times in production and maintained across all agency themes.]"
+      },
+      2: {
+        component: "<nys-stepper>",
+        badge: "[Archetype 2 Badge: Sequential • Patient • Milestone Master]",
+        tagline: "[Archetype 2 Tagline: The Structured Visionary]",
+        description: "[Archetype 2 Description: You thrive on orderly progress. You know that major digital transformations happen one clear milestone at a time. You turn confusing 20-page forms into smooth, digestible 4-step guided journeys.]",
+        statCallout: "[Archetype 2 Stat: Helped state agency teams cut form completion timelines by 3x in 2026.]"
+      },
+      3: {
+        component: "<nys-modal>",
+        badge: "[Archetype 3 Badge: Trapped Focus • Mission Critical]",
+        tagline: "[Archetype 3 Tagline: The Uncompromising Closer]",
+        description: "[Archetype 3 Description: When you speak, the background dims and the room focuses. You keep people on task, demand intentional confirmation, and guard accessibility with strict keyboard traps and escape key listeners.]",
+        statCallout: "[Archetype 3 Stat: Maintained zero accessibility regressions across 200+ automated build checks.]"
+      },
+      4: {
+        component: "<nys-unavheader>",
+        badge: "[Archetype 4 Badge: Official State Seal • Anchor of Trust]",
+        tagline: "[Archetype 4 Tagline: The Sovereign Standard]",
+        description: "[Archetype 4 Description: You bring instant credibility to any page. Sitting prominently at the top of hundreds of state subdomains, you reassure every New Yorker that they are in safe, official hands.]",
+        statCallout: "[Archetype 4 Stat: Visited by over 6,000 reference site users and anchored across 50+ live agency portals.]"
+      },
+      5: {
+        component: "<nys-tooltip>",
+        badge: "[Archetype 5 Badge: Zero Bloat • Context On-Demand]",
+        tagline: "[Archetype 5 Tagline: The Subtle Genius]",
+        description: "[Archetype 5 Description: You don't need to take up all the screen real estate. You wait patiently until someone is confused, then deliver the exact piece of clarity that saves their day. Pure lightweight efficiency.]",
+        statCallout: "[Archetype 5 Stat: Built with zero heavy dependencies, contributing to our 47% bundle size reduction.]"
+      },
+      6: {
+        component: "<nys-table>",
+        badge: "[Archetype 6 Badge: High Capacity • Structured Data]",
+        tagline: "[Archetype 6 Tagline: The Master Organizer]",
+        description: "[Archetype 6 Description: You can handle complex data at scale without flinching. When thousands of rows of state records arrive, you sort, align, and format them cleanly so everyone can find what they need.]",
+        statCallout: "[Archetype 6 Stat: Shipped with full keyboard column sorting and responsive container overflow.]"
+      }
+    };
+
+    (function () {
+      const TOTAL_QUESTIONS = 1;
+      let currentSlide = 0; // 0 = Intro, 1 = Question 1, 2 = Results
+      const userAnswers = {};
+
+      // DOM elements
+      const slides = Array.from(document.querySelectorAll(".quiz-slide"));
+      const navBar = document.getElementById("quizNavBar");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const startQuizBtn = document.getElementById("startQuizBtn");
+      const restartQuizBtn = document.getElementById("restartQuizBtn");
+      const shareResultBtn = document.getElementById("shareResultBtn");
+
+      const progressLabel = document.getElementById("quizProgressLabel");
+      const progressPercent = document.getElementById("quizProgressPercent");
+      const progressFill = document.getElementById("quizProgressFill");
+      const progressTrack = document.querySelector(".quiz-progress-track");
+
+      const resultBadge = document.getElementById("resultBadge");
+      const resultComponent = document.getElementById("resultComponent");
+      const resultTagline = document.getElementById("resultTagline");
+      const resultDescription = document.getElementById("resultDescription");
+      const resultStatCallout = document.getElementById("resultStatCallout");
+
+      const shareModal = document.getElementById("shareModal");
+      const shareText = document.getElementById("shareText");
+      const copyShareBtn = document.getElementById("copyShareBtn");
+      const closeShareBtn = document.getElementById("closeShareBtn");
+
+      function clampSlide(idx) {
+        return Math.max(0, Math.min(TOTAL_QUESTIONS + 1, idx));
       }
 
-      .wrapped-app {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
+      function showSlide(targetIdx) {
+        const idx = clampSlide(targetIdx);
+        currentSlide = idx;
+
+        slides.forEach((slide) => {
+          const slideNum = Number(slide.getAttribute("data-slide"));
+          const isActive = slideNum === idx;
+          slide.setAttribute("data-active", isActive ? "true" : "false");
+          slide.setAttribute("aria-hidden", isActive ? "false" : "true");
+        });
+
+        // Manage bottom navigation toolbar visibility
+        if (idx >= 1 && idx <= TOTAL_QUESTIONS) {
+          navBar.style.display = "block";
+          updateProgress(idx);
+          updateNavButtons(idx);
+        } else {
+          navBar.style.display = "none";
+        }
+
+        // If on Results slide, calculate and render result
+        if (idx === TOTAL_QUESTIONS + 1) {
+          renderResults();
+        }
+
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
 
-      main {
-        flex: 1;
+      function updateProgress(questionIdx) {
+        const pct = Math.round((questionIdx / TOTAL_QUESTIONS) * 100);
+        progressLabel.textContent = `Question ${questionIdx} of ${TOTAL_QUESTIONS}`;
+        progressPercent.textContent = `${pct}%`;
+        progressFill.style.width = `${pct}%`;
+        progressTrack.setAttribute("aria-valuenow", pct);
       }
-    </style>
-  </head>
 
-  <body>
-    <div class="wrapped-app">
-      <!-- Required site chrome -->
-      <nys-globalheader agencyName="Design System 2026 Wrapped"></nys-globalheader>
-      <main id="main" class="nys-grid-container">
-        content to come
-      </main>
-      <nys-globalfooter agencyName="Design System 2026 Wrapped"></nys-globalfooter>
-    </div>
+      function updateNavButtons(questionIdx) {
+        prevBtn.disabled = questionIdx === 0;
 
-    <!-- REQUIRED: do not add/remove CSS/JS references -->
-    <script src="../assets/js/vendor/nysds.js" type="module"></script>
-  </body>
+        const hasAnswer = Boolean(userAnswers[questionIdx]);
+        nextBtn.disabled = !hasAnswer;
+        nextBtn.setAttribute("label", "See Results");
+      }
+
+      function selectAnswer(card) {
+        const qIdx = Number(card.getAttribute("data-question"));
+        const archetype = card.getAttribute("data-archetype");
+
+        // Deselect all cards for this question
+        document.querySelectorAll(`nys-card[data-question="${qIdx}"]`).forEach((c) => {
+          c.classList.remove("selected");
+          const status = c.querySelector(".card-select-status");
+          if (status) status.textContent = "Tap to select";
+        });
+
+        // Mark selected
+        card.classList.add("selected");
+        const status = card.querySelector(".card-select-status");
+        if (status) status.textContent = "✓ Selected";
+
+        userAnswers[qIdx] = archetype;
+        updateNavButtons(qIdx);
+
+        // Snappy auto-advance to results after selection
+        setTimeout(() => {
+          if (currentSlide === qIdx) {
+            showSlide(TOTAL_QUESTIONS + 1);
+          }
+        }, 380);
+      }
+
+      function calculateWinner() {
+        const tallies = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0 };
+        for (let q = 1; q <= TOTAL_QUESTIONS; q++) {
+          const arch = userAnswers[q];
+          if (arch && tallies[arch] !== undefined) {
+            tallies[arch]++;
+          }
+        }
+
+        let topArchetype = "1";
+        let maxCount = -1;
+        for (const [arch, count] of Object.entries(tallies)) {
+          if (count > maxCount) {
+            maxCount = count;
+            topArchetype = arch;
+          }
+        }
+        return topArchetype;
+      }
+
+      function renderResults() {
+        const winnerId = calculateWinner();
+        const profile = ARCHETYPES[winnerId] || ARCHETYPES[1];
+
+        resultBadge.textContent = profile.badge;
+        resultComponent.textContent = profile.component;
+        resultTagline.textContent = profile.tagline;
+        resultDescription.textContent = profile.description;
+        resultStatCallout.textContent = profile.statCallout;
+
+        // Update share modal text
+        const shareUrl = window.location.href.split("#")[0];
+        shareText.value = `I took the NYSDS 2026 Wrapped Quiz and got ${profile.component} — "${profile.tagline}"! Discover your design system archetype and explore 2026 stats: ${shareUrl}`;
+      }
+
+      function restartQuiz() {
+        for (let q = 1; q <= TOTAL_QUESTIONS; q++) {
+          delete userAnswers[q];
+        }
+        document.querySelectorAll("nys-card.quiz-answer-card").forEach((c) => {
+          c.classList.remove("selected");
+          const status = c.querySelector(".card-select-status");
+          if (status) status.textContent = "Tap to select";
+        });
+        showSlide(0);
+      }
+
+      function onNysClick(el, handler) {
+        if (!el) return;
+        el.addEventListener("nys-click", handler);
+        el.addEventListener("click", handler);
+      }
+
+      function bindCardClick(card, handler) {
+        let debounce = false;
+        const trigger = (e) => {
+          if (debounce) return;
+          debounce = true;
+          setTimeout(() => { debounce = false; }, 100);
+          handler(e);
+        };
+        card.addEventListener("nys-click", trigger);
+        card.addEventListener("click", trigger);
+      }
+
+      // Initialize event listeners
+      function init() {
+        onNysClick(startQuizBtn, () => showSlide(1));
+
+        onNysClick(prevBtn, () => {
+          if (currentSlide === 1) {
+            showSlide(0);
+          }
+        });
+
+        onNysClick(nextBtn, () => {
+          if (currentSlide === 1) {
+            showSlide(2);
+          }
+        });
+
+        onNysClick(restartQuizBtn, restartQuiz);
+
+        // Clickable nys-cards
+        document.querySelectorAll("nys-card.quiz-answer-card").forEach((card) => {
+          bindCardClick(card, () => selectAnswer(card));
+        });
+
+        // Share modal handlers
+        onNysClick(shareResultBtn, () => {
+          shareModal.open = true;
+        });
+
+        onNysClick(closeShareBtn, () => {
+          shareModal.open = false;
+        });
+
+        onNysClick(copyShareBtn, async () => {
+          try {
+            await navigator.clipboard.writeText(shareText.value);
+            copyShareBtn.setAttribute("label", "Copied!");
+            setTimeout(() => {
+              copyShareBtn.setAttribute("label", "Copy Text");
+            }, 2000);
+          } catch {
+            shareText.focus();
+            shareText.select();
+          }
+        });
+
+        showSlide(0);
+      }
+
+      init();
+    })();
+  </script>
+</body>
+
 </html>
