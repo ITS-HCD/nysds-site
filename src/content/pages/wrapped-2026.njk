@@ -37,6 +37,26 @@ description: "Which NYS Design System component are you? Take the 2026 Wrapped q
   </script>
 
   <style>
+    /* Baseline */
+    html {
+      font-size: 18px;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Proxima Nova", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Section show/hide */
     .quiz-slide {
       display: none;
     }
@@ -44,17 +64,78 @@ description: "Which NYS Design System component are you? Take the 2026 Wrapped q
     .quiz-slide[data-active="true"] {
       display: block;
     }
+
+    /* First landing page (Slide 0) */
+    .quiz-slide[data-slide="0"] {
+      background:
+        radial-gradient(1200px 600px at 20% 20%, var(--nys-color-theme-mid), transparent 60%),
+        radial-gradient(900px 500px at 80% 30%, var(--nys-color-theme), transparent 55%),
+        linear-gradient(135deg, var(--nys-color-theme-stronger), var(--nys-color-theme-strong));
+      color: var(--nys-color-text-reverse);
+      flex: 1;
+      min-height: calc(100vh - 64px);
+      box-sizing: border-box;
+      display: none;
+    }
+
+    .quiz-slide[data-slide="0"][data-active="true"] {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .intro-container {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .intro-kicker {
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      opacity: 0.9;
+      margin: 0 0 0.75rem;
+    }
+
+    .intro-title {
+      font-size: clamp(2.4rem, 6vw, 4rem);
+      line-height: 1.1;
+      margin: 0 0 1.25rem;
+      font-weight: 800;
+    }
+
+    .intro-subtitle {
+      font-size: clamp(1.15rem, 2.5vw, 1.45rem);
+      line-height: 1.45;
+      opacity: 0.95;
+      margin: 0 auto 2rem;
+      max-width: 55ch;
+    }
+
+    .intro-stats-preview {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 2rem auto 2.5rem;
+      max-width: 620px;
+    }
+
+    @media (max-width: 540px) {
+      .intro-stats-preview {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+      }
+    }
   </style>
 </head>
 
 <body>
   <div>
     <!-- Required site chrome -->
-    <nys-globalheader appName="Design System 2026 Wrapped">
-      <ul>
-        <li><a href="https://designsystem.ny.gov">Home</a></li>
-      </ul>
-    </nys-globalheader>
+    <nys-globalheader appName="Design System 2026 Wrapped"></nys-globalheader>
 
     <main id="main">
       <!-- QUIZ DECK CONTAINER -->
@@ -63,32 +144,23 @@ description: "Which NYS Design System component are you? Take the 2026 Wrapped q
         <!-- SLIDE 0: INTRO SCREEN -->
         <section class="quiz-slide" data-slide="0" data-active="true" aria-roledescription="slide"
           role="region" aria-label="Quiz Introduction" tabindex="-1">
-          <div>
-            <p>NYS Design System • 2026 Wrapped</p>
-            <h1>Which NYSDS Component Are You?</h1>
-            <p>
+          <div class="intro-container">
+            <p class="intro-kicker">NYS Design System • 2026 Wrapped</p>
+            <h1 class="intro-title">Which NYSDS Component Are You?</h1>
+            <p class="intro-subtitle">
               Diagnose your design system personality archetype, unlock key 2026 milestones, and see how you match with
               the year's achievements.
             </p>
 
             <!-- Optional Year-in-Review Stats Preview -->
-            <div>
-              <div>
-                <strong>[Stat 1]</strong>
-                <span>[e.g. 35+ Releases]</span>
-              </div>
-              <div>
-                <strong>[Stat 2]</strong>
-                <span>[e.g. 50k+ Inserts]</span>
-              </div>
-              <div>
-                <strong>[Stat 3]</strong>
-                <span>[e.g. 47% Leaner]</span>
-              </div>
+            <div class="intro-stats-preview">
+              <nys-card heading="[Stat 1]" description="[e.g. 35+ Releases]"></nys-card>
+              <nys-card heading="[Stat 2]" description="[e.g. 50k+ Inserts]"></nys-card>
+              <nys-card heading="[Stat 3]" description="[e.g. 47% Leaner]"></nys-card>
             </div>
 
             <div>
-              <nys-button id="startQuizBtn" label="Start Quiz"></nys-button>
+              <nys-button id="startQuizBtn" label="Start Quiz" variant="outline" inverted></nys-button>
             </div>
           </div>
         </section>
