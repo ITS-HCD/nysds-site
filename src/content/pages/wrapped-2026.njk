@@ -1,0 +1,76 @@
+---
+permalink: /2026-wrapped/
+title: "NYS Design System 2026 Wrapped"
+description: "A quick, mobile-friendly recap of 2026, built with NYS DS components and tokens."
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>NYS Design System 2026 Wrapped</title>
+
+    <meta property="og:title" content="{{ site.title }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:url" content="{{ site.url }}{{page.url}}">
+    <meta property="og:description" content="{{ description }}">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="{{ site.url }}/assets/i/2025/wrapped/wrapped-og-share.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:logo" content="{{ site.url }}/assets/img/nysds-logo-mark.png">
+
+    <!-- REQUIRED: do not add/remove CSS/JS references -->
+    <link rel="stylesheet" href="../assets/css/vendor/nysds-full.min.css" />
+    <link rel="stylesheet" href="../assets/fonts/nysds-fonts.css" />
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M4JYBJ7BZY"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+
+      gtag('config', 'G-M4JYBJ7BZY');
+    </script>
+
+    <style>
+      /* Minimum text size requirement */
+      html {
+        font-size: 18px;
+      }
+
+      body {
+        margin: 0;
+        color: var(--nys-color-text);
+        background: var(--nys-color-surface);
+        font-family: "Proxima Nova", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      .wrapped-app {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      main {
+        flex: 1;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapped-app">
+      <!-- Required site chrome -->
+      <nys-globalheader agencyName="Design System 2026 Wrapped"></nys-globalheader>
+      <main id="main" class="nys-grid-container">
+        content to come
+      </main>
+      <nys-globalfooter agencyName="Design System 2026 Wrapped"></nys-globalfooter>
+    </div>
+
+    <!-- REQUIRED: do not add/remove CSS/JS references -->
+    <script src="../assets/js/vendor/nysds.js" type="module"></script>
+  </body>
+</html>
