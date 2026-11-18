@@ -1,8 +1,7 @@
 ---
 permalink: /2026-wrapped/
 title: "NYS Design System 2026 Wrapped"
-description: "Which NYS Design System component are you? Take the 2026 Wrapped quiz to reveal your archetype and explore
-this year's stats."
+description: "Which NYS Design System component are you? Take the 2026 Wrapped quiz to reveal your archetype and explore this year's stats."
 ---
 
 <!doctype html>
@@ -49,7 +48,7 @@ this year's stats."
 </head>
 
 <body>
-  <div class="wrapped-app">
+  <div>
     <!-- Required site chrome -->
     <nys-globalheader appName="Design System 2026 Wrapped">
       <ul>
@@ -59,30 +58,30 @@ this year's stats."
 
     <main id="main">
       <!-- QUIZ DECK CONTAINER -->
-      <div id="quizDeck" class="quiz-deck" aria-live="polite">
+      <div id="quizDeck" aria-live="polite">
 
         <!-- SLIDE 0: INTRO SCREEN -->
-        <section class="quiz-slide bg-intro" data-slide="0" data-active="true" aria-roledescription="slide"
+        <section class="quiz-slide" data-slide="0" data-active="true" aria-roledescription="slide"
           role="region" aria-label="Quiz Introduction" tabindex="-1">
-          <div class="intro-content">
-            <p class="intro-kicker">NYS Design System • 2026 Wrapped</p>
-            <h1 class="intro-title">Which NYSDS Component Are You?</h1>
-            <p class="intro-description">
+          <div>
+            <p>NYS Design System • 2026 Wrapped</p>
+            <h1>Which NYSDS Component Are You?</h1>
+            <p>
               Diagnose your design system personality archetype, unlock key 2026 milestones, and see how you match with
               the year's achievements.
             </p>
 
             <!-- Optional Year-in-Review Stats Preview -->
-            <div class="intro-stats-preview">
-              <div class="intro-stat-pill">
+            <div>
+              <div>
                 <strong>[Stat 1]</strong>
                 <span>[e.g. 35+ Releases]</span>
               </div>
-              <div class="intro-stat-pill">
+              <div>
                 <strong>[Stat 2]</strong>
                 <span>[e.g. 50k+ Inserts]</span>
               </div>
-              <div class="intro-stat-pill">
+              <div>
                 <strong>[Stat 3]</strong>
                 <span>[e.g. 47% Leaner]</span>
               </div>
@@ -95,91 +94,68 @@ this year's stats."
         </section>
 
         <!-- SLIDE 1: THE ONE QUESTION (WITH 6 CLICKABLE NYS-CARDS) -->
-        <section class="quiz-slide bg-question" data-slide="1" data-active="false" aria-roledescription="slide"
+        <section class="quiz-slide" data-slide="1" data-active="false" aria-roledescription="slide"
           role="region" aria-label="Question 1 of 1" tabindex="-1">
-          <div class="question-wrapper">
-            <div class="question-header">
-              <span class="question-kicker">Question 1 of 1</span>
-              <h2 class="question-title">[Question 1 Prompt Title Goes Here]</h2>
-              <p class="question-subtitle">[Question 1 description, 2026 context, or stat hook goes here]</p>
+          <div>
+            <div>
+              <span>Question 1 of 1</span>
+              <h2>[Question 1 Prompt Title Goes Here]</h2>
+              <p>[Question 1 description, 2026 context, or stat hook goes here]</p>
             </div>
 
             <!-- 6-Answer Grid using clickable <nys-card> components -->
             <div class="nys-grid-row nys-grid-gap" style="--nys-card-height: 100%;">
               <!-- Card A -> Archetype 1 -->
-              <div
-                class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
-                <nys-card class="quiz-answer-card" data-question="1" data-archetype="1"
+              <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
+                <nys-card data-question="1" data-archetype="1"
                   heading="[Option 1A Answer text goes here]" headingLevel="h3"
                   description="[Option 1A note or stat hint]" size="md" onclick="void 0">
-
-                  <div slot="footer" class="card-select-footer">
-                    <span class="card-select-status">Tap to select</span>
-                  </div>
+                  <div slot="footer">Tap to select</div>
                 </nys-card>
               </div>
 
               <!-- Card B -> Archetype 2 -->
-              <div
-                class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
-                <nys-card class="quiz-answer-card" data-question="1" data-archetype="2"
+              <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
+                <nys-card data-question="1" data-archetype="2"
                   heading="[Option 1B Answer text goes here]" headingLevel="h3"
                   description="[Option 1B note or stat hint]" size="md" onclick="void 0">
-                  <div slot="footer" class="card-select-footer">
-                    <span class="card-select-status">Tap to select</span>
-                  </div>
+                  <div slot="footer">Tap to select</div>
                 </nys-card>
               </div>
 
               <!-- Card C -> Archetype 3 -->
-              <div
-                class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
-                <nys-card class="quiz-answer-card" data-question="1" data-archetype="3"
+              <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
+                <nys-card data-question="1" data-archetype="3"
                   heading="[Option 1C Answer text goes here]" headingLevel="h3"
                   description="[Option 1C note or stat hint]" size="md" onclick="void 0">
-
-                  <div slot="footer" class="card-select-footer">
-                    <span class="card-select-status">Tap to select</span>
-                  </div>
+                  <div slot="footer">Tap to select</div>
                 </nys-card>
               </div>
 
               <!-- Card D -> Archetype 4 -->
-              <div
-                class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
-                <nys-card class="quiz-answer-card" data-question="1" data-archetype="4"
+              <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
+                <nys-card data-question="1" data-archetype="4"
                   heading="[Option 1D Answer text goes here]" headingLevel="h3"
                   description="[Option 1D note or stat hint]" size="md" onclick="void 0">
-
-                  <div slot="footer" class="card-select-footer">
-                    <span class="card-select-status">Tap to select</span>
-                  </div>
+                  <div slot="footer">Tap to select</div>
                 </nys-card>
               </div>
 
               <!-- Card E -> Archetype 5 -->
-              <div
-                class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
-                <nys-card class="quiz-answer-card" data-question="1" data-archetype="5"
+              <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
+                <nys-card data-question="1" data-archetype="5"
                   heading="[Option 1E Answer text goes here]" headingLevel="h3"
                   description="[Option 1E note or stat hint]" size="md" onclick="void 0">
-
-                  <div slot="footer" class="card-select-footer">
-                    <span class="card-select-status">Tap to select</span>
-                  </div>
+                  <div slot="footer">Tap to select</div>
                 </nys-card>
               </div>
 
               <!-- Card F -> Archetype 6 -->
-              <div
-                class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
-                <nys-card class="quiz-answer-card" data-question="1" data-archetype="6"
+              <div class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
+                <nys-card data-question="1" data-archetype="6"
                   heading="[Option 1F Answer text goes here]" headingLevel="h3"
                   description="[Option 1F note or stat hint]" size="md" onclick="void 0">
-
-                  <div slot="footer" class="card-select-footer">
-                    <span class="card-select-status">Tap to select</span>
-                  </div>
+                  <div slot="footer">Tap to select</div>
                 </nys-card>
               </div>
             </div>
@@ -187,31 +163,31 @@ this year's stats."
         </section>
 
         <!-- SLIDE 2: RESULTS SCREEN -->
-        <section class="quiz-slide bg-results" data-slide="2" data-active="false" aria-roledescription="slide"
+        <section class="quiz-slide" data-slide="2" data-active="false" aria-roledescription="slide"
           role="region" aria-label="Your Quiz Result" tabindex="-1">
-          <div class="results-wrapper">
+          <div>
             <!-- Result Hero Card -->
-            <div class="result-hero-card">
-              <span class="result-kicker">Your NYSDS Archetype</span>
+            <div>
+              <span>Your NYSDS Archetype</span>
               <div>
-                <span id="resultBadge" class="result-badge">[Badge: High Contrast • 100% Dependable]</span>
+                <span id="resultBadge">[Badge: High Contrast • 100% Dependable]</span>
               </div>
-              <h2 id="resultComponent" class="result-component-name">&lt;nys-component&gt;</h2>
-              <p id="resultTagline" class="result-tagline">[The Workhorse of New York State]</p>
-              <p id="resultDescription" class="result-description">
+              <h2 id="resultComponent">&lt;nys-component&gt;</h2>
+              <p id="resultTagline">[The Workhorse of New York State]</p>
+              <p id="resultDescription">
                 [Detailed archetype personality summary goes here. Explains how you approach projects, your relationship
                 to design tokens and accessibility, and your spirit role on state teams.]
               </p>
 
               <!-- Dynamic Component Stat Callout -->
-              <div class="result-stat-callout">
+              <div>
                 <strong>2026 Highlight</strong>
                 <p id="resultStatCallout">[Component 2026 stat highlight goes here, e.g. Inserted 8,000+ times across
                   agency workspaces this year.]</p>
               </div>
 
               <!-- Action Buttons -->
-              <div class="result-actions">
+              <div>
                 <nys-button id="shareResultBtn" label="Share Result" variant="primary"></nys-button>
                 <nys-button id="restartQuizBtn" label="Retake Quiz" variant="outline"></nys-button>
                 <nys-button id="exploreComponentsBtn" label="Explore Components" variant="outline"
@@ -220,35 +196,34 @@ this year's stats."
             </div>
 
             <!-- 2026 Wrapped Grand Totals Section -->
-            <div class="grand-stats-section">
-              <h3 class="grand-stats-title">NYS Design System • 2026 By The Numbers</h3>
-              <p class="grand-stats-subtitle">A look at what New York State built, tested, and shipped together this
-                year.</p>
+            <div>
+              <h3>NYS Design System • 2026 By The Numbers</h3>
+              <p>A look at what New York State built, tested, and shipped together this year.</p>
 
-              <div class="grand-stats-grid">
-                <div class="grand-stat-card">
-                  <p class="grand-stat-number">[35+]</p>
-                  <p class="grand-stat-label">Releases Published</p>
+              <div>
+                <div>
+                  <p>[35+]</p>
+                  <p>Releases Published</p>
                 </div>
-                <div class="grand-stat-card">
-                  <p class="grand-stat-number">[500+]</p>
-                  <p class="grand-stat-label">Pull Requests Merged</p>
+                <div>
+                  <p>[500+]</p>
+                  <p>Pull Requests Merged</p>
                 </div>
-                <div class="grand-stat-card">
-                  <p class="grand-stat-number">[200+]</p>
-                  <p class="grand-stat-label">Automated Component Tests</p>
+                <div>
+                  <p>[200+]</p>
+                  <p>Automated Component Tests</p>
                 </div>
-                <div class="grand-stat-card">
-                  <p class="grand-stat-number">[50k+]</p>
-                  <p class="grand-stat-label">Figma Component Inserts</p>
+                <div>
+                  <p>[50k+]</p>
+                  <p>Figma Component Inserts</p>
                 </div>
-                <div class="grand-stat-card">
-                  <p class="grand-stat-number">[~47%]</p>
-                  <p class="grand-stat-label">Bundle Size Reduction</p>
+                <div>
+                  <p>[~47%]</p>
+                  <p>Bundle Size Reduction</p>
                 </div>
-                <div class="grand-stat-card">
-                  <p class="grand-stat-number">[250+]</p>
-                  <p class="grand-stat-label">Teams Community Members</p>
+                <div>
+                  <p>[250+]</p>
+                  <p>Teams Community Members</p>
                 </div>
               </div>
             </div>
@@ -257,20 +232,20 @@ this year's stats."
       </div>
 
       <!-- STICKY BOTTOM NAVIGATION BAR -->
-      <div id="quizNavBar" class="quiz-nav-bar" style="display: none;">
-        <div class="quiz-nav-inner">
-          <div class="quiz-progress-section">
-            <div class="quiz-progress-meta">
+      <div id="quizNavBar" style="display: none;">
+        <div>
+          <div>
+            <div>
               <span id="quizProgressLabel">Question 1 of 1</span>
               <span id="quizProgressPercent">100%</span>
             </div>
-            <div class="quiz-progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+            <div id="quizProgressTrack" role="progressbar" aria-valuemin="0" aria-valuemax="100"
               aria-valuenow="100">
-              <div id="quizProgressFill" class="quiz-progress-fill" style="width: 100%;"></div>
+              <div id="quizProgressFill" style="width: 100%;"></div>
             </div>
           </div>
 
-          <div class="quiz-nav-buttons">
+          <div>
             <nys-button id="prevBtn" label="Back" variant="outline"></nys-button>
             <nys-button id="nextBtn" label="See Results" variant="primary" disabled></nys-button>
           </div>
@@ -361,7 +336,7 @@ this year's stats."
       const progressLabel = document.getElementById("quizProgressLabel");
       const progressPercent = document.getElementById("quizProgressPercent");
       const progressFill = document.getElementById("quizProgressFill");
-      const progressTrack = document.querySelector(".quiz-progress-track");
+      const progressTrack = document.getElementById("quizProgressTrack");
 
       const resultBadge = document.getElementById("resultBadge");
       const resultComponent = document.getElementById("resultComponent");
@@ -429,14 +404,14 @@ this year's stats."
         // Deselect all cards for this question
         document.querySelectorAll(`nys-card[data-question="${qIdx}"]`).forEach((c) => {
           c.classList.remove("selected");
-          const status = c.querySelector(".card-select-status");
-          if (status) status.textContent = "Tap to select";
+          const footer = c.querySelector('[slot="footer"]');
+          if (footer) footer.textContent = "Tap to select";
         });
 
         // Mark selected
         card.classList.add("selected");
-        const status = card.querySelector(".card-select-status");
-        if (status) status.textContent = "✓ Selected";
+        const footer = card.querySelector('[slot="footer"]');
+        if (footer) footer.textContent = "✓ Selected";
 
         userAnswers[qIdx] = archetype;
         updateNavButtons(qIdx);
@@ -488,10 +463,10 @@ this year's stats."
         for (let q = 1; q <= TOTAL_QUESTIONS; q++) {
           delete userAnswers[q];
         }
-        document.querySelectorAll("nys-card.quiz-answer-card").forEach((c) => {
+        document.querySelectorAll("nys-card[data-question]").forEach((c) => {
           c.classList.remove("selected");
-          const status = c.querySelector(".card-select-status");
-          if (status) status.textContent = "Tap to select";
+          const footer = c.querySelector('[slot="footer"]');
+          if (footer) footer.textContent = "Tap to select";
         });
         showSlide(0);
       }
@@ -533,7 +508,7 @@ this year's stats."
         onNysClick(restartQuizBtn, restartQuiz);
 
         // Clickable nys-cards
-        document.querySelectorAll("nys-card.quiz-answer-card").forEach((card) => {
+        document.querySelectorAll("nys-card[data-question]").forEach((card) => {
           bindCardClick(card, () => selectAnswer(card));
         });
 
