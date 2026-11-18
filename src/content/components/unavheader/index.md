@@ -181,6 +181,16 @@ When New York State publishes an urgent message, such as a severe weather event 
       <td>String</td>
       <td><code>""</code></td>
     </tr>
+    <tr>
+      <td><code>languages</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+    </tr>
+    <tr>
+      <td><code>landmarkLabel</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+    </tr>
   </table>
 </nys-table>
 

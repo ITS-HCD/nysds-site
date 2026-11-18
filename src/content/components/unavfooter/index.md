@@ -44,7 +44,20 @@ There are no configurable options for this component. It is intended to be used 
 
 {% block properties %}
 
-There are no properties for this component.
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Property</th>
+      <th>Type</th>
+      <th>Default</th>
+    </tr>
+    <tr>
+      <td><code>landmarkLabel</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+    </tr>
+  </table>
+</nys-table>
 
 {% endblock %}
 
