@@ -338,6 +338,12 @@ Add an `onClick` if the content of the step is retrieved from an API or a functi
       <td><code>undefined</code></td>
       <td><code>&lt;nys-step&gt;</code></td>
     </tr>
+    <tr>
+      <td><code>counterText</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+      <td><code>&lt;nys-stepper&gt;</code></td>
+    </tr>
   </table>
 </nys-table>
 

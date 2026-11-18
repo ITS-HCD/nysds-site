@@ -132,13 +132,13 @@ The `<nys-iconlist>` component includes the following accessibility-focused feat
       <td><code>divider</code></td>
       <td>boolean</td>
       <td><code>false</code></td>
-      <td><code>&lt;nys-iconlist&gt;</code></td>
+      <td><code>both</code></td>
     </tr>
     <tr>
       <td><code>inverted</code></td>
       <td>boolean</td>
       <td><code>false</code></td>
-      <td><code>&lt;nys-iconlist&gt;</code></td>
+      <td><code>both</code></td>
     </tr>
     <tr>
       <td><code>icon</code></td>

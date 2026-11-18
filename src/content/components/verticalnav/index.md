@@ -385,6 +385,12 @@ Call `open()`, `close()`, or `toggle()` on the mobile version of `nys-verticalna
       <td><code>false</code></td>
       <td>Hides the visible heading. <code>heading</code> is still used as the nav's accessible label.</td>
     </tr>
+    <tr>
+      <td><code>expanded</code></td>
+      <td>Boolean</td>
+      <td><code>false</code></td>
+      <td>Opens the group by default.</td>
+    </tr>
   </table>
 </nys-table>
 
