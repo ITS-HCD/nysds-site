@@ -294,7 +294,7 @@ The `form` property associates this component with a `<form>` element by ID, eve
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-The `<nys-textarea>` component emits **four** custom Javascript events:
+The `<nys-textarea>` component emits **six** custom Javascript events:
 
 ### Event details
 
@@ -334,6 +334,16 @@ The `<nys-textarea>` component emits **four** custom Javascript events:
           <li><code>value</code> (string): The currently selected text.</li>
         </ul>
       </td>
+    </tr>
+    <tr>
+      <td><code>nys-change</code></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>nys-selectionchange</code></td>
+      <td></td>
+      <td></td>
     </tr>
   </table>
 </nys-table>

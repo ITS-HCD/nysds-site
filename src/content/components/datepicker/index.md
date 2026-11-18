@@ -331,7 +331,7 @@ The `form` property associates this component with a `<form>` element by ID, eve
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-The `<nys-datepicker>` component emits **two** custom JavaScript events:
+The `<nys-datepicker>` component emits **four** custom JavaScript events:
 
 ### Event details
 
@@ -355,6 +355,16 @@ The `<nys-datepicker>` component emits **two** custom JavaScript events:
     <tr>
       <td><code>nys-blur</code></td>
       <td>Fired when the input or calendar loses focus. Triggers validation.</td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>nys-change</code></td>
+      <td></td>
+      <td>—</td>
+    </tr>
+    <tr>
+      <td><code>nys-focus</code></td>
+      <td></td>
       <td>—</td>
     </tr>
   </table>

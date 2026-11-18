@@ -194,7 +194,28 @@ The `nys-video` does not have any css variables because this component must rema
 
 {% block events %}
 
-This component does not emit any custom events.
+<nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
+
+The `<nys-video>` component emits **one** custom Javascript event:
+
+### Event details
+
+<nys-table striped>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Return details</th>
+    </tr>
+    <tr>
+      <td><code>nys-video-play</code></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</nys-table>
+
+<br/>
 
 {% endblock %}
 

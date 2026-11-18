@@ -274,6 +274,18 @@ Set `required` to make a checkbox or group of checkboxes mandatory. It can be ap
       <td>both</td>
     </tr>
     <tr>
+      <td><code>hideLabel</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+      <td>both</td>
+    </tr>
+    <tr>
+      <td><code>labelledBy</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+      <td>both</td>
+    </tr>
+    <tr>
       <td><code>optional</code></td>
       <td>boolean</td>
       <td><code>false</code></td>
@@ -314,6 +326,12 @@ Set `required` to make a checkbox or group of checkboxes mandatory. It can be ap
       <td>String | <code>null</code></td>
       <td><code>null</code></td>
       <td>both</td>
+    </tr>
+    <tr>
+      <td><code>tooltip</code></td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
   </table>
 </nys-table>

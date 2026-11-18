@@ -279,6 +279,36 @@ Set the `inverted` when the button is on a dark background.
           <td><code>""</code></td>
       </tr>
       <tr>
+          <td><code>ariaControls</code></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>ariaExpanded</code></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>ariaCurrent</code></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>ariaDescribedBy</code></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>circle</code></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
+          <td><code>icon</code></td>
+          <td></td>
+          <td></td>
+      </tr>
+      <tr>
           <td><code>disabled</code></td>
           <td>boolean</td>
           <td><code>false</code></td>

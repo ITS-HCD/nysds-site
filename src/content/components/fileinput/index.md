@@ -246,7 +246,7 @@ The `form` property associates this component with a `<form>` element by ID, eve
 
 <nys-alert type="info"><span>Some components emit `nys-` events with a `detail` object containing the relevant data, instead of relying on native events alone. Stick to one approach per interaction, don't mix native and `nys-` listeners for the same thing.</span></nys-alert>
 
-The `<nys-fileinput>` component emits **one** custom Javascript event:
+The `<nys-fileinput>` component emits **three** custom Javascript event:
 
 ### Event details
 
@@ -274,6 +274,16 @@ The `<nys-fileinput>` component emits **one** custom Javascript event:
           <li><code>errorMsg</code> (string, optional)</li>
         </ul>
       </td>
+    </tr>
+    <tr>
+      <td><code>nys-focus</code></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><code>nys-blur</code></td>
+      <td></td>
+      <td></td>
     </tr>
   </table>
 </nys-table>
