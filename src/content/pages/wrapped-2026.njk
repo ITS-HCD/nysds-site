@@ -36,472 +36,6 @@ this year's stats."
 
     gtag('config', 'G-M4JYBJ7BZY');
   </script>
-
-  <style>
-    /* Minimum text size requirement */
-    html {
-      font-size: 18px;
-    }
-
-    body {
-      margin: 0;
-      color: var(--nys-color-text);
-      background: var(--nys-color-surface);
-      font-family: "Proxima Nova", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    }
-
-    .wrapped-app {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Slide deck container */
-    .quiz-deck {
-      position: relative;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .quiz-slide {
-      display: none;
-      flex: 1;
-      width: 100%;
-      padding: 2.5rem 1rem 5rem;
-      box-sizing: border-box;
-    }
-
-    .quiz-slide[data-active="true"] {
-      display: block;
-      animation: slideFadeIn 300ms ease-out forwards;
-    }
-
-    @keyframes slideFadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(12px);
-      }
-
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Background themes */
-    .bg-intro {
-      background:
-        radial-gradient(1200px 600px at 20% 20%, var(--nys-color-theme-mid), transparent 60%),
-        radial-gradient(900px 500px at 80% 30%, var(--nys-color-theme), transparent 55%),
-        linear-gradient(135deg, var(--nys-color-theme-stronger), var(--nys-color-theme-strong));
-      color: var(--nys-color-text-reverse);
-    }
-
-    .bg-question {
-      background: var(--nys-color-surface);
-      color: var(--nys-color-text);
-    }
-
-    .bg-results {
-      background:
-        radial-gradient(900px 500px at 20% 15%, var(--nys-color-theme-weak), transparent 60%),
-        radial-gradient(800px 450px at 80% 30%, var(--nys-color-info-weak, rgba(0, 100, 200, 0.08)), transparent 55%),
-        linear-gradient(180deg, var(--nys-color-surface), var(--nys-color-theme-faint, #f4f8fb));
-      color: var(--nys-color-text);
-    }
-
-    /* Intro slide layout */
-    .intro-content {
-      max-width: 760px;
-      margin: 0 auto;
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-
-    .intro-kicker {
-      font-size: 1.1rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      font-weight: 700;
-      opacity: 0.9;
-      margin-bottom: 0.75rem;
-    }
-
-    .intro-title {
-      font-size: clamp(2.4rem, 6vw, 4rem);
-      line-height: 1.1;
-      margin: 0 0 1.25rem;
-      font-weight: 800;
-    }
-
-    .intro-description {
-      font-size: clamp(1.15rem, 2.5vw, 1.45rem);
-      line-height: 1.45;
-      opacity: 0.95;
-      margin: 0 auto 2.5rem;
-      max-width: 60ch;
-    }
-
-    .intro-stats-preview {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin: 2.5rem auto 3rem;
-      max-width: 650px;
-    }
-
-    .intro-stat-pill {
-      background: rgba(255, 255, 255, 0.12);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.25);
-      border-radius: 1rem;
-      padding: 1rem 0.75rem;
-    }
-
-    .intro-stat-pill strong {
-      display: block;
-      font-size: 1.75rem;
-    }
-
-    .intro-stat-pill span {
-      font-size: 0.9rem;
-      opacity: 0.9;
-    }
-
-    /* Question slide layout */
-    .question-wrapper {
-      max-width: 1040px;
-      margin: 0 auto;
-    }
-
-    .question-header {
-      margin-bottom: 2rem;
-    }
-
-    .question-kicker {
-      display: inline-block;
-      font-size: 0.95rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      color: var(--nys-color-theme);
-      margin-bottom: 0.5rem;
-    }
-
-    .question-title {
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      line-height: 1.2;
-      margin: 0 0 0.5rem;
-      font-weight: 700;
-    }
-
-    .question-subtitle {
-      font-size: 1.15rem;
-      color: var(--nys-color-neutral-700, #555);
-      margin: 0;
-      max-width: 70ch;
-    }
-
-    /* Clickable nys-card styling */
-    nys-card.quiz-answer-card {
-      --nys-card-height: 100%;
-      width: 100%;
-      display: block;
-      border-radius: var(--nys-radius-xl, 12px);
-      cursor: pointer;
-    }
-
-    nys-card.quiz-answer-card:hover {
-      transform: translateY(-3px);
-    }
-
-    nys-card.quiz-answer-card.selected {
-      outline: 3px solid var(--nys-color-theme, #154973);
-      outline-offset: 3px;
-      border-radius: var(--nys-radius-xl, 12px);
-    }
-
-    /* Slotted preheading badge */
-    .card-option-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--nys-color-theme, #154973);
-    }
-
-    .card-letter {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 1.85rem;
-      height: 1.85rem;
-      border-radius: 50%;
-      background: var(--nys-color-neutral-100, #eef0f2);
-      color: var(--nys-color-text, #1b1b1b);
-      font-weight: 800;
-      font-size: 0.9rem;
-    }
-
-    nys-card.quiz-answer-card:hover .card-letter,
-    nys-card.quiz-answer-card.selected .card-letter {
-      background: var(--nys-color-theme, #154973);
-      color: var(--nys-color-text-reverse, #ffffff);
-    }
-
-    /* Slotted footer action */
-    .card-select-footer {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      width: 100%;
-      padding-top: 0.5rem;
-    }
-
-    .card-select-status {
-      font-size: 0.85rem;
-      font-weight: 600;
-      color: var(--nys-color-neutral-600, #666);
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-    }
-
-    nys-card.quiz-answer-card.selected .card-select-status {
-      color: var(--nys-color-theme, #154973);
-      font-weight: 700;
-    }
-
-    /* Sticky Bottom Navigation Bar */
-    .quiz-nav-bar {
-      position: sticky;
-      bottom: 0;
-      background: var(--nys-color-surface);
-      border-top: 1px solid var(--nys-color-base-weak, #d6d7d9);
-      padding: 0.85rem 1rem;
-      z-index: 50;
-    }
-
-    .quiz-nav-inner {
-      max-width: 960px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 1rem;
-    }
-
-    .quiz-progress-section {
-      flex: 1;
-      max-width: 380px;
-    }
-
-    .quiz-progress-meta {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 0.35rem;
-      color: var(--nys-color-neutral-700, #444);
-    }
-
-    .quiz-progress-track {
-      height: 0.5rem;
-      width: 100%;
-      background: var(--nys-color-neutral-200, #e2e4e8);
-      border-radius: 999px;
-      overflow: hidden;
-    }
-
-    .quiz-progress-fill {
-      height: 100%;
-      width: 0%;
-      background: var(--nys-color-theme);
-      border-radius: 999px;
-    }
-
-    .quiz-nav-buttons {
-      display: flex;
-      align-items: center;
-      gap: 0.75rem;
-    }
-
-    /* Results Page Styles */
-    .results-wrapper {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .result-hero-card {
-      background: var(--nys-color-surface);
-      border: 2px solid var(--nys-color-base-weak, #d6d7d9);
-      border-radius: 1.5rem;
-      padding: 2.5rem 2rem;
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
-      text-align: center;
-      margin-bottom: 2.5rem;
-    }
-
-    .result-kicker {
-      display: inline-block;
-      font-size: 1rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--nys-color-theme);
-      margin-bottom: 0.75rem;
-    }
-
-    .result-badge {
-      display: inline-block;
-      padding: 0.4rem 1rem;
-      background: var(--nys-color-theme-faint, #f0f7fc);
-      border: 1px solid var(--nys-color-theme);
-      color: var(--nys-color-theme);
-      border-radius: 999px;
-      font-size: 0.95rem;
-      font-weight: 700;
-      margin-bottom: 1.25rem;
-    }
-
-    .result-component-name {
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-      line-height: 1.08;
-      font-weight: 800;
-      margin: 0 0 0.5rem;
-      color: var(--nys-color-text);
-    }
-
-    .result-tagline {
-      font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-      font-weight: 600;
-      color: var(--nys-color-theme);
-      margin: 0 0 1.5rem;
-    }
-
-    .result-description {
-      font-size: 1.2rem;
-      line-height: 1.55;
-      max-width: 65ch;
-      margin: 0 auto 2rem;
-      color: var(--nys-color-neutral-800, #333);
-    }
-
-    .result-stat-callout {
-      background: var(--nys-color-theme-faint, #f4f8fb);
-      border-left: 4px solid var(--nys-color-theme);
-      border-radius: 0 0.75rem 0.75rem 0;
-      padding: 1rem 1.25rem;
-      margin: 0 auto 2rem;
-      max-width: 600px;
-      text-align: left;
-    }
-
-    .result-stat-callout strong {
-      display: block;
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      color: var(--nys-color-theme);
-      letter-spacing: 0.05em;
-      margin-bottom: 0.25rem;
-    }
-
-    .result-stat-callout p {
-      margin: 0;
-      font-size: 1.05rem;
-      line-height: 1.4;
-    }
-
-    .result-actions {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 1rem;
-      margin-top: 1.5rem;
-    }
-
-    /* Year in Review Grand Stats Section */
-    .grand-stats-section {
-      margin-top: 3rem;
-    }
-
-    .grand-stats-title {
-      font-size: 1.8rem;
-      font-weight: 700;
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-
-    .grand-stats-subtitle {
-      text-align: center;
-      color: var(--nys-color-neutral-600, #666);
-      margin-bottom: 1.75rem;
-      font-size: 1.1rem;
-    }
-
-    .grand-stats-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1rem;
-    }
-
-    @media (min-width: 640px) {
-      .grand-stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 900px) {
-      .grand-stats-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-
-    .grand-stat-card {
-      background: var(--nys-color-surface);
-      border: 1px solid var(--nys-color-base-weak, #d6d7d9);
-      border-radius: 1rem;
-      padding: 1.5rem;
-      text-align: center;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    }
-
-    .grand-stat-number {
-      font-size: clamp(2.2rem, 4vw, 3rem);
-      font-weight: 800;
-      color: var(--nys-color-theme);
-      line-height: 1.1;
-      margin: 0 0 0.35rem;
-    }
-
-    .grand-stat-label {
-      font-size: 1rem;
-      font-weight: 600;
-      margin: 0;
-      color: var(--nys-color-neutral-700, #444);
-    }
-
-    /* Accessibility helper */
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0, 0, 0, 0);
-      white-space: nowrap;
-      border: 0;
-    }
-  </style>
 </head>
 
 <body>
@@ -545,7 +79,7 @@ this year's stats."
             </div>
 
             <div>
-              <nys-button id="startQuizBtn" label="Start Quiz" variant="outline"></nys-button>
+              <nys-button id="startQuizBtn" label="Start Quiz" inverted></nys-button>
             </div>
           </div>
         </section>
@@ -567,7 +101,7 @@ this year's stats."
                 class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
                 <nys-card class="quiz-answer-card" data-question="1" data-archetype="1"
                   heading="[Option 1A Answer text goes here]" headingLevel="h3"
-                  description="[Option 1A note or stat hint]" size="md" elevated onclick="void 0">
+                  description="[Option 1A note or stat hint]" size="md" onclick="void 0">
 
                   <div slot="footer" class="card-select-footer">
                     <span class="card-select-status">Tap to select</span>
@@ -580,7 +114,7 @@ this year's stats."
                 class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
                 <nys-card class="quiz-answer-card" data-question="1" data-archetype="2"
                   heading="[Option 1B Answer text goes here]" headingLevel="h3"
-                  description="[Option 1B note or stat hint]" size="md" elevated onclick="void 0">
+                  description="[Option 1B note or stat hint]" size="md" onclick="void 0">
                   <div slot="footer" class="card-select-footer">
                     <span class="card-select-status">Tap to select</span>
                   </div>
@@ -592,7 +126,7 @@ this year's stats."
                 class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
                 <nys-card class="quiz-answer-card" data-question="1" data-archetype="3"
                   heading="[Option 1C Answer text goes here]" headingLevel="h3"
-                  description="[Option 1C note or stat hint]" size="md" elevated onclick="void 0">
+                  description="[Option 1C note or stat hint]" size="md" onclick="void 0">
 
                   <div slot="footer" class="card-select-footer">
                     <span class="card-select-status">Tap to select</span>
@@ -605,7 +139,7 @@ this year's stats."
                 class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
                 <nys-card class="quiz-answer-card" data-question="1" data-archetype="4"
                   heading="[Option 1D Answer text goes here]" headingLevel="h3"
-                  description="[Option 1D note or stat hint]" size="md" elevated onclick="void 0">
+                  description="[Option 1D note or stat hint]" size="md" onclick="void 0">
 
                   <div slot="footer" class="card-select-footer">
                     <span class="card-select-status">Tap to select</span>
@@ -618,7 +152,7 @@ this year's stats."
                 class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
                 <nys-card class="quiz-answer-card" data-question="1" data-archetype="5"
                   heading="[Option 1E Answer text goes here]" headingLevel="h3"
-                  description="[Option 1E note or stat hint]" size="md" elevated onclick="void 0">
+                  description="[Option 1E note or stat hint]" size="md" onclick="void 0">
 
                   <div slot="footer" class="card-select-footer">
                     <span class="card-select-status">Tap to select</span>
@@ -631,7 +165,7 @@ this year's stats."
                 class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex nys-margin-b-400">
                 <nys-card class="quiz-answer-card" data-question="1" data-archetype="6"
                   heading="[Option 1F Answer text goes here]" headingLevel="h3"
-                  description="[Option 1F note or stat hint]" size="md" elevated onclick="void 0">
+                  description="[Option 1F note or stat hint]" size="md" onclick="void 0">
 
                   <div slot="footer" class="card-select-footer">
                     <span class="card-select-status">Tap to select</span>
