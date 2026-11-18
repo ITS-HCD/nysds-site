@@ -157,6 +157,16 @@ The NYS Brand Logo can be toggled on via the `nysLogo` property for back-office 
       <td>String (URL)</td>
       <td><code>""</code></td>
     </tr>
+    <tr>
+      <td><code>nysLogo</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+    </tr>
+    <tr>
+      <td><code>landmarkLabel</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+    </tr>
   </table>
 </nys-table>
 

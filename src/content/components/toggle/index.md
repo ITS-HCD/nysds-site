@@ -192,6 +192,11 @@ Set the `inverted` when the component is on a dark background.
       <td>String , <code>null</code></td>
       <td><code>null</code></td>
     </tr>
+    <tr>
+      <td><code>inverted</code></td>
+      <td></td>
+      <td></td>
+    </tr>
   </table>
 </nys-table>
 

@@ -253,6 +253,11 @@ A forced action modal requires users to make a choice before continuing. Set the
       <td><code>"sm"</code> , <code>"md"</code> , <code>"lg"</code></td>
       <td><code>"md"</code></td>
     </tr>
+  <tr>
+      <td><code>ariaLabel</code></td>
+      <td></td>
+      <td></td>
+    </tr>
   </table>
 </nys-table>
 

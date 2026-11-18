@@ -323,6 +323,24 @@ Set the `inverted` when the component is on a dark background.
       <td><code>null</code></td>
       <td><code>&lt;nys-select&gt;</code></td>
     </tr>
+    <tr>
+      <td><code>ariaLabel</code></td>
+      <td></td>
+      <td></td>
+      <td><code>&lt;nys-select&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>tooltip</code></td>
+      <td></td>
+      <td></td>
+      <td><code>&lt;nys-select&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>inverted</code></td>
+      <td></td>
+      <td></td>
+      <td><code>&lt;nys-select&gt;</code></td>
+    </tr>
   </table>
 </nys-table>
 

@@ -147,6 +147,16 @@ Use the prop `homepageLink` to link your `agencyName` to your homepage.
       <td>String (URL)</td>
       <td><code>""</code></td>
     </tr>
+    <tr>
+      <td><code>agencySubheading</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+    </tr>
+    <tr>
+      <td><code>landmarkLabel</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+    </tr>
   </table>
 </nys-table>
 

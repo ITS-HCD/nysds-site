@@ -292,8 +292,23 @@ Set `disabled` to prevent interaction. The calendar button and input are both di
       <td><code>""</code></td>
     </tr>
     <tr>
+      <td><code>minDate</code></td>
+      <td></td>
+      <td><code>""</code></td>
+    </tr>
+    <tr>
+      <td><code>maxDate</code></td>
+      <td></td>
+      <td><code>""</code></td>
+    </tr>
+    <tr>
       <td><code>tooltip</code></td>
       <td>string</td>
+      <td><code>""</code></td>
+    </tr>
+    <tr>
+      <td><code>type</code></td>
+      <td></td>
       <td><code>""</code></td>
     </tr>
     <tr>
@@ -359,7 +374,7 @@ The `<nys-datepicker>` component emits **four** custom JavaScript events:
     </tr>
     <tr>
       <td><code>nys-change</code></td>
-      <td></td>
+      <td></td> 
       <td>—</td>
     </tr>
     <tr>

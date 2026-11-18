@@ -140,6 +140,12 @@ all `nys-accordionitem` inside the wrapper will display borders.
 <td><code>nys-accordionitem</code></td>
 </tr>
 <tr>
+<td><code>headingLevel</code></td>
+<td>String</td>
+<td><code>""</code></td>
+<td>both</td>
+</tr>
+<tr>
 <td><code>expanded</code></td>
 <td>boolean</td>
 <td><code>false</code></td>
@@ -149,7 +155,7 @@ all `nys-accordionitem` inside the wrapper will display borders.
 <td><code>bordered</code></td>
 <td>boolean</td>
 <td><code>false</code></td>
-<td><code>nys-accordion</code></td>
+<td>both</td>
 </tr>
 <tr>
 <td><code>singleSelect</code></td>
