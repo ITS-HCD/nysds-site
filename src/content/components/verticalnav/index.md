@@ -454,7 +454,7 @@ The `<nys-verticalnav>` component emits **three** custom Javascript event:
       </td>
     </tr>
     <tr>
-      <td><code>nys-vertical-nav-group:nys-verticalnav-toggle</code></td>
+      <td><code>nys-verticalnavgroup:nys-verticalnav-toggle</code></td>
       <td>Fired when the mobile accordion group is expanded or collapsed. Only applies on smaller screens, where the nav collapses into an accordion (see <a href="#page-layout">Page layout</a>). On desktop the nav is always visible and this event does not fire.</td>
       <td>
         <ul>
@@ -464,7 +464,7 @@ The `<nys-verticalnav>` component emits **three** custom Javascript event:
       </td>
     </tr>
     <tr>
-      <td><code>nys-vertical-nav-group:nys-child-resize</code></td>
+      <td><code>nys-verticalnavgroup:nys-child-resize</code></td>
       <td></td>
       <td></td>
     </tr>

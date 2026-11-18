@@ -279,6 +279,18 @@ Set the `inverted` on `<nys-radiogroup>` when the component is on a dark backgro
       <td>both</td>
     </tr>
     <tr>
+      <td><code>labelledby</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+      <td><code>&lt;radiobutton&gt;</code></td>
+    </tr>
+    <tr>
+      <td><code>hideLabel</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+      <td><code>&lt;radiobutton&gt;</code></td>
+    </tr>
+    <tr>
       <td><code>value</code></td>
       <td>String</td>
       <td><code>""</code></td>
@@ -318,7 +330,7 @@ Set the `inverted` on `<nys-radiogroup>` when the component is on a dark backgro
       <td><code>required</code></td>
       <td>boolean</td>
       <td><code>false</code></td>
-      <td><code>&lt;nys-radiogroup&gt;</code></td>
+      <td><code>both</code></td>
     </tr>
     <tr>
       <td><code>showError</code></td>
@@ -327,13 +339,25 @@ Set the `inverted` on `<nys-radiogroup>` when the component is on a dark backgro
       <td><code>&lt;nys-radiogroup&gt;</code></td>
     </tr>
     <tr>
+      <td><code>showOtherError</code></td>
+      <td>boolean</td>
+      <td><code>false</code></td>
+      <td><code>&lt;nys-radiobutton&gt;</code></td>
+    </tr>
+    <tr>
       <td><code>size</code></td>
       <td><code>"sm"</code>, <code>"md"</code></td>
       <td><code>"md"</code></td>
-      <td><code>&lt;nys-radiogroup&gt;</code></td>
+      <td><code>both</code></td>
     </tr>
     <tr>
       <td><code>tile</code></td>
+      <td>boolean</td>
+      <td><code>false</code></td>
+      <td><code>both</code></td>
+    </tr>
+    <tr>
+      <td><code>tooltip</code></td>
       <td>boolean</td>
       <td><code>false</code></td>
       <td><code>&lt;nys-radiogroup&gt;</code></td>
@@ -348,7 +372,7 @@ Set the `inverted` on `<nys-radiogroup>` when the component is on a dark backgro
       <td><code>form</code></td>
       <td>String, <code>null</code></td>
       <td><code>null</code></td>
-      <td><code>&lt;nys-radiogroup&gt;</code></td>
+      <td><code>both</code></td>
     </tr>
   </table>
 </nys-table>
