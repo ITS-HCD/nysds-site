@@ -363,7 +363,21 @@ this year's stats."
       const closeShareBtn = document.getElementById("closeShareBtn");
 
       function clampSlide(idx) {
-        return Math.max(0, Math.min(TOTAL_QUESTIONS + 1, idx));
+        return Math.max(0, Math.min(slides.length - 1, idx));
+      }
+
+      function updateHash(i) {
+        const url = new URL(window.location.href);
+        url.hash = "slide=" + i;
+        history.replaceState(null, "", url.toString());
+      }
+
+      function readHash() {
+        const hash = window.location.hash || "";
+        const match = hash.match(/slide=(\d+)/);
+        if (!match) return null;
+        const n = Number(match[1]);
+        return Number.isFinite(n) ? clampSlide(n) : null;
       }
 
       function showSlide(targetIdx) {
@@ -377,37 +391,43 @@ this year's stats."
           slide.setAttribute("aria-hidden", isActive ? "false" : "true");
         });
 
-        // Manage bottom navigation toolbar visibility
-        if (idx >= 1 && idx <= TOTAL_QUESTIONS) {
-          navBar.style.display = "block";
-          updateProgress(idx);
-          updateNavButtons(idx);
-        } else {
-          navBar.style.display = "none";
+        // Manage bottom navigation toolbar visibility if present
+        if (navBar) {
+          if (idx >= 1 && idx < slides.length - 1) {
+            navBar.style.display = "block";
+            updateProgress(idx);
+            updateNavButtons(idx);
+          } else {
+            navBar.style.display = "none";
+          }
         }
 
         // If on Results slide, calculate and render result
-        if (idx === TOTAL_QUESTIONS + 1) {
+        if (idx === slides.length - 1) {
           renderResults();
         }
+
+        updateHash(idx);
 
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
 
       function updateProgress(questionIdx) {
         const pct = Math.round((questionIdx / TOTAL_QUESTIONS) * 100);
-        progressLabel.textContent = `Question ${questionIdx} of ${TOTAL_QUESTIONS}`;
-        progressPercent.textContent = `${pct}%`;
-        progressFill.style.width = `${pct}%`;
-        progressTrack.setAttribute("aria-valuenow", pct);
+        if (progressLabel) progressLabel.textContent = `Question ${questionIdx} of ${TOTAL_QUESTIONS}`;
+        if (progressPercent) progressPercent.textContent = `${pct}%`;
+        if (progressFill) progressFill.style.width = `${pct}%`;
+        if (progressTrack) progressTrack.setAttribute("aria-valuenow", pct);
       }
 
       function updateNavButtons(questionIdx) {
-        prevBtn.disabled = questionIdx === 0;
+        if (prevBtn) prevBtn.disabled = questionIdx === 0;
 
         const hasAnswer = Boolean(userAnswers[questionIdx]);
-        nextBtn.disabled = !hasAnswer;
-        nextBtn.setAttribute("label", "See Results");
+        if (nextBtn) {
+          nextBtn.disabled = !hasAnswer;
+          nextBtn.setAttribute("label", "See Results");
+        }
       }
 
       function selectAnswer(card) {
@@ -432,7 +452,7 @@ this year's stats."
         // Snappy auto-advance to results after selection
         setTimeout(() => {
           if (currentSlide === qIdx) {
-            showSlide(TOTAL_QUESTIONS + 1);
+            showSlide(slides.length - 1);
           }
         }, 380);
       }
@@ -461,15 +481,17 @@ this year's stats."
         const winnerId = calculateWinner();
         const profile = ARCHETYPES[winnerId] || ARCHETYPES[1];
 
-        resultBadge.textContent = profile.badge;
-        resultComponent.textContent = profile.component;
-        resultTagline.textContent = profile.tagline;
-        resultDescription.textContent = profile.description;
-        resultStatCallout.textContent = profile.statCallout;
+        if (resultBadge) resultBadge.textContent = profile.badge;
+        if (resultComponent) resultComponent.textContent = profile.component;
+        if (resultTagline) resultTagline.textContent = profile.tagline;
+        if (resultDescription) resultDescription.textContent = profile.description;
+        if (resultStatCallout) resultStatCallout.textContent = profile.statCallout;
 
         // Update share modal text
-        const shareUrl = window.location.href.split("#")[0];
-        shareText.value = `I took the NYSDS 2026 Wrapped Quiz and got ${profile.component} — "${profile.tagline}"! Discover your design system archetype and explore 2026 stats: ${shareUrl}`;
+        if (shareText) {
+          const shareUrl = window.location.href.split("#")[0];
+          shareText.value = `I took the NYSDS 2026 Wrapped Quiz and got ${profile.component} — "${profile.tagline}"! Discover your design system archetype and explore 2026 stats: ${shareUrl}`;
+        }
       }
 
       function restartQuiz() {
@@ -547,7 +569,15 @@ this year's stats."
           }
         });
 
-        showSlide(0);
+        const hashSlide = readHash();
+        showSlide(hashSlide ?? 0);
+
+        window.addEventListener("hashchange", () => {
+          const n = readHash();
+          if (n !== null && n !== currentSlide) {
+            showSlide(n);
+          }
+        });
       }
 
       init();
