@@ -826,6 +826,7 @@ this year's stats."
       function selectAnswer(card) {
         const qIdx = Number(card.getAttribute("data-question"));
         const archetype = card.getAttribute("data-archetype");
+        const isFirstTime = !userAnswers[qIdx];
 
         // Deselect all cards for this question
         document.querySelectorAll(`nys-card[data-question="${qIdx}"]`).forEach((c) => {
@@ -842,11 +843,13 @@ this year's stats."
         userAnswers[qIdx] = archetype;
         updateNavButtons(qIdx);
 
-        // Immediate advance to next question or results
-        if (qIdx < TOTAL_QUESTIONS) {
-          showSlide(qIdx + 1);
-        } else {
-          showSlide(slides.length - 1);
+        // Only move to the next slide if it is the first time making a selection
+        if (isFirstTime) {
+          if (qIdx < TOTAL_QUESTIONS) {
+            showSlide(qIdx + 1);
+          } else {
+            showSlide(slides.length - 1);
+          }
         }
       }
 
