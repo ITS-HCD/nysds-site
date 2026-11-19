@@ -220,6 +220,12 @@ this year's stats."
         font-size: var(--nys-font-size-ui-xs, 12px);
       }
     }
+
+    /* Selected card theme outline */
+    nys-card.selected {
+      --_nys-card-border-color: var(--nys-color-theme);
+      --_nys-card-background-color: var(--nys-color-theme-weak)
+    }
   </style>
 </head>
 
@@ -770,6 +776,12 @@ this year's stats."
             quizTopNav.style.display = "block";
             updateProgress(idx);
             updateNavButtons(idx);
+
+            // Sync selected card state for this question
+            const currentSelected = userAnswers[idx];
+            document.querySelectorAll(`nys-card[data-question="${idx}"]`).forEach((c) => {
+              c.classList.toggle("selected", Boolean(currentSelected && c.getAttribute("data-archetype") === currentSelected));
+            });
           } else {
             quizTopNav.style.display = "none";
           }
