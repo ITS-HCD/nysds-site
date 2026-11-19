@@ -130,6 +130,96 @@ this year's stats."
         gap: 0.75rem;
       }
     }
+
+    /* Top Navigation & Progress Bar (directly under global header) */
+    .quiz-top-nav {
+      position: sticky;
+      top: 0;
+      background: var(--nys-color-surface, #ffffff);
+      border-bottom: var(--nys-border-width-sm, 1px) solid var(--nys-color-base-weak, #d6d7d9);
+      padding: var(--nys-space-150, 12px) 0;
+      z-index: 50;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .quiz-top-nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--nys-space-200, 16px);
+    }
+
+    .quiz-nav-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--nys-space-100, 8px);
+    }
+
+    .quiz-progress-group {
+      display: flex;
+      align-items: center;
+      gap: var(--nys-space-150, 12px);
+      flex: 1;
+      max-width: 440px;
+    }
+
+    .quiz-progress-group progress {
+      width: 100%;
+      height: var(--nys-space-100, 8px);
+      appearance: none;
+      border: none;
+      border-radius: var(--nys-radius-round, 999px);
+      overflow: hidden;
+      background: var(--nys-color-base-weak, #d6d7d9);
+    }
+
+    .quiz-progress-group progress::-webkit-progress-bar {
+      background: var(--nys-color-base-weak, #d6d7d9);
+      border-radius: var(--nys-radius-round, 999px);
+    }
+
+    .quiz-progress-group progress::-webkit-progress-value {
+      background: var(--nys-color-theme, #154973);
+      border-radius: var(--nys-radius-round, 999px);
+      transition: width 240ms ease;
+    }
+
+    .quiz-progress-group progress::-moz-progress-bar {
+      background: var(--nys-color-theme, #154973);
+      border-radius: var(--nys-radius-round, 999px);
+    }
+
+    .quiz-progress-text {
+      font-size: var(--nys-font-size-ui-sm, 14px);
+      color: var(--nys-color-text, #1b1b1b);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* Compact rendering on smaller screens */
+    @media (max-width: 640px) {
+      .quiz-nav-actions nys-button{
+        --_nys-button-padding--y: 0;
+        --_nys-button-padding--x: var(--nys-size-100);
+        --_nys-button-height: var(--nys-size-300);
+      }
+
+      .quiz-top-nav {
+        padding: var(--nys-space-50, 4px) 0;
+      }
+
+      .quiz-top-nav-inner {
+        gap: var(--nys-space-100, 8px);
+      }
+
+      .quiz-progress-group {
+        gap: var(--nys-space-50, 4px);
+      }
+
+      .quiz-progress-text {
+        font-size: var(--nys-font-size-ui-xs, 12px);
+      }
+    }
   </style>
 </head>
 
@@ -139,6 +229,22 @@ this year's stats."
     <nys-globalheader appName="Design System 2026 Wrapped"></nys-globalheader>
 
     <main id="main">
+      <!-- TOP NAVIGATION & PROGRESS BAR -->
+      <div id="quizTopNav" class="quiz-top-nav" style="display: none;">
+        <div class="nys-grid-container">
+          <div class="quiz-top-nav-inner">
+            <div class="quiz-nav-actions">
+              <nys-button id="prevBtn" label="Back" variant="outline" size="sm"></nys-button>
+              <nys-button id="nextBtn" label="Next" variant="primary" size="sm" disabled></nys-button>
+            </div>
+            <div class="quiz-progress-group">
+              <progress id="progressBar" value="1" max="10" aria-label="Quiz progress" aria-describedby="progressText"></progress>
+              <span id="progressText" class="quiz-progress-text">1 of 10</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- QUIZ DECK CONTAINER -->
       <div id="quizDeck" aria-live="polite">
 
@@ -154,7 +260,7 @@ this year's stats."
             </p>
 
             <!-- Optional Year-in-Review Stats Preview -->
-            <div class="intro-stats-preview">
+            <div class="intro-stats-preview" style="--nys-card-height: 100%;">
               <nys-card heading="[Stat 1]" description="[e.g. 35+ Releases]"></nys-card>
               <nys-card heading="[Stat 2]" description="[e.g. 50k+ Inserts]"></nys-card>
               <nys-card heading="[Stat 3]" description="[e.g. 47% Leaner]"></nys-card>
@@ -609,17 +715,14 @@ this year's stats."
 
       // DOM elements
       const slides = Array.from(document.querySelectorAll(".quiz-slide"));
-      const navBar = document.getElementById("quizNavBar");
+      const quizTopNav = document.getElementById("quizTopNav");
       const prevBtn = document.getElementById("prevBtn");
       const nextBtn = document.getElementById("nextBtn");
+      const progressBar = document.getElementById("progressBar");
+      const progressText = document.getElementById("progressText");
       const startQuizBtn = document.getElementById("startQuizBtn");
       const restartQuizBtn = document.getElementById("restartQuizBtn");
       const shareResultBtn = document.getElementById("shareResultBtn");
-
-      const progressLabel = document.getElementById("quizProgressLabel");
-      const progressPercent = document.getElementById("quizProgressPercent");
-      const progressFill = document.getElementById("quizProgressFill");
-      const progressTrack = document.getElementById("quizProgressTrack");
 
       const resultBadge = document.getElementById("resultBadge");
       const resultComponent = document.getElementById("resultComponent");
@@ -661,14 +764,14 @@ this year's stats."
           slide.setAttribute("aria-hidden", isActive ? "false" : "true");
         });
 
-        // Manage bottom navigation toolbar visibility if present
-        if (navBar) {
-          if (idx >= 1 && idx < slides.length - 1) {
-            navBar.style.display = "block";
+        // Manage top navigation bar visibility
+        if (quizTopNav) {
+          if (idx >= 1 && idx <= TOTAL_QUESTIONS) {
+            quizTopNav.style.display = "block";
             updateProgress(idx);
             updateNavButtons(idx);
           } else {
-            navBar.style.display = "none";
+            quizTopNav.style.display = "none";
           }
         }
 
@@ -679,19 +782,23 @@ this year's stats."
 
         updateHash(idx);
 
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo(0, 0);
       }
 
       function updateProgress(questionIdx) {
-        const pct = Math.round((questionIdx / TOTAL_QUESTIONS) * 100);
-        if (progressLabel) progressLabel.textContent = `Question ${questionIdx} of ${TOTAL_QUESTIONS}`;
-        if (progressPercent) progressPercent.textContent = `${pct}%`;
-        if (progressFill) progressFill.style.width = `${pct}%`;
-        if (progressTrack) progressTrack.setAttribute("aria-valuenow", pct);
+        if (progressBar) {
+          progressBar.max = TOTAL_QUESTIONS;
+          progressBar.value = questionIdx;
+        }
+        if (progressText) {
+          progressText.textContent = `${questionIdx} of ${TOTAL_QUESTIONS}`;
+        }
       }
 
       function updateNavButtons(questionIdx) {
-        if (prevBtn) prevBtn.disabled = questionIdx === 0;
+        if (prevBtn) {
+          prevBtn.disabled = questionIdx === 0;
+        }
 
         const hasAnswer = Boolean(userAnswers[questionIdx]);
         if (nextBtn) {
@@ -723,16 +830,12 @@ this year's stats."
         userAnswers[qIdx] = archetype;
         updateNavButtons(qIdx);
 
-        // Snappy auto-advance to next question or results
-        setTimeout(() => {
-          if (currentSlide === qIdx) {
-            if (qIdx < TOTAL_QUESTIONS) {
-              showSlide(qIdx + 1);
-            } else {
-              showSlide(slides.length - 1);
-            }
-          }
-        }, 380);
+        // Immediate advance to next question or results
+        if (qIdx < TOTAL_QUESTIONS) {
+          showSlide(qIdx + 1);
+        } else {
+          showSlide(slides.length - 1);
+        }
       }
 
       function calculateWinner() {
@@ -786,20 +889,19 @@ this year's stats."
 
       function onNysClick(el, handler) {
         if (!el) return;
-        el.addEventListener("nys-click", handler);
-        el.addEventListener("click", handler);
-      }
-
-      function bindCardClick(card, handler) {
         let debounce = false;
         const trigger = (e) => {
           if (debounce) return;
           debounce = true;
-          setTimeout(() => { debounce = false; }, 100);
+          setTimeout(() => { debounce = false; }, 120);
           handler(e);
         };
-        card.addEventListener("nys-click", trigger);
-        card.addEventListener("click", trigger);
+        el.addEventListener("nys-click", trigger);
+        el.addEventListener("click", trigger);
+      }
+
+      function bindCardClick(card, handler) {
+        onNysClick(card, handler);
       }
 
       // Initialize event listeners
