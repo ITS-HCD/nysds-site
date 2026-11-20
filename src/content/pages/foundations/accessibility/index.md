@@ -354,7 +354,7 @@ navOrder: 2
     font-weight: 700;
     font-size: clamp(1.125rem, 2vw, 1.375rem);
     color: var(--nys-color-ink);
-    margin-block-end: var(--nys-space-050);
+    margin-block-end: var(--nys-space-50);
   }
 
   .a11y-hero__caption {
