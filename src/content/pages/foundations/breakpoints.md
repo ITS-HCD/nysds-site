@@ -36,22 +36,22 @@ Gutters increase from 20px on mobile to 64px on desktop large.
     </tr>
     <tr>
       <td>Mobile Large</td>
-      <td>480px-767px</td>
+      <td>480-639px</td>
       <td>20px</td>
     </tr>
     <tr>
       <td>Tablet</td>
-      <td>768-1023px</td>
+      <td>640-1023px</td>
       <td>32px</td>
     </tr>
     <tr>
       <td>Desktop</td>
-      <td>1024-1279px</td>
+      <td>1024-1399px</td>
       <td>32px</td>
     </tr>
     <tr>
       <td>Widescreen</td>
-      <td>1280-2500px</td>
+      <td>1400-2500px</td>
       <td>64px</td>
     </tr>
   </table>
