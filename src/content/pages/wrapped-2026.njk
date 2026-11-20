@@ -46,6 +46,17 @@ this year's stats."
 
       gtag("config", "G-M4JYBJ7BZY");
     </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        NYSDS.registerIconLibrary("font-awesome", {
+          resolver: (name) =>
+            `https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/svgs/solid/${name}.svg`,
+          mutator: (svg) => {
+            svg.setAttribute("fill", "currentColor");
+          },
+        });
+      });
+    </script>
 
     <style>
       /* Baseline */
@@ -257,6 +268,25 @@ this year's stats."
         --_nys-card-border-color: var(--nys-color-theme);
         --_nys-card-background-color: var(--nys-color-theme-weak);
       }
+
+      .quiz-fact {
+        padding: 1rem 1.25rem;
+        background: var(--nys-color-theme-weaker);
+        border-left: 6px solid var(--nys-color-theme); /* swap for your theme token */
+        border-radius: 0 var(--nys-radius-md) var(--nys-radius-md) 0;
+      }
+      .quiz-fact__label {
+        text-transform: uppercase;
+        color: var(--nys-color-theme);
+        margin-top: 0;
+        margin-bottom: var(--nys-space-100);
+        font-size: var(--nys-font-size-md);
+        gap: var(--nys-space-200);
+      }
+
+      .quiz-fact__label nys-icon {
+        margin-inline-end: var(--nys-space-100);
+      }
     </style>
   </head>
 
@@ -358,8 +388,20 @@ this year's stats."
             tabindex="-1"
           >
             <div class="nys-grid-container">
+              <aside class="quiz-fact" role="note">
+                <h2 class="quiz-fact__label">
+                  <nys-icon
+                    name="lightbulb"
+                    library="font-awesome"
+                    size="5xl"
+                  ></nys-icon
+                  >Fun fact
+                </h2>
+                <p class="quiz-fact__text">
+                  [Question 1 fun fact, 2026 context, or stat hook goes here]
+                </p>
+              </aside>
               <h2>[Question 1 Prompt Title Goes Here]</h2>
-
               <div
                 class="nys-grid-row nys-grid-gap-200"
                 style="--nys-card-height: 100%"
@@ -431,11 +473,6 @@ this year's stats."
                 >
                 </nys-card>
               </div>
-              <p
-                class="nys-display-flex nys-flex-justify-center nys-margin-t-200"
-              >
-                [Question 1 fun fact, 2026 context, or stat hook goes here]
-              </p>
             </div>
           </section>
 
@@ -449,8 +486,20 @@ this year's stats."
             tabindex="-1"
           >
             <div class="nys-grid-container">
+              <aside class="quiz-fact" role="note">
+                <h2 class="quiz-fact__label">
+                  <nys-icon
+                    name="lightbulb"
+                    library="font-awesome"
+                    size="5xl"
+                  ></nys-icon
+                  >Fun fact
+                </h2>
+                <p class="quiz-fact__text">
+                  [Question 1 fun fact, 2026 context, or stat hook goes here]
+                </p>
+              </aside>
               <h2>[Question 2 Prompt Title Goes Here]</h2>
-
               <div
                 class="nys-grid-row nys-grid-gap-200"
                 style="--nys-card-height: 100%"
@@ -522,11 +571,6 @@ this year's stats."
                 >
                 </nys-card>
               </div>
-              <p
-                class="nys-display-flex nys-flex-justify-center nys-margin-t-200"
-              >
-                [Question 2 fun fact, 2026 context, or stat hook goes here]
-              </p>
             </div>
           </section>
 
@@ -540,8 +584,20 @@ this year's stats."
             tabindex="-1"
           >
             <div class="nys-grid-container">
+              <aside class="quiz-fact" role="note">
+                <h2 class="quiz-fact__label">
+                  <nys-icon
+                    name="lightbulb"
+                    library="font-awesome"
+                    size="5xl"
+                  ></nys-icon
+                  >Fun fact
+                </h2>
+                <p class="quiz-fact__text">
+                  [Question 1 fun fact, 2026 context, or stat hook goes here]
+                </p>
+              </aside>
               <h2>[Question 3 Prompt Title Goes Here]</h2>
-
               <div
                 class="nys-grid-row nys-grid-gap-200"
                 style="--nys-card-height: 100%"
@@ -613,11 +669,6 @@ this year's stats."
                 >
                 </nys-card>
               </div>
-              <p
-                class="nys-display-flex nys-flex-justify-center nys-margin-t-200"
-              >
-                [Question 3 fun fact, 2026 context, or stat hook goes here]
-              </p>
             </div>
           </section>
 
@@ -631,8 +682,20 @@ this year's stats."
             tabindex="-1"
           >
             <div class="nys-grid-container">
+              <aside class="quiz-fact" role="note">
+                <h2 class="quiz-fact__label">
+                  <nys-icon
+                    name="lightbulb"
+                    library="font-awesome"
+                    size="5xl"
+                  ></nys-icon
+                  >Fun fact
+                </h2>
+                <p class="quiz-fact__text">
+                  [Question 1 fun fact, 2026 context, or stat hook goes here]
+                </p>
+              </aside>
               <h2>[Question 4 Prompt Title Goes Here]</h2>
-
               <div
                 class="nys-grid-row nys-grid-gap-200"
                 style="--nys-card-height: 100%"
@@ -704,11 +767,6 @@ this year's stats."
                 >
                 </nys-card>
               </div>
-              <p
-                class="nys-display-flex nys-flex-justify-center nys-margin-t-200"
-              >
-                [Question 4 fun fact, 2026 context, or stat hook goes here]
-              </p>
             </div>
           </section>
 
@@ -722,8 +780,20 @@ this year's stats."
             tabindex="-1"
           >
             <div class="nys-grid-container">
+              <aside class="quiz-fact" role="note">
+                <h2 class="quiz-fact__label">
+                  <nys-icon
+                    name="lightbulb"
+                    library="font-awesome"
+                    size="5xl"
+                  ></nys-icon
+                  >Fun fact
+                </h2>
+                <p class="quiz-fact__text">
+                  [Question 1 fun fact, 2026 context, or stat hook goes here]
+                </p>
+              </aside>
               <h2>[Question 5 Prompt Title Goes Here]</h2>
-
               <div
                 class="nys-grid-row nys-grid-gap-200"
                 style="--nys-card-height: 100%"
@@ -795,11 +865,6 @@ this year's stats."
                 >
                 </nys-card>
               </div>
-              <p
-                class="nys-display-flex nys-flex-justify-center nys-margin-t-200"
-              >
-                [Question 5 fun fact, 2026 context, or stat hook goes here]
-              </p>
             </div>
           </section>
 
@@ -813,8 +878,20 @@ this year's stats."
             tabindex="-1"
           >
             <div class="nys-grid-container">
+              <aside class="quiz-fact" role="note">
+                <h2 class="quiz-fact__label">
+                  <nys-icon
+                    name="lightbulb"
+                    library="font-awesome"
+                    size="5xl"
+                  ></nys-icon
+                  >Fun fact
+                </h2>
+                <p class="quiz-fact__text">
+                  [Question 1 fun fact, 2026 context, or stat hook goes here]
+                </p>
+              </aside>
               <h2>[Question 6 Prompt Title Goes Here]</h2>
-
               <div
                 class="nys-grid-row nys-grid-gap-200"
                 style="--nys-card-height: 100%"
@@ -886,11 +963,6 @@ this year's stats."
                 >
                 </nys-card>
               </div>
-              <p
-                class="nys-display-flex nys-flex-justify-center nys-margin-t-200"
-              >
-                [Question 6 fun fact, 2026 context, or stat hook goes here]
-              </p>
             </div>
           </section>
 
@@ -904,8 +976,20 @@ this year's stats."
             tabindex="-1"
           >
             <div class="nys-grid-container">
+              <aside class="quiz-fact" role="note">
+                <h2 class="quiz-fact__label">
+                  <nys-icon
+                    name="lightbulb"
+                    library="font-awesome"
+                    size="5xl"
+                  ></nys-icon
+                  >Fun fact
+                </h2>
+                <p class="quiz-fact__text">
+                  [Question 1 fun fact, 2026 context, or stat hook goes here]
+                </p>
+              </aside>
               <h2>[Question 7 Prompt Title Goes Here]</h2>
-
               <div
                 class="nys-grid-row nys-grid-gap-200"
                 style="--nys-card-height: 100%"
@@ -977,11 +1061,6 @@ this year's stats."
                 >
                 </nys-card>
               </div>
-              <p
-                class="nys-display-flex nys-flex-justify-center nys-margin-t-200"
-              >
-                [Question 7 fun fact, 2026 context, or stat hook goes here]
-              </p>
             </div>
           </section>
 
@@ -995,8 +1074,20 @@ this year's stats."
             tabindex="-1"
           >
             <div class="nys-grid-container">
+              <aside class="quiz-fact" role="note">
+                <h2 class="quiz-fact__label">
+                  <nys-icon
+                    name="lightbulb"
+                    library="font-awesome"
+                    size="5xl"
+                  ></nys-icon
+                  >Fun fact
+                </h2>
+                <p class="quiz-fact__text">
+                  [Question 1 fun fact, 2026 context, or stat hook goes here]
+                </p>
+              </aside>
               <h2>[Question 8 Prompt Title Goes Here]</h2>
-
               <div
                 class="nys-grid-row nys-grid-gap-200"
                 style="--nys-card-height: 100%"
@@ -1068,11 +1159,6 @@ this year's stats."
                 >
                 </nys-card>
               </div>
-              <p
-                class="nys-display-flex nys-flex-justify-center nys-margin-t-200"
-              >
-                [Question 8 fun fact, 2026 context, or stat hook goes here]
-              </p>
             </div>
           </section>
 
@@ -1086,8 +1172,20 @@ this year's stats."
             tabindex="-1"
           >
             <div class="nys-grid-container">
+              <aside class="quiz-fact" role="note">
+                <h2 class="quiz-fact__label">
+                  <nys-icon
+                    name="lightbulb"
+                    library="font-awesome"
+                    size="5xl"
+                  ></nys-icon
+                  >Fun fact
+                </h2>
+                <p class="quiz-fact__text">
+                  [Question 1 fun fact, 2026 context, or stat hook goes here]
+                </p>
+              </aside>
               <h2>[Question 9 Prompt Title Goes Here]</h2>
-
               <div
                 class="nys-grid-row nys-grid-gap-200"
                 style="--nys-card-height: 100%"
@@ -1159,11 +1257,6 @@ this year's stats."
                 >
                 </nys-card>
               </div>
-              <p
-                class="nys-display-flex nys-flex-justify-center nys-margin-t-200"
-              >
-                [Question 9 fun fact, 2026 context, or stat hook goes here]
-              </p>
             </div>
           </section>
 
@@ -1177,8 +1270,20 @@ this year's stats."
             tabindex="-1"
           >
             <div class="nys-grid-container">
+              <aside class="quiz-fact" role="note">
+                <h2 class="quiz-fact__label">
+                  <nys-icon
+                    name="lightbulb"
+                    library="font-awesome"
+                    size="5xl"
+                  ></nys-icon
+                  >Fun fact
+                </h2>
+                <p class="quiz-fact__text">
+                  [Question 1 fun fact, 2026 context, or stat hook goes here]
+                </p>
+              </aside>
               <h2>[Question 10 Prompt Title Goes Here]</h2>
-
               <div
                 class="nys-grid-row nys-grid-gap-200"
                 style="--nys-card-height: 100%"
@@ -1250,11 +1355,6 @@ this year's stats."
                 >
                 </nys-card>
               </div>
-              <p
-                class="nys-display-flex nys-flex-justify-center nys-margin-t-200"
-              >
-                [Question 10 fun fact, 2026 context, or stat hook goes here]
-              </p>
             </div>
           </section>
 
