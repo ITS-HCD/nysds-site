@@ -80,8 +80,8 @@ For example, to change the background color of a button on your agency's landing
 {% set code %}
 <style>
   .apply-now-section nys-button {
-    --nys-button-background-color: var(--nys-color-success-600);
-    --nys-button-background-color--hover: var(--nys-color-success-700);
+    --nys-button-background-color: var(--nys-color-success);
+    --nys-button-background-color--hover: var(--nys-color-success-strong);
   }
 </style>
 <div class="apply-now-section">
@@ -218,9 +218,9 @@ Web components work directly in plain HTML and in frameworks that support custom
 
 **Plain HTML and .NET Razor Pages** — NYSDS components work as standard HTML elements. No wrappers or special configuration needed.
 
-**React** — React's synthetic event system and property handling don't always align with web component conventions. Framework-specific wrappers are planned but not yet available. Some teams have successfully wrapped NYSDS components for React — see the [React integration demo](https://its-hcd.github.io/nysds-react-demo/) for one approach.
+**React** — React's synthetic event system and property handling don't always align with web component conventions. Framework-specific wrappers are available. Some teams have successfully wrapped NYSDS components for React — see the [React integration demo](https://its-hcd.github.io/nysds-react-demo/) for one approach.
 
-**Angular** — Angular supports custom elements through its `CUSTOM_ELEMENTS_SCHEMA`. Components work directly in templates, though typed wrappers would improve the developer experience. Wrappers are planned.
+**Angular** — Angular components work directly in templates, though typed wrappers would improve the developer experience. Wrappers are available.
 
 **Vue** — Vue has strong native web component support. NYSDS components work with minimal configuration. Configure Vue to recognize `nys-*` elements as custom elements to avoid warnings.
 
