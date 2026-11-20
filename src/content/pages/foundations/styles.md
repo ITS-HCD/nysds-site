@@ -51,7 +51,7 @@ At a glance, the package provides three composable endpoints:
 
 ## Stylesheet Endpoints
 
-The `@nysds/styles` package ships three CSS files, each building on the last. Choose the one that matches your project's needs.
+The `@nysds/styles` package ships three CSS files. Choose the one that matches your project's needs.
 
 ### Default — Tokens Only
 
@@ -66,7 +66,7 @@ The `@nysds/styles` package ships three CSS files, each building on the last. Ch
 
 This is the smallest stylesheet. It includes:
 
-- **Design tokens** — All NYSDS color, spacing, typography, and sizing values as CSS custom properties (e.g., `--nys-color-theme-primary`, `--nys-space-200`, `--nys-font-size-md`)
+- **Design tokens** — All NYSDS color, spacing, typography, and sizing values as CSS custom properties (e.g., `--nys-color-theme`, `--nys-space-200`, `--nys-font-size-md`)
 - **FOUC prevention** — Rules that hide NYSDS web components (via `:not(:defined)`) until they finish registering, preventing a flash of unstyled content
 
 Use this when you want access to the design system's token values in your CSS but plan to handle typography, layout, and resets yourself.
@@ -184,7 +184,7 @@ The reset applies the following:
 - **Body defaults** — Sets the base font to `--nys-font-size-md` with `--nys-font-lineheight-md` using the `--nys-font-family-body` font family, and sets text color to `--nys-color-ink`
 - **Headings** — Applies `--nys-font-family-heading` with appropriate font sizes, line heights, letter spacing, and margin spacing for `h1` through `h6`
 - **Links** — Colors links with `--nys-color-link`, with hover/focus and active states using `--nys-color-link-strong` and `--nys-color-link-strongest`
-- **List markers** — Colors list markers with `--nys-color-theme-primary`
+- **List markers** — Colors list markers with `--nys-color-theme`
 - **Smooth scrolling** — Enables `scroll-behavior: smooth` on the `html` element
 
 The reset is included only in the **full** stylesheet (`nysds-full.min.css`). If you use the default tokens-only stylesheet, you are responsible for your own reset.
