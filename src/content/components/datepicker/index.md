@@ -374,12 +374,16 @@ The `<nys-datepicker>` component emits **four** custom JavaScript events:
     </tr>
     <tr>
       <td><code>nys-change</code></td>
-      <td></td> 
-      <td>—</td>
+      <td>Fired on committed selection: calendar pick, valid typed date on blur, Today, Clear.</td> 
+      <td> <ul>
+          <li><code>id</code> (string): The id of the datepicker component.</li>
+          <li><code>name</code> (string): The datepicker's name attribute.</li>
+          <li><code>value</code> (Date): The selected date as a <code>Date</code> object.</li>
+        </ul></td>
     </tr>
     <tr>
       <td><code>nys-focus</code></td>
-      <td></td>
+      <td>Fired when focus enters the component from outside.</td>
       <td>—</td>
     </tr>
   </table>

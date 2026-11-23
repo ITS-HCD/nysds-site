@@ -424,8 +424,14 @@ The `<nys-radiogroup>` component emits **four** custom Javascript events:
     </tr>
     <tr>
       <td><code>nys-other-input</code></td>
-      <td>Fired when the radio button option "Other" is selected.</td>
-      <td>—</td>
+      <td>Fired as the "other" free-text input changes.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the radiobutton.</li>
+          <li><code>name</code> (string): The radiobutton group name.</li>
+          <li><code>value</code> (string): The radiobutton's value.</li>
+        </ul>
+      </td>
     </tr>
   </table>
 </nys-table>
