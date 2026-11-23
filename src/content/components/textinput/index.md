@@ -409,8 +409,14 @@ The `<nys-textinput>` component emits **four** custom Javascript events:
     </tr>
     <tr>
       <td><code>nys-change</code></td>
-      <td></td>
-      <td>—</td>
+      <td>Fired when the value is committed, on blur or Enter.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the textinput.</li>
+          <li><code>name</code> (string): The name of the textinput.</li>
+          <li><code>value</code> (string): The current value of the textinput.</li>
+        </ul>
+      </td>
     </tr>
   </table>
 </nys-table>

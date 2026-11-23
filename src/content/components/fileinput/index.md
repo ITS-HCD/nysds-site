@@ -287,13 +287,13 @@ The `<nys-fileinput>` component emits **three** custom Javascript event:
     </tr>
     <tr>
       <td><code>nys-focus</code></td>
-      <td></td>
-      <td></td>
+      <td>Fired when focus enters the component from outside.</td>
+      <td>-</td>
     </tr>
     <tr>
       <td><code>nys-blur</code></td>
-      <td></td>
-      <td></td>
+      <td>Fired when focus leaves the component. Triggers validation.</td>
+      <td>-</td>
     </tr>
   </table>
 </nys-table>

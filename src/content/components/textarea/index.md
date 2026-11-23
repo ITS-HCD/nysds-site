@@ -352,13 +352,24 @@ The `<nys-textarea>` component emits **six** custom Javascript events:
     </tr>
     <tr>
       <td><code>nys-change</code></td>
-      <td></td>
-      <td></td>
+      <td>Fired when the value is committed (native `change`).</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the textarea.</li>
+           <li><code>name</code> (string): The name of the textarea.</li>
+          <li><code>value</code> (string): The currently selected text.</li>
+        </ul>
+      </td>
     </tr>
     <tr>
       <td><code>nys-selectionchange</code></td>
-      <td></td>
-      <td></td>
+      <td>Fired when the text selection changes.</td>
+      <td>
+        <ul>
+          <li><code>id</code> (string): The id of the textarea.</li>
+          <li><code>value</code> (string): The currently selected text.</li>
+        </ul>
+      </td>
     </tr>
   </table>
 </nys-table>
