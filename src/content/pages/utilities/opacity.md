@@ -188,7 +188,7 @@ All opacity utilities support responsive prefixes. See [Responsive Utilities](/u
     color: white;
     padding: var(--nys-space-300) var(--nys-space-200);
     text-align: center;
-    border-radius: var(--nys-border-radius-md);
+    border-radius: var(--nys-radius-md);
     font-family: var(--nys-font-family-monospace);
   }
   .docs-opacity-swatch code {

@@ -574,95 +574,95 @@ All flexbox utilities support [responsive prefixes](/utilities/responsive/).
     </div>
     <span class="utility-class">.nys-flex-align-start</span>
     <div class="nys-grid-row nys-flex-column nys-flex-align-start margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
     </div>
     <span class="utility-class">.nys-flex-align-center</span>
     <div class="nys-grid-row nys-flex-column nys-flex-align-center margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
     </div>
     <span class="utility-class">.nys-flex-align-end</span>
     <div class="nys-grid-row nys-flex-column nys-flex-align-end margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
     </div>
     <span class="utility-class">.nys-flex-align-stretch</span>
     <div class="nys-grid-row nys-flex-column nys-flex-align-stretch margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
     </div>
     <span class="utility-class">.nys-flex-align-baseline</span>
     <div class="nys-grid-row nys-flex-column nys-flex-align-baseline margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
-      <div class="nys-grid-auto padding-1px">
+      <div class="nys-grid-col-auto padding-1px">
         <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
         </div>
       </div>
@@ -674,95 +674,95 @@ All flexbox utilities support [responsive prefixes](/utilities/responsive/).
     </div>
       <span class="utility-class">.nys-flex-align-start</span>
       <div class="nys-grid-row nys-flex-row nys-flex-align-start margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
       </div>
       <span class="utility-class">.nys-flex-align-center</span>
       <div class="nys-grid-row nys-flex-row nys-flex-align-center margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
       </div>
       <span class="utility-class">.nys-flex-align-end</span>
       <div class="nys-grid-row nys-flex-row nys-flex-align-end margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
       </div>
       <span class="utility-class">.nys-flex-align-stretch</span>
       <div class="nys-grid-row nys-flex-row nys-flex-align-stretch margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
         </div>
       <span class="utility-class">.nys-flex-align-baseline</span>
       <div class="nys-grid-row nys-flex-row nys-flex-align-baseline qmargin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
@@ -915,114 +915,114 @@ All flexbox utilities support [responsive prefixes](/utilities/responsive/).
   </div>
     <span class="utility-class">.nys-flex-justify-start</span>
       <div class="nys-grid-row nys-flex-justify-start margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
       </div>
     <span class="utility-class">.nys-flex-justify-center</span>
       <div class="nys-grid-row nys-flex-justify-center margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
       </div>
     <span class="utility-class">.nys-flex-justify-end</span>
       <div class="nys-grid-row nys-flex-justify-end margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
       </div>
       <span class="utility-class">.nys-flex-justify-space-between</span>
       <div class="nys-grid-row nys-flex-justify-space-between margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
       </div>
       <span class="utility-class">.nys-flex-justify-space-around</span>
       <div class="nys-grid-row nys-flex-justify-space-around margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
       </div>
       <span class="utility-class">.nys-flex-justify-space-evenly</span>
       <div class="nys-grid-row nys-flex-justify-space-evenly margin-top-2 border-bottom border-base-light padding-bottom-2 margin-bottom-2">
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-8 minw-8 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-9 minw-9 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
-        <div class="nys-grid-auto padding-1px">
+        <div class="nys-grid-col-auto padding-1px">
           <div class="height-full minh-10 minw-10 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center">
           </div>
         </div>
@@ -1110,7 +1110,8 @@ All flexbox utilities support [responsive prefixes](/utilities/responsive/).
 
 {% set preview %}
 
-<div class="nys-display-grid">
+<div class="border padding-1 radius-md margin-bottom-2">
+  <div class="padding-bottom-4 border-bottom margin-bottom-2">
   <span class="utility-class">.nys-flex-gap-1px</span>
   <div class="nys-display-flex nys-grid-row nys-flex-gap-1px">
     <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
@@ -1208,7 +1209,8 @@ All flexbox utilities support [responsive prefixes](/utilities/responsive/).
     <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
     <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
     <div class="height-full minh-7 minw-7 width-full nys-display-flex nys-flex-align-center bg-secondary-light nys-flex-justify-center"></div>
-  </div>  
+  </div> 
+  </div> 
 </div>
 {% endset %}
 {% set code %}

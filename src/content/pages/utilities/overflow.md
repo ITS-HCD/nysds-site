@@ -129,7 +129,7 @@ Control overflow on a single axis with `-x` and `-y` variants. This is useful fo
 </nys-table>
 
 {% set preview %}
-<div class="nys-overflow-x-auto" style="border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-border-radius-md); padding: var(--nys-space-200);">
+<div class="nys-overflow-x-auto" style="border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-radius-md); padding: var(--nys-space-200);">
   <div style="white-space: nowrap; font-family: var(--nys-font-family-monospace); font-size: var(--nys-font-size-ui-sm);">
     Albany &bull; Buffalo &bull; Rochester &bull; Syracuse &bull; Yonkers &bull; New Rochelle &bull; Mount Vernon &bull; Schenectady &bull; Utica &bull; White Plains &bull; Hempstead &bull; Troy &bull; Niagara Falls &bull; Binghamton &bull; Freeport &bull; Valley Stream
   </div>
@@ -177,7 +177,7 @@ Control overflow on a single axis with `-x` and `-y` variants. This is useful fo
 </nys-table>
 
 {% set preview %}
-<div class="nys-overflow-y-auto" style="max-height: 120px; border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-border-radius-md); padding: var(--nys-space-200);">
+<div class="nys-overflow-y-auto" style="max-height: 120px; border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-radius-md); padding: var(--nys-space-200);">
   <p style="margin-top: 0;"><strong>NYS Department of Transportation</strong> — Maintains over 100,000 miles of highway and more than 7,500 bridges statewide.</p>
   <p><strong>Thruway Authority</strong> — Operates the 570-mile New York State Thruway, one of the longest toll highways in the United States.</p>
   <p><strong>MTA</strong> — Provides public transit in the New York metropolitan area, serving millions of riders daily across subway, bus, and rail.</p>
@@ -217,7 +217,7 @@ All overflow utilities support responsive prefixes. See [Responsive Utilities](/
   .docs-overflow-box {
     max-height: 80px;
     border: 1px solid var(--nys-color-theme-weak);
-    border-radius: var(--nys-border-radius-md);
+    border-radius: var(--nys-radius-md);
     padding: var(--nys-space-200);
   }
   .docs-overflow-content {

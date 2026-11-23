@@ -143,7 +143,7 @@ All z-index utilities support responsive prefixes. See [Responsive Utilities](/u
     align-items: center;
     padding: var(--nys-space-200) var(--nys-space-300);
     border: 1px solid var(--nys-color-theme-weak);
-    border-radius: var(--nys-border-radius-md);
+    border-radius: var(--nys-radius-md);
     background-color: var(--nys-color-theme-weaker);
     margin-top: -10px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.8);
@@ -152,9 +152,9 @@ All z-index utilities support responsive prefixes. See [Responsive Utilities](/u
     font-family: var(--nys-font-family-monospace);
     font-size: var(--nys-font-size-ui-sm);
     color: var(--nys-color-theme);
-    background-color: var(--nys-color-theme-weakest);
+    background-color: var(--nys-color-theme-faint);
     padding: var(--nys-space-50) var(--nys-space-100);
-    border-radius: var(--nys-border-radius-sm);
+    border-radius: var(--nys-radius-sm);
   }
 </style>
 {% endblock %}

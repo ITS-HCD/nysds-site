@@ -69,7 +69,7 @@ Position utilities set the CSS `position` property on an element, controlling ho
 Use `.nys-position-relative` on a parent and `.nys-position-absolute` on a child to position elements relative to their container — for example, placing a badge on a card.
 
 {% set preview %}
-<div class="nys-position-relative" style="border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-border-radius-md); padding: var(--nys-space-400); min-height: 120px;">
+<div class="nys-position-relative" style="border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-radius-md); padding: var(--nys-space-400); min-height: 120px;">
   <span class="docs-demo-box nys-position-absolute" style="top: var(--nys-space-100); right: var(--nys-space-100); padding: var(--nys-space-50) var(--nys-space-200); font-size: var(--nys-font-size-ui-sm);">
     <code>Absolute child</code>
   </span>
@@ -95,7 +95,7 @@ Use `.nys-position-relative` on a parent and `.nys-position-absolute` on a child
 Use `.nys-position-sticky` with a `top` offset to make an element stick in place when the user scrolls past it. This is commonly used for section headers or navigation within a long page.
 
 {% set preview %}
-<div style="max-height: 200px; overflow-y: auto; border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-border-radius-md);">
+<div style="max-height: 200px; overflow-y: auto; border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-radius-md);">
   <div class="nys-position-sticky nys-z-100 docs-demo-box" style="top: 0; border-radius: 0;">
     <code>.nys-position-sticky</code> — scroll to see this stick
   </div>

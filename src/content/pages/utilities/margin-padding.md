@@ -244,14 +244,14 @@ Combine margin and padding utilities with layout utilities to space content in a
 {% set preview %}
 <div class="nys-grid-row nys-grid-gap">
   <div class="nys-grid-col-6">
-    <div class="nys-padding-400" style="border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-border-radius-md);">
+    <div class="nys-padding-400" style="border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-radius-md);">
       <h3 class="nys-margin-b-200" style="margin-top: 0;">Apply for benefits</h3>
       <p class="nys-margin-b-300" style="margin-top: 0;">Check your eligibility for New York State assistance programs including SNAP, Medicaid, and HEAP.</p>
       <nys-button label="Check eligibility" variant="outline"></nys-button>
     </div>
   </div>
   <div class="nys-grid-col-6">
-    <div class="nys-padding-400" style="border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-border-radius-md);">
+    <div class="nys-padding-400" style="border: 1px solid var(--nys-color-theme-weak); border-radius: var(--nys-radius-md);">
       <h3 class="nys-margin-b-200" style="margin-top: 0;">Renew your license</h3>
       <p class="nys-margin-b-300" style="margin-top: 0;">Renew your driver license or non-driver ID online through the DMV. Most renewals can be completed in minutes.</p>
       <nys-button label="Start renewal" variant="outline"></nys-button>
@@ -289,13 +289,13 @@ Combine margin and padding utilities with layout utilities to space content in a
   .docs-spacing-outer {
     background-color: var(--nys-color-theme-weaker);
     border: 1px solid var(--nys-color-theme-weak);
-    border-radius: var(--nys-border-radius-md);
+    border-radius: var(--nys-radius-md);
     overflow: hidden;
   }
   .docs-spacing-inner {
-    background-color: var(--nys-color-theme-weakest);
+    background-color: var(--nys-color-theme-faint);
     border: 1px dashed var(--nys-color-theme);
-    border-radius: var(--nys-border-radius-sm);
+    border-radius: var(--nys-radius-sm);
     font-family: var(--nys-font-family-monospace);
     font-size: var(--nys-font-size-ui-sm);
     padding: var(--nys-space-100);
@@ -304,7 +304,7 @@ Combine margin and padding utilities with layout utilities to space content in a
   .docs-padding-demo {
     background-color: var(--nys-color-theme-weaker);
     border: 1px solid var(--nys-color-theme-weak);
-    border-radius: var(--nys-border-radius-md);
+    border-radius: var(--nys-radius-md);
     font-family: var(--nys-font-family-monospace);
     font-size: var(--nys-font-size-ui-sm);
     word-break: break-all;
