@@ -293,12 +293,12 @@ Set `disabled` to prevent interaction. The calendar button and input are both di
     </tr>
     <tr>
       <td><code>minDate</code></td>
-      <td></td>
+      <td>string</td>
       <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>maxDate</code></td>
-      <td></td>
+      <td>string</td>
       <td><code>""</code></td>
     </tr>
     <tr>
@@ -308,8 +308,8 @@ Set `disabled` to prevent interaction. The calendar button and input are both di
     </tr>
     <tr>
       <td><code>type</code></td>
-      <td></td>
-      <td><code>""</code></td>
+      <td>string</td>
+      <td><code>"date"</code></td>
     </tr>
     <tr>
       <td><code>inverted</code></td>

@@ -234,7 +234,7 @@ Set the inverted when the component is on a dark background.
     <tr>
       <td><code>tooltip</code></td>
       <td>String</td>
-      <td>""</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>inverted</code></td>

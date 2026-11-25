@@ -328,9 +328,9 @@ Set `required` to make a checkbox or group of checkboxes mandatory. It can be ap
     </tr>
     <tr>
       <td><code>tooltip</code></td>
-      <td></td>
-      <td></td>
-      <td><code>&lt;nys-checkboxgroup&gt;</code></td>
+      <td>String</td>
+      <td><code>""</code></td>
+      <td>both</td>
     </tr>
   </table>
 </nys-table>
