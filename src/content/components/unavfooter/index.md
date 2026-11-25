@@ -54,7 +54,7 @@ There are no configurable options for this component. It is intended to be used 
     <tr>
       <td><code>landmarkLabel</code></td>
       <td>String</td>
-      <td><code>""</code></td>
+      <td><code>"New York State"</code></td>
     </tr>
   </table>
 </nys-table>
