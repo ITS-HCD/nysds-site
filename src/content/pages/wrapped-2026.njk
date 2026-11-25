@@ -89,6 +89,7 @@ this year's stats."
       /* Section show/hide */
       .quiz-slide {
         display: none;
+        margin-top: 0;
       }
 
       .quiz-slide[data-active="true"] {
@@ -270,10 +271,11 @@ this year's stats."
       }
 
       .quiz-fact {
+        margin: var(--nys-space-100) 0;
         padding: 1rem 1.25rem;
         background: var(--nys-color-theme-weaker);
         border-left: 6px solid var(--nys-color-theme); /* swap for your theme token */
-        border-radius: 0 var(--nys-radius-md) var(--nys-radius-md) 0;
+        border-radius: var(--nys-radius-md);
       }
       .quiz-fact__label {
         text-transform: uppercase;
@@ -286,6 +288,11 @@ this year's stats."
 
       .quiz-fact__label nys-icon {
         margin-inline-end: var(--nys-space-100);
+      }
+
+      .quiz-question__label {
+        font-size: var(--nys-font-size-4xl);
+        margin: var(--nys-space-200) 0;
       }
 
       .results-hero-card {
@@ -420,10 +427,10 @@ this year's stats."
                   >Fun fact
                 </h2>
                 <p class="quiz-fact__text">
-                  [Question 1 fun fact, 2026 context, or stat hook goes here]
+                  Over 50+ component ideas were submitted in GitHub Discussions this year, ranging from deeply practical to delightfully inventive.
                 </p>
               </aside>
-              <h2>[Question 1 Prompt Title Goes Here]</h2>
+              <h2 class="quiz-question__label">You are proposing a new component to the NYSDS team, what should it be?</h2>
               <div
                 class="nys-grid-row nys-grid-gap-200"
                 style="--nys-card-height: 100%"
@@ -432,9 +439,9 @@ this year's stats."
                   class="nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-display-flex"
                   data-question="1"
                   data-archetype="1"
-                  heading="[Option 1A Answer text goes here]"
+                  heading="Timesheet Express"
                   headingLevel="h3"
-                  description="[Option 1A note or stat hint]"
+                  description="A magical one-click shortcut that pre-fills your standard 37.5 hours for the week so you can breeze through Friday admin in 3 seconds flat."
                   size="md"
                   onclick="void 0"
                 >
@@ -443,9 +450,9 @@ this year's stats."
                   class="nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-display-flex"
                   data-question="1"
                   data-archetype="2"
-                  heading="[Option 1B Answer text goes here]"
+                  heading="Confetti Cannon"
                   headingLevel="h3"
-                  description="[Option 1B note or stat hint]"
+                  description="Fires a burst of digital confetti and animated sound effects anytime NYSDS Office Hours reaches a new attendance record."
                   size="md"
                   onclick="void 0"
                 >
@@ -454,9 +461,9 @@ this year's stats."
                   class="nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-display-flex"
                   data-question="1"
                   data-archetype="3"
-                  heading="[Option 1C Answer text goes here]"
+                  heading="Phishing Hero"
                   headingLevel="h3"
-                  description="[Option 1C note or stat hint]"
+                  description="A celebratory pop-up banner that awards you digital trophies and security badges whenever you successfully identify a simulated phishing email."
                   size="md"
                   onclick="void 0"
                 >
@@ -465,9 +472,9 @@ this year's stats."
                   class="nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-display-flex"
                   data-question="1"
                   data-archetype="4"
-                  heading="[Option 1D Answer text goes here]"
+                  heading="Water Fountain Status"
                   headingLevel="h3"
-                  description="[Option 1D note or stat hint]"
+                  description="A live office status dashboard: confirms the breakroom water fountain is ice-cold, fresh-filtered, and ready for your reusable water bottle."
                   size="md"
                   onclick="void 0"
                 >
@@ -476,9 +483,9 @@ this year's stats."
                   class="nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-display-flex"
                   data-question="1"
                   data-archetype="5"
-                  heading="[Option 1E Answer text goes here]"
+                  heading="Bodega Cat"
                   headingLevel="h3"
-                  description="[Option 1E note or stat hint]"
+                  description="Curled up peacefully beside your form components; purrs contentedly whenever your code passes WCAG compliance and ARIA inspections."
                   size="md"
                   onclick="void 0"
                 >
@@ -487,9 +494,9 @@ this year's stats."
                   class="nys-grid-col-6 nys-tablet:nys-grid-col-4 nys-display-flex"
                   data-question="1"
                   data-archetype="6"
-                  heading="[Option 1F Answer text goes here]"
+                  heading="Bagel with Lox"
                   headingLevel="h3"
-                  description="[Option 1F note or stat hint]"
+                  description="A glorious multi-layered stack of cream cheese, capers, and lox; sorts complex state datasets with maximum flavor and zero drama."
                   size="md"
                   onclick="void 0"
                 >
