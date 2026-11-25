@@ -287,6 +287,28 @@ this year's stats."
       .quiz-fact__label nys-icon {
         margin-inline-end: var(--nys-space-100);
       }
+
+      .results-hero-card {
+        background: var(--nys-color-surface);
+        border: var(--nys-border-width-md) solid var(--nys-color-theme);
+        border-radius: var(--nys-radius-lg);
+        box-shadow: var(--nys-shadow-raised);
+      }
+
+      .results-component-name {
+        font-family: var(--nys-font-family-monospace);
+        font-size: var(--nys-font-size-display-sm);
+        color: var(--nys-color-theme-stronger);
+        line-height: var(--nys-font-lineheight-h2);
+      }
+
+      .results-stat-card {
+        --nys-card-height: 100%;
+        --nys-card-font-size--heading: var(--nys-font-size-display-sm);
+        --nys-card-line-height--heading: var(--nys-font-lineheight-h1);
+        --nys-card-font-size--description: var(--nys-font-size-md);
+        --nys-card-line-height--description: var(--nys-font-lineheight-md);
+      }
     </style>
   </head>
 
@@ -1368,34 +1390,31 @@ this year's stats."
             aria-label="Your Quiz Result"
             tabindex="-1"
           >
-            <div>
+            <div class="nys-grid-container">
               <!-- Result Hero Card -->
-              <div>
-                <span>Your NYSDS Archetype</span>
-                <div>
-                  <span id="resultBadge"
-                    >[Badge: High Contrast • 100% Dependable]</span
-                  >
-                </div>
-                <h2 id="resultComponent">&lt;nys-component&gt;</h2>
-                <p id="resultTagline">[The Workhorse of New York State]</p>
-                <p id="resultDescription">
+              <div class="results-hero-card nys-padding-500 nys-margin-b-600">
+                <span class="nys-font-bold" style="color: var(--nys-color-theme); font-size: var(--nys-font-size-ui-sm);">Your NYSDS archetype</span>
+                <h2 id="resultComponent" class="results-component-name nys-font-extrabold nys-margin-y-100">&lt;nys-component&gt;</h2>
+                <p id="resultTagline" class="nys-font-bold nys-margin-b-200" style="color: var(--nys-color-theme); font-size: var(--nys-font-size-xl);">[The Workhorse of New York State]</p>
+                <p id="resultDescription" class="nys-margin-b-300" style="color: var(--nys-color-text); font-size: var(--nys-font-size-body-lg); line-height: var(--nys-font-lineheight-body-lg);">
                   [Detailed archetype personality summary goes here. Explains
                   how you approach projects, your relationship to design tokens
                   and accessibility, and your spirit role on state teams.]
                 </p>
 
-                <!-- Dynamic Component Stat Callout -->
-                <div>
-                  <strong>2026 Highlight</strong>
-                  <p id="resultStatCallout">
+                <!-- Dynamic Component Stat Callout using existing quiz-fact component -->
+                <aside class="quiz-fact nys-margin-b-400" role="note">
+                  <strong class="quiz-fact__label nys-display-flex nys-flex-align-center">
+                    <nys-icon name="star" library="font-awesome"></nys-icon>2026 Highlight
+                  </strong>
+                  <p id="resultStatCallout" class="quiz-fact__text nys-font-semibold nys-margin-0">
                     [Component 2026 stat highlight goes here, e.g. Inserted
                     8,000+ times across agency workspaces this year.]
                   </p>
-                </div>
+                </aside>
 
                 <!-- Action Buttons -->
-                <div>
+                <div class="nys-display-flex nys-flex-wrap nys-flex-gap-150">
                   <nys-button
                     id="shareResultBtn"
                     label="Share Result"
@@ -1416,38 +1435,52 @@ this year's stats."
               </div>
 
               <!-- 2026 Wrapped Grand Totals Section -->
-              <div>
-                <h3>NYS Design System • 2026 By The Numbers</h3>
-                <p>
-                  A look at what New York State built, tested, and shipped
-                  together this year.
-                </p>
+              <div class="nys-margin-t-600">
+                <div class="nys-margin-b-300">
+                  <h3 class="nys-font-extrabold nys-margin-0 nys-margin-b-50" style="color: var(--nys-color-theme-stronger); font-size: var(--nys-font-size-h2); line-height: var(--nys-font-lineheight-h2);">NYS Design System • 2026 By The Numbers</h3>
+                  <p class="nys-margin-0" style="color: var(--nys-color-text-weak); font-size: var(--nys-font-size-body-lg); line-height: var(--nys-font-lineheight-body-md);">
+                    A look at what New York State built, tested, and shipped
+                    together this year.
+                  </p>
+                </div>
 
-                <div>
-                  <div>
-                    <p>[35+]</p>
-                    <p>Releases Published</p>
-                  </div>
-                  <div>
-                    <p>[500+]</p>
-                    <p>Pull Requests Merged</p>
-                  </div>
-                  <div>
-                    <p>[200+]</p>
-                    <p>Automated Component Tests</p>
-                  </div>
-                  <div>
-                    <p>[50k+]</p>
-                    <p>Figma Component Inserts</p>
-                  </div>
-                  <div>
-                    <p>[~47%]</p>
-                    <p>Bundle Size Reduction</p>
-                  </div>
-                  <div>
-                    <p>[250+]</p>
-                    <p>Teams Community Members</p>
-                  </div>
+                <div class="nys-grid-row nys-grid-gap-250">
+                  <nys-card
+                    class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex results-stat-card"
+                    heading="[35+]"
+                    headingLevel="h4"
+                    description="Releases Published"
+                  ></nys-card>
+                  <nys-card
+                    class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex results-stat-card"
+                    heading="[500+]"
+                    headingLevel="h4"
+                    description="Pull Requests Merged"
+                  ></nys-card>
+                  <nys-card
+                    class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex results-stat-card"
+                    heading="[200+]"
+                    headingLevel="h4"
+                    description="Automated Component Tests"
+                  ></nys-card>
+                  <nys-card
+                    class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex results-stat-card"
+                    heading="[50k+]"
+                    headingLevel="h4"
+                    description="Figma Component Inserts"
+                  ></nys-card>
+                  <nys-card
+                    class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex results-stat-card"
+                    heading="[~47%]"
+                    headingLevel="h4"
+                    description="Bundle Size Reduction"
+                  ></nys-card>
+                  <nys-card
+                    class="nys-grid-col-12 nys-tablet:nys-grid-col-6 nys-desktop:nys-grid-col-4 nys-display-flex results-stat-card"
+                    heading="[250+]"
+                    headingLevel="h4"
+                    description="Teams Community Members"
+                  ></nys-card>
                 </div>
               </div>
             </div>
@@ -1722,7 +1755,10 @@ this year's stats."
           const winnerId = calculateWinner();
           const profile = ARCHETYPES[winnerId] || ARCHETYPES[1];
 
-          if (resultBadge) resultBadge.textContent = profile.badge;
+          if (resultBadge) {
+            resultBadge.setAttribute("label", profile.badge);
+            resultBadge.textContent = profile.badge;
+          }
           if (resultComponent) resultComponent.textContent = profile.component;
           if (resultTagline) resultTagline.textContent = profile.tagline;
           if (resultDescription)
