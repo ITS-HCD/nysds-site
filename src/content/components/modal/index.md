@@ -255,8 +255,8 @@ A forced action modal requires users to make a choice before continuing. Set the
     </tr>
   <tr>
       <td><code>ariaLabel</code></td>
-      <td></td>
-      <td></td>
+      <td>String</td>
+      <td><code>""</code></td>
     </tr>
   </table>
 </nys-table>

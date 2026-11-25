@@ -281,18 +281,18 @@ Set the `inverted` when the component is on a dark background.
     </tr>
     <tr>
       <td><code>ariaLabel</code></td>
-      <td></td>
-      <td></td>
+      <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>tooltip</code></td>
-      <td></td>
-      <td></td>
+      <td>String</td>
+      <td><code>""</code></td>
     </tr>
     <tr>
       <td><code>inverted</code></td>
-      <td></td>
-      <td></td>
+      <td>boolean</td>
+      <td><code>false</code></td>
     </tr>
   </table>
 </nys-table>
