@@ -209,7 +209,7 @@ The `<nys-video>` component emits **one** custom Javascript event:
     </tr>
     <tr>
       <td><code>nys-video-play</code></td>
-      <td></td>
+      <td>Fired when the user clicks the thumbnail to load the player.</td>
       <td></td>
     </tr>
   </table>
@@ -217,6 +217,20 @@ The `<nys-video>` component emits **one** custom Javascript event:
 
 <br/>
 
+You can listen to these events using JavaScript:
+{% set code %}
+// Select the video component
+const textinput = document.querySelector('nys-video');
+// Listen for the 'nys-video-play' event
+textinput.addEventListener('nys-video', (event) => {
+  const { nys-video-play } = event.detail;
+  console.log(`Text input (${id}) changed:`, value);
+});
+{% endset %}
+{% set accordionLabel = "Sample Code" %}
+{% set codeExpanded = true %}
+{% set codeLanguage = "js" %}
+{% include "partials/code-preview.njk" %}
 {% endblock %}
 
 {% block updates %}{% endblock %}

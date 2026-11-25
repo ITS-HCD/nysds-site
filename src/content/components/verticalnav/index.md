@@ -465,13 +465,14 @@ The `<nys-verticalnav>` component emits **three** custom Javascript event:
       <td>
         <ul>
           <li><code>id</code> (string): The id of the vertical nav group.</li>
+          <li><code>label</code> (string).</li>
           <li><code>expanded</code> (boolean): Whether the nav group is now expanded.</li>
         </ul>
       </td>
     </tr>
     <tr>
       <td><code>nys-verticalnavgroup:nys-child-resize</code></td>
-      <td></td>
+      <td>Fired when the group toggles so ancestor containers (for example nys-accordionitem) can resize.</td>
       <td></td>
     </tr>
   </table>
