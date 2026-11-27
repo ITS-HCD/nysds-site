@@ -1547,7 +1547,7 @@ li > .section-nav__list {
 .onpage-nav {
   /* position: sticky; */
   /* top: var(--nys-space-600); */
-  margin-top: var(--nys-space-600);
+  padding-top: var(--nys-space-600);
   margin-bottom: var(--nys-space-200);
   height: auto;
 }
