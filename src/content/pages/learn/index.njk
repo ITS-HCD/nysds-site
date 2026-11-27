@@ -12,7 +12,7 @@ navOrder: 1
 
 <div class="nys-grid-container-widescreen">
   <div class="nys-grid-row nys-grid-gap">
-    <main class="nys-tablet:nys-grid-col-10">
+    <main class="nys-tablet:nys-grid-col-10 nys-order-1 nys-desktop:nys-order-0">
       
       <header class="page-header">
 
@@ -67,7 +67,7 @@ navOrder: 1
         {%- endif -%}
       {%- endfor -%}
     </main>
-    <aside class="nys-tablet:nys-grid-col-2">
+    <aside class="nys-tablet:nys-grid-col-2 nys-order-0 nys-desktop:nys-order-1">
       {% include "partials/onpage-nav.njk" %}
     </aside>
   </div>
