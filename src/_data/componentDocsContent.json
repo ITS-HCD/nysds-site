@@ -282,7 +282,7 @@
       "Pair icons with a text label—few icons are universally understood alone.",
       "Use icons consistently: same icon and label for the same meaning throughout your app.",
       "Use `ariaLabel` when the icon conveys meaning, so screen readers can announce its purpose.",
-      "Use icons from the NYS Design System library; if unavailable, use Google Material Symbols (rounded, unfilled).",
+      "Use icons from the NYS Design System library. If it doesn't have the icon you need, register another library with `registerIconLibrary()` and set `library`.",
       "Match icon size and color to the design system."
     ],
     "donts": [
@@ -329,6 +329,25 @@
       "Don't use for trivial information or inline status messages. Use `<nys-alert>` instead.",
       "Don't use for quick hints on form fields. Use `<nys-tooltip>` instead.",
       "Don't force the `mandatory` prop unnecessarily."
+    ]
+  },
+  "nys-onthispage": {
+    "dos": [
+      "Use as a table of contents on lengthy pages to give a structural overview and let users jump to a section.",
+      "Use on pages with at least three distinct sections, or content longer than three screen heights.",
+      "Keep the link order the same as the order of the section headings on the page.",
+      "Use \"On this page\" as the heading so the nav is clearly labeled and stands apart from other links.",
+      "Keep the link text identical to the heading it links to.",
+      "Let link text wrap to a second line instead of truncating it.",
+      "Clearly show the active link so users can track their position as they scroll or after they click a link.",
+      "On desktop, place it in the left sidebar. If vertical navigation is on the left, place it in the right sidebar.",
+      "On tablet and mobile, place it above the main content and below the page heading."
+    ],
+    "donts": [
+      "Don't use on pages with minimal content or a small number of sections, where scrolling isn't an issue.",
+      "Don't use to link to other pages. Use `<nys-verticalnav>` instead.",
+      "Don't use for heading levels lower than H3, such as H4, H5, or H6.",
+      "Don't shorten, rephrase, or summarize a heading for its link."
     ]
   },
   "nys-pagination": {
