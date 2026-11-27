@@ -1553,9 +1553,9 @@ li > .section-nav__list {
 }
 
 @media screen and (min-width: 1024px) {
-  .navigator {
-    display: block;
-  }
+.onpage-nav {
+  height: auto;
+}
 }
 
 /* Hero */
