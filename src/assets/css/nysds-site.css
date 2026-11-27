@@ -1549,12 +1549,12 @@ li > .section-nav__list {
   /* top: var(--nys-space-600); */
   margin-top: var(--nys-space-600);
   margin-bottom: var(--nys-space-200);
-  height: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 1024px) {
 .onpage-nav {
-  height: auto;
+  height: 100%;
 }
 }
 
